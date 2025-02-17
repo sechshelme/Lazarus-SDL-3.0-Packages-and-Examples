@@ -104,7 +104,7 @@ uses
         end;
       end;
 
-      SDL_SetRenderDrawColor(renderer, $00, $00, $00, $FF);
+      SDL_SetRenderDrawColor(renderer, $20, $00, $10, $FF);
       SDL_RenderClear(renderer);
 
       Triangle(renderer);

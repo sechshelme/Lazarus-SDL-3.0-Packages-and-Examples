@@ -19,11 +19,9 @@ var
     event: TSDL_Event;
     quit: boolean = False;
     keyStat: PBoolean;
-    TimeStart: UInt64;
 
   begin
     while not quit do begin
-      TimeStart:=SDL_GetTicks;
       keyStat := SDL_GetKeyboardState(nil);
       if keyStat[SDL_SCANCODE_SPACE] then begin
         SDL_Log('Space is pressed');
@@ -41,10 +39,6 @@ var
               SDLK_ESCAPE: begin
                 quit := True;
               end;
-              SDLK_m: begin
-                //                SwitchMouseButton;
-              end;
-
             end;
           end;
           SDL_EVENT_MOUSE_BUTTON_DOWN: begin
@@ -63,8 +57,6 @@ var
 
       SDL_RenderClear(renderer);
       SDL_RenderPresent(renderer);
-
-      SDL_Log('Tick: %i',SDL_GetTicks-TimeStart);
     end;
   end;
 

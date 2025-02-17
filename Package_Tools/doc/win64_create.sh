@@ -11,7 +11,6 @@ git clone https://github.com/libsdl-org/SDL.git
 mkdir build_win64
 cd build_win64
 cmake -S ../SDL/ -B . \
-  --install-prefix ~/win64_local\
   -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
   -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
   -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \
@@ -33,7 +32,6 @@ git clone https://github.com/libsdl-org/SDL_mixer.git
 mkdir build_win64
 cd build_win64
 cmake -S ../SDL_mixer -B . \
-  --install-prefix ~/win64_local\
   -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
   -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
   -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \
@@ -55,7 +53,6 @@ git clone https://github.com/libsdl-org/SDL_net.git
 mkdir build_win64
 cd build_win64
 cmake -S ../SDL_net -B . \
-  --install-prefix ~/win64_local\
   -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
   -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
   -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \
@@ -77,7 +74,6 @@ git clone https://github.com/libsdl-org/SDL_image.git
 mkdir build_win64
 cd build_win64
 cmake -S ../SDL_image/ -B . \
-  --install-prefix ~/win64_local\
   -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
   -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
   -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \
@@ -99,7 +95,6 @@ git clone https://github.com/libsdl-org/SDL_ttf.git
 mkdir build_win64
 cd build_win64
 cmake -S ../SDL_ttf -B . \
-  --install-prefix ~/win64_local\
   -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
   -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
   -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \
@@ -108,8 +103,8 @@ cmake -S ../SDL_ttf -B . \
   -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY="ONLY" \
   -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM="BOTH" \
   -DCMAKE_SYSTEM_NAME="Windows" \
-  -DFREETYPE_INCLUDE_DIR_freetype2="~/win64_local/include/freetype2" \
-  -DFREETYPE_INCLUDE_DIR_ft2build="~/win64_local/include/freetype2"
+  -DFREETYPE_INCLUDE_DIR_freetype2="/usr/local/include/freetype2" \
+  -DFREETYPE_INCLUDE_DIR_ft2build="/usr/local/include/freetype2"
 make -j16
 sudo make install
 cd ../..
@@ -123,7 +118,6 @@ git clone https://github.com/libsdl-org/SDL_rtf.git
 mkdir build_win64
 cd build_win64
 cmake -S ../SDL_rtf -B . \
-  --install-prefix ~/win64_local\
   -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
   -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
   -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \
@@ -146,7 +140,28 @@ git clone https://github.com/libsdl-org/sdl2-compat.git
 mkdir build_win64
 cd build_win64
 cmake -S ../sdl2-compat -B . \
-  --install-prefix ~/win64_local\
+  -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
+  -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
+  -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \
+  -DCMAKE_FIND_ROOT_PATH="/usr/x86_64-w64-mingw32" \
+  -DCMAKE_FIND_ROOT_PATH_MODE_INCLUDE="BOTH" \
+  -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY="ONLY" \
+  -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM="BOTH" \
+  -DCMAKE_SYSTEM_NAME="Windows" 
+make -j16
+sudo make install
+cd ../..
+
+echo =======================  SDL2_comapat ==============================
+mkdir SDL12-compat
+cd SDL12-compat
+# git clone https://github.com/libsdl-org/sdl12-compat.git --recursive 
+git https://github.com/libsdl-org/sdl12-compat.git
+
+# Linux
+mkdir build_win64
+cd build_win64
+cmake -S ../sdl12-compat -B . \
   -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
   -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
   -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \

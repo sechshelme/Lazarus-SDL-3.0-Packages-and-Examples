@@ -93,6 +93,19 @@ make -j16
 sudo make install
 cd ../..
 
+echo =======================  SDL1.2_comapat ==============================
+mkdir SDL12-compat
+cd SDL12-compat
+git clone https://github.com/libsdl-org/sdl12-compat.git
+
+# Linux
+mkdir build
+cd build
+cmake ../sdl12-compat
+make -j16
+sudo make install
+cd ../..
+
 echo ==== Ende ====
 
 cd ..

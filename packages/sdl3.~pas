@@ -6,7 +6,7 @@ uses
   {$IFDEF Linux}
   x, xlib;
   {$ENDIF}
-  {$IFDEF msWindows}
+  {$IFDEF Windows}
   Windows;
   {$ENDIF}
 //  ctypes;
@@ -20,7 +20,7 @@ const
   libSDL3 = 'SDL3';
   {$ENDIF}
 
-  {$IFDEF msWindows}
+  {$IFDEF Windows}
   libSDL3 = 'SDL3';
   {$ENDIF}
 

@@ -108,11 +108,10 @@ var
         end;
       end;
 
+      SDL_SetRenderDrawColor(renderer, $20, $00, $10, $FF);
       SDL_RenderClear(renderer);
-      rSrc.x := 0;
-      rSrc.y := 0;
-      rSrc.w := 400;
-      rSrc.h := 400;
+
+      rSrc.items := [0, 0, 400, 400];
 
       SDL_RenderTexture(renderer, bitmapTex, @rSrc, @rDest);
       SDL_RenderPresent(renderer);
@@ -121,7 +120,6 @@ var
 
 begin
   SDL_init(SDL_INIT_VIDEO);
-//  IMG_Init(IMG_INIT_JPG);
 
   window := SDL_CreateWindow('SDL3 Window', 800, 600, SDL_WINDOW_RESIZABLE);
   if window = nil then begin
@@ -148,6 +146,5 @@ begin
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
 
-//  IMG_Quit;
   SDL_Quit;
 end.

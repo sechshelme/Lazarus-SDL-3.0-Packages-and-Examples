@@ -14,7 +14,8 @@ var
     event: TSDL_Event;
     quit: boolean = False;
     win: PSDL_Window;
-    title: PChar;
+    title: pchar;
+    i: Integer;
 
   begin
     while not quit do begin
@@ -26,7 +27,9 @@ var
                 quit := True;
               end;
               SDLK_t: begin
-                SDL_SetWindowTitle(window[1], 'Hallo');
+                for i := 0 to Length(window) - 1 do begin
+                  SDL_SetWindowTitle(window[i], 'Hallo');
+                end;
               end;
             end;
           end;

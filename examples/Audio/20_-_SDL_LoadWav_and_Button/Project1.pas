@@ -2,6 +2,7 @@ program Project1;
 
 uses
 //  heaptrc,
+  math,
   ctypes,
   SDL3,
   Button,
@@ -127,6 +128,7 @@ var
   MyApp: TMyApp;
 
 begin
+  SetExceptionMask([exInvalidOp, exDenormalized, exZeroDivide, exOverflow, exUnderflow, exPrecision]);
   MyApp := TMyApp.Create;
   MyApp.Run;
   MyApp.Free;

@@ -62,11 +62,16 @@ const
         end;
       end;
 
-      destRect.x := SDL_sinf(SDL_GetTicks / 300) * 200 + 200;
-
       SDL_SetRenderDrawColorFloat(renderer, 0.2, 0.0, 0.1, SDL_ALPHA_OPAQUE);
       SDL_RenderClear(renderer);
+
+      destRect.x := SDL_sinf(SDL_GetTicks / 300) * 200 + 200;
+      destRect.y := 150;
+
       SDL_RenderTexture(renderer, FontTexture, nil, @destRect);
+
+      destRect.y := 300;
+      SDL_RenderTextureRotated(renderer, FontTexture, nil, @destRect, SDL_GetTicks / 30,nil,SDL_FLIP_NONE);
       SDL_RenderPresent(renderer);
     end;
 

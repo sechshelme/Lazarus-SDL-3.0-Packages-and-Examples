@@ -22,6 +22,8 @@ var
     time: extended;
     red, green, blue: single;
     keyStat: PBoolean;
+    motion: TSDL_MouseMotionEvent;
+
   begin
     rDest.w := 100;
     rDest.h := 100;
@@ -71,6 +73,10 @@ var
 
       while SDL_PollEvent(@e) do begin
         case e._type of
+          SDL_EVENT_MOUSE_MOTION:begin
+            motion:=e.motion;
+          end;
+
           SDL_EVENT_KEY_DOWN: begin
             case e.key.key of
 
@@ -97,9 +103,10 @@ var
       SDL_RenderFillRect(renderer, @rDest);
 
       SDL_SetRenderDrawColorFloat(renderer, 1.0, 1.0, 1.0, SDL_ALPHA_OPAQUE_FLOAT);
-      SDL_RenderDebugText(renderer, 10, 10, 'Zeile 1');
-      SDL_RenderDebugText(renderer, 10, 30, 'Zeile 2');
+      SDL_RenderDebugText(renderer, 10, 10, 'Lines 1');
+      SDL_RenderDebugText(renderer, 10, 30, 'Lines 2');
       SDL_RenderDebugTextFormat(renderer, 10, 50, 'X: %6.2f Y: %6.2f W: %6.2f H: %6.2f  ', rDest.x, rDest.y, rDest.w, rDest.h);
+      SDL_RenderDebugTextFormat(renderer, 10, 70, 'Mouse Pos: %6.2f x %6.2f  Real Pos:  %6.2f x %6.2f', motion.x,motion.y, motion.xrel,motion.yrel);
       SDL_RenderPresent(renderer);
     end;
   end;

@@ -2,7 +2,7 @@
 {$IFDEF read_interface}
 
 // function _SDL_bsr_watcom(para1:TUint32):longint;cdecl;external libSDL3;
-function SDL_MostSignificantBitIndex32(x: uint32): cint; inline;
+function SDL_MostSignificantBitIndex32(x: uint32): Integer; inline;
 function SDL_HasExactlyOneBitSet32(x: UInt32): Boolean; inline;
 
 {$ENDIF read_interface}
@@ -10,7 +10,7 @@ function SDL_HasExactlyOneBitSet32(x: UInt32): Boolean; inline;
 
 {$IFDEF read_implementation}
 
-function SDL_MostSignificantBitIndex32(x: uint32): cint;
+function SDL_MostSignificantBitIndex32(x: uint32): Integer;
 const
   b: array[0..4] of uint32 = ($2, $C, $F0, $FF00, $FFFF0000);
   S: array[0..4] of integer = (1, 2, 4, 8, 16);

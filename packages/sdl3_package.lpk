@@ -6,11 +6,10 @@
     <CompilerOptions>
       <Version Value="11"/>
       <SearchPaths>
-        <OtherUnitFiles Value="pas_units"/>
         <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
     </CompilerOptions>
-    <Version Major="3" Minor="1" Release="6"/>
+    <Version Major="3" Minor="2" Release="4"/>
     <Files>
       <Item>
         <Filename Value="sdl3.pas"/>

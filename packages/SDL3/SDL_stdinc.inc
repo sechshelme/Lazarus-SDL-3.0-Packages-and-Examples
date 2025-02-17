@@ -37,7 +37,14 @@ type
   PSint32 = ^int32;
   PSint64 = ^int64;
 
-  Tsize_t = csize_t;
+  {$IFDEF CPU32}
+    Tsize_t = uint32;
+  {$ENDIF}
+
+  {$IFDEF CPU64}
+    Tsize_t = uint64;
+  {$ENDIF}
+//  Tsize_t = csize_t;
   Psize_t = ^Tsize_t;
 
   Tuintptr_t = PtrUInt;

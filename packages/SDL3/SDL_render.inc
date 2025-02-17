@@ -245,8 +245,8 @@ function SDL_GetRenderVSync(renderer: PSDL_Renderer; vsync: Plongint): Tbool; cd
 const
   SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE = 8;
 
-function SDL_RenderDebugText(renderer: PSDL_Renderer; x, y: cfloat; str: pchar): boolean; cdecl; external libSDL3;
-function SDL_RenderDebugTextFormat(renderer: PSDL_Renderer; x: single; y: single; fmt: pchar): Tbool; varargs; cdecl; external libSDL3;
+function SDL_RenderDebugText(renderer: PSDL_Renderer; x, y: Single; str: pchar): boolean; cdecl; external libSDL3;
+function SDL_RenderDebugTextFormat(renderer: PSDL_Renderer; x: Single; y: Single; fmt: pchar): Tbool; varargs; cdecl; external libSDL3;
 
 
 {$ENDIF read_interface}

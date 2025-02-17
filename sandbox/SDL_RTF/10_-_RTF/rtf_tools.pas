@@ -52,7 +52,7 @@ var
 begin
   font := TTF_OpenFont('lazy.ttf', size);
   if font = nil then begin
-    SDL_Log('Kann kein Font laden !    %s', TTF_GetError);
+    SDL_Log('Kann kein Font laden !    %s', SDL_GetError);
   end else begin
     TTF_SetFontStyle(font, style);
   end;

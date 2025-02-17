@@ -22,7 +22,6 @@ var
     VPrect: TSDL_Rect;
   begin
     while not quit do begin
-
       while SDL_PollEvent(@e) do begin
         case e._type of
           SDL_EVENT_KEY_DOWN: begin
@@ -40,14 +39,12 @@ var
       end;
 
       SDL_SetRenderDrawColorFloat(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-//      SDL_RenderClear(renderer);
 
       vprect.x := 100;
       vprect.y := 100;
       vprect.w := 100;
       vprect.h := 100;
       SDL_SetRenderViewport(renderer, @VPrect);
-
 
       rect.x := Random * 500;
       rect.y := Random * 500;
