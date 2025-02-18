@@ -1,3 +1,5 @@
+=============================================================================
+
   zlib License<br>
   SDL3 Pascal Bindings<br>
   Copyright (c) 2023-2025 Mathias Burkhard
@@ -124,6 +126,11 @@
   3. This notice may not be removed or altered from any source distribution.
 
 
+=============================================================================
+
+  Use at your own risk and responsibility !
+
+=============================================================================
 
 
 
