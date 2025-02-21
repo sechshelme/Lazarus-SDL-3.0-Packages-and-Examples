@@ -39,6 +39,7 @@ Für die SDL Zusatzpackete in ein ähnliches vorgehen nötig.
 # Neuerungen:
 | Datum      | Änderungen 
 | ---        | ---
+| 21.02.2025 | Angepasst an SDL_ttf-prerelease-3.1.2
 | 07.02.2025 | Angepasst an SDL-release-3.2.4
 | 02.02.2025 | Angepasst an SDL-ttf-preview-3.1.0
 | 02.02.2025 | Angepasst an SDL-release-3.2.2

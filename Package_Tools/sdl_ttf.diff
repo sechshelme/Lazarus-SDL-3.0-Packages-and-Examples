@@ -1,0 +1,7 @@
+
+944a947,977
+> extern SDL_DECLSPEC Uint32 SDLCALL TTF_StringToTag(const char *string);
+> 
+> extern SDL_DECLSPEC void SDLCALL TTF_TagToString(Uint32 tag, char *string, size_t size);
+> 
+

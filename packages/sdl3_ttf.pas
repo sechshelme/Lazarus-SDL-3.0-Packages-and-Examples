@@ -134,7 +134,7 @@ type
 const
   SDL_TTF_MAJOR_VERSION = 3;
   SDL_TTF_MINOR_VERSION = 1;
-  SDL_TTF_MICRO_VERSION = 0;
+  SDL_TTF_MICRO_VERSION = 2;
 
 function TTF_Version: longint; cdecl; external libSDL3_ttf;
 procedure TTF_GetFreeTypeVersion(major: Plongint; minor: Plongint; patch: Plongint); cdecl; external libSDL3_ttf;
@@ -243,6 +243,8 @@ const
 
 function TTF_SetFontDirection(font: PTTF_Font; direction: TTTF_Direction): Tbool; cdecl; external libSDL3_ttf;
 function TTF_GetFontDirection(font: PTTF_Font): TTTF_Direction; cdecl; external libSDL3_ttf;
+function TTF_StringToTag(_string:Pchar):TUint32;cdecl;external libSDL3_ttf;
+procedure TTF_TagToString(tag:TUint32; _string:Pchar; size:Tsize_t);cdecl;external libSDL3_ttf;
 function TTF_SetFontScript(font: PTTF_Font; script: TUint32): Tbool; cdecl; external libSDL3_ttf;
 function TTF_GetFontScript(font: PTTF_Font): TUint32; cdecl; external libSDL3_ttf;
 function TTF_GetGlyphScript(ch: TUint32): TUint32; cdecl; external libSDL3_ttf;
