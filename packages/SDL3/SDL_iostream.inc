@@ -68,8 +68,7 @@ function SDL_SeekIO(context: PSDL_IOStream; offset: TSint64; whence: TSDL_IOWhen
 function SDL_TellIO(context: PSDL_IOStream): TSint64; cdecl; external libSDL3;
 function SDL_ReadIO(context: PSDL_IOStream; ptr: pointer; size: Tsize_t): Tsize_t; cdecl; external libSDL3;
 function SDL_WriteIO(context: PSDL_IOStream; ptr: pointer; size: Tsize_t): Tsize_t; cdecl; external libSDL3;
-function SDL_IOprintf(context: PSDL_IOStream; fmt: pansichar; args: array of const): Tsize_t; cdecl; external libSDL3;
-function SDL_IOprintf(context: PSDL_IOStream; fmt: pansichar): Tsize_t; cdecl; external libSDL3;
+function SDL_IOprintf(context: PSDL_IOStream; fmt: pansichar): Tsize_t; varargs; cdecl; external libSDL3;
 function SDL_IOvprintf(context: PSDL_IOStream; fmt: pansichar; ap: Tva_list): Tsize_t; cdecl; external libSDL3;
 function SDL_FlushIO(context: PSDL_IOStream): Tbool; cdecl; external libSDL3;
 function SDL_LoadFile_IO(src: PSDL_IOStream; datasize: Psize_t; closeio: Tbool): pointer; cdecl; external libSDL3;
