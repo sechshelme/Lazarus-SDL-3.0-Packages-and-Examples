@@ -94,7 +94,7 @@ SDL_SetHint(SDL_HINT_SHUTDOWN_DBUS_ON_QUIT, '1');
 ```
 Test more precisely `valgrind --leak-check=full --trace-children=yes ./main`
 
-# ==================
+***
 # Deutsch 
 
 ## Einleitung
