@@ -1,4 +1,4 @@
-# ====== Englisch ======
+# Englisch
 
 ## Introduction
 - This is an SDL3.2.x binding for FPC/Lazarus (Delphi not tested)
@@ -94,7 +94,8 @@ SDL_SetHint(SDL_HINT_SHUTDOWN_DBUS_ON_QUIT, '1');
 ```
 Test more precisely `valgrind --leak-check=full --trace-children=yes ./main`
 
-# ====== Deutsch ======
+# ==================
+# Deutsch 
 
 ## Einleitung
 - Dies ist eine SDL3.2.x - Bindung für FPC/Lazarus ( Delphi nicht getestet )
