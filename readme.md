@@ -61,23 +61,23 @@ A similar procedure is required for the SDL additional packages.
 ### Windows
 - The DLLs are included in the release links. They must be copied to `C:\windows\system32`.
 
-## New features:
-| Date | Changes
-| --- | ---
-| 02/23/2025 | Forgotten `array of const` replaced by `varargs`.
-| 02/21/2025 | Adapted to SDL_ttf-prerelease-3.1.2
-| 02/07/2025 | Adapted to SDL-release-3.2.4
-| 02/02/2025 | Adapted to SDL-ttf-preview-3.1.0
-| 02/02/2025 | Adapted to SDL-release-3.2.2
-| 02/02/2025 | Adapted to SDL_image-release-3.2.0
-| 01/24/2025 | Adapted to SDL_image-prerelease-3.1.1
-| 01/22/2025 | Adapted to SDL-release-3.2.0
-| 01/17/2025 | Adapted to SDL-prerelease-3.1.10
-| 01/08/2025 | Adapted to SDL-preview-3.1.8
-| December 8th, 2024 | Adapted to SDL_image-preview-3.1.0
-| November 3rd, 2024 | Adapted to SDL-preview-3.1.6
-| October 22nd, 2024 | Adapted to SDL-preview-3.1.3
-| March 19th, 2024 | Opening of the repository
+## Updates:
+| Date       | Changes 
+| ---        | ---
+| 23.02.2025 | Replaced forgotten `array of const` with `varargs`.
+| 21.02.2025 | Adapted to SDL_ttf-prerelease-3.1.2
+| 07.02.2025 | Adapted to SDL-release-3.2.4
+| 02.02.2025 | Adapted to SDL-ttf-preview-3.1.0
+| 02.02.2025 | Adapted to SDL-release-3.2.2
+| 02.02.2025 | Adapted to SDL_image-release-3.2.0
+| 24.01.2025 | Adapted to SDL_image-prerelease-3.1.1
+| 22.01.2025 | Adapted to SDL-release-3.2.0
+| 17.01.2025 | Adapted to SDL-prerelease-3.1.10
+| 08.01.2025 | Adapted to SDL-preview-3.1.8
+| 08.12.2024 | Adapted to SDL_image-preview-3.1.0
+| 03.11.2024 | Adapted to SDL-preview-3.1.6
+| 22.10.2024 | Adapted to SDL-preview-3.1.3
+| 19.03.2024 | Repository opened
 
 ## Examples
 - [Examples](examples)
