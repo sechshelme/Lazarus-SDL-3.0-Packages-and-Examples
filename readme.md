@@ -25,7 +25,10 @@ Dest.w := 200;
 Dest.h := 200;
 ```
 
-## Installation
+### Mutex and Thread
+If you use `SDL_mutex` and `SDL_thread`, it can, at least under Linux, trigger a
+`runtime error 202`.
+To fix this, all debugging stuff has to be turned off.## Installation
 In order for SDL3 to run with Lazarus, the C-Libs must be installed.
 The following links contain the sources of the latest stable version and DLLs ready for Windows.
 
@@ -121,6 +124,11 @@ Dest.y := 100;
 Dest.w := 200;
 Dest.h := 200;
 ```
+
+### Mutex und Thread
+Wen man `SDL_mutex` und `SDL_thread` verwendet, kann es sein, zumindest unter Linux, das es einen 
+`runtime error 202` auslöst.
+Um das zu beheben, müssen sämtliche Debugging Sachen ausgeschalten werden.
 
 
 ## Installation
