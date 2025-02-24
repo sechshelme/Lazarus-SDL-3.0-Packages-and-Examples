@@ -4,35 +4,28 @@ program Project1;
 
 uses
   ctypes,
-  SDL3, SDL3_image;
+  SDL3,
+  SDL3_image;
 
 var
   window: PSDL_Window;
   renderer: PSDL_Renderer;
 
-  procedure SDLFail(const err: string);
-  begin
-    SDL_LogError(SDL_LOG_CATEGORY_CUSTOM, PChar('Fehler: ' + err));
-    Halt(1);
-  end;
-
   procedure Run;
   var
     event: TSDL_Event;
     quit: boolean = False;
-    keyStat: PUInt8;
-    TimeStart: UInt64;
-    blue, green, red: Single;
-    time: Extended;
+    blue, green, red: single;
+    time: extended;
+    keyStat: PBoolean;
 
   begin
     while not quit do begin
-      TimeStart:=SDL_GetTicks;
       keyStat := SDL_GetKeyboardState(nil);
-      if keyStat[SDL_SCANCODE_SPACE] <> 0 then begin
+      if keyStat[SDL_SCANCODE_SPACE] then begin
         SDL_Log('Space is pressed');
       end;
-      if keyStat[SDL_SCANCODE_LEFT] <> 0 then begin
+      if keyStat[SDL_SCANCODE_LEFT] then begin
         SDL_Log('Left is pressed');
       end;
 
@@ -45,10 +38,6 @@ var
               SDLK_ESCAPE: begin
                 quit := True;
               end;
-              SDLK_m: begin
-                //                SwitchMouseButton;
-              end;
-
             end;
           end;
           SDL_EVENT_MOUSE_BUTTON_DOWN: begin
@@ -71,39 +60,37 @@ var
       SDL_SetRenderDrawColorFloat(renderer, red, green, blue, SDL_ALPHA_OPAQUE);
       SDL_RenderClear(renderer);
       SDL_RenderPresent(renderer);
-
-      SDL_Log('Tick: %i',SDL_GetTicks-TimeStart);
     end;
   end;
 
   procedure main;
   var
-    windowFlags, initFlags: Integer;
+    windowFlags, initFlags: integer;
     shapeSurface: PSDL_Surface;
-    r: TSDL_Rect;
   begin
     initFlags := SDL_INIT_VIDEO or SDL_INIT_AUDIO or SDL_INIT_EVENTS;
     SDL_init(initFlags);
-    IMG_Init(IMG_INIT_PNG);
 
-    shapeSurface:=IMG_Load('sdl.png');
+    shapeSurface := IMG_Load('sdl.png');
     if shapeSurface = nil then begin
-      SDLFail('Kann Sahbe nicht laden !');
+      SDL_LogError(SDL_LOG_CATEGORY_ERROR, 'IMG_Load error: %s', SDL_GetError);
+      Exit;
     end;
 
-
-    windowFlags:=SDL_WINDOW_HIDDEN or SDL_WINDOW_TRANSPARENT or SDL_WINDOW_BORDERLESS;
+    windowFlags := SDL_WINDOW_HIDDEN or SDL_WINDOW_TRANSPARENT or SDL_WINDOW_BORDERLESS;
     window := SDL_CreateWindow('SDL3 Window', shapeSurface^.w, shapeSurface^.h, windowFlags);
     if window = nil then begin
-      SDLFail('Kann kein SDL-Fenster erzeugen !');
+      SDL_LogError(SDL_LOG_CATEGORY_ERROR, 'Create eindow error: %s', SDL_GetError);
+      Exit;
     end;
 
     renderer := SDL_CreateRenderer(window, nil);
     if renderer = nil then begin
-      SDLFail('Kann kein SDL-Renderer erzeugen !');
+      SDL_LogError(SDL_LOG_CATEGORY_ERROR, 'Create renderer error: %s', SDL_GetError);
+      Exit;
     end;
 
-    SDL_SetWindowShape(window,shapeSurface);
+    SDL_SetWindowShape(window, shapeSurface);
     SDL_ShowWindow(window);
 
     Run;
@@ -111,7 +98,6 @@ var
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
 
-    IMG_Quit;
     SDL_Quit;
     SDL_Log('Application quit successfully!');
   end;
