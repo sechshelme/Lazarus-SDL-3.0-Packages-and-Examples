@@ -67,7 +67,6 @@ uses
       SDL_RenderPresent(renderer);
     end;
 
-
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(win);
     SDL_Quit;
