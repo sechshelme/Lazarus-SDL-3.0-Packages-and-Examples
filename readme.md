@@ -28,14 +28,12 @@ Dest.h := 200;
 ### Mutex and Thread
 If you use `SDL_mutex` and `SDL_thread`, it can, at least under Linux, trigger a
 `runtime error 202`.
-To fix this, all debugging stuff has to be turned off.## Installation
-In order for SDL3 to run with Lazarus, the C-Libs must be installed.
-The following links contain the sources of the latest stable version and DLLs ready for Windows.
-
+To fix this, all debugging stuff has to be turned off.
 
 ## Installation
 In order for SDL3 to run with Lazarus, the C-Libs must be installed.
-The following links contain the sources of the latest stable version and the DLLs ready for Windows.
+The following links contain the sources of the latest stable version and DLLs ready for Windows.
+
 - [SDL 3.2.x](https://github.com/libsdl-org/SDL/releases)
 - [SDL_image 3.2.x](https://github.com/libsdl-org/SDL_image/releases)
 - [SDL_ttf 3.1.x](https://github.com/libsdl-org/SDL_ttf/releases)
