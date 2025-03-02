@@ -4,7 +4,12 @@
 const
   SDL_LIL_ENDIAN = 1234;
   SDL_BIG_ENDIAN = 4321;
+
+  {$ifdef endian_little}
   SDL_BYTEORDER = SDL_LIL_ENDIAN;
+  {$else}
+  SDL_BYTEORDER = SDL_BIG_ENDIAN;
+  {$endif}
 
 function SDL_Swap16(x: uint16): uint16; inline;
 function SDL_Swap32(x: uint32): uint32; inline;

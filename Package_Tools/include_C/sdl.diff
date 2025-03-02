@@ -1,0 +1,11 @@
+diff -r SDL-release-3.2.4/include/SDL3/SDL_surface.h SDL-release-3.2.6/include/SDL3/SDL_surface.h
+122a123,125
+223a227,230
+235a243,244
+> #define SDL_PROP_SURFACE_HOTSPOT_X_NUMBER                   "SDL.surface.hotspot.x"
+> #define SDL_PROP_SURFACE_HOTSPOT_Y_NUMBER                   "SDL.surface.hotspot.y"
+diff -r SDL-release-3.2.4/include/SDL3/SDL_version.h SDL-release-3.2.6/include/SDL3/SDL_version.h
+65c65
+< #define SDL_MICRO_VERSION   4
+---
+> #define SDL_MICRO_VERSION   6

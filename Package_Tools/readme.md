@@ -3,6 +3,17 @@
 h2pas -p -T -d -c -e xxx.h
 ```
 
+# diff
+## SDL3
+`diff SDL-release-3.2.4/include/SDL3/ SDL-release-3.2.6/include/SDL3/ -r > sdl.diff`
+
+## SDL3_image
+`diff SDL_image-release-3.2.0/include/ SDL_image-release-3.2.2/include/ -r > sdl_image.diff`
+
+## SDL3_ttf
+`diff SDL_ttf-prerelease-3.1.2/include/ SDL_ttf-release-3.2.0/include/ -r > sdl_ttf.diff`
+
+
 # Spezielle Behandlungen:
 
 ### .../pas_units/sdl3_stdinc.pas
