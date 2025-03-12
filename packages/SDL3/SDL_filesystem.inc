@@ -43,6 +43,7 @@ type
   end;
   PSDL_PathInfo = ^TSDL_PathInfo;
 
+type
   TSDL_GlobFlags = TUint32;
   PSDL_GlobFlags = ^TSDL_GlobFlags;
 

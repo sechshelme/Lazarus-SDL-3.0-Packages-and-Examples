@@ -148,6 +148,13 @@ Bei folgenden Links findet man die Sourcen der letzten stable, und für Windows 
 - SDL_rtf ( in Arbeit )
 
 ### Linux
+
+#### Ubuntu 25.04
+Beim neusten Ubuntu kann man die C-libs direkt runterladen: 
+```sh
+sudo apt install libsdl3-dev libsdl3-image-dev libsdl3-ttf-dev 
+```
+
 - Folgende Anleitung beachten: [Readme](https://github.com/libsdl-org/SDL/blob/main/docs/README-cmake.md)
 
 Folgendes Script ladet das neuste SDL3 herunter, baut und installiert es.
