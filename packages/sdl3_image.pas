@@ -101,7 +101,7 @@ function IMG_LoadGIFAnimation_IO(src: PSDL_IOStream): PIMG_Animation; cdecl; ext
 function IMG_LoadWEBPAnimation_IO(src: PSDL_IOStream): PIMG_Animation; cdecl; external libSDL3_image;
 
 function SDL_IMAGE_VERSION: longint;
-function SDL_IMAGE_VERSION_ATLEAST(X, Y, Z: longint): TSDL_bool;
+function SDL_IMAGE_VERSION_ATLEAST(X, Y, Z: longint): Boolean;
 
 
 implementation
@@ -112,7 +112,7 @@ begin
 end;
 
 
-function SDL_IMAGE_VERSION_ATLEAST(X, Y, Z: longint): TSDL_bool;
+function SDL_IMAGE_VERSION_ATLEAST(X, Y, Z: longint): Boolean;
 begin
   SDL_IMAGE_VERSION_ATLEAST :=
     (SDL_IMAGE_MAJOR_VERSION >= X) and

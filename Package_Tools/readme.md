@@ -66,14 +66,6 @@ type
 
   PPUint8 = ^PUint8;
 
-const
-  SDL_FALSE = False;  
-  SDL_TRUE = True;  
-type
-  PSDL_bool = ^TSDL_bool;
-  TSDL_bool = boolean32;
-
-
 // modifizieren
 function SDL_log(x: cdouble): cdouble; cdecl; external name 'SDL_log';
 ```

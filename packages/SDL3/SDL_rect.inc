@@ -77,9 +77,9 @@ end;
 function SDL_RectEmpty(r: PSDL_Rect): Boolean;
 begin
   if (r = nil) or (r^.w <= 0) or (r^.h <= 0) then begin
-    Result := SDL_TRUE;
+    Result := True;
   end else begin
-    Result := SDL_FALSE;
+    Result := False;
   end;
 end;
 

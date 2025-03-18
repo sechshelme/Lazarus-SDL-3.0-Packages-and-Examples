@@ -65,15 +65,6 @@ type
 
   Tva_list = Pointer; // ?????
 
-
-const
-  SDL_FALSE = False;
-  SDL_TRUE = True;
-
-type
-  PSDL_bool = ^TSDL_bool;
-  TSDL_bool = boolean32;
-
 const
   SDL_NOLONGLONG = 1;
 

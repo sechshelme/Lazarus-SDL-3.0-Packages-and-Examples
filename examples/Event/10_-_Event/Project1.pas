@@ -29,6 +29,9 @@ var
       if keyStat[SDL_SCANCODE_LEFT] then begin
         SDL_Log('Left is pressed');
       end;
+      if keyStat[SDL_SCANCODE_RIGHT] then begin
+        SDL_Log('Right is pressed');
+      end;
 
       while SDL_PollEvent(@event) do begin
         case event._type of

@@ -374,7 +374,7 @@ function TTF_WasInit: longint; cdecl; external libSDL3_ttf;
 // =====
 
 function SDL_TTF_VERSION: longint;
-function SDL_TTF_VERSION_ATLEAST(X, Y, Z: longint): TSDL_bool;
+function SDL_TTF_VERSION_ATLEAST(X, Y, Z: longint): Boolean;
 
 implementation
 
@@ -383,7 +383,7 @@ begin
   SDL_TTF_VERSION := SDL_VERSIONNUM(SDL_TTF_MAJOR_VERSION, SDL_TTF_MINOR_VERSION, SDL_TTF_MICRO_VERSION);
 end;
 
-function SDL_TTF_VERSION_ATLEAST(X, Y, Z: longint): TSDL_bool;
+function SDL_TTF_VERSION_ATLEAST(X, Y, Z: longint): Boolean;
 begin
   SDL_TTF_VERSION_ATLEAST :=
     (SDL_TTF_MAJOR_VERSION >= X) and
