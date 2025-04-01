@@ -134,7 +134,7 @@ type
 const
   SDL_TTF_MAJOR_VERSION = 3;
   SDL_TTF_MINOR_VERSION = 2;
-  SDL_TTF_MICRO_VERSION = 0;
+  SDL_TTF_MICRO_VERSION = 2;
 
 function TTF_Version: longint; cdecl; external libSDL3_ttf;
 procedure TTF_GetFreeTypeVersion(major: Plongint; minor: Plongint; patch: Plongint); cdecl; external libSDL3_ttf;
@@ -194,6 +194,7 @@ type
   TTTF_HintingFlags = longint;
 
 const
+  TTF_HINTING_INVALID = -1;
   TTF_HINTING_NORMAL = 0;
   TTF_HINTING_LIGHT = 1;
   TTF_HINTING_MONO = 2;
@@ -205,6 +206,19 @@ function TTF_GetNumFontFaces(font: PTTF_Font): longint; cdecl; external libSDL3_
 function TTF_GetFontHinting(font: PTTF_Font): TTTF_HintingFlags; cdecl; external libSDL3_ttf;
 function TTF_SetFontSDF(font: PTTF_Font; Enabled: Tbool): Tbool; cdecl; external libSDL3_ttf;
 function TTF_GetFontSDF(font: PTTF_Font): Tbool; cdecl; external libSDL3_ttf;
+function TTF_GetFontWeight(font:PTTF_Font):longint;cdecl;external libSDL3_ttf;
+
+const
+  TTF_FONT_WEIGHT_THIN = 100;
+  TTF_FONT_WEIGHT_EXTRA_LIGHT = 200;
+  TTF_FONT_WEIGHT_LIGHT = 300;
+  TTF_FONT_WEIGHT_NORMAL = 400;
+  TTF_FONT_WEIGHT_MEDIUM = 500;
+  TTF_FONT_WEIGHT_SEMI_BOLD = 600;
+  TTF_FONT_WEIGHT_BOLD = 700;
+  TTF_FONT_WEIGHT_EXTRA_BOLD = 800;
+  TTF_FONT_WEIGHT_BLACK = 900;
+  TTF_FONT_WEIGHT_EXTRA_BLACK = 950;
 
 type
   PTTF_HorizontalAlignment = ^TTTF_HorizontalAlignment;

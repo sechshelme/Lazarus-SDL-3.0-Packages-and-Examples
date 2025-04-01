@@ -16,6 +16,7 @@ type
   TSDL_ScaleMode = longint;
 
 const
+  SDL_SCALEMODE_INVALID = -1;
   SDL_SCALEMODE_NEAREST = 0;
   SDL_SCALEMODE_LINEAR = 1;
 

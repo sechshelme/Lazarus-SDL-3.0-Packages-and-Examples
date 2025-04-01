@@ -69,6 +69,7 @@ A similar procedure is required for the SDL additional packages.
 ## Updates:
 | Date       | Changes 
 | ---        | ---
+| 01.04.2025 | Adapted to SDL-release-3.2.10, SDL_ttf-release-3.2.0 
 | 05.02.2025 | Adapted to SDL-release-3.2.8
 | 04.03.2025 | Adapted to SDL_image-release-3.2.4
 | 02.03.2025 | Adapted to SDL-release-3.2.6, SDL_image-release-3.2.2, SDL_ttf-release-3.2.0 
@@ -181,6 +182,7 @@ Für die SDL Zusatzpackete in ein ähnliches vorgehen nötig.
 ## Neuerungen:
 | Datum      | Änderungen 
 | ---        | ---
+| 01.04.2025 | Angepasst an SDL-release-3.2.10, SDL_ttf-release-3.2.0 
 | 05.03.2025 | Angepasst an SDL-release-3.2.8
 | 04.03.2025 | Angepasst SDL_image-release-3.2.4
 | 02.03.2025 | Angepasst an SDL-release-3.2.6, SDL_image-release-3.2.2, SDL_ttf-release-3.2.0 
