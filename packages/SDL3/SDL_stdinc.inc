@@ -260,7 +260,7 @@ function SDL_snprintf(Text: pansichar; maxlen: Tsize_t; fmt: pansichar): longint
 function SDL_swprintf(Text: Pwchar_t; maxlen: Tsize_t; fmt: Pwchar_t): longint; varargs; cdecl; external libSDL3;
 function SDL_vsnprintf(Text: pansichar; maxlen: Tsize_t; fmt: pansichar; ap: Tva_list): longint; cdecl; external libSDL3;
 function SDL_vswprintf(Text: Pwchar_t; maxlen: Tsize_t; fmt: Pwchar_t; ap: Tva_list): longint; cdecl; external libSDL3;
-function SDL_asprintf(strp: PPansichar; fmt: pansichar): longint;  cdecl; external libSDL3;
+function SDL_asprintf(strp: PPansichar; fmt: pansichar): longint; varargs; cdecl; external libSDL3;
 function SDL_vasprintf(strp: PPansichar; fmt: pansichar; ap: Tva_list): longint; cdecl; external libSDL3;
 procedure SDL_srand(seed: TUint64); cdecl; external libSDL3;
 function SDL_rand(n: TSint32): TSint32; cdecl; external libSDL3;
