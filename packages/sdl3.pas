@@ -39,4 +39,18 @@ implementation
 {$include SDL3_includes.inc}
 {$UNDEF read_implementation}
 
-end.
+{$IF defined(CPUX86) or defined(CPUX64)}
+procedure SetMXCSR;
+var
+  w2: word = 8064;
+begin
+  asm
+           Ldmxcsr w2
+  end;
+end;
+{$ENDIF}
+
+begin
+{$IF defined(CPUX86) or defined(CPUX64)}
+  SetMXCSR;
+{$ENDIF}end.

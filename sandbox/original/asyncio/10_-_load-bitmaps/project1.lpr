@@ -14,36 +14,46 @@ var
     (items: (525, 180, 96, 96)),
     (items: (288, 375, 64, 64)));
 
-var
-  window: PSDL_Window = nil;
-  renderer: PSDL_Renderer = nil;
-  queue: PSDL_AsyncIOQueue = nil;
+type
+  TAppState = record
+    window: PSDL_Window;
+    renderer: PSDL_Renderer;
+    queue: PSDL_AsyncIOQueue;
+  end;
+  PAppState = ^TAppState;
+
 
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
+  var
+    app: PAppstate = nil;
   var
     path: pansichar;
     i: integer;
   begin
+    app := SDL_malloc(SizeOf(TAppstate));
+    app^ := Default(TAppstate);
+    appstate^ := app;
+
     if not SDL_Init(SDL_INIT_VIDEO) then begin
       SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, 'Couldn''t initialize SDL!', SDL_GetError, nil);
       Exit(SDL_APP_FAILURE);
     end;
 
-    if not SDL_CreateWindowAndRenderer('examples/asyncio/load-bitmaps', 640, 480, 0, @window, @renderer) then begin
+    if not SDL_CreateWindowAndRenderer('examples/asyncio/load-bitmaps', 640, 480, 0, @app^.window, @app^.renderer) then begin
       SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, 'Couldn''t create window/renderer!', SDL_GetError, nil);
       Exit(SDL_APP_FAILURE);
     end;
 
-    queue := SDL_CreateAsyncIOQueue;
-    if queue = nil then begin
+    app^.queue := SDL_CreateAsyncIOQueue;
+    if app^.queue = nil then begin
       SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, 'Couldn''t create async i/o queue!', SDL_GetError, nil);
       Exit(SDL_APP_FAILURE);
     end;
 
     for i := 0 to TOTAL_TEXTURES - 1 do begin
-      path:=nil;
+      path := nil;
       SDL_asprintf(@path, '%s%s', SDL_GetBasePath, bmps[i]);
-      if not SDL_LoadFileAsync(path, queue, @bmps[i]) then  begin
+      if not SDL_LoadFileAsync(path, app^.queue, @bmps[i]) then  begin
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, 'File load error!', SDL_GetError, nil);
         Exit(SDL_APP_FAILURE);
       end;
@@ -55,15 +65,16 @@ var
 
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
+    app: PAppstate absolute appstate;
     outcome: TSDL_AsyncIOOutcome;
     surface: PSDL_Surface;
     i: integer;
   begin
-    FillChar(outcome, SizeOf(outcome),0);
-    if SDL_GetAsyncIOResult(queue, @outcome) then begin
+    FillChar(outcome, SizeOf(outcome), 0);
+    if SDL_GetAsyncIOResult(app^.queue, @outcome) then begin
       if outcome.Result = SDL_ASYNCIO_COMPLETE then begin
         for i := 0 to TOTAL_TEXTURES - 1 do begin
-          if outcome.userdata =  @bmps[i] then begin
+          if outcome.userdata = @bmps[i] then begin
             WriteLn('break');
             break;
           end;
@@ -71,11 +82,15 @@ var
 
         if i < TOTAL_TEXTURES then begin
           surface := SDL_LoadBMP_IO(SDL_IOFromConstMem(outcome.buffer, outcome.bytes_transferred), True);
-          if surface=nil then WriteLn('surface = nil');
+          if surface = nil then begin
+            WriteLn('surface = nil');
+          end;
           if surface <> nil then begin
 
-            textures[i] := SDL_CreateTextureFromSurface(renderer, surface);
-              if textures[i]<>nil then WriteLn('texture = io');
+            textures[i] := SDL_CreateTextureFromSurface(app^.renderer, surface);
+            if textures[i] <> nil then begin
+              WriteLn('texture = io');
+            end;
             if textures[i] = nil then begin
               SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, 'Couldn''t create texture!', SDL_GetError, nil);
               Exit(SDL_APP_FAILURE);
@@ -87,20 +102,22 @@ var
       SDL_free(outcome.buffer);
     end;
 
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-    SDL_RenderClear(renderer);
+    SDL_SetRenderDrawColor(app^.renderer, 0, 0, 0, 255);
+    SDL_RenderClear(app^.renderer);
 
     for i := 0 to TOTAL_TEXTURES - 1 do begin
-      SDL_RenderTexture(renderer, textures[i], nil, @texture_rects[i]);
+      SDL_RenderTexture(app^.renderer, textures[i], nil, @texture_rects[i]);
     end;
 
-    SDL_RenderPresent(renderer);
+    SDL_RenderPresent(app^.renderer);
     Exit(SDL_APP_CONTINUE);
   end;
 
   function AppEvent(appstate: pointer; event: PSDL_Event): TSDL_AppResult; cdecl;
+  var
+    app: PAppstate absolute appstate;
   begin
-    if event^._type = SDL_EVENT_QUIT then  begin
+    if event^._type = SDL_EVENT_QUIT then begin
       Exit(SDL_APP_SUCCESS);
     end;
     Exit(SDL_APP_CONTINUE);
@@ -108,13 +125,18 @@ var
 
   procedure AppQuit(appstate: pointer; Result: TSDL_AppResult); cdecl;
   var
+    app: PAppstate absolute appstate;
     i: integer;
   begin
-    SDL_DestroyAsyncIOQueue(queue);
+    SDL_DestroyAsyncIOQueue(app^.queue);
 
     for i := 0 to TOTAL_TEXTURES - 1 do begin
       SDL_DestroyTexture(textures[i]);
     end;
+
+    SDL_DestroyRenderer(app^.renderer);
+    SDL_DestroyWindow(app^.window);
+    SDL_free(app);
   end;
 
 begin
