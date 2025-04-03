@@ -12,6 +12,30 @@ type
   end;
   PAppState = ^TAppState;
 
+  procedure FeedTheAudioStreamMore(userdata: pointer; stream: PSDL_AudioStream; additional_amount: longint; total_amount: longint); cdecl;
+  var
+    app: PAppstate absolute userdata;
+    samples: array [0..128 - 1] of single;
+    freq, i: integer;
+    phase: single;
+    total: longint;
+  begin
+    additional_amount := additional_amount div SizeOf(single);
+
+    while additional_amount > 0 do begin
+      total := SDL_min(additional_amount, Length(samples));
+      for i := 0 to total - 1 do begin
+        freq := 440;
+        phase := app^.current_sine_sample * freq / 8000.0;
+        samples[i] := SDL_sinf(phase * 2 * SDL_PI_F);
+        Inc(app^.current_sine_sample);
+      end;
+
+      app^.current_sine_sample := app^.current_sine_sample mod 8000;
+      SDL_PutAudioStreamData(stream, @samples, total * SizeOf(single));
+      additional_amount := additional_amount - total;
+    end;
+  end;
 
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
@@ -22,7 +46,7 @@ type
     app^ := Default(TAppstate);
     appstate^ := app;
 
-    SDL_SetAppMetadata('Example Audio Simple Playback', '1.0', 'com.example.audio-simple-playback');
+    SDL_SetAppMetadata('Example Audio Simple Playback Callback', '1.0', 'com.example.audio-simple-playback-callback');
 
     if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_AUDIO) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);
@@ -38,7 +62,7 @@ type
     spec.format := SDL_AUDIO_F32;
     spec.freq := 8000;
 
-    app^.stream := SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, @spec, nil, nil);
+    app^.stream := SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, @spec, @FeedTheAudioStreamMore, app);
     if app^.stream = nil then begin
       SDL_Log('Couldn''t create audio stream: %s', SDL_GetError);
       Exit(SDL_APP_FAILURE);
@@ -52,23 +76,7 @@ type
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    samples: array [0..512 - 1] of single;
-    freq, i: integer;
-    phase: single;
-  const
-    minimum_audio:Integer = (8000 * SizeOf(Single)) div 2;
   begin
-    if SDL_GetAudioStreamQueued(app^.stream) < minimum_audio then begin
-      for i := 0 to Length(samples) - 1 do begin
-        freq := 440;
-        phase := app^.current_sine_sample * freq / 8000.0;
-        samples[i] := SDL_sinf(phase * 2 * SDL_PI_F);
-        Inc(app^.current_sine_sample);
-      end;
-
-      app^.current_sine_sample := app^.current_sine_sample mod 8000;
-      SDL_PutAudioStreamData(app^.stream, @samples, SizeOf(samples));
-    end;
 
     SDL_RenderClear(app^.renderer);
     SDL_RenderPresent(app^.renderer);

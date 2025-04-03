@@ -39,7 +39,7 @@ type
       Exit(SDL_APP_FAILURE);
     end;
 
-    if not SDL_CreateWindowAndRenderer('examples/asyncio/load-bitmaps', 640, 480, 0, @app^.window, @app^.renderer) then begin
+    if not SDL_CreateWindowAndRenderer('examples', 640, 480, 0, @app^.window, @app^.renderer) then begin
       SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, 'Couldn''t create window/renderer!', SDL_GetError, nil);
       Exit(SDL_APP_FAILURE);
     end;
@@ -52,7 +52,7 @@ type
 
     for i := 0 to TOTAL_TEXTURES - 1 do begin
       path := nil;
-      SDL_asprintf(@path, '%s%s', SDL_GetBasePath, bmps[i]);
+      SDL_asprintf(@path, '%s/../../media/%s', SDL_GetBasePath, bmps[i]);
       if not SDL_LoadFileAsync(path, app^.queue, @bmps[i]) then  begin
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, 'File load error!', SDL_GetError, nil);
         Exit(SDL_APP_FAILURE);

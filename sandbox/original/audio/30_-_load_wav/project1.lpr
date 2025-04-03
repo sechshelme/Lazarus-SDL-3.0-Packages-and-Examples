@@ -8,7 +8,8 @@ type
     window: PSDL_Window;
     renderer: PSDL_Renderer;
     stream: PSDL_AudioStream;
-    current_sine_sample: integer;
+    wav_data:PUInt8;
+    wav_data_len:UInt32;
   end;
   PAppState = ^TAppState;
 
@@ -17,6 +18,7 @@ type
   var
     app: PAppstate = nil;
     spec: TSDL_AudioSpec;
+    wav_path: PAnsiChar=nil;
   begin
     app := SDL_malloc(SizeOf(TAppstate));
     app^ := Default(TAppstate);
@@ -34,9 +36,11 @@ type
       Exit(SDL_APP_FAILURE);
     end;
 
-    spec.channels := 1;
-    spec.format := SDL_AUDIO_F32;
-    spec.freq := 8000;
+    SDL_asprintf(@wav_path, '%s/../../media/sample.wav', SDL_GetBasePath);
+    if not SDL_LoadWAV(wav_path, @spec, @app^.wav_data, @app^.wav_data_len) then begin
+        SDL_Log('Couldn''t load .wav file: %s', SDL_GetError);
+        Exit(SDL_APP_FAILURE);
+    end;
 
     app^.stream := SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, @spec, nil, nil);
     if app^.stream = nil then begin
@@ -52,22 +56,9 @@ type
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    samples: array [0..512 - 1] of single;
-    freq, i: integer;
-    phase: single;
-  const
-    minimum_audio:Integer = (8000 * SizeOf(Single)) div 2;
   begin
-    if SDL_GetAudioStreamQueued(app^.stream) < minimum_audio then begin
-      for i := 0 to Length(samples) - 1 do begin
-        freq := 440;
-        phase := app^.current_sine_sample * freq / 8000.0;
-        samples[i] := SDL_sinf(phase * 2 * SDL_PI_F);
-        Inc(app^.current_sine_sample);
-      end;
-
-      app^.current_sine_sample := app^.current_sine_sample mod 8000;
-      SDL_PutAudioStreamData(app^.stream, @samples, SizeOf(samples));
+    if SDL_GetAudioStreamQueued(app^.stream) < app^.wav_data_len then begin
+      SDL_PutAudioStreamData(app^.stream, app^.wav_data, app^.wav_data_len);
     end;
 
     SDL_RenderClear(app^.renderer);
