@@ -117,9 +117,12 @@ type
   var
     app: PAppstate absolute appstate;
   begin
-    if event^._type = SDL_EVENT_QUIT then begin
-      Exit(SDL_APP_SUCCESS);
+    case event^._type of
+      SDL_EVENT_QUIT: begin
+        Exit(SDL_APP_SUCCESS);
+      end;
     end;
+
     Exit(SDL_APP_CONTINUE);
   end;
 

@@ -4,19 +4,50 @@ uses
   SDL3;
 
 type
+  TSound = record
+    wav_data: PUInt8;
+    wav_data_len: uint32;
+    stream: PSDL_AudioStream;
+  end;
+  PSound = ^TSound;
+
   TAppState = record
     window: PSDL_Window;
     renderer: PSDL_Renderer;
-    stream: PSDL_AudioStream;
-    current_sine_sample: integer;
+    audio_device: TSDL_AudioDeviceID;
+    sounds: array[0..1] of TSound;
   end;
   PAppState = ^TAppState;
 
+  function initSound(app: PAppState; fname: pchar; sound: PSound): boolean;
+  var
+    wav_path: pansichar;
+    spec: TSDL_AudioSpec;
+  begin
+    Result := False;
+    SDL_asprintf(@wav_path, '%s/../../media/%s', SDL_GetBasePath, fname);
+    if not SDL_LoadWAV(wav_path, @spec, @sound^.wav_data, @sound^.wav_data_len) then begin
+      SDL_Log('Couldn''t load .wav file: %s', SDL_GetError);
+      Exit(False);
+    end;
+
+    sound^.stream := SDL_CreateAudioStream(@spec, nil);
+    if sound^.stream = nil then begin
+      SDL_Log('Couldn''t create audio stream: %s', SDL_GetError);
+    end else if not SDL_BindAudioStream(app^.audio_device, sound^.stream) then begin
+      SDL_Log('Failed to bind ''%s'' stream to device: %s', fname, SDL_GetError);
+    end else begin
+      Result := True;
+    end;
+
+    SDL_free(wav_path);
+  end;
 
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
     app: PAppstate = nil;
     spec: TSDL_AudioSpec;
+    wav_path: pansichar = nil;
   begin
     app := SDL_malloc(SizeOf(TAppstate));
     app^ := Default(TAppstate);
@@ -34,40 +65,30 @@ type
       Exit(SDL_APP_FAILURE);
     end;
 
-    spec.channels := 1;
-    spec.format := SDL_AUDIO_F32;
-    spec.freq := 8000;
-
-    app^.stream := SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, @spec, nil, nil);
-    if app^.stream = nil then begin
-      SDL_Log('Couldn''t create audio stream: %s', SDL_GetError);
+    app^.audio_device := SDL_OpenAudioDevice(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, nil);
+    if app^.audio_device = 0 then begin
+      SDL_Log('Couldn''t open audio device: %s', SDL_GetError);
       Exit(SDL_APP_FAILURE);
     end;
 
-    SDL_ResumeAudioStreamDevice(app^.stream);
-
-    Exit(SDL_APP_CONTINUE);
+    if not initSound(app, 'sample.wav', @app^.sounds[0]) then begin
+      Exit(SDL_APP_FAILURE);
+    end else if not initSound(app, 'sword.wav', @app^.sounds[1]) then begin
+      Exit(SDL_APP_FAILURE);
+    end else begin
+      Exit(SDL_APP_CONTINUE);
+    end;
   end;
 
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    samples: array [0..512 - 1] of single;
-    freq, i: integer;
-    phase: single;
-  const
-    minimum_audio:Integer = (8000 * SizeOf(Single)) div 2;
+    i: integer;
   begin
-    if SDL_GetAudioStreamQueued(app^.stream) < minimum_audio then begin
-      for i := 0 to Length(samples) - 1 do begin
-        freq := 440;
-        phase := app^.current_sine_sample * freq / 8000.0;
-        samples[i] := SDL_sinf(phase * 2 * SDL_PI_F);
-        Inc(app^.current_sine_sample);
+    for i := 0 to Length(app^.sounds) - 1 do begin
+      if SDL_GetAudioStreamQueued(app^.sounds[i].stream) < app^.sounds[i].wav_data_len then begin
+        SDL_PutAudioStreamData(app^.sounds[i].stream, app^.sounds[i].wav_data, app^.sounds[i].wav_data_len);
       end;
-
-      app^.current_sine_sample := app^.current_sine_sample mod 8000;
-      SDL_PutAudioStreamData(app^.stream, @samples, SizeOf(samples));
     end;
 
     SDL_RenderClear(app^.renderer);
