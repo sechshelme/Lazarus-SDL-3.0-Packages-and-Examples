@@ -4,9 +4,11 @@ uses
   SysUtils,
   SDL3;
 
+const
+  MOTION_EVENT_COOLDOWN = 40;
+
 type
   PEventMessage = ^TEventMessage;
-
   TEventMessage = record
     str: pchar;
     color: TSDL_Color;
@@ -14,19 +16,12 @@ type
     Next: PEventMessage;
   end;
 
-var
-  Messages: TEventMessage;
-  messages_tail: PEventMessage = @Messages;
-
-const
-  MOTION_EVENT_COOLDOWN = 40;
-
-
-type
   TAppState = record
     window: PSDL_Window;
     renderer: PSDL_Renderer;
-    colors: array [0..64 - 1] of TSDL_Color;
+    colors: array [0..63] of TSDL_Color;
+    Messages: TEventMessage;
+    messages_tail: PEventMessage;
   end;
   PAppState = ^TAppState;
 
@@ -96,29 +91,29 @@ type
   procedure add_message(app: PAppState; jid: TSDL_JoystickID; fmt: pchar; args: array of const);
   var
     color: PSDL_Color;
-    msg: PEventMessage;
-    str: pchar;
+    msg: PEventMessage = nil;
+    str: pchar = nil;
   begin
     color := @app^.colors[jid mod Length(app^.colors)];
-    msg := PEventMessage(SDL_calloc(1, SizeOf(TEventMessage)));
+    msg := PEventMessage(SDL_calloc(1, SizeOf(msg^)));
     if msg = nil then begin
       Exit;
     end;
 
-    str := PChar(Format(fmt, args));
+    str := SDL_strdup(PChar(Format(fmt, args)));
     if str = nil then begin
       SDL_free(msg);
       Exit;
     end;
 
     msg^.str := str;
-    //  SDL_copyp(@msg.color, color);
     SDL_memcpy(@msg^.color, color, SizeOf(TSDL_Color));
-    msg^.start_ticks := SDL_GetTicks();
+
+    msg^.start_ticks := SDL_GetTicks;
     msg^.Next := nil;
 
-    messages_tail^.Next := msg;
-    messages_tail := msg;
+    app^.messages_tail^.Next := msg;
+    app^.messages_tail := msg;
   end;
 
 
@@ -130,6 +125,8 @@ type
     app := SDL_malloc(SizeOf(TAppstate));
     app^ := Default(TAppstate);
     appstate^ := app;
+
+    app^.messages_tail := @app^.Messages;
 
     SDL_SetAppMetadata('Example Input Joystick Events', '1.0', 'com.example.input-joystick-events');
 
@@ -144,9 +141,9 @@ type
     end;
 
     for i := 0 to Length(app^.colors) - 1 do begin
-      app^.colors[i].r := SDL_rand(255);
-      app^.colors[i].g := SDL_rand(255);
-      app^.colors[i].b := SDL_rand(255);
+      app^.colors[i].r := SDL_rand(127) + 128;
+      app^.colors[i].g := SDL_rand(127) + 128;
+      app^.colors[i].b := SDL_rand(127) + 128;
       app^.colors[i].a := 255;
     end;
 
@@ -167,28 +164,28 @@ type
   const
     msg_lifetime = 3500.0;
   begin
+    msg := app^.Messages.Next;
+    now := SDL_GetTicks;
+
     SDL_SetRenderDrawColor(app^.renderer, $00, $00, $00, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(app^.renderer);
     SDL_GetWindowSize(app^.window, @winw, @winh);
 
-    msg := Messages.Next;
-    now := SDL_GetTicks;
-
     while msg <> nil do begin
-      life_percent := ((now - msg^.start_ticks)) / msg_lifetime;
+      life_percent := (now - msg^.start_ticks) / msg_lifetime;
       if life_percent >= 1.0 then begin
-        Messages.Next := msg^.Next;
-        if messages_tail = msg then  begin
-          messages_tail := @Messages;
+        app^.Messages.Next := msg^.Next;
+        if app^.messages_tail = msg then  begin
+          app^.messages_tail := @app^.Messages;
         end;
         SDL_free(msg^.str);
         SDL_free(msg);
-        msg := Messages.Next;
+        msg := app^.Messages.Next;
         continue;
       end;
       x := (winw - (SDL_strlen(msg^.str) * SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE)) / 2.0;
       y := winh * life_percent;
-      if ((prev_y <> 0.0) and ((prev_y - y) < (SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE))) then begin
+      if (prev_y <> 0.0) and (prev_y - y < SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE) then begin
         msg^.start_ticks := now;
         break;
       end;
@@ -200,6 +197,8 @@ type
       msg := msg^.Next;
     end;
 
+    SDL_RenderPresent(app^.renderer);
+
     Exit(SDL_APP_CONTINUE);
   end;
 
@@ -209,7 +208,9 @@ type
     now: uint64;
     which: TSDL_JoystickID;
     joystick: PSDL_Joystick;
-    axis_motion_cooldown_time, ball_motion_cooldown_time: uint64;
+  const
+    ball_motion_cooldown_time: uint64 = 0;
+    axis_motion_cooldown_time: uint64 = 0;
   begin
     case event^._type of
       SDL_EVENT_QUIT: begin
@@ -234,8 +235,7 @@ type
         end;
       end;
       SDL_EVENT_JOYSTICK_AXIS_MOTION: begin
-        axis_motion_cooldown_time := 0;
-        now := SDL_GetTicks();
+        now := SDL_GetTicks;
         if now >= axis_motion_cooldown_time then begin
           which := event^.jaxis.which;
           axis_motion_cooldown_time := now + MOTION_EVENT_COOLDOWN;
@@ -243,8 +243,7 @@ type
         end;
       end;
       SDL_EVENT_JOYSTICK_BALL_MOTION: begin
-        ball_motion_cooldown_time := 0;
-        now := SDL_GetTicks();
+        now := SDL_GetTicks;
         if now >= ball_motion_cooldown_time then begin
           which := event^.jball.which;
           ball_motion_cooldown_time := now + MOTION_EVENT_COOLDOWN;
@@ -257,7 +256,11 @@ type
       end;
       SDL_EVENT_JOYSTICK_BUTTON_UP: begin
         which := event^.jbutton.which;
-        //        add_message(app,which, 'Joystick #%u button %d -> %s',  which,  event^.jbutton.button, event^.jbutton.down ? "PRESSED" : "RELEASED");
+        if event^.jbutton.down then begin
+          add_message(app, which, 'Joystick #%u button %d -> %s', [which, event^.jbutton.button, 'PRESSED']);
+        end else begin
+          add_message(app, which, 'Joystick #%u button %d -> %s', [which, event^.jbutton.button, 'RELEASED']);
+        end;
       end;
       SDL_EVENT_JOYSTICK_BATTERY_UPDATED: begin
         which := event^.jbattery.which;

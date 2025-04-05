@@ -3,13 +3,10 @@ program project1;
 uses
   SDL3;
 
-
 type
   TAppState = record
     window: PSDL_Window;
     renderer: PSDL_Renderer;
-    camera: PSDL_Camera;
-    texture: PSDL_Texture;
   end;
   PAppState = ^TAppState;
 
@@ -17,6 +14,7 @@ type
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
     app: PAppstate = nil;
+  var
     devcount: longint = 0;
     devices: PSDL_CameraID;
   begin
@@ -34,22 +32,6 @@ type
       Exit(SDL_APP_FAILURE);
     end;
 
-    devices := SDL_GetCameras(@devcount);
-    if devices = nil then begin
-      SDL_Log('Couldn''t enumerate camera devices: %s', SDL_GetError);
-      Exit(SDL_APP_FAILURE);
-    end else if devcount = 0 then begin
-      SDL_Log('Couldn''t find any camera devices! Please connect a camera and try again.');
-      Exit(SDL_APP_FAILURE);
-    end;
-
-    app^.camera := SDL_OpenCamera(devices[0], nil);
-    SDL_free(devices);
-    if app^.camera = nil then begin
-      SDL_Log('Couldn''t open camera: %s', SDL_GetError);
-      Exit(SDL_APP_FAILURE);
-    end;
-
     Exit(SDL_APP_CONTINUE);
   end;
 
@@ -58,28 +40,18 @@ type
     app: PAppstate absolute appstate;
     timestampNS: uint64 = 0;
     frame: PSDL_Surface;
+    now: double;
+    red, green, blue: Tdouble;
   begin
-    frame := SDL_AcquireCameraFrame(app^.camera, @timestampNS);
+    now := SDL_GetTicks / 1000.0;
 
-    if frame <> nil then begin
-      if app^.texture = nil then begin
-        SDL_SetWindowSize(app^.window, frame^.w, frame^.h);
-        app^.texture := SDL_CreateTexture(app^.renderer, frame^.format, SDL_TEXTUREACCESS_STREAMING, frame^.w, frame^.h);
-      end;
+    red := 0.5 + 0.5 * SDL_sin(now);
+    green := 0.5 + 0.5 * SDL_sin(now + SDL_PI_D * 2 / 3);
+    blue := 0.5 + 0.5 * SDL_sin(now + SDL_PI_D * 4 / 3);
 
-      if app^.texture <> nil then  begin
-        SDL_UpdateTexture(app^.texture, nil, frame^.pixels, frame^.pitch);
-      end;
+    SDL_SetRenderDrawColorFloat(app^.renderer, red, green, blue, SDL_ALPHA_OPAQUE_FLOAT);
 
-      SDL_ReleaseCameraFrame(app^.camera, frame);
-    end;
-
-    SDL_SetRenderDrawColor(app^.renderer, $99, $99, $99, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(app^.renderer);
-    if app^.texture <> nil then begin
-      SDL_RenderTexture(app^.renderer, app^.texture, nil, nil);
-    end;
-
     SDL_RenderPresent(app^.renderer);
     Exit(SDL_APP_CONTINUE);
   end;
@@ -92,13 +64,6 @@ type
       SDL_EVENT_QUIT: begin
         Exit(SDL_APP_SUCCESS);
       end;
-      SDL_EVENT_CAMERA_DEVICE_APPROVED: begin
-        SDL_Log('Camera use approved by user!');
-      end;
-      SDL_EVENT_CAMERA_DEVICE_DENIED: begin
-        SDL_Log('Camera use denied by user!');
-        Exit(SDL_APP_FAILURE);
-      end;
     end;
 
     Exit(SDL_APP_CONTINUE);
@@ -107,10 +72,8 @@ type
   procedure AppQuit(appstate: pointer; Result: TSDL_AppResult); cdecl;
   var
     app: PAppstate absolute appstate;
+    i: integer;
   begin
-    SDL_CloseCamera(app^.camera);
-    SDL_DestroyTexture(app^.texture);
-
     SDL_DestroyRenderer(app^.renderer);
     SDL_DestroyWindow(app^.window);
     SDL_free(app);
