@@ -24,7 +24,7 @@ type
     app^ := Default(TAppstate);
     appstate^ := app;
 
-    SDL_SetAppMetadata('Example Audio Simple Playback', '1.0', 'com.example.audio-simple-playback');
+    SDL_SetAppMetadata('Example Audio Load Wave', '1.0', 'com.example.audio-load-wav');
 
     if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_AUDIO) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);

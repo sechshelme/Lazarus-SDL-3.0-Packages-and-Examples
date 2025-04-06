@@ -23,6 +23,8 @@ type
     app^ := Default(TAppstate);
     appstate^ := app;
 
+    SDL_SetAppMetadata('Example Input Joystick Polling', '1.0', 'com.example.input-joystick-polling');
+
     if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_JOYSTICK) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);
       Exit(SDL_APP_FAILURE);

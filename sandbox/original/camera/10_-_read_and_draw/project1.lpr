@@ -24,6 +24,8 @@ type
     app^ := Default(TAppstate);
     appstate^ := app;
 
+    SDL_SetAppMetadata('Example Camera Read and Draw', '1.0', 'com.example.camera-read-and-draw');
+
     if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_CAMERA) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);
       Exit(SDL_APP_FAILURE);

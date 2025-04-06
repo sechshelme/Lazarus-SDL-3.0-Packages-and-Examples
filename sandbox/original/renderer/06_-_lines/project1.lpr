@@ -14,7 +14,6 @@ type
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
     app: PAppstate = nil;
-    i: integer;
   begin
     app := SDL_malloc(SizeOf(TAppstate));
     app^ := Default(TAppstate);
@@ -38,7 +37,6 @@ type
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    rect: TSDL_FRect;
     i: integer;
   const
     size = 30.0;

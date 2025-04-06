@@ -14,13 +14,12 @@ type
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
     app: PAppstate = nil;
-  var
-    devcount: longint = 0;
-    devices: PSDL_CameraID;
   begin
     app := SDL_malloc(SizeOf(TAppstate));
     app^ := Default(TAppstate);
     appstate^ := app;
+
+    SDL_SetAppMetadata('Example Renderer Clear', '1.0', 'com.example.renderer-clear');
 
     if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_CAMERA) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);
@@ -38,8 +37,6 @@ type
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    timestampNS: uint64 = 0;
-    frame: PSDL_Surface;
     now: double;
     red, green, blue: Tdouble;
   begin
@@ -72,7 +69,6 @@ type
   procedure AppQuit(appstate: pointer; Result: TSDL_AppResult); cdecl;
   var
     app: PAppstate absolute appstate;
-    i: integer;
   begin
     SDL_DestroyRenderer(app^.renderer);
     SDL_DestroyWindow(app^.window);
