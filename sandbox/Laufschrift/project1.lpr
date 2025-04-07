@@ -13,49 +13,14 @@ type
   end;
   PAppState = ^TAppState;
 
-const
-  MAX_LEN = 20;
 var
+  TextLength: SizeInt = 30;
   Laufschrift: array of string;
-
-  function Timer_cp(userdata: pointer; timerID: TSDL_TimerID; interval: TUint32): TUint32; cdecl;
-  var
-    i: integer;
-    len, ofs: SizeInt;
-  begin
-    ClrScr;
-
-    len := Length(Laufschrift);
-    ofs := len - MAX_LEN;
-    if ofs < 0 then begin
-      ofs := 0;
-    end;
-    for i := len-ofs downto  0  do begin
-      WriteLn(Laufschrift[i]);
-    end;
-
-
-    //for i := Length(Laufschrift) - 1 downto 0 do begin
-    //  WriteLn(Laufschrift[i]);
-    //  if i+MAX_LEN< Length(Laufschrift) then Continue;
-    //end;
-    //    for i := 0 to Length(Laufschrift) - 1 do begin
-    //      WriteLn(Laufschrift[i]);
-    //    end;
-    if Length(Laufschrift) > 0 then  begin
-      Delete(Laufschrift, 0, 1);
-    end;
-
-    if Length(Laufschrift) < MAX_LEN then  begin
-      Laufschrift += ['-'];
-    end;
-
-    Result := interval;
-  end;
 
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
     app: PAppstate = nil;
+    w, h: longint;
   begin
     app := SDL_malloc(SizeOf(TAppstate));
     app^ := Default(TAppstate);
@@ -68,14 +33,48 @@ var
       Exit(SDL_APP_FAILURE);
     end;
 
-    if not SDL_CreateWindowAndRenderer('examples', 640, 480, 0, @app^.window, @app^.renderer) then begin
+    if not SDL_CreateWindowAndRenderer('examples', 640, 480, SDL_WINDOW_RESIZABLE, @app^.window, @app^.renderer) then begin
       SDL_Log('Couldn''t create window/renderer: %s', SDL_GetError);
       Exit(SDL_APP_FAILURE);
     end;
 
-    SDL_AddTimer(300, @Timer_cp, app);
+    SDL_GetWindowSize(app^.window, @w, @h);
+    TextLength := h div 12;
+    SetLength(Laufschrift, TextLength);
 
     Exit(SDL_APP_CONTINUE);
+  end;
+
+  procedure printData(app: PAppstate);
+  var
+    i: integer;
+    len, ofs: SizeInt;
+  begin
+    SDL_SetRenderDrawColorFloat(app^.renderer, 1.0, 1.0, 1.0, SDL_ALPHA_OPAQUE_FLOAT);
+
+    len := Length(Laufschrift);
+    ofs := len - TextLength + 1;
+    if ofs < 0 then begin
+      ofs := 0;
+    end;
+
+    ClrScr;
+    for i := len - ofs downto 0 do begin
+      GotoXY(5, 2 + TextLength - i);
+      WriteLn(TextLength - i - 1, '.    ', Laufschrift[i]);
+
+      SDL_RenderDebugText(app^.renderer, 10, 1 + (TextLength - i) * 12, PChar(Laufschrift[i]));
+    end;
+
+    if SDL_GetTicks mod 100 = 0 then begin
+      if Length(Laufschrift) > 0 then  begin
+        Delete(Laufschrift, 0, 1);
+      end;
+
+      if Length(Laufschrift) <= TextLength then  begin
+        Laufschrift += ['-'];
+      end;
+    end;
   end;
 
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
@@ -91,8 +90,10 @@ var
     blue := 0.5 + 0.5 * SDL_sin(now + SDL_PI_D * 4 / 3);
 
     SDL_SetRenderDrawColorFloat(app^.renderer, red, green, blue, SDL_ALPHA_OPAQUE_FLOAT);
-
     SDL_RenderClear(app^.renderer);
+
+    printData(app);
+
     SDL_RenderPresent(app^.renderer);
     Exit(SDL_APP_CONTINUE);
   end;
@@ -101,6 +102,7 @@ var
   var
     app: PAppstate absolute appstate;
     s: string;
+    w, h: longint;
   const
     index: integer = 0;
   begin
@@ -111,6 +113,11 @@ var
     case event^._type of
       SDL_EVENT_QUIT: begin
         Exit(SDL_APP_SUCCESS);
+      end;
+      SDL_EVENT_WINDOW_RESIZED: begin
+        SDL_GetWindowSize(app^.window, @w, @h);
+        TextLength := h div 12;
+        SetLength(Laufschrift, TextLength);
       end;
     end;
 
