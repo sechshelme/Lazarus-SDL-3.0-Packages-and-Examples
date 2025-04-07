@@ -9,12 +9,33 @@ type
   TAppState = record
     window: PSDL_Window;
     renderer: PSDL_Renderer;
+    TextLength: SizeInt;
+    yPixelOffset: TUint64;
+    marqueeText: array of string;
   end;
   PAppState = ^TAppState;
 
-var
-  TextLength: SizeInt = 30;
-  Laufschrift: array of string;
+
+  function timer_cp(userdata: pointer; timerID: TSDL_TimerID; interval: TUint32): TUint32; cdecl;
+  var
+    app: PAppstate absolute userdata;
+  const
+    Counter: integer = 0;
+  begin
+    app^.yPixelOffset := Counter mod 12 - 12;
+    if Counter mod 12 = 0 then begin
+      if Length(app^.marqueeText) > 0 then  begin
+        Delete(app^.marqueeText, 0, 1);
+      end;
+
+      if Length(app^.marqueeText) <= app^.TextLength then  begin
+        app^.marqueeText += [''];
+      end;
+    end;
+    Inc(Counter);
+
+    Result := interval;
+  end;
 
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
@@ -38,8 +59,10 @@ var
     end;
 
     SDL_GetWindowSize(app^.window, @w, @h);
-    TextLength := h div 12;
-    SetLength(Laufschrift, TextLength);
+    app^.TextLength := h div 12;
+    SetLength(app^.marqueeText, app^.TextLength);
+
+    SDL_AddTimer(10, @timer_cp, app);
 
     Exit(SDL_APP_CONTINUE);
   end;
@@ -47,44 +70,25 @@ var
   procedure printData(app: PAppstate);
   var
     i: integer;
-    len, ofs: SizeInt;
-    y: TUint64;
-    speed ,    ticknew: TUint64;
-  const
-    tickold: TUint64=0;
-    Counter: integer = 0;
+    len, ofs, y: SizeInt;
+    w, h: longint;
+    alpha: single;
+    x: extended;
   begin
-    ticknew:=SDL_GetTicksNS;
-
-    speed:=(ticknew-tickold) div 10000;
-//    WriteLn(speed);
-    speed:=30;
-
-    tickold:=ticknew;
-
-    SDL_SetRenderDrawColorFloat(app^.renderer, 1.0, 1.0, 1.0, SDL_ALPHA_OPAQUE_FLOAT);
-
-    len := Length(Laufschrift);
-    ofs := len - TextLength + 1;
+    len := Length(app^.marqueeText);
+    ofs := len - app^.TextLength + 1;
     if ofs < 0 then begin
       ofs := 0;
     end;
+    SDL_GetWindowSize(app^.window, @w, @h);
 
-    y := (Counter div speed) mod 12-12;
     for i := len - ofs downto 0 do begin
-      SDL_RenderDebugText(app^.renderer, 10, 1 + (TextLength - i) * 12 + y, PChar(Laufschrift[i]));
+      y := 1 + (app^.TextLength - i) * 12 + app^.yPixelOffset;
+      x := (w - Length(app^.marqueeText[i]) * 12) / 2;
+      alpha := 1 - 1 / h * y;
+      SDL_SetRenderDrawColorFloat(app^.renderer, 1.0, 1.0, 1.0, alpha);
+      SDL_RenderDebugText(app^.renderer, x, y, PChar(app^.marqueeText[i]));
     end;
-
-    if Counter mod (speed * 12) = 0 then begin
-      if Length(Laufschrift) > 0 then  begin
-        Delete(Laufschrift, 0, 1);
-      end;
-
-      if Length(Laufschrift) <= TextLength then  begin
-        Laufschrift += ['-'];
-      end;
-    end;
-    Inc(Counter);
   end;
 
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
@@ -117,7 +121,7 @@ var
     index: integer = 0;
   begin
     WriteStr(s, index, '.   Ev: ', event^._type);
-    Laufschrift += [s];
+    app^.marqueeText += [s];
     Inc(index);
 
     case event^._type of
@@ -126,8 +130,8 @@ var
       end;
       SDL_EVENT_WINDOW_RESIZED: begin
         SDL_GetWindowSize(app^.window, @w, @h);
-        TextLength := h div 12;
-        SetLength(Laufschrift, TextLength);
+        app^.TextLength := h div 12;
+        SetLength(app^.marqueeText, app^.TextLength);
       end;
     end;
 
