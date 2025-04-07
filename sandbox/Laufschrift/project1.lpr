@@ -3,7 +3,6 @@ program project1;
 {$modeswitch arrayoperators on}
 
 uses
-  crt,
   SDL3;
 
 type
@@ -49,7 +48,20 @@ var
   var
     i: integer;
     len, ofs: SizeInt;
+    y: TUint64;
+    speed ,    ticknew: TUint64;
+  const
+    tickold: TUint64=0;
+    Counter: integer = 0;
   begin
+    ticknew:=SDL_GetTicksNS;
+
+    speed:=(ticknew-tickold) div 10000;
+//    WriteLn(speed);
+    speed:=30;
+
+    tickold:=ticknew;
+
     SDL_SetRenderDrawColorFloat(app^.renderer, 1.0, 1.0, 1.0, SDL_ALPHA_OPAQUE_FLOAT);
 
     len := Length(Laufschrift);
@@ -58,15 +70,12 @@ var
       ofs := 0;
     end;
 
-    ClrScr;
+    y := (Counter div speed) mod 12-12;
     for i := len - ofs downto 0 do begin
-      GotoXY(5, 2 + TextLength - i);
-      WriteLn(TextLength - i - 1, '.    ', Laufschrift[i]);
-
-      SDL_RenderDebugText(app^.renderer, 10, 1 + (TextLength - i) * 12, PChar(Laufschrift[i]));
+      SDL_RenderDebugText(app^.renderer, 10, 1 + (TextLength - i) * 12 + y, PChar(Laufschrift[i]));
     end;
 
-    if SDL_GetTicks mod 100 = 0 then begin
+    if Counter mod (speed * 12) = 0 then begin
       if Length(Laufschrift) > 0 then  begin
         Delete(Laufschrift, 0, 1);
       end;
@@ -75,6 +84,7 @@ var
         Laufschrift += ['-'];
       end;
     end;
+    Inc(Counter);
   end;
 
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
