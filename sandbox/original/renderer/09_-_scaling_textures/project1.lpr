@@ -27,7 +27,7 @@ type
     app^ := Default(TAppstate);
     appstate^ := app;
 
-    SDL_SetAppMetadata('Example Renderer Rectangles', '1.0', 'com.example.renderer-rectangles');
+    SDL_SetAppMetadata('Example Renderer Scaling Textures', '1.0', 'com.example.renderer-scaling-textures');
 
     if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_CAMERA) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);
@@ -65,10 +65,9 @@ type
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    i: integer;
     now: uint64;
-    size, direction, scale, w, h: single;
-    des_rect: TSDL_FRect;
+    direction, scale: single;
+    dst_rect: TSDL_FRect;
   begin
     now := SDL_GetTicks;
 
@@ -79,21 +78,16 @@ type
     end;
     scale := (((integer(now mod 1000)) - 500) / 500.0) * direction;
 
-    with app^ do begin
-      SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-      SDL_RenderClear(renderer);
+    SDL_SetRenderDrawColor(app^.renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_RenderClear(app^.renderer);
 
-      des_rect.items := [100.0 * scale, 0.0, texture_width, texture_height];
-      SDL_RenderTexture(renderer, texture, nil, @des_rect);
+    dst_rect.w := app^.texture_width + (app^.texture_width * scale);
+    dst_rect.h := app^.texture_height + (app^.texture_height * scale);
+    dst_rect.x := (WINDOW_WIDTH - dst_rect.w) / 2.0;
+    dst_rect.y := (WINDOW_HEIGHT - dst_rect.h) / 2.0;
+    SDL_RenderTexture(app^.renderer, app^.texture, nil, @dst_rect);
 
-      des_rect.items := [(WINDOW_WIDTH - texture_width) / 2, (WINDOW_HEIGHT - texture_height) / 2, texture_width, texture_height];
-      SDL_RenderTexture(renderer, texture, nil, @des_rect);
-
-      des_rect.items := [(WINDOW_WIDTH - texture_width) - (100.0 * scale), WINDOW_HEIGHT - texture_height, texture_width, texture_height];
-      SDL_RenderTexture(renderer, texture, nil, @des_rect);
-
-      SDL_RenderPresent(renderer);
-    end;
+    SDL_RenderPresent(app^.renderer);
 
     Exit(SDL_APP_CONTINUE);
   end;
