@@ -27,7 +27,7 @@ type
     app^ := Default(TAppstate);
     appstate^ := app;
 
-    SDL_SetAppMetadata('Example Renderer Rectangles', '1.0', 'com.example.renderer-rectangles');
+    SDL_SetAppMetadata('Example Renderer Textures', '1.0', 'com.example.renderer-textures');
 
     if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_CAMERA) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);
