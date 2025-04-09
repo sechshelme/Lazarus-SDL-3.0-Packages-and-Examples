@@ -69,7 +69,7 @@ type
     now: uint64;
     size, direction, scale: single;
     vertices: array[0..3] of TSDL_Vertex;
-    indices: array [0..5] of longint=( 0, 1, 2, 1, 2, 3);
+    indices: array [0..5] of longint = (0, 1, 2, 1, 2, 3);
   begin
     now := SDL_GetTicks;
 
@@ -102,17 +102,28 @@ type
     FillChar(vertices, SizeOf(vertices), $00);
     vertices[0].position.x := 10.0;
     vertices[0].position.y := 10.0;
-    vertices[0].color.items := [1.0, 1.0, 1.0, 1.0];
+    vertices[0].color.r := 1.0;
+    vertices[0].color.g := 1.0;
+    vertices[0].color.b := 1.0;
+    vertices[0].color.a := 1.0;
     vertices[0].tex_coord.x := 0.0;
     vertices[0].tex_coord.y := 0.0;
+
     vertices[1].position.x := 150.0;
     vertices[1].position.y := 10.0;
-    vertices[1].color.items := [1.0, 1.0, 1.0, 1.0];
+    vertices[1].color.r := 1.0;
+    vertices[1].color.g := 1.0;
+    vertices[1].color.b := 1.0;
+    vertices[1].color.a := 1.0;
     vertices[1].tex_coord.x := 1.0;
     vertices[1].tex_coord.y := 0.0;
+
     vertices[2].position.x := 10.0;
     vertices[2].position.y := 150.0;
-    vertices[2].color.items := [1.0, 1.0, 1.0, 1.0];
+    vertices[2].color.r := 1.0;
+    vertices[2].color.g := 1.0;
+    vertices[2].color.b := 1.0;
+    vertices[2].color.a := 1.0;
     vertices[2].tex_coord.x := 0.0;
     vertices[2].tex_coord.y := 1.0;
     SDL_RenderGeometry(app^.renderer, app^.texture, vertices, 3, nil, 0);
@@ -122,7 +133,10 @@ type
     end;
     vertices[3].position.x := 600.0;
     vertices[3].position.y := 150.0;
-    vertices[3].color.items := [1.0, 1.0, 1.0, 1.0];
+    vertices[3].color.r := 1.0;
+    vertices[3].color.g := 1.0;
+    vertices[3].color.b := 1.0;
+    vertices[3].color.a := 1.0;
     vertices[3].tex_coord.x := 1.0;
     vertices[3].tex_coord.y := 1.0;
 

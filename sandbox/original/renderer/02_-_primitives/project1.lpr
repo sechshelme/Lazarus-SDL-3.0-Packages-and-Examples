@@ -44,13 +44,12 @@ type
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    rect: TSDL_FRect;
+    rect: TSDL_FRect = (items: (100, 100, 440, 280));
   begin
     SDL_SetRenderDrawColor(app^.renderer, 33, 33, 33, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(app^.renderer);
 
     SDL_SetRenderDrawColor(app^.renderer, 0, 0, 255, SDL_ALPHA_OPAQUE);
-    rect.items := [100, 100, 440, 280];
     SDL_RenderFillRect(app^.renderer, @rect);
 
     SDL_SetRenderDrawColor(app^.renderer, 255, 0, 0, SDL_ALPHA_OPAQUE);

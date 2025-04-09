@@ -78,21 +78,28 @@ type
     end;
     scale := (((integer(now mod 1000)) - 500) / 500.0) * direction;
 
-    with app^ do begin
-      SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-      SDL_RenderClear(renderer);
+    SDL_SetRenderDrawColor(app^.renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_RenderClear(app^.renderer);
 
-      des_rect.items := [100.0 * scale, 0.0, texture_width, texture_height];
-      SDL_RenderTexture(renderer, texture, nil, @des_rect);
+    des_rect.x := 100.0 * scale;
+    des_rect.y := 0.0;
+    des_rect.w := app^.texture_width;
+    des_rect.h := app^.texture_height;
+    SDL_RenderTexture(app^.renderer, app^.texture, nil, @des_rect);
 
-      des_rect.items := [(WINDOW_WIDTH - texture_width) / 2, (WINDOW_HEIGHT - texture_height) / 2, texture_width, texture_height];
-      SDL_RenderTexture(renderer, texture, nil, @des_rect);
+    des_rect.x := (WINDOW_WIDTH - app^.texture_width) / 2;
+    des_rect.y := (WINDOW_HEIGHT - app^.texture_height) / 2;
+    des_rect.w := app^.texture_width;
+    des_rect.h := app^.texture_height;
+    SDL_RenderTexture(app^.renderer, app^.texture, nil, @des_rect);
 
-      des_rect.items := [(WINDOW_WIDTH - texture_width) - (100.0 * scale), WINDOW_HEIGHT - texture_height, texture_width, texture_height];
-      SDL_RenderTexture(renderer, texture, nil, @des_rect);
+    des_rect.x := (WINDOW_WIDTH - app^.texture_width) - (100.0 * scale);
+    des_rect.y := WINDOW_HEIGHT - app^.texture_height;
+    des_rect.w := app^.texture_width;
+    des_rect.h := app^.texture_height;
+    SDL_RenderTexture(app^.renderer, app^.texture, nil, @des_rect);
 
-      SDL_RenderPresent(renderer);
-    end;
+    SDL_RenderPresent(app^.renderer);
 
     Exit(SDL_APP_CONTINUE);
   end;

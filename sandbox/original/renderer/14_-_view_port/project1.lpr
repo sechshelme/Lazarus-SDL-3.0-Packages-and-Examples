@@ -27,7 +27,7 @@ type
     app^ := Default(TAppstate);
     appstate^ := app;
 
-    SDL_SetAppMetadata('Example Renderer Rotating Textures', '1.0', 'com.example.renderer-rotating-textures');
+    SDL_SetAppMetadata('Example Renderer Viewport', '1.0', 'com.example.renderer-viewport');
 
     if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_CAMERA) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);
@@ -65,29 +65,47 @@ type
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    now: uint64;
-    des_rect: TSDL_FRect;
-    rotation: double;
-    center: TSDL_FPoint;
+    dst_rect: TSDL_FRect;
+    viewport: TSDL_Rect;
   begin
-    now := SDL_GetTicks;
-    rotation := ((((now mod 2000))) / 2000.0) * 360.0;
+    dst_rect.x:=0.0;
+    dst_rect.y:=0.0;
+    dst_rect.w:=app^.texture_width;
+    dst_rect.h:=app^.texture_height;
 
-    with app^ do begin
-      SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-      SDL_RenderClear(renderer);
+    SDL_SetRenderDrawColor(app^.renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_RenderClear(app^.renderer);
 
-      des_rect.x := (WINDOW_WIDTH - texture_width) / 2;
-      des_rect.y := (WINDOW_HEIGHT - texture_height) / 2;
-      des_rect.w := texture_width;
-      des_rect.h := texture_height;
-      center.x := texture_width / 2.0;
-      center.y := texture_height / 2.0;
+    viewport.x := 0;
+    viewport.y := 0;
+    viewport.w := WINDOW_WIDTH div 2;
+    viewport.h := WINDOW_HEIGHT div 2;
+    SDL_SetRenderViewport(app^.renderer, nil);
+    SDL_RenderTexture(app^.renderer, app^.texture, nil, @dst_rect);
 
-      SDL_RenderTextureRotated(renderer, texture, nil, @des_rect, rotation, @center, SDL_FLIP_NONE);
+    viewport.x := WINDOW_WIDTH div 2;
+    viewport.y := WINDOW_HEIGHT div 2;
+    viewport.w := WINDOW_WIDTH div 2;
+    viewport.h := WINDOW_HEIGHT div 2;
+    SDL_SetRenderViewport(app^.renderer, @viewport);
+    SDL_RenderTexture(app^.renderer, app^.texture, nil, @dst_rect);
 
-      SDL_RenderPresent(renderer);
-    end;
+    viewport.x := 0;
+    viewport.y := WINDOW_HEIGHT - (WINDOW_HEIGHT div 5);
+    viewport.w := WINDOW_WIDTH div 5;
+    viewport.h := WINDOW_HEIGHT div 5;
+    SDL_SetRenderViewport(app^.renderer, @viewport);
+    SDL_RenderTexture(app^.renderer, app^.texture, nil, @dst_rect);
+
+    viewport.x := 100;
+    viewport.y := 200;
+    viewport.w := WINDOW_WIDTH;
+    viewport.h := WINDOW_HEIGHT;
+    SDL_SetRenderViewport(app^.renderer, @viewport);
+    dst_rect.y := -50;
+    SDL_RenderTexture(app^.renderer, app^.texture, nil, @dst_rect);
+
+    SDL_RenderPresent(app^.renderer);
 
     Exit(SDL_APP_CONTINUE);
   end;

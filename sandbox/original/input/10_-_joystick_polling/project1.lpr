@@ -74,7 +74,10 @@ type
         color := @app^.colors[i mod Length(app^.colors)];
         val := ((SDL_GetJoystickAxis(app^.joystick, i)) / 32767.0);
         dx := x + (val * x);
-        dst.items := [dx, y, x - SDL_fabsf(dx), size];
+        dst.x := dx;
+        dst.y := y;
+        dst.w := x - SDL_fabsf(dx);
+        dst.h := size;
         SDL_SetRenderDrawColor(app^.renderer, color^.r, color^.g, color^.b, color^.a);
         SDL_RenderFillRect(app^.renderer, @dst);
         y += size;
@@ -84,7 +87,10 @@ type
       x := (winw - (total * size)) / 2;
       for i := 0 to total - 1 do begin
         color := @app^.colors[i mod Length(app^.colors)];
-        dst.items := [x, 0.0, size, size];
+        dst.x := x;
+        dst.y := 0.0;
+        dst.w := size;
+        dst.h := size;
         if SDL_GetJoystickButton(app^.joystick, i) then begin
           SDL_SetRenderDrawColor(app^.renderer, color^.r, color^.g, color^.b, color^.a);
         end else begin
@@ -103,8 +109,14 @@ type
       for i := 0 to total - 1 do begin
         color := @app^.colors[i mod Length(app^.colors)];
         thirdsize := size / 3.0;
-        cross[0].items := [x, y + thirdsize, size, thirdsize];
-        cross[1].items := [x + thirdsize, y, thirdsize, size];
+        cross[0].x := x;
+        cross[0].y := y + thirdsize;
+        cross[0].w := size;
+        cross[0].h := thirdsize;
+        cross[1].x := x + thirdsize;
+        cross[1].y := y + thirdsize;
+        cross[1].w := thirdsize;
+        cross[1].h := size;
         hat := SDL_GetJoystickHat(app^.joystick, i);
 
         SDL_SetRenderDrawColor(app^.renderer, 90, 90, 90, 255);
@@ -113,22 +125,34 @@ type
         SDL_SetRenderDrawColor(app^.renderer, color^.r, color^.g, color^.b, color^.a);
 
         if (hat and SDL_HAT_UP) <> 0 then begin
-          dst.items := [x + thirdsize, y, thirdsize, thirdsize];
+          dst.x := x + thirdsize;
+          dst.y := y;
+          dst.w := thirdsize;
+          dst.h := thirdsize;
           SDL_RenderFillRect(app^.renderer, @dst);
         end;
 
         if (hat and SDL_HAT_RIGHT) <> 0 then begin
-          dst.items := [x + (thirdsize * 2), y + thirdsize, thirdsize, thirdsize];
+          dst.x := x + (thirdsize * 2);
+          dst.y := y + thirdsize;
+          dst.w := thirdsize;
+          dst.h := thirdsize;
           SDL_RenderFillRect(app^.renderer, @dst);
         end;
 
         if (hat and SDL_HAT_DOWN) <> 0 then begin
-          dst.items := [x + thirdsize, y + (thirdsize * 2), thirdsize, thirdsize];
+          dst.x := x + thirdsize;
+          dst.y := y + (thirdsize * 2);
+          dst.w := thirdsize;
+          dst.h := thirdsize;
           SDL_RenderFillRect(app^.renderer, @dst);
         end;
 
         if (hat and SDL_HAT_LEFT) <> 0 then begin
-          dst.items := [x, y + thirdsize, thirdsize, thirdsize];
+          dst.x := x;
+          dst.y := y + thirdsize;
+          dst.w := thirdsize;
+          dst.h := thirdsize;
           SDL_RenderFillRect(app^.renderer, @dst);
         end;
 
