@@ -12,7 +12,7 @@ const
   SDL_WINDOW_HEIGHT = (SNAKE_BLOCK_SIZE_IN_PIXELS * SNAKE_GAME_HEIGHT);
 
   SNAKE_MATRIX_SIZE = (SNAKE_GAME_WIDTH * SNAKE_GAME_HEIGHT);
-  SNAKE_CELL_MAX_BITS = 3;
+  SNAKE_CELL_MAX_BITS = 13;
 
   THREE_BITS = $7;
 
@@ -43,14 +43,14 @@ const
 
 type
   TSnakeContext = record
-    cells: array[0..((SNAKE_MATRIX_SIZE * SNAKE_CELL_MAX_BITS) div 8) - 1] of byte; // Array für die Zellen
-    head_xpos: shortint;       // X-Position des Kopfes
-    head_ypos: shortint;       // Y-Position des Kopfes
-    tail_xpos: shortint;       // X-Position des Schwanzes
-    tail_ypos: shortint;       // Y-Position des Schwanzes
-    next_dir: shortint;        // Nächste Richtung (als char in C)
-    inhibit_tail_step: shortint; // Flag, um den Schwanzschritt zu unterdrücken
-    occupied_cells: cardinal;  // Anzahl der belegten Zellen (unsigned in C)
+    cells: array[0..((SNAKE_MATRIX_SIZE * SNAKE_CELL_MAX_BITS) div 4) - 1] of byte; // Array für die Zellen
+    head_xpos: int8;       // X-Position des Kopfes
+    head_ypos: int8;       // Y-Position des Kopfes
+    tail_xpos: int8;       // X-Position des Schwanzes
+    tail_ypos: int8;       // Y-Position des Schwanzes
+    next_dir: int8;        // Nächste Richtung (als char in C)
+    inhibit_tail_step: int8; // Flag, um den Schwanzschritt zu unterdrücken
+    occupied_cells: uint32;  // Anzahl der belegten Zellen (unsigned in C)
   end;
   PSnakeContext = ^TSnakeContext;
 
@@ -70,11 +70,6 @@ type
   begin
     shift_ := Shift(x, y);
     SDL_memcpy(@range, @ctx^.cells[shift_ div 8], SizeOf(range));
-
-    // Kopiere die Daten aus dem Speicherbereich
-    //    Move(ctx^.cells[shift div 8], range, SizeOf(range));
-
-    // Berechne und gib die entsprechende SnakeCell zurück
     Result := TSnakeCell((range shr (shift_ mod 8)) and THREE_BITS);
   end;
 
@@ -88,9 +83,8 @@ type
   var
     shift_: integer;
     adjust: integer;
-    pos: pchar;
-    range: word;
-    p: pbyte;
+    pos: PInt8;
+    range: UInt16;
   begin
     shift_ := SHIFT(x, y);
     adjust := shift_ mod 8;
@@ -159,35 +153,179 @@ type
     end;
   end;
 
-  procedure wrap_around_(var val: shortint; max: shortint);
+  procedure wrap_around_(val: PInt8; max: int8);
   begin
-    if val < 0 then begin
-      val := max - 1;
-    end else if val > max - 1 then begin
-      val := 0;
+    if val^ < 0 then begin
+      val^ := max - 1;
+    end else if val^ > max - 1 then begin
+      val^ := 0;
     end;
   end;
 
+  procedure snake_step(ctx: PSnakeContext);
+  var
+    dir_as_cell: TSnakeCell;
+    ct: TSnakeCell;
+    prev_xpos, prev_ypos: byte;
+  begin
+    dir_as_cell := TSnakeCell(ctx^.next_dir + 1);
+
+    { Schwanz vorwärts bewegen }
+    if ctx^.inhibit_tail_step > 0 then begin
+      Dec(ctx^.inhibit_tail_step);
+    end;
+
+    if ctx^.inhibit_tail_step = 0 then begin
+      Inc(ctx^.inhibit_tail_step);
+      ct := snake_cell_at(ctx, ctx^.tail_xpos, ctx^.tail_ypos);
+      put_cell_at(ctx, ctx^.tail_xpos, ctx^.tail_ypos, SNAKE_CELL_NOTHING);
+
+      case ct of
+        SNAKE_CELL_SRIGHT: begin
+          Inc(ctx^.tail_xpos);
+        end;
+        SNAKE_CELL_SUP: begin
+          Dec(ctx^.tail_ypos);
+        end;
+        SNAKE_CELL_SLEFT: begin
+          Dec(ctx^.tail_xpos);
+        end;
+        SNAKE_CELL_SDOWN: begin
+          Inc(ctx^.tail_ypos);
+        end;
+      end;
+
+      wrap_around_(@ctx^.tail_xpos, SNAKE_GAME_WIDTH);
+      wrap_around_(@ctx^.tail_ypos, SNAKE_GAME_HEIGHT);
+    end;
+
+    { Kopf vorwärts bewegen }
+    prev_xpos := ctx^.head_xpos;
+    prev_ypos := ctx^.head_ypos;
+
+    case ctx^.next_dir of
+      SNAKE_DIR_RIGHT: begin
+        Inc(ctx^.head_xpos);
+      end;
+      SNAKE_DIR_UP: begin
+        Dec(ctx^.head_ypos);
+      end;
+      SNAKE_DIR_LEFT: begin
+        Dec(ctx^.head_xpos);
+      end;
+      SNAKE_DIR_DOWN: begin
+        Inc(ctx^.head_xpos);
+      end;
+    end;
+
+    wrap_around_(@ctx^.head_xpos, SNAKE_GAME_WIDTH);
+    wrap_around_(@ctx^.head_ypos, SNAKE_GAME_HEIGHT);
+
+    { Kollisionen }
+    ct := snake_cell_at(ctx, ctx^.head_xpos, ctx^.head_ypos);
+
+    if (ct <> SNAKE_CELL_NOTHING) and (ct <> SNAKE_CELL_FOOD) then begin
+      snake_initialize(ctx);
+      Exit;
+    end;
+
+    put_cell_at(ctx, prev_xpos, prev_ypos, dir_as_cell);
+    put_cell_at(ctx, ctx^.head_xpos, ctx^.head_ypos, dir_as_cell);
+
+    if ct = SNAKE_CELL_FOOD then begin
+      if are_cells_full_(ctx) then begin
+        snake_initialize(ctx);
+        Exit;
+      end;
+
+      new_food_pos_(ctx);
+      Inc(ctx^.inhibit_tail_step);
+      Inc(ctx^.occupied_cells);
+    end;
+  end;
+
+  function handle_key_event(ctx: PSnakeContext; keyCode: TSDL_Scancode): TSDL_AppResult;
+  begin
+    case keyCode of
+      // Quit
+      SDL_SCANCODE_ESCAPE,
+      SDL_SCANCODE_Q: begin
+        Exit(SDL_APP_SUCCESS);
+      end;
+
+      // Restart the game as if the program was launched
+      SDL_SCANCODE_R: begin
+        snake_initialize(ctx);
+      end;
+
+      // Decide new direction of the snake
+      SDL_SCANCODE_RIGHT: begin
+        snake_redir(ctx, SNAKE_DIR_RIGHT);
+      end;
+      SDL_SCANCODE_UP: begin
+        snake_redir(ctx, SNAKE_DIR_UP);
+      end;
+      SDL_SCANCODE_LEFT: begin
+        snake_redir(ctx, SNAKE_DIR_LEFT);
+      end;
+      SDL_SCANCODE_DOWN: begin
+        snake_redir(ctx, SNAKE_DIR_DOWN);
+      end;
+      else begin
+      end
+      // Default case does nothing
+    end;
+
+    Exit(SDL_APP_CONTINUE);
+  end;
+
+  // =====================
+
+type
+  TExtendedMetadata = record
+    key: pchar;
+    Value: pchar;
+  end;
+
+const
+  extended_metadata: array[0..3] of TExtendedMetadata = (
+    (key: SDL_PROP_APP_METADATA_URL_STRING; Value: 'https://examples.libsdl.org/SDL3/demo/01-snake/'),
+    (key: SDL_PROP_APP_METADATA_CREATOR_STRING; Value: 'SDL team'),
+    (key: SDL_PROP_APP_METADATA_COPYRIGHT_STRING; Value: 'Placed in the public domain'),
+    (key: SDL_PROP_APP_METADATA_TYPE_STRING; Value: 'game')
+    );
 
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
     app: PAppstate = nil;
+    i: integer;
   begin
     app := SDL_malloc(SizeOf(TAppstate));
     app^ := Default(TAppstate);
     appstate^ := app;
 
-    SDL_SetAppMetadata('Example Renderer Clear', '1.0', 'com.example.renderer-clear');
+    if not SDL_SetAppMetadata('Example Snake game', '1.0', 'com.example.Snake') then begin
+      Exit(SDL_APP_FAILURE);
+    end;
 
-    if not SDL_Init(SDL_INIT_VIDEO or SDL_INIT_CAMERA) then begin
+    for i := 0 to Length(extended_metadata) - 1 do begin
+      if not SDL_SetAppMetadataProperty(extended_metadata[i].key, extended_metadata[i].Value) then begin
+        Exit(SDL_APP_FAILURE);
+      end;
+    end;
+
+    if not SDL_Init(SDL_INIT_VIDEO) then begin
       SDL_Log('Couldn''t initialize SDL: %s', SDL_GetError);
       Exit(SDL_APP_FAILURE);
     end;
 
-    if not SDL_CreateWindowAndRenderer('examples', 640, 480, 0, @app^.window, @app^.renderer) then begin
+    if not SDL_CreateWindowAndRenderer('examples', SDL_WINDOW_WIDTH, SDL_WINDOW_HEIGHT, 0, @app^.window, @app^.renderer) then begin
       SDL_Log('Couldn''t create window/renderer: %s', SDL_GetError);
       Exit(SDL_APP_FAILURE);
     end;
+
+    snake_initialize(@app^.snake_ctx);
+    app^.last_step := SDL_GetTicks;
 
     Exit(SDL_APP_CONTINUE);
   end;
@@ -196,17 +334,51 @@ type
   var
     app: PAppstate absolute appstate;
     now: double;
-    red, green, blue: Tdouble;
+    ctx: PSnakeContext;
+    r: TSDL_FRect;
+    i, j: integer;
+    ct: TSnakeCell;
   begin
-    now := SDL_GetTicks / 1000.0;
+    ctx := @app^.snake_ctx;
+    now := SDL_GetTicks;
 
-    red := 0.5 + 0.5 * SDL_sin(now);
-    green := 0.5 + 0.5 * SDL_sin(now + SDL_PI_D * 2 / 3);
-    blue := 0.5 + 0.5 * SDL_sin(now + SDL_PI_D * 4 / 3);
+    while (now - app^.last_step) >= STEP_RATE_IN_MILLISECONDS do begin
+      snake_step(ctx);
+      app^.last_step := app^.last_step + STEP_RATE_IN_MILLISECONDS;
+    end;
 
-    SDL_SetRenderDrawColorFloat(app^.renderer, red, green, blue, SDL_ALPHA_OPAQUE_FLOAT);
+    r.w := SNAKE_BLOCK_SIZE_IN_PIXELS;
+    r.h := SNAKE_BLOCK_SIZE_IN_PIXELS;
 
+    SDL_SetRenderDrawColor(app^.renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(app^.renderer);
+
+    for i := 0 to SNAKE_GAME_WIDTH - 1 do begin
+      for j := 0 to SNAKE_GAME_HEIGHT - 1 do begin
+        ct := snake_cell_at(ctx, i, j);
+        if ct = SNAKE_CELL_NOTHING then begin
+          Continue;
+        end;
+
+        set_rect_xy_(@r, i, j);
+
+        if ct = SNAKE_CELL_FOOD then begin
+          SDL_SetRenderDrawColor(app^.renderer, 80, 80, 255, SDL_ALPHA_OPAQUE);
+        end else // Körper
+        begin
+          SDL_SetRenderDrawColor(app^.renderer, 0, 128, 0, SDL_ALPHA_OPAQUE);
+        end;
+
+        SDL_RenderFillRect(app^.renderer, @r);
+      end;
+    end;
+
+    // Kopf zeichnen
+    SDL_SetRenderDrawColor(app^.renderer, 255, 255, 0, SDL_ALPHA_OPAQUE);
+    set_rect_xy_(@r, ctx^.head_xpos, ctx^.head_ypos);
+    SDL_RenderFillRect(app^.renderer, @r);
+
+
     SDL_RenderPresent(app^.renderer);
     Exit(SDL_APP_CONTINUE);
   end;
@@ -214,10 +386,15 @@ type
   function AppEvent(appstate: pointer; event: PSDL_Event): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
+    ctx: PSnakeContext;
   begin
+    ctx := @app^.snake_ctx;
     case event^._type of
       SDL_EVENT_QUIT: begin
         Exit(SDL_APP_SUCCESS);
+      end;
+      SDL_EVENT_KEY_DOWN: begin
+        Exit(handle_key_event(ctx, event^.key.scancode));
       end;
     end;
 
