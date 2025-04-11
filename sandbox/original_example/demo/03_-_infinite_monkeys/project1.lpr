@@ -75,19 +75,17 @@ const
     app: PAppstate absolute appstate;
     i: integer;
   begin
-    with app^ do begin
-      if (rows > 0) and (cols > 0) then begin
-        for i := 0 to rows - 1 do begin
-          SDL_Free(Lines[i]^.Text);
-          SDL_Free(Lines[i]);
-        end;
-        SDL_Free(Lines);
-        Lines := nil;
+    if (app^.rows > 0) and (app^.cols > 0) then begin
+      for i := 0 to app^.rows - 1 do begin
+        SDL_Free(app^.Lines[i]^.Text);
+        SDL_Free(app^.Lines[i]);
       end;
-
-      SDL_Free(monkey_chars.Text);
-      monkey_chars.Text := nil;
+      SDL_Free(app^.Lines);
+      app^.Lines := nil;
     end;
+
+    SDL_Free(app^.monkey_chars.Text);
+    app^.monkey_chars.Text := nil;
   end;
 
   procedure OnWindowSizeChanged(appstate: pointer);
@@ -96,50 +94,157 @@ const
     w, h: integer;
     i: integer;
   begin
-    with app^ do begin
-      if not SDL_GetCurrentRenderOutputSize(renderer, @w, @h) then begin
-        Exit;
+    if not SDL_GetCurrentRenderOutputSize(app^.renderer, @w, @h) then begin
+      Exit;
+    end;
+
+    FreeLines(app);
+
+    app^.row := 0;
+    app^.rows := (h div SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE) - 4;
+    app^.cols := (w div SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE);
+
+    if (app^.rows > 0) and (app^.cols > 0) then begin
+      app^.Lines := PPLine(SDL_malloc(app^.rows * SizeOf(PLine)));
+      if app^.Lines <> nil then begin
+        for i := 0 to app^.rows - 1 do begin
+          app^.Lines[i] := PLine(SDL_malloc(SizeOf(TLine)));
+          if app^.Lines[i] = nil then begin
+            FreeLines(app);
+            Break;
+          end;
+
+          app^.Lines[i]^.Text := PUint32(SDL_malloc(app^.cols * SizeOf(uint32)));
+          if app^.Lines[i]^.Text = nil then begin
+            FreeLines(app);
+            Break;
+          end;
+
+          app^.Lines[i]^.length := 0;
+        end;
       end;
 
-      FreeLines(app);
-
-      row := 0;
-      rows := (h div SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE) - 4;
-      cols := (w div SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE);
-
-      if (rows > 0) and (cols > 0) then begin
-        Lines := PPLine(SDL_malloc(rows * SizeOf(PLine)));
-        if Lines <> nil then begin
-          for i := 0 to rows - 1 do begin
-            Lines[i] := PLine(SDL_malloc(SizeOf(TLine)));
-            if Lines[i] = nil then begin
-              FreeLines(app);
-              Break;
-            end;
-
-            Lines[i]^.Text := PUint32(SDL_malloc(cols * SizeOf(uint32)));
-            if Lines[i]^.Text = nil then begin
-              FreeLines(app);
-              Break;
-            end;
-
-            Lines[i]^.length := 0;
-          end;
+      app^.monkey_chars.Text := PUint32(SDL_malloc(app^.cols * SizeOf(uint32)));
+      if app^.monkey_chars.Text <> nil then begin
+        for i := 0 to app^.cols - 1 do begin
+          app^.monkey_chars.Text[i] := Ord(' ');
         end;
 
-        monkey_chars.Text := PUint32(SDL_malloc(cols * SizeOf(uint32)));
-        if monkey_chars.Text <> nil then begin
-          for i := 0 to cols - 1 do begin
-            monkey_chars.Text[i] := Ord(' ');
-          end;
-
-          monkey_chars.length := cols;
-        end;
+        app^.monkey_chars.length := app^.cols;
       end;
     end;
   end;
 
+  procedure DisplayLine(appstate: pointer; x, y: single; line: PLine);
+  var
+    app: PAppstate absolute appstate;
+    utf8: pchar;
+    spot: pchar;
+    i: integer;
+  begin
+    utf8 := SDL_malloc(line^.length * 4 + 1);
+    if utf8 <> nil then  begin
+      spot := utf8;
 
+      for i := 0 to line^.length - 1 do begin
+        spot := SDL_UCS4ToUTF8(line^.Text[i], spot);
+      end;
+      spot^ := #0;
+
+      SDL_RenderDebugText(app^.renderer, x, y, utf8);
+      SDL_free(utf8);
+    end;
+  end;
+
+  function CanMonkeyType(ch: uint32): boolean;
+  var
+    modstate: TSDL_Keymod;
+    scancode: TSDL_Scancode;
+  begin
+    scancode := SDL_GetScancodeFromKey(ch, @modstate);
+    if (scancode < MIN_MONKEY_SCANCODE) or (scancode > MAX_MONKEY_SCANCODE) then begin
+      Exit(False);
+    end;
+
+    if (modstate and not SDL_KMOD_SHIFT) <> 0 then begin
+      Exit(False);
+    end;
+
+    Result := True;
+  end;
+
+  procedure AdvanceRow(appstate: pointer);
+  var
+    app: PAppstate absolute appstate;
+    line: PLine;
+  begin
+    Inc(app^.row);
+    line := app^.Lines[app^.row mod app^.rows];
+    line^.length := 0;
+  end;
+
+  procedure AddMonkeyChar(appstate: pointer; monkey: integer; ch: uint32);
+  var
+    app: PAppstate absolute appstate;
+    line: PLine;
+  begin
+    if (monkey >= 0) and (app^.monkey_chars.Text <> nil) then  begin
+      app^.monkey_chars.Text[(monkey mod app^.cols)] := ch;
+    end;
+
+    if app^.Lines <> nil then  begin
+      if ch = Ord(#10) then begin
+        AdvanceRow(app);
+      end else begin
+        line := app^.Lines[app^.row mod app^.rows];
+        line^.Text[line^.length] := ch;
+        Inc(line^.length);
+        if line^.length = app^.cols then begin
+          AdvanceRow(app);
+        end;
+      end;
+    end;
+
+    SDL_StepUTF8(@app^.progress, nil);
+  end;
+
+  function GetNextChar(appstate: pointer): uint32;
+  var
+    app: PAppstate absolute appstate;
+    ch: uint32;
+    spot: pchar;
+  begin
+    ch := 0;
+    while app^.progress < app^.end_ do begin
+      spot := app^.progress;
+      ch := SDL_StepUTF8(@spot, nil);
+      if CanMonkeyType(ch) then begin
+        Break;
+      end else begin
+        AddMonkeyChar(app, -1, ch);
+      end;
+    end;
+    Result := ch;
+  end;
+
+  function MonkeyPlay: uint32;
+  var
+    Count: integer;
+    scancode: TSDL_Scancode;
+    modstate: TSDL_Keymod;
+  begin
+    Count := (MAX_MONKEY_SCANCODE - MIN_MONKEY_SCANCODE + 1);
+    scancode := TSDL_Scancode(MIN_MONKEY_SCANCODE + SDL_Rand(Count));
+    if SDL_Rand(2) <> 0 then begin
+      modstate := SDL_KMOD_SHIFT;
+    end else begin
+      modstate := 0;
+    end;
+
+    Result := SDL_GetKeyFromScancode(scancode, modstate, False);
+  end;
+
+  // =========================
 
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
@@ -200,18 +305,95 @@ const
   function AppIterate(appstate: pointer): TSDL_AppResult; cdecl;
   var
     app: PAppstate absolute appstate;
-    now: double;
-    red, green, blue: Tdouble;
+    i, monkey: integer;
+    next_char, ch: uint32;
+    x, y: single;
+    Caption: pchar;
+    now, elapsed: TSDL_Time;
+    hours, minutes, seconds, row_offset: integer;
+    rect: TSDL_FRect;
+    line: PLine;
   begin
-    now := SDL_GetTicks / 1000.0;
+    next_char := 0;
+    Caption := nil;
+    for monkey := 0 to app^.monkeys - 1 do begin
+      if next_char = 0 then begin
+        next_char := GetNextChar(app);
+        if next_char = 0 then begin
+          Break;
+        end;
+      end;
 
-    red := 0.5 + 0.5 * SDL_sin(now);
-    green := 0.5 + 0.5 * SDL_sin(now + SDL_PI_D * 2 / 3);
-    blue := 0.5 + 0.5 * SDL_sin(now + SDL_PI_D * 4 / 3);
+      ch := MonkeyPlay();
+      if ch = next_char then begin
+        AddMonkeyChar(app, monkey, ch);
+        next_char := 0;
+      end;
+    end;
 
-    SDL_SetRenderDrawColorFloat(app^.renderer, red, green, blue, SDL_ALPHA_OPAQUE_FLOAT);
-
+    SDL_SetRenderDrawColor(app^.renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(app^.renderer);
+
+    SDL_SetRenderDrawColor(app^.renderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
+    x := 0.0;
+    y := 0.0;
+
+    if app^.Lines <> nil then begin
+      row_offset := app^.row - app^.rows + 1;
+      if row_offset < 0 then begin
+        row_offset := 0;
+      end;
+
+      for i := 0 to app^.rows - 1 do begin
+        line := app^.Lines[(row_offset + i) mod app^.rows];
+        DisplayLine(app, x, y, line);
+        y += SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE;
+      end;
+
+      y := (app^.rows + 1) * SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE;
+
+      if app^.progress = app^.end_ then begin
+        if app^.end_time = 0 then begin
+          SDL_GetCurrentTime(@app^.end_time);
+        end;
+
+        now := app^.end_time;
+      end else begin
+        SDL_GetCurrentTime(@now);
+      end;
+
+      elapsed := now - app^.start_time;
+      elapsed := elapsed div SDL_NS_PER_SECOND;
+
+      seconds := Trunc(elapsed) mod 60;
+      elapsed := elapsed div 60;
+
+      minutes := Trunc(elapsed) mod 60;
+      elapsed := elapsed div 60;
+
+      hours := Trunc(elapsed);
+
+      SDL_asprintf(@Caption, 'Monkeys: %d - %dH:%dM:%dS', app^.monkeys, hours, minutes, seconds);
+
+      if Caption <> nil then begin
+        SDL_RenderDebugText(app^.renderer, x, y, Caption);
+        SDL_free(Caption);
+      end;
+
+      y += SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE;
+
+      DisplayLine(app, x, y, @app^.monkey_chars);
+      y += SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE;
+    end;
+
+    SDL_SetRenderDrawColor(app^.renderer, 0, 255, 0, SDL_ALPHA_OPAQUE);
+    rect.x := x;
+    rect.y := y;
+    rect.w := ((app^.progress - app^.Text) / (app^.end_ - app^.Text)) * (app^.cols * SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE);
+    rect.h := SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE;
+
+    SDL_RenderFillRect(app^.renderer, @rect);
+
     SDL_RenderPresent(app^.renderer);
     Exit(SDL_APP_CONTINUE);
   end;
@@ -221,9 +403,9 @@ const
     app: PAppstate absolute appstate;
   begin
     case event^._type of
-    SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED: begin
-      OnWindowSizeChanged(app);
-    end;
+      SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED: begin
+        OnWindowSizeChanged(app);
+      end;
       SDL_EVENT_QUIT: begin
         Exit(SDL_APP_SUCCESS);
       end;
@@ -236,6 +418,8 @@ const
   var
     app: PAppstate absolute appstate;
   begin
+    FreeLines(app);
+    SDL_free(app^.Text);
     SDL_DestroyRenderer(app^.renderer);
     SDL_DestroyWindow(app^.window);
     SDL_free(app);
