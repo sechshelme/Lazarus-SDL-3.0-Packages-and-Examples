@@ -12,7 +12,7 @@ const
   SDL_WINDOW_HEIGHT = (SNAKE_BLOCK_SIZE_IN_PIXELS * SNAKE_GAME_HEIGHT);
 
   SNAKE_MATRIX_SIZE = (SNAKE_GAME_WIDTH * SNAKE_GAME_HEIGHT);
-  SNAKE_CELL_MAX_BITS = 13;
+  SNAKE_CELL_MAX_BITS = 3;
 
   THREE_BITS = $7;
 
@@ -84,14 +84,14 @@ type
     shift_: integer;
     adjust: integer;
     pos: PInt8;
-    range: UInt16;
+    range: uint16;
   begin
     shift_ := SHIFT(x, y);
     adjust := shift_ mod 8;
 
     pos := @ctx^.cells[shift_ div 8];
     SDL_memcpy(@range, pos, SizeOf(range));
-    range := range and not (THREE_BITS shl adjust); // clear bits
+    range := range and not (THREE_BITS shl adjust);
     range := range or ((ct and THREE_BITS) shl adjust);
     SDL_memcpy(pos, @range, SizeOf(range));
   end;
@@ -170,7 +170,6 @@ type
   begin
     dir_as_cell := TSnakeCell(ctx^.next_dir + 1);
 
-    { Schwanz vorwärts bewegen }
     if ctx^.inhibit_tail_step > 0 then begin
       Dec(ctx^.inhibit_tail_step);
     end;
@@ -199,7 +198,6 @@ type
       wrap_around_(@ctx^.tail_ypos, SNAKE_GAME_HEIGHT);
     end;
 
-    { Kopf vorwärts bewegen }
     prev_xpos := ctx^.head_xpos;
     prev_ypos := ctx^.head_ypos;
 
@@ -214,7 +212,7 @@ type
         Dec(ctx^.head_xpos);
       end;
       SNAKE_DIR_DOWN: begin
-        Inc(ctx^.head_xpos);
+        Inc(ctx^.head_ypos);
       end;
     end;
 
@@ -247,18 +245,12 @@ type
   function handle_key_event(ctx: PSnakeContext; keyCode: TSDL_Scancode): TSDL_AppResult;
   begin
     case keyCode of
-      // Quit
-      SDL_SCANCODE_ESCAPE,
-      SDL_SCANCODE_Q: begin
+      SDL_SCANCODE_ESCAPE, SDL_SCANCODE_Q: begin
         Exit(SDL_APP_SUCCESS);
       end;
-
-      // Restart the game as if the program was launched
       SDL_SCANCODE_R: begin
         snake_initialize(ctx);
       end;
-
-      // Decide new direction of the snake
       SDL_SCANCODE_RIGHT: begin
         snake_redir(ctx, SNAKE_DIR_RIGHT);
       end;
@@ -273,7 +265,6 @@ type
       end;
       else begin
       end
-      // Default case does nothing
     end;
 
     Exit(SDL_APP_CONTINUE);
@@ -281,19 +272,16 @@ type
 
   // =====================
 
-type
-  TExtendedMetadata = record
-    key: pchar;
-    Value: pchar;
-  end;
-
 const
-  extended_metadata: array[0..3] of TExtendedMetadata = (
+  extended_metadata: array[0..3] of record
+      key: pchar;
+      Value: pchar;
+      end
+  = (
     (key: SDL_PROP_APP_METADATA_URL_STRING; Value: 'https://examples.libsdl.org/SDL3/demo/01-snake/'),
     (key: SDL_PROP_APP_METADATA_CREATOR_STRING; Value: 'SDL team'),
     (key: SDL_PROP_APP_METADATA_COPYRIGHT_STRING; Value: 'Placed in the public domain'),
-    (key: SDL_PROP_APP_METADATA_TYPE_STRING; Value: 'game')
-    );
+    (key: SDL_PROP_APP_METADATA_TYPE_STRING; Value: 'game'));
 
   function AppInit(appstate: Ppointer; argc: longint; argv: PPansichar): TSDL_AppResult; cdecl;
   var
@@ -364,8 +352,7 @@ const
 
         if ct = SNAKE_CELL_FOOD then begin
           SDL_SetRenderDrawColor(app^.renderer, 80, 80, 255, SDL_ALPHA_OPAQUE);
-        end else // Körper
-        begin
+        end else begin
           SDL_SetRenderDrawColor(app^.renderer, 0, 128, 0, SDL_ALPHA_OPAQUE);
         end;
 
@@ -377,7 +364,6 @@ const
     SDL_SetRenderDrawColor(app^.renderer, 255, 255, 0, SDL_ALPHA_OPAQUE);
     set_rect_xy_(@r, ctx^.head_xpos, ctx^.head_ypos);
     SDL_RenderFillRect(app^.renderer, @r);
-
 
     SDL_RenderPresent(app^.renderer);
     Exit(SDL_APP_CONTINUE);
