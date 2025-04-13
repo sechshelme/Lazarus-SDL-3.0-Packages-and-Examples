@@ -1,17 +1,5 @@
-unit SDL3_rotozoom;
+{$IFDEF read_interface}
 
-interface
-
-uses
-  ctypes, SDL3, SDL3_gfx;
-
-  {$IFDEF FPC}
-  {$PACKRECORDS C}
-  {$ENDIF}
-
-
-const
-  M_PI = 3.1415926535897932384626433832795;
 
 const
   SMOOTHING_OFF = 0;
@@ -29,7 +17,10 @@ procedure zoomSurfaceSize(Width: longint; Height: longint; zoomx: Tdouble; zoomy
 function shrinkSurface(src: PSDL_Surface; factorx: longint; factory: longint): PSDL_Surface; cdecl; external libSDL3_gfx;
 function rotateSurface90Degrees(src: PSDL_Surface; numClockwiseTurns: longint): PSDL_Surface; cdecl; external libSDL3_gfx;
 
-implementation
+{$ENDIF read_interface}
 
 
-end.
+{$IFDEF read_implementation}
+
+
+{$ENDIF read_implementation}

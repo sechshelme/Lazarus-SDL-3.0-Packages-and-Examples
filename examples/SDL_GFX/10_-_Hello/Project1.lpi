@@ -25,6 +25,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="SDL3_gfx_package"/>
+      </Item>
+      <Item>
         <PackageName Value="SDL3_package"/>
       </Item>
     </RequiredPackages>
@@ -32,6 +35,7 @@
       <Unit>
         <Filename Value="Project1.pas"/>
         <IsPartOfProject Value="True"/>
+        <UnitName Value="project1"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -44,6 +48,9 @@
       <IncludeFiles Value="$(ProjOutDir)"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <CodeGeneration>
+      <TargetOS Value="linux"/>
+    </CodeGeneration>
     <Linking>
       <Debugging>
         <DebugInfoType Value="dsDwarf3"/>

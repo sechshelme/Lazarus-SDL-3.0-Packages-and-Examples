@@ -1,10 +1,4 @@
-unit SDL3_gfxPrimitives_font;
-
-interface
-
-  {$IFDEF FPC}
-  {$PACKRECORDS C}
-  {$ENDIF}
+{$IFDEF read_interface}
 
 const
   GFX_FONTDATAMAX = 8 * 256;
@@ -3083,7 +3077,10 @@ const
     $00,      (* 00000000 *)
     $00);     (* 00000000 *)
 
-implementation
+{$ENDIF read_interface}
 
 
-end.
+{$IFDEF read_implementation}
+
+
+{$ENDIF read_implementation}

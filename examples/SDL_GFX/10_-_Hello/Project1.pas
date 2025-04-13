@@ -2,11 +2,7 @@ program project1;
 
 uses
   SDL3,
-  SDL3_gfxPrimitives_font,
-  SDL3_framerate,
-  SDL3_imageFilter,
-  SDL3_rotozoom,
-  SDL3_gfxPrimitives;
+  SDL3_gfx;
 
 type
   TAppState = record
@@ -57,7 +53,7 @@ type
     hlineColor(app^.renderer, 0, 640, 240, $FF0000FF);
     vlineColor(app^.renderer, 320 ,0, 480, $FF0000FF);
 
-    roundedRectangleColor(app^.renderer, 10, 110, 100, 100, 15, $FF00FF00);
+    roundedRectangleColor(app^.renderer, 10, 110, 100, 200, 15, $FF00FF00);
     stringColor(app^.renderer, 10, 10, 'Hello World !', $FF00FF00);
 
 

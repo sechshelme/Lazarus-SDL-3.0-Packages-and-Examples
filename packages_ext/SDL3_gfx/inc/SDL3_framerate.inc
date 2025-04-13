@@ -1,13 +1,4 @@
-unit SDL3_framerate;
-
-interface
-
-uses
-  ctypes, SDL3, SDL3_gfx;
-
-  {$IFDEF FPC}
-  {$PACKRECORDS C}
-  {$ENDIF}
+{$IFDEF read_interface}
 
 const
   FPS_UPPER_LIMIT = 200;
@@ -30,7 +21,10 @@ function SDL_getFramerate(manager: PFPSmanager): longint; cdecl; external libSDL
 function SDL_getFramecount(manager: PFPSmanager): longint; cdecl; external libSDL3_gfx;
 function SDL_framerateDelay(manager: PFPSmanager): TUint64; cdecl; external libSDL3_gfx;
 
-implementation
+{$ENDIF read_interface}
 
 
-end.
+{$IFDEF read_implementation}
+
+
+{$ENDIF read_implementation}

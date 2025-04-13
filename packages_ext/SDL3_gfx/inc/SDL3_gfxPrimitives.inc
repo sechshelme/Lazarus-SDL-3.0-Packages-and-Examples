@@ -1,16 +1,4 @@
-unit SDL3_gfxPrimitives;
-
-interface
-
-uses
-  ctypes, SDL3, SDL3_gfx;
-
-  {$IFDEF FPC}
-  {$PACKRECORDS C}
-  {$ENDIF}
-
-const
-  M_PI = 3.1415926535897932384626433832795;
+{$IFDEF read_interface}
 
 const
   SDL3_GFXPRIMITIVES_MAJOR = 1;
@@ -77,7 +65,10 @@ function characterRGBA(renderer: PSDL_Renderer; x: TSint16; y: TSint16; c: char;
 function stringColor(renderer: PSDL_Renderer; x: TSint16; y: TSint16; s: pchar; color: TUint32): Tbool; cdecl; external libSDL3_gfx;
 function stringRGBA(renderer: PSDL_Renderer; x: TSint16; y: TSint16; s: pchar; r: TUint8; g: TUint8; b: TUint8; a: TUint8): Tbool; cdecl; external libSDL3_gfx;
 
-implementation
+{$ENDIF read_interface}
 
 
-end.
+{$IFDEF read_implementation}
+
+
+{$ENDIF read_implementation}

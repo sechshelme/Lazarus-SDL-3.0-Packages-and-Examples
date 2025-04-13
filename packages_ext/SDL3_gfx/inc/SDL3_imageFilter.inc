@@ -1,13 +1,4 @@
-unit SDL3_imageFilter;
-
-interface
-
-uses
-  ctypes, SDL3, SDL3_gfx;
-
-  {$IFDEF FPC}
-  {$PACKRECORDS C}
-  {$ENDIF}
+{$IFDEF read_interface}
 
 
 function SDL_imageFilterMMXdetect: longint; cdecl; external libSDL3_gfx;
@@ -42,7 +33,10 @@ function SDL_imageFilterClipToRange(Src1: pbyte; Dest: pbyte; length: dword; Tmi
 function SDL_imageFilterNormalizeLinear(Src: pbyte; Dest: pbyte; length: dword; Cmin: longint; Cmax: longint;
   Nmin: longint; Nmax: longint): longint; cdecl; external libSDL3_gfx;
 
-implementation
+{$ENDIF read_interface}
 
 
-end.
+{$IFDEF read_implementation}
+
+
+{$ENDIF read_implementation}
