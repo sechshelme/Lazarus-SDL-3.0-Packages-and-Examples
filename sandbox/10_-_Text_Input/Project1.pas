@@ -31,11 +31,11 @@ var
     s: String = '';
   begin
 //       SDL_GL_GetProcAddress();
-    SDL_StartTextInput;
+    SDL_StartTextInput(window);
     while not quit do begin
       while SDL_PollEvent(@event) do begin
 
-        case event.type_ of
+        case event._type of
           SDL_EVENT_KEY_DOWN: begin
 //            SDL_Log('key: %i', event.key.keysym.sym); // neu
 
@@ -71,7 +71,7 @@ var
       SDL_RenderClear(renderer);
       SDL_RenderPresent(renderer);
     end;
-    SDL_StopTextInput;
+    SDL_StopTextInput(window);
   end;
 
 begin
@@ -81,7 +81,7 @@ begin
   if window = nil then begin
     SDLFail('Kann kein SDL-Fenster erzeugen !');
   end;
-  renderer := SDL_CreateRenderer(window, nil, SDL_RENDERER_ACCELERATED);
+  renderer := SDL_CreateRenderer(window, nil);
   if renderer = nil then begin
     SDLFail('Kann kein SDL-Renderer erzeugen !');
   end;

@@ -46,8 +46,8 @@ const
   (libs: ''; units: 'ctypes, SDL3'),
   (libs: 'libSDL3_image'; units: 'ctypes, SDL3'),
   (libs: 'libSDL3_ttf'; units: 'ctypes, SDL3'),
+  (libs: 'libSDL3_gfx'; units: 'ctypes, SDL3'),
   (libs: 'libSDL3'; units: 'ctypes, SDL_stdinc'),
-  (libs: 'libmicrohttpd'; units: 'ctypes'),
 
     (libs: ''; units: ''));
 

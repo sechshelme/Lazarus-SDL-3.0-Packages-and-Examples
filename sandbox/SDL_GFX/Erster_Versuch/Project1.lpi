@@ -32,7 +32,12 @@
       <Unit>
         <Filename Value="Project1.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="m"/>
+        <UnitName Value="project1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../packages_ext/SDL3_gfx/sdl3_gfx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SDL3_gfx"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -43,8 +48,12 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../../../packages_ext/SDL3_gfx"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <CodeGeneration>
+      <TargetOS Value="linux"/>
+    </CodeGeneration>
     <Linking>
       <Debugging>
         <DebugInfoType Value="dsDwarf3"/>
