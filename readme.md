@@ -174,10 +174,10 @@ make -j16
 sudo make install
 cd ../..
 ```
-Für die SDL Zusatzpackete in ein ähnliches vorgehen nötig.
+Für die Zusatzpackete **SDL_image, SDL_ttf, SDL_rtf, SDL_mixer und SDL_net** in ein ähnliches Vorgehen nötig.
 
 ### Windows
-- Die DLLs sind bei den Release-Links dabei. Sie müssen nach `C:\windows\system32` kopiert werden.
+- Die DLLs sind bei den Release-Links von der original Seite von SDL3 dabei. Sie müssen nach `C:\windows\system32` kopiert werden.
 
 ## Neuerungen:
 | Datum      | Änderungen 
