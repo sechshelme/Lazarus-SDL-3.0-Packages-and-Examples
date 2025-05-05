@@ -257,6 +257,8 @@ type
     direction: TSDL_MouseWheelDirection;
     mouse_x: single;
     mouse_y: single;
+    integer_x:TSint32;
+    integer_y:TSint32;
   end;
   PSDL_MouseWheelEvent = ^TSDL_MouseWheelEvent;
 

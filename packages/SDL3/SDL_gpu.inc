@@ -898,7 +898,7 @@ const
   SDL_PROP_GPU_TEXTURE_CREATE_D3D12_CLEAR_B_FLOAT = 'SDL.gpu.texture.create.d3d12.clear.b';
   SDL_PROP_GPU_TEXTURE_CREATE_D3D12_CLEAR_A_FLOAT = 'SDL.gpu.texture.create.d3d12.clear.a';
   SDL_PROP_GPU_TEXTURE_CREATE_D3D12_CLEAR_DEPTH_FLOAT = 'SDL.gpu.texture.create.d3d12.clear.depth';
-  SDL_PROP_GPU_TEXTURE_CREATE_D3D12_CLEAR_STENCIL_UINT8 = 'SDL.gpu.texture.create.d3d12.clear.stencil';
+  SDL_PROP_GPU_TEXTURE_CREATE_D3D12_CLEAR_STENCIL_NUMBER = 'SDL.gpu.texture.create.d3d12.clear.stencil';
   SDL_PROP_GPU_TEXTURE_CREATE_NAME_STRING = 'SDL.gpu.texture.create.name';
 
 function SDL_CreateGPUBuffer(device: PSDL_GPUDevice; createinfo: PSDL_GPUBufferCreateInfo): PSDL_GPUBuffer; cdecl; external libSDL3;
