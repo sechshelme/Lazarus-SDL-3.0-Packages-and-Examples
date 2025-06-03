@@ -10,7 +10,7 @@ uses
 var
   win: PSDL_Window;
 
-  procedure loadFile(userdata: pointer; filelist: PPchar; filter: longint); cdecl;
+  procedure loadFile(userdata: pointer; filelist: PPAnsiChar; filter: longint); cdecl;
   begin
     if filelist <> nil then begin
       while filelist^ <> nil do begin

@@ -38,7 +38,7 @@ function SDL_RenameStoragePath(storage: PSDL_Storage; oldpath: pansichar; newpat
 function SDL_CopyStorageFile(storage: PSDL_Storage; oldpath: pansichar; newpath: pansichar): Tbool; cdecl; external libSDL3;
 function SDL_GetStoragePathInfo(storage: PSDL_Storage; path: pansichar; info: PSDL_PathInfo): Tbool; cdecl; external libSDL3;
 function SDL_GetStorageSpaceRemaining(storage: PSDL_Storage): TUint64; cdecl; external libSDL3;
-function SDL_GlobStorageDirectory(storage: PSDL_Storage; path: pansichar; pattern: pansichar; flags: TSDL_GlobFlags; Count: Plongint): PPChar; cdecl; external libSDL3;
+function SDL_GlobStorageDirectory(storage: PSDL_Storage; path: pansichar; pattern: pansichar; flags: TSDL_GlobFlags; Count: Plongint): PPAnsiChar; cdecl; external libSDL3;
 
 {$ENDIF read_interface}
 

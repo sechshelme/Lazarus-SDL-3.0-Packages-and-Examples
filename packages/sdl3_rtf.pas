@@ -66,25 +66,25 @@ type
 
   TRTF_FontEngine = record
     version: longint;
-    CreateFont: function(Name: PChar; family: TRTF_FontFamily; charset: longint; size: longint; style: longint): pointer; cdecl;
+    CreateFont: function(Name: PAnsiChar; family: TRTF_FontFamily; charset: longint; size: longint; style: longint): pointer; cdecl;
     GetLineSpacing: function(font: pointer): longint; cdecl;
-    GetCharacterOffsets: function(font: pointer; Text: PChar; byteOffsets: Plongint; pixelOffsets: Plongint; maxOffsets: longint): longint; cdecl;
-    RenderText: function(font: pointer; renderer: PSDL_Renderer; Text: PChar; fg: TSDL_Color): PSDL_Texture; cdecl;
+    GetCharacterOffsets: function(font: pointer; Text: PAnsiChar; byteOffsets: Plongint; pixelOffsets: Plongint; maxOffsets: longint): longint; cdecl;
+    RenderText: function(font: pointer; renderer: PSDL_Renderer; Text: PAnsiChar; fg: TSDL_Color): PSDL_Texture; cdecl;
     FreeFont: procedure(font: pointer); cdecl;
   end;
 
 function RTF_CreateContext(renderer: PSDL_Renderer; fontEngine: PRTF_FontEngine): PRTF_Context; cdecl; external libSDL3_RTF;
-function RTF_Load(ctx: PRTF_Context; file_: PChar): longint; cdecl; external libSDL3_RTF;
+function RTF_Load(ctx: PRTF_Context; file_: PAnsiChar): longint; cdecl; external libSDL3_RTF;
 function RTF_Load_IO(ctx: PRTF_Context; src: PSDL_IOStream; closeio: longint): longint; cdecl; external libSDL3_RTF;
-function RTF_GetTitle(ctx: PRTF_Context): PChar; cdecl; external libSDL3_RTF;
-function RTF_GetSubject(ctx: PRTF_Context): PChar; cdecl; external libSDL3_RTF;
-function RTF_GetAuthor(ctx: PRTF_Context): PChar; cdecl; external libSDL3_RTF;
+function RTF_GetTitle(ctx: PRTF_Context): PAnsiChar; cdecl; external libSDL3_RTF;
+function RTF_GetSubject(ctx: PRTF_Context): PAnsiChar; cdecl; external libSDL3_RTF;
+function RTF_GetAuthor(ctx: PRTF_Context): PAnsiChar; cdecl; external libSDL3_RTF;
 function RTF_GetHeight(ctx: PRTF_Context; Width: longint): longint; cdecl; external libSDL3_RTF;
 procedure RTF_Render(ctx: PRTF_Context; rect: PSDL_Rect; yOffset: longint); cdecl; external libSDL3_RTF;
 procedure RTF_FreeContext(ctx: PRTF_Context); cdecl; external libSDL3_RTF;
 
-function RTF_SetError(fmt: PChar): longint; varargs; cdecl; external libSDL3 Name 'SDL_SetError';
-function RTF_GetError: PChar; cdecl; external libSDL3 Name 'SDL_GetError';
+function RTF_SetError(fmt: PAnsiChar): longint; varargs; cdecl; external libSDL3 Name 'SDL_SetError';
+function RTF_GetError: PAnsiChar; cdecl; external libSDL3 Name 'SDL_GetError';
 
 implementation
 

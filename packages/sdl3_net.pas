@@ -54,10 +54,10 @@ type
 
 function SDLNet_Init: longint; cdecl; external libSDL3_net;
 procedure SDLNet_Quit; cdecl; external libSDL3_net;
-function SDLNet_ResolveHostname(host: PChar): PSDLNet_Address; cdecl; external libSDL3_net;
+function SDLNet_ResolveHostname(host: PAnsiChar): PSDLNet_Address; cdecl; external libSDL3_net;
 function SDLNet_WaitUntilResolved(address: PSDLNet_Address; timeout: TSint32): longint; cdecl; external libSDL3_net;
 function SDLNet_GetAddressStatus(address: PSDLNet_Address): longint; cdecl; external libSDL3_net;
-function SDLNet_GetAddressString(address: PSDLNet_Address): PChar; cdecl; external libSDL3_net;
+function SDLNet_GetAddressString(address: PSDLNet_Address): PAnsiChar; cdecl; external libSDL3_net;
 function SDLNet_RefAddress(address: PSDLNet_Address): PSDLNet_Address; cdecl; external libSDL3_net;
 procedure SDLNet_UnrefAddress(address: PSDLNet_Address); cdecl; external libSDL3_net;
 procedure SDLNet_SimulateAddressResolutionLoss(percent_loss: longint); cdecl; external libSDL3_net;

@@ -196,7 +196,7 @@ type
 ### .../pas_units/sdl3_log.pas
 Folgendes ergänzen:
 ```pascal
-procedure SDL_Log(fmt: PChar); varargs; cdecl; external libSDL3 name 'SDL_Log';
+procedure SDL_Log(fmt: PAnsiChar); varargs; cdecl; external libSDL3 name 'SDL_Log';
 ```
 # Unit Abhängigkeiten
 

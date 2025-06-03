@@ -155,7 +155,7 @@ function SDL_GetNumAllocations: longint; cdecl; external libSDL3;
 function SDL_GetEnvironment: PSDL_Environment; cdecl; external libSDL3;
 function SDL_CreateEnvironment(populated: Tbool): PSDL_Environment; cdecl; external libSDL3;
 function SDL_GetEnvironmentVariable(env: PSDL_Environment; Name: pansichar): pansichar; cdecl; external libSDL3;
-function SDL_GetEnvironmentVariables(env: PSDL_Environment): PPChar; cdecl; external libSDL3;
+function SDL_GetEnvironmentVariables(env: PSDL_Environment): PPAnsiChar; cdecl; external libSDL3;
 function SDL_SetEnvironmentVariable(env: PSDL_Environment; Name: pansichar; Value: pansichar; overwrite: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_UnsetEnvironmentVariable(env: PSDL_Environment; Name: pansichar): Tbool; cdecl; external libSDL3;
 procedure SDL_DestroyEnvironment(env: PSDL_Environment); cdecl; external libSDL3;
@@ -252,7 +252,7 @@ const
   SDL_INVALID_UNICODE_CODEPOINT = $FFFD;
 
 function SDL_StepUTF8(pstr: PPansichar; pslen: Psize_t): TUint32; cdecl; external libSDL3;
-function SDL_StepBackUTF8(start: Pchar; pstr: PPChar): TUint32; cdecl; external libSDL3;
+function SDL_StepBackUTF8(start: PAnsiChar; pstr: PPAnsiChar): TUint32; cdecl; external libSDL3;
 function SDL_UCS4ToUTF8(codepoint: TUint32; dst: pansichar): pansichar; cdecl; external libSDL3;
 function SDL_sscanf(Text: pansichar; fmt: pansichar): longint; varargs; cdecl; external libSDL3;
 function SDL_vsscanf(Text: pansichar; fmt: pansichar; ap: Tva_list): longint; cdecl; external libSDL3;
@@ -336,10 +336,10 @@ function SDL_max(x, y: single): single;
 function SDL_clamp(x, a, b: longint): longint;
 function SDL_clamp(x, a, b: single): single;
 
-function SDL_iconv_utf8_locale(S: pchar): pchar;
-function SDL_iconv_utf8_ucs2(S: pchar): PUint16;
-function SDL_iconv_utf8_ucs4(S: pchar): PUint32;
-function SDL_iconv_wchar_utf8(S: Pwchar_t): pchar;
+function SDL_iconv_utf8_locale(S: PAnsiChar): PAnsiChar;
+function SDL_iconv_utf8_ucs2(S: PAnsiChar): PUint16;
+function SDL_iconv_utf8_ucs4(S: PAnsiChar): PUint32;
+function SDL_iconv_wchar_utf8(S: Pwchar_t): PAnsiChar;
 
 function SDL_ICONV_ERROR: Tsize_t;
 function SDL_ICONV_E2BIG: Tsize_t;
@@ -449,24 +449,24 @@ begin
   SDL_ICONV_EINVAL := Tsize_t(-(4));
 end;
 
-function SDL_iconv_utf8_locale(S: pchar): pchar;
+function SDL_iconv_utf8_locale(S: PAnsiChar): PAnsiChar;
 begin
   SDL_iconv_utf8_locale := SDL_iconv_string('', 'UTF-8', S, (SDL_strlen(S)) + 1);
 end;
 
-function SDL_iconv_utf8_ucs2(S: pchar): PUint16;
+function SDL_iconv_utf8_ucs2(S: PAnsiChar): PUint16;
 begin
   SDL_iconv_utf8_ucs2 := PUint16(SDL_iconv_string('UCS-2', 'UTF-8', S, (SDL_strlen(S)) + 1));
 end;
 
-function SDL_iconv_utf8_ucs4(S: pchar): PUint32;
+function SDL_iconv_utf8_ucs4(S: PAnsiChar): PUint32;
 begin
   SDL_iconv_utf8_ucs4 := PUint32(SDL_iconv_string('UCS-4', 'UTF-8', S, (SDL_strlen(S)) + 1));
 end;
 
-function SDL_iconv_wchar_utf8(S: Pwchar_t): pchar;
+function SDL_iconv_wchar_utf8(S: Pwchar_t): PAnsiChar;
 begin
-  SDL_iconv_wchar_utf8 := SDL_iconv_string('UTF-8', 'WCHAR_T', PChar(S), ((SDL_wcslen(S)) + 1) * (sizeof(Twchar_t)));
+  SDL_iconv_wchar_utf8 := SDL_iconv_string('UTF-8', 'WCHAR_T', PAnsiChar(S), ((SDL_wcslen(S)) + 1) * (sizeof(Twchar_t)));
 end;
 
 {$ENDIF read_implementation}

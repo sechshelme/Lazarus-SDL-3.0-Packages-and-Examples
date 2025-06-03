@@ -76,7 +76,7 @@ type
     num_devices: longint;
     i: integer;
     instance_id: TSDL_AudioDeviceID;
-    Name: pchar;
+    Name: PAnsiChar;
   begin
     num_devices := SDL_GetNumAudioDrivers;
 
@@ -96,7 +96,7 @@ type
   procedure ShowEnvironment;
   var
     ev: PSDL_Environment;
-    ev_items, p: PPChar;
+    ev_items, p: PPAnsiChar;
   begin
     ev := SDL_GetEnvironment;
     ev_items := SDL_GetEnvironmentVariables(ev);
@@ -114,7 +114,7 @@ type
 
   procedure ShowDir;
   var
-    list, p: PPChar;
+    list, p: PPAnsiChar;
     Count: longint;
   begin
     list := SDL_GlobDirectory('.', nil, SDL_GLOB_CASEINSENSITIVE, @Count);

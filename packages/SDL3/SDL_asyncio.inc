@@ -41,7 +41,7 @@ type
   end;
   PSDL_AsyncIOQueue = ^TSDL_AsyncIOQueue;
 
-function SDL_AsyncIOFromFile(file_: pchar; mode: pchar): PSDL_AsyncIO; cdecl; external libSDL3;
+function SDL_AsyncIOFromFile(file_: PAnsiChar; mode: PAnsiChar): PSDL_AsyncIO; cdecl; external libSDL3;
 function SDL_GetAsyncIOSize(asyncio: PSDL_AsyncIO): TSint64; cdecl; external libSDL3;
 function SDL_ReadAsyncIO(asyncio: PSDL_AsyncIO; ptr: pointer; offset: TUint64; size: TUint64; queue: PSDL_AsyncIOQueue;
   userdata: pointer): Tbool; cdecl; external libSDL3;
@@ -53,7 +53,7 @@ procedure SDL_DestroyAsyncIOQueue(queue: PSDL_AsyncIOQueue); cdecl; external lib
 function SDL_GetAsyncIOResult(queue: PSDL_AsyncIOQueue; outcome: PSDL_AsyncIOOutcome): Tbool; cdecl; external libSDL3;
 function SDL_WaitAsyncIOResult(queue: PSDL_AsyncIOQueue; outcome: PSDL_AsyncIOOutcome; timeoutMS: TSint32): Tbool; cdecl; external libSDL3;
 procedure SDL_SignalAsyncIOQueue(queue: PSDL_AsyncIOQueue); cdecl; external libSDL3;
-function SDL_LoadFileAsync(file_: pchar; queue: PSDL_AsyncIOQueue; userdata: pointer): Tbool; cdecl; external libSDL3;
+function SDL_LoadFileAsync(file_: PAnsiChar; queue: PSDL_AsyncIOQueue; userdata: pointer): Tbool; cdecl; external libSDL3;
 
 
 {$ENDIF read_interface}

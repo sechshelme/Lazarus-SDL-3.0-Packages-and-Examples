@@ -64,7 +64,7 @@ type
   // ===== end - SDL_textenfgine.h =====
 
   TTTF_Text = record
-    Text: pchar;
+    Text: PAnsiChar;
     num_lines: longint;
     refcount: longint;
     internal: PTTF_TextData;
@@ -141,7 +141,7 @@ procedure TTF_GetFreeTypeVersion(major: Plongint; minor: Plongint; patch: Plongi
 procedure TTF_GetHarfBuzzVersion(major: Plongint; minor: Plongint; patch: Plongint); cdecl; external libSDL3_ttf;
 
 function TTF_Init: Tbool; cdecl; external libSDL3_ttf;
-function TTF_OpenFont(file_: pchar; ptsize: single): PTTF_Font; cdecl; external libSDL3_ttf;
+function TTF_OpenFont(file_: PAnsiChar; ptsize: single): PTTF_Font; cdecl; external libSDL3_ttf;
 function TTF_OpenFontIO(src: PSDL_IOStream; closeio: Tbool; ptsize: single): PTTF_Font; cdecl; external libSDL3_ttf;
 function TTF_OpenFontWithProperties(props: TSDL_PropertiesID): PTTF_Font; cdecl; external libSDL3_ttf;
 
@@ -241,8 +241,8 @@ procedure TTF_SetFontKerning(font: PTTF_Font; Enabled: Tbool); cdecl; external l
 function TTF_GetFontKerning(font: PTTF_Font): Tbool; cdecl; external libSDL3_ttf;
 function TTF_FontIsFixedWidth(font: PTTF_Font): Tbool; cdecl; external libSDL3_ttf;
 function TTF_FontIsScalable(font: PTTF_Font): Tbool; cdecl; external libSDL3_ttf;
-function TTF_GetFontFamilyName(font: PTTF_Font): pchar; cdecl; external libSDL3_ttf;
-function TTF_GetFontStyleName(font: PTTF_Font): pchar; cdecl; external libSDL3_ttf;
+function TTF_GetFontFamilyName(font: PTTF_Font): PAnsiChar; cdecl; external libSDL3_ttf;
+function TTF_GetFontStyleName(font: PTTF_Font): PAnsiChar; cdecl; external libSDL3_ttf;
 
 type
   PTTF_Direction = ^TTTF_Direction;
@@ -257,12 +257,12 @@ const
 
 function TTF_SetFontDirection(font: PTTF_Font; direction: TTTF_Direction): Tbool; cdecl; external libSDL3_ttf;
 function TTF_GetFontDirection(font: PTTF_Font): TTTF_Direction; cdecl; external libSDL3_ttf;
-function TTF_StringToTag(_string:Pchar):TUint32;cdecl;external libSDL3_ttf;
-procedure TTF_TagToString(tag:TUint32; _string:Pchar; size:Tsize_t);cdecl;external libSDL3_ttf;
+function TTF_StringToTag(_string: PAnsiChar):TUint32;cdecl;external libSDL3_ttf;
+procedure TTF_TagToString(tag:TUint32; _string: PAnsiChar; size:Tsize_t);cdecl;external libSDL3_ttf;
 function TTF_SetFontScript(font: PTTF_Font; script: TUint32): Tbool; cdecl; external libSDL3_ttf;
 function TTF_GetFontScript(font: PTTF_Font): TUint32; cdecl; external libSDL3_ttf;
 function TTF_GetGlyphScript(ch: TUint32): TUint32; cdecl; external libSDL3_ttf;
-function TTF_SetFontLanguage(font: PTTF_Font; language_bcp47: pchar): Tbool; cdecl; external libSDL3_ttf;
+function TTF_SetFontLanguage(font: PTTF_Font; language_bcp47: PAnsiChar): Tbool; cdecl; external libSDL3_ttf;
 function TTF_FontHasGlyph(font: PTTF_Font; ch: TUint32): Tbool; cdecl; external libSDL3_ttf;
 
 type
@@ -280,23 +280,23 @@ function TTF_GetGlyphImageForIndex(font: PTTF_Font; glyph_index: TUint32; image_
 function TTF_GetGlyphMetrics(font: PTTF_Font; ch: TUint32; minx: Plongint; maxx: Plongint; miny: Plongint;
   maxy: Plongint; advance: Plongint): Tbool; cdecl; external libSDL3_ttf;
 function TTF_GetGlyphKerning(font: PTTF_Font; previous_ch: TUint32; ch: TUint32; kerning: Plongint): Tbool; cdecl; external libSDL3_ttf;
-function TTF_GetStringSize(font: PTTF_Font; Text: pchar; length: Tsize_t; w: Plongint; h: Plongint): Tbool; cdecl; external libSDL3_ttf;
-function TTF_GetStringSizeWrapped(font: PTTF_Font; Text: pchar; length: Tsize_t; wrap_width: longint; w: Plongint;
+function TTF_GetStringSize(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; w: Plongint; h: Plongint): Tbool; cdecl; external libSDL3_ttf;
+function TTF_GetStringSizeWrapped(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; wrap_width: longint; w: Plongint;
   h: Plongint): Tbool; cdecl; external libSDL3_ttf;
-function TTF_MeasureString(font: PTTF_Font; Text: pchar; length: Tsize_t; max_width: longint; measured_width: Plongint;
+function TTF_MeasureString(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; max_width: longint; measured_width: Plongint;
   measured_length: Psize_t): Tbool; cdecl; external libSDL3_ttf;
-function TTF_RenderText_Solid(font: PTTF_Font; Text: pchar; length: Tsize_t; fg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
-function TTF_RenderText_Solid_Wrapped(font: PTTF_Font; Text: pchar; length: Tsize_t; fg: TSDL_Color; wrapLength: longint): PSDL_Surface; cdecl; external libSDL3_ttf;
+function TTF_RenderText_Solid(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; fg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
+function TTF_RenderText_Solid_Wrapped(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; fg: TSDL_Color; wrapLength: longint): PSDL_Surface; cdecl; external libSDL3_ttf;
 function TTF_RenderGlyph_Solid(font: PTTF_Font; ch: TUint32; fg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
-function TTF_RenderText_Shaded(font: PTTF_Font; Text: pchar; length: Tsize_t; fg: TSDL_Color; bg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
-function TTF_RenderText_Shaded_Wrapped(font: PTTF_Font; Text: pchar; length: Tsize_t; fg: TSDL_Color; bg: TSDL_Color;
+function TTF_RenderText_Shaded(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; fg: TSDL_Color; bg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
+function TTF_RenderText_Shaded_Wrapped(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; fg: TSDL_Color; bg: TSDL_Color;
   wrap_width: longint): PSDL_Surface; cdecl; external libSDL3_ttf;
 function TTF_RenderGlyph_Shaded(font: PTTF_Font; ch: TUint32; fg: TSDL_Color; bg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
-function TTF_RenderText_Blended(font: PTTF_Font; Text: pchar; length: Tsize_t; fg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
-function TTF_RenderText_Blended_Wrapped(font: PTTF_Font; Text: pchar; length: Tsize_t; fg: TSDL_Color; wrap_width: longint): PSDL_Surface; cdecl; external libSDL3_ttf;
+function TTF_RenderText_Blended(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; fg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
+function TTF_RenderText_Blended_Wrapped(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; fg: TSDL_Color; wrap_width: longint): PSDL_Surface; cdecl; external libSDL3_ttf;
 function TTF_RenderGlyph_Blended(font: PTTF_Font; ch: TUint32; fg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
-function TTF_RenderText_LCD(font: PTTF_Font; Text: pchar; length: Tsize_t; fg: TSDL_Color; bg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
-function TTF_RenderText_LCD_Wrapped(font: PTTF_Font; Text: pchar; length: Tsize_t; fg: TSDL_Color; bg: TSDL_Color;
+function TTF_RenderText_LCD(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; fg: TSDL_Color; bg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
+function TTF_RenderText_LCD_Wrapped(font: PTTF_Font; Text: PAnsiChar; length: Tsize_t; fg: TSDL_Color; bg: TSDL_Color;
   wrap_width: longint): PSDL_Surface; cdecl; external libSDL3_ttf;
 function TTF_RenderGlyph_LCD(font: PTTF_Font; ch: TUint32; fg: TSDL_Color; bg: TSDL_Color): PSDL_Surface; cdecl; external libSDL3_ttf;
 
@@ -347,7 +347,7 @@ const
 
 procedure TTF_SetGPUTextEngineWinding(engine: PTTF_TextEngine; winding: TTTF_GPUTextEngineWinding); cdecl; external libSDL3_ttf;
 function TTF_GetGPUTextEngineWinding(engine: PTTF_TextEngine): TTTF_GPUTextEngineWinding; cdecl; external libSDL3_ttf;
-function TTF_CreateText(engine: PTTF_TextEngine; font: PTTF_Font; Text: pchar; length: Tsize_t): PTTF_Text; cdecl; external libSDL3_ttf;
+function TTF_CreateText(engine: PTTF_TextEngine; font: PTTF_Font; Text: PAnsiChar; length: Tsize_t): PTTF_Text; cdecl; external libSDL3_ttf;
 function TTF_GetTextProperties(Text: PTTF_Text): TSDL_PropertiesID; cdecl; external libSDL3_ttf;
 function TTF_SetTextEngine(Text: PTTF_Text; engine: PTTF_TextEngine): Tbool; cdecl; external libSDL3_ttf;
 function TTF_GetTextEngine(Text: PTTF_Text): PTTF_TextEngine; cdecl; external libSDL3_ttf;
@@ -367,9 +367,9 @@ function TTF_SetTextWrapWidth(Text: PTTF_Text; wrap_width: longint): Tbool; cdec
 function TTF_GetTextWrapWidth(Text: PTTF_Text; wrap_width: Plongint): Tbool; cdecl; external libSDL3_ttf;
 function TTF_SetTextWrapWhitespaceVisible(Text: PTTF_Text; Visible: Tbool): Tbool; cdecl; external libSDL3_ttf;
 function TTF_TextWrapWhitespaceVisible(Text: PTTF_Text): Tbool; cdecl; external libSDL3_ttf;
-function TTF_SetTextString(Text: PTTF_Text; _string: pchar; length: Tsize_t): Tbool; cdecl; external libSDL3_ttf;
-function TTF_InsertTextString(Text: PTTF_Text; offset: longint; _string: pchar; length: Tsize_t): Tbool; cdecl; external libSDL3_ttf;
-function TTF_AppendTextString(Text: PTTF_Text; _string: pchar; length: Tsize_t): Tbool; cdecl; external libSDL3_ttf;
+function TTF_SetTextString(Text: PTTF_Text; _string: PAnsiChar; length: Tsize_t): Tbool; cdecl; external libSDL3_ttf;
+function TTF_InsertTextString(Text: PTTF_Text; offset: longint; _string: PAnsiChar; length: Tsize_t): Tbool; cdecl; external libSDL3_ttf;
+function TTF_AppendTextString(Text: PTTF_Text; _string: PAnsiChar; length: Tsize_t): Tbool; cdecl; external libSDL3_ttf;
 function TTF_DeleteTextString(Text: PTTF_Text; offset: longint; length: longint): Tbool; cdecl; external libSDL3_ttf;
 function TTF_GetTextSize(Text: PTTF_Text; w: Plongint; h: Plongint): Tbool; cdecl; external libSDL3_ttf;
 

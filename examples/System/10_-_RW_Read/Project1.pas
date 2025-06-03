@@ -10,7 +10,7 @@ var
   ch: byte;
   i: integer;
   datasize: Tsize_t;
-  pc: PChar;
+  pc: PAnsiChar;
 begin
   stream := SDL_IOFromFile('test.txt', 'w');
   if stream = nil then begin

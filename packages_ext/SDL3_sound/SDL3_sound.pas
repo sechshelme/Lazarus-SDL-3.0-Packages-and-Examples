@@ -49,10 +49,10 @@ type
   PSound_AudioInfo = ^TSound_AudioInfo;
 
   TSound_DecoderInfo = record
-    extensions: ^pchar;
-    description: pchar;
-    author: pchar;
-    url: pchar;
+    extensions: PPAnsiChar;
+    description: PAnsiChar;
+    author: PAnsiChar;
+    url: PAnsiChar;
   end;
   PSound_DecoderInfo = ^TSound_DecoderInfo;
   PPSound_DecoderInfo = ^PSound_DecoderInfo;
@@ -81,11 +81,11 @@ procedure Sound_GetLinkedVersion(ver: PSound_Version); cdecl; external libSDL3_s
 function Sound_Init: longint; cdecl; external libSDL3_sound;
 function Sound_Quit: longint; cdecl; external libSDL3_sound;
 function Sound_AvailableDecoders: PPSound_DecoderInfo; cdecl; external libSDL3_sound;
-function Sound_GetError: pchar; cdecl; external libSDL3_sound;
+function Sound_GetError: PAnsiChar; cdecl; external libSDL3_sound;
 procedure Sound_ClearError; cdecl; external libSDL3_sound;
-function Sound_NewSample(rw: PSDL_IOStream; ext: pchar; desired: PSound_AudioInfo; bufferSize: TUint32): PSound_Sample; cdecl; external libSDL3_sound;
-function Sound_NewSampleFromMem(data: PUint8; size: TUint32; ext: pchar; desired: PSound_AudioInfo; bufferSize: TUint32): PSound_Sample; cdecl; external libSDL3_sound;
-function Sound_NewSampleFromFile(fname: pchar; desired: PSound_AudioInfo; bufferSize: TUint32): PSound_Sample; cdecl; external libSDL3_sound;
+function Sound_NewSample(rw: PSDL_IOStream; ext: PAnsiChar; desired: PSound_AudioInfo; bufferSize: TUint32): PSound_Sample; cdecl; external libSDL3_sound;
+function Sound_NewSampleFromMem(data: PUint8; size: TUint32; ext: PAnsiChar; desired: PSound_AudioInfo; bufferSize: TUint32): PSound_Sample; cdecl; external libSDL3_sound;
+function Sound_NewSampleFromFile(fname: PAnsiChar; desired: PSound_AudioInfo; bufferSize: TUint32): PSound_Sample; cdecl; external libSDL3_sound;
 procedure Sound_FreeSample(sample: PSound_Sample); cdecl; external libSDL3_sound;
 function Sound_GetDuration(sample: PSound_Sample): TSint32; cdecl; external libSDL3_sound;
 function Sound_SetBufferSize(sample: PSound_Sample; new_size: TUint32): longint; cdecl; external libSDL3_sound;

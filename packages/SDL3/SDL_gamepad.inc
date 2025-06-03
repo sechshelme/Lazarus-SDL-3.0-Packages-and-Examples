@@ -130,7 +130,7 @@ function SDL_AddGamepadMapping(mapping: pansichar): longint; cdecl; external lib
 function SDL_AddGamepadMappingsFromIO(src: PSDL_IOStream; closeio: Tbool): longint; cdecl; external libSDL3;
 function SDL_AddGamepadMappingsFromFile(file_: pansichar): longint; cdecl; external libSDL3;
 function SDL_ReloadGamepadMappings: Tbool; cdecl; external libSDL3;
-function SDL_GetGamepadMappings(Count: Plongint): PPChar; cdecl; external libSDL3;
+function SDL_GetGamepadMappings(Count: Plongint): PPAnsiChar; cdecl; external libSDL3;
 function SDL_GetGamepadMappingForGUID(guid: TSDL_GUID): pansichar; cdecl; external libSDL3;
 function SDL_GetGamepadMapping(gamepad: PSDL_Gamepad): pansichar; cdecl; external libSDL3;
 function SDL_SetGamepadMapping(instance_id: TSDL_JoystickID; mapping: pansichar): Tbool; cdecl; external libSDL3;

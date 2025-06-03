@@ -28,12 +28,12 @@ const
   SDL_IMAGE_MICRO_VERSION = 4;
 
 function IMG_Version: longint; cdecl; external libSDL3_image;
-function IMG_LoadTyped_IO(src: PSDL_IOStream; closeio: Tbool; _type: pchar): PSDL_Surface; cdecl; external libSDL3_image;
-function IMG_Load(file_: pchar): PSDL_Surface; cdecl; external libSDL3_image;
+function IMG_LoadTyped_IO(src: PSDL_IOStream; closeio: Tbool; _type: PAnsiChar): PSDL_Surface; cdecl; external libSDL3_image;
+function IMG_Load(file_: PAnsiChar): PSDL_Surface; cdecl; external libSDL3_image;
 function IMG_Load_IO(src: PSDL_IOStream; closeio: Tbool): PSDL_Surface; cdecl; external libSDL3_image;
-function IMG_LoadTexture(renderer: PSDL_Renderer; file_: pchar): PSDL_Texture; cdecl; external libSDL3_image;
+function IMG_LoadTexture(renderer: PSDL_Renderer; file_: PAnsiChar): PSDL_Texture; cdecl; external libSDL3_image;
 function IMG_LoadTexture_IO(renderer: PSDL_Renderer; src: PSDL_IOStream; closeio: Tbool): PSDL_Texture; cdecl; external libSDL3_image;
-function IMG_LoadTextureTyped_IO(renderer: PSDL_Renderer; src: PSDL_IOStream; closeio: Tbool; _type: pchar): PSDL_Texture; cdecl; external libSDL3_image;
+function IMG_LoadTextureTyped_IO(renderer: PSDL_Renderer; src: PSDL_IOStream; closeio: Tbool; _type: PAnsiChar): PSDL_Texture; cdecl; external libSDL3_image;
 function IMG_isAVIF(src: PSDL_IOStream): Tbool; cdecl; external libSDL3_image;
 function IMG_isICO(src: PSDL_IOStream): Tbool; cdecl; external libSDL3_image;
 function IMG_isCUR(src: PSDL_IOStream): Tbool; cdecl; external libSDL3_image;
@@ -74,13 +74,13 @@ function IMG_LoadXV_IO(src: PSDL_IOStream): PSDL_Surface; cdecl; external libSDL
 function IMG_LoadWEBP_IO(src: PSDL_IOStream): PSDL_Surface; cdecl; external libSDL3_image;
 
 function IMG_LoadSizedSVG_IO(src: PSDL_IOStream; Width: longint; Height: longint): PSDL_Surface; cdecl; external libSDL3_image;
-function IMG_ReadXPMFromArray(xpm: PPchar): PSDL_Surface; cdecl; external libSDL3_image;
-function IMG_ReadXPMFromArrayToRGB888(xpm: PPchar): PSDL_Surface; cdecl; external libSDL3_image;
-function IMG_SaveAVIF(surface: PSDL_Surface; file_: pchar; quality: longint): Tbool; cdecl; external libSDL3_image;
+function IMG_ReadXPMFromArray(xpm: PPAnsiChar): PSDL_Surface; cdecl; external libSDL3_image;
+function IMG_ReadXPMFromArrayToRGB888(xpm: PPAnsiChar): PSDL_Surface; cdecl; external libSDL3_image;
+function IMG_SaveAVIF(surface: PSDL_Surface; file_: PAnsiChar; quality: longint): Tbool; cdecl; external libSDL3_image;
 function IMG_SaveAVIF_IO(surface: PSDL_Surface; dst: PSDL_IOStream; closeio: Tbool; quality: longint): Tbool; cdecl; external libSDL3_image;
-function IMG_SavePNG(surface: PSDL_Surface; file_: pchar): Tbool; cdecl; external libSDL3_image;
+function IMG_SavePNG(surface: PSDL_Surface; file_: PAnsiChar): Tbool; cdecl; external libSDL3_image;
 function IMG_SavePNG_IO(surface: PSDL_Surface; dst: PSDL_IOStream; closeio: Tbool): Tbool; cdecl; external libSDL3_image;
-function IMG_SaveJPG(surface: PSDL_Surface; file_: pchar; quality: longint): Tbool; cdecl; external libSDL3_image;
+function IMG_SaveJPG(surface: PSDL_Surface; file_: PAnsiChar; quality: longint): Tbool; cdecl; external libSDL3_image;
 function IMG_SaveJPG_IO(surface: PSDL_Surface; dst: PSDL_IOStream; closeio: Tbool; quality: longint): Tbool; cdecl; external libSDL3_image;
 
 type
@@ -93,9 +93,9 @@ type
   end;
   PIMG_Animation = ^TIMG_Animation;
 
-function IMG_LoadAnimation(file_: pchar): PIMG_Animation; cdecl; external libSDL3_image;
+function IMG_LoadAnimation(file_: PAnsiChar): PIMG_Animation; cdecl; external libSDL3_image;
 function IMG_LoadAnimation_IO(src: PSDL_IOStream; closeio: Tbool): PIMG_Animation; cdecl; external libSDL3_image;
-function IMG_LoadAnimationTyped_IO(src: PSDL_IOStream; closeio: Tbool; _type: pchar): PIMG_Animation; cdecl; external libSDL3_image;
+function IMG_LoadAnimationTyped_IO(src: PSDL_IOStream; closeio: Tbool; _type: PAnsiChar): PIMG_Animation; cdecl; external libSDL3_image;
 procedure IMG_FreeAnimation(anim: PIMG_Animation); cdecl; external libSDL3_image;
 function IMG_LoadGIFAnimation_IO(src: PSDL_IOStream): PIMG_Animation; cdecl; external libSDL3_image;
 function IMG_LoadWEBPAnimation_IO(src: PSDL_IOStream): PIMG_Animation; cdecl; external libSDL3_image;

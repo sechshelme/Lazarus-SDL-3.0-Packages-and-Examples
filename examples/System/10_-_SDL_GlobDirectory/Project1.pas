@@ -8,7 +8,7 @@ uses
 
 var
   Count: longint;
-  list: PPChar;
+  list: PPAnsiChar;
   i: integer;
 begin
   SDL_init(SDL_INIT_VIDEO);

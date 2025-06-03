@@ -108,8 +108,8 @@ procedure Mix_PauseAudio(pause_on: longint); cdecl; external libSDL3_mixer;
 function Mix_QuerySpec(frequency: Plongint; format: PUint16; channels: Plongint): longint; cdecl; external libSDL3_mixer;
 function Mix_AllocateChannels(numchans: longint): longint; cdecl; external libSDL3_mixer;
 function Mix_LoadWAV_IO(src: PSDL_IOStream; closeio: Boolean): PMix_Chunk; cdecl; external libSDL3_mixer;
-function Mix_LoadWAV(file_: PChar): PMix_Chunk; cdecl; external libSDL3_mixer;
-function Mix_LoadMUS(file_: PChar): PMix_Music; cdecl; external libSDL3_mixer;
+function Mix_LoadWAV(file_: PAnsiChar): PMix_Chunk; cdecl; external libSDL3_mixer;
+function Mix_LoadMUS(file_: PAnsiChar): PMix_Music; cdecl; external libSDL3_mixer;
 function Mix_LoadMUS_IO(src: PSDL_IOStream; closeio: Boolean): PMix_Music; cdecl; external libSDL3_mixer;
 function Mix_LoadMUSType_IO(src: PSDL_IOStream; _type: TMix_MusicType; closeio: Boolean): PMix_Music; cdecl; external libSDL3_mixer;
 function Mix_QuickLoad_WAV(mem: PUint8): PMix_Chunk; cdecl; external libSDL3_mixer;
@@ -117,17 +117,17 @@ function Mix_QuickLoad_RAW(mem: PUint8; len: TUint32): PMix_Chunk; cdecl; extern
 procedure Mix_FreeChunk(chunk: PMix_Chunk); cdecl; external libSDL3_mixer;
 procedure Mix_FreeMusic(music: PMix_Music); cdecl; external libSDL3_mixer;
 function Mix_GetNumChunkDecoders: longint; cdecl; external libSDL3_mixer;
-function Mix_GetChunkDecoder(index: longint): PChar; cdecl; external libSDL3_mixer;
-function Mix_HasChunkDecoder(Name: PChar): Boolean; cdecl; external libSDL3_mixer;
+function Mix_GetChunkDecoder(index: longint): PAnsiChar; cdecl; external libSDL3_mixer;
+function Mix_HasChunkDecoder(Name: PAnsiChar): Boolean; cdecl; external libSDL3_mixer;
 function Mix_GetNumMusicDecoders: longint; cdecl; external libSDL3_mixer;
-function Mix_GetMusicDecoder(index: longint): PChar; cdecl; external libSDL3_mixer;
-function Mix_HasMusicDecoder(Name: PChar): Boolean; cdecl; external libSDL3_mixer;
+function Mix_GetMusicDecoder(index: longint): PAnsiChar; cdecl; external libSDL3_mixer;
+function Mix_HasMusicDecoder(Name: PAnsiChar): Boolean; cdecl; external libSDL3_mixer;
 function Mix_GetMusicType(music: PMix_Music): TMix_MusicType; cdecl; external libSDL3_mixer;
-function Mix_GetMusicTitle(music: PMix_Music): PChar; cdecl; external libSDL3_mixer;
-function Mix_GetMusicTitleTag(music: PMix_Music): PChar; cdecl; external libSDL3_mixer;
-function Mix_GetMusicArtistTag(music: PMix_Music): PChar; cdecl; external libSDL3_mixer;
-function Mix_GetMusicAlbumTag(music: PMix_Music): PChar; cdecl; external libSDL3_mixer;
-function Mix_GetMusicCopyrightTag(music: PMix_Music): PChar; cdecl; external libSDL3_mixer;
+function Mix_GetMusicTitle(music: PMix_Music): PAnsiChar; cdecl; external libSDL3_mixer;
+function Mix_GetMusicTitleTag(music: PMix_Music): PAnsiChar; cdecl; external libSDL3_mixer;
+function Mix_GetMusicArtistTag(music: PMix_Music): PAnsiChar; cdecl; external libSDL3_mixer;
+function Mix_GetMusicAlbumTag(music: PMix_Music): PAnsiChar; cdecl; external libSDL3_mixer;
+function Mix_GetMusicCopyrightTag(music: PMix_Music): PAnsiChar; cdecl; external libSDL3_mixer;
 
 type
   Tmix_func_proc = procedure(udata: pointer; stream: PUint8; len: longint);
@@ -213,23 +213,23 @@ function Mix_GetMusicLoopEndTime(music: PMix_Music): double; cdecl; external lib
 function Mix_GetMusicLoopLengthTime(music: PMix_Music): double; cdecl; external libSDL3_mixer;
 function Mix_Playing(channel: longint): longint; cdecl; external libSDL3_mixer;
 function Mix_PlayingMusic: longint; cdecl; external libSDL3_mixer;
-function Mix_SetMusicCMD(command: PChar): longint; cdecl; external libSDL3_mixer;
+function Mix_SetMusicCMD(command: PAnsiChar): longint; cdecl; external libSDL3_mixer;
 function Mix_SetSynchroValue(Value: longint): longint; cdecl; external libSDL3_mixer;
 function Mix_GetSynchroValue: longint; cdecl; external libSDL3_mixer;
-function Mix_SetSoundFonts(paths: PChar): longint; cdecl; external libSDL3_mixer;
-function Mix_GetSoundFonts: PChar; cdecl; external libSDL3_mixer;
+function Mix_SetSoundFonts(paths: PAnsiChar): longint; cdecl; external libSDL3_mixer;
+function Mix_GetSoundFonts: PAnsiChar; cdecl; external libSDL3_mixer;
 
 type
-  TEachSoundFont_proc = function(para1: PChar; para2: pointer): longint;
+  TEachSoundFont_proc = function(para1: PAnsiChar; para2: pointer): longint;
 
 function Mix_EachSoundFont(_function: TEachSoundFont_proc; Data: pointer): longint; cdecl; external libSDL3_mixer;
-function Mix_SetTimidityCfg(path: PChar): longint; cdecl; external libSDL3_mixer;
-function Mix_GetTimidityCfg: PChar; cdecl; external libSDL3_mixer;
+function Mix_SetTimidityCfg(path: PAnsiChar): longint; cdecl; external libSDL3_mixer;
+function Mix_GetTimidityCfg: PAnsiChar; cdecl; external libSDL3_mixer;
 function Mix_GetChunk(channel: longint): PMix_Chunk; cdecl; external libSDL3_mixer;
 procedure Mix_CloseAudio; cdecl; external libSDL3_mixer;
 
-function Mix_SetError(fmt: PChar): longint; varargs; cdecl; external libSDL3 Name 'SDL_SetError';
-function Mix_GetError: PChar; cdecl; external libSDL3 Name 'SDL_GetError';
+function Mix_SetError(fmt: PAnsiChar): longint; varargs; cdecl; external libSDL3 Name 'SDL_SetError';
+function Mix_GetError: PAnsiChar; cdecl; external libSDL3 Name 'SDL_GetError';
 procedure Mix_ClearError; cdecl; external libSDL3 Name 'SDL_ClearError';
 procedure Mix_OutOfMemory; cdecl; external libSDL3 Name 'SDL_OutOfMemory';
 //function Mix_OutOfMemory: longint;

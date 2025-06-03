@@ -26,7 +26,7 @@ type
     procedure ShowWinPos(const ev: TSDL_Event);
 
     procedure printSurface(sur: PSDL_Surface);
-    function CreateBMPSurface(path: PChar): PSDL_Surface;
+    function CreateBMPSurface(path: PAnsiChar): PSDL_Surface;
     function CreateSurfaceFromTriBuffer: PSDL_Surface;
     function CreateSurfaceFromQuadBuffer: PSDL_Surface;
     function CreateSurfaceFromClassicTriBuffer: PSDL_Surface;
@@ -228,7 +228,7 @@ begin
   //SDL_Log('Rloss: %u   Gloss: %u   Bloss: %u   Aloss: %u'#10#10, sur^.format^.Rloss, sur^.format^.Gloss, sur^.format^.Bloss, sur^.format^.Aloss);
 end;
 
-function TSurfaceWindow.CreateBMPSurface(path: PChar): PSDL_Surface;
+function TSurfaceWindow.CreateBMPSurface(path: PAnsiChar): PSDL_Surface;
 begin
   Result := SDL_LoadBMP(path);
   if Result = nil then begin

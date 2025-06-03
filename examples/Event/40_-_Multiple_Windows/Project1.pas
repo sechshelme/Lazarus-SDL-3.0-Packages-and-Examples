@@ -14,7 +14,7 @@ var
     event: TSDL_Event;
     quit: boolean = False;
     win: PSDL_Window;
-    title: pchar;
+    title: PAnsiChar;
     i: Integer;
 
   begin

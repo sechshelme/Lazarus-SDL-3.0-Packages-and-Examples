@@ -47,7 +47,7 @@ procedure SDL_SetLogPriority(category: longint; priority: TSDL_LogPriority); cde
 function SDL_GetLogPriority(category: longint): TSDL_LogPriority; cdecl; external libSDL3;
 procedure SDL_ResetLogPriorities; cdecl; external libSDL3;
 function SDL_SetLogPriorityPrefix(priority: TSDL_LogPriority; prefix: pansichar): Tbool; cdecl; external libSDL3;
-procedure SDL_Log(fmt: PChar); varargs; cdecl; external libSDL3 name 'SDL_Log';
+procedure SDL_Log(fmt: PAnsiChar); varargs; cdecl; external libSDL3 name 'SDL_Log';
 procedure SDL_LogTrace(category: longint; fmt: pansichar); varargs cdecl; external libSDL3;
 procedure SDL_LogVerbose(category: longint; fmt: pansichar); varargs cdecl; external libSDL3;
 procedure SDL_LogDebug(category: longint; fmt: pansichar); varargs cdecl; external libSDL3;

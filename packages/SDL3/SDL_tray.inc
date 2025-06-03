@@ -27,18 +27,18 @@ type
 
   TSDL_TrayCallback = procedure(userdata: pointer; entry: PSDL_TrayEntry); cdecl;
 
-function SDL_CreateTray(icon: PSDL_Surface; tooltip: pchar): PSDL_Tray; cdecl; external libSDL3;
+function SDL_CreateTray(icon: PSDL_Surface; tooltip: PAnsiChar): PSDL_Tray; cdecl; external libSDL3;
 procedure SDL_SetTrayIcon(tray: PSDL_Tray; icon: PSDL_Surface); cdecl; external libSDL3;
-procedure SDL_SetTrayTooltip(tray: PSDL_Tray; tooltip: pchar); cdecl; external libSDL3;
+procedure SDL_SetTrayTooltip(tray: PSDL_Tray; tooltip: PAnsiChar); cdecl; external libSDL3;
 function SDL_CreateTrayMenu(tray: PSDL_Tray): PSDL_TrayMenu; cdecl; external libSDL3;
 function SDL_CreateTraySubmenu(entry: PSDL_TrayEntry): PSDL_TrayMenu; cdecl; external libSDL3;
 function SDL_GetTrayMenu(tray: PSDL_Tray): PSDL_TrayMenu; cdecl; external libSDL3;
 function SDL_GetTraySubmenu(entry: PSDL_TrayEntry): PSDL_TrayMenu; cdecl; external libSDL3;
 function SDL_GetTrayEntries(menu: PSDL_TrayMenu; size: Plongint): PPSDL_TrayEntry; cdecl; external libSDL3;
 procedure SDL_RemoveTrayEntry(entry: PSDL_TrayEntry); cdecl; external libSDL3;
-function SDL_InsertTrayEntryAt(menu: PSDL_TrayMenu; pos: longint; _label: pchar; flags: TSDL_TrayEntryFlags): PSDL_TrayEntry; cdecl; external libSDL3;
-procedure SDL_SetTrayEntryLabel(entry: PSDL_TrayEntry; _label: pchar); cdecl; external libSDL3;
-function SDL_GetTrayEntryLabel(entry: PSDL_TrayEntry): pchar; cdecl; external libSDL3;
+function SDL_InsertTrayEntryAt(menu: PSDL_TrayMenu; pos: longint; _label: PAnsiChar; flags: TSDL_TrayEntryFlags): PSDL_TrayEntry; cdecl; external libSDL3;
+procedure SDL_SetTrayEntryLabel(entry: PSDL_TrayEntry; _label: PAnsiChar); cdecl; external libSDL3;
+function SDL_GetTrayEntryLabel(entry: PSDL_TrayEntry): PAnsiChar; cdecl; external libSDL3;
 procedure SDL_SetTrayEntryChecked(entry: PSDL_TrayEntry; Checked: Tbool); cdecl; external libSDL3;
 function SDL_GetTrayEntryChecked(entry: PSDL_TrayEntry): Tbool; cdecl; external libSDL3;
 procedure SDL_SetTrayEntryEnabled(entry: PSDL_TrayEntry; Enabled: Tbool); cdecl; external libSDL3;

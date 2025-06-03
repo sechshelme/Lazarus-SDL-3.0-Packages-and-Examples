@@ -60,10 +60,10 @@ function bezierColor(renderer: PSDL_Renderer; vx: PSint16; vy: PSint16; n: longi
 function bezierRGBA(renderer: PSDL_Renderer; vx: PSint16; vy: PSint16; n: longint; s: longint; r: TUint8; g: TUint8; b: TUint8; a: TUint8): Tbool; cdecl; external libSDL3_gfx;
 procedure gfxPrimitivesSetFont(fontdata: pointer; cw: TUint32; ch: TUint32); cdecl; external libSDL3_gfx;
 procedure gfxPrimitivesSetFontRotation(rotation: TUint32); cdecl; external libSDL3_gfx;
-function characterColor(renderer: PSDL_Renderer; x: TSint16; y: TSint16; c: char; color: TUint32): Tbool; cdecl; external libSDL3_gfx;
-function characterRGBA(renderer: PSDL_Renderer; x: TSint16; y: TSint16; c: char; r: TUint8; g: TUint8; b: TUint8; a: TUint8): Tbool; cdecl; external libSDL3_gfx;
-function stringColor(renderer: PSDL_Renderer; x: TSint16; y: TSint16; s: pchar; color: TUint32): Tbool; cdecl; external libSDL3_gfx;
-function stringRGBA(renderer: PSDL_Renderer; x: TSint16; y: TSint16; s: pchar; r: TUint8; g: TUint8; b: TUint8; a: TUint8): Tbool; cdecl; external libSDL3_gfx;
+function characterColor(renderer: PSDL_Renderer; x: TSint16; y: TSint16; c: AnsiChar; color: TUint32): Tbool; cdecl; external libSDL3_gfx;
+function characterRGBA(renderer: PSDL_Renderer; x: TSint16; y: TSint16; c: AnsiChar; r: TUint8; g: TUint8; b: TUint8; a: TUint8): Tbool; cdecl; external libSDL3_gfx;
+function stringColor(renderer: PSDL_Renderer; x: TSint16; y: TSint16; s: PAnsiChar; color: TUint32): Tbool; cdecl; external libSDL3_gfx;
+function stringRGBA(renderer: PSDL_Renderer; x: TSint16; y: TSint16; s: PAnsiChar; r: TUint8; g: TUint8; b: TUint8; a: TUint8): Tbool; cdecl; external libSDL3_gfx;
 
 {$ENDIF read_interface}
 

@@ -12,7 +12,7 @@ function GetRTF_ctx(renderer: PSDL_Renderer): PRTF_Context;
 
 implementation
 
-function UTF8_to_UNICODE(_utf8: PChar; advance: pcint): TUint32;
+function UTF8_to_UNICODE(_utf8: PAnsiChar; advance: pcint): TUint32;
 var
   ch: TUint32;
   i: cint = 0;
@@ -45,7 +45,7 @@ begin
   Result := ch;
 end;
 
-function CreateFont(Name: PChar; family: TRTF_FontFamily; charset: longint; size: longint; style: longint): pointer; cdecl;
+function CreateFont(Name: PAnsiChar; family: TRTF_FontFamily; charset: longint; size: longint; style: longint): pointer; cdecl;
 var
   font: PTTF_Font;
   TTFstyle: integer;
@@ -67,7 +67,7 @@ begin
   WriteLn('GetLineSpacing io.');
 end;
 
-function GetCharacterOffsets(font: pointer; Text: PChar; byteOffsets: Plongint; pixelOffsets: Plongint; maxOffsets: longint): longint; cdecl;
+function GetCharacterOffsets(font: pointer; Text: PAnsiChar; byteOffsets: Plongint; pixelOffsets: Plongint; maxOffsets: longint): longint; cdecl;
 var
   i: cint = 0;
   bytes: cint = 0;
@@ -99,7 +99,7 @@ begin
   Result := i;
 end;
 
-function RenderText(font: pointer; renderer: PSDL_Renderer; Text: PChar; fg: TSDL_Color): PSDL_Texture; cdecl;
+function RenderText(font: pointer; renderer: PSDL_Renderer; Text: PAnsiChar; fg: TSDL_Color): PSDL_Texture; cdecl;
 var
   surface: PSDL_Surface;
 begin
