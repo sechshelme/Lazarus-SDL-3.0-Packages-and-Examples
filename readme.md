@@ -69,7 +69,7 @@ A similar procedure is required for the SDL additional packages.
 ## Updates:
 | Date       | Changes 
 | ---        | ---
-| 03.06.2025 | *Char* replaced by *AnsiChar*
+| 03.06.2025 | **Char** replaced by **AnsiChar**
 | 03.06.2025 | Adapted to SDL-release-3.2.16
 | 15.05.2025 | Adapted to SDL-release-3.2.14
 | 05.05.2025 | Adapted to SDL-release-3.2.12
@@ -186,7 +186,7 @@ Für die Zusatzpackete **SDL_image, SDL_ttf, SDL_rtf, SDL_mixer und SDL_net** in
 ## Neuerungen:
 | Datum      | Änderungen 
 | ---        | ---
-| 03.06.2025 | *Char* durch *AnsiChar* ersetzt
+| 03.06.2025 | **Char** durch **AnsiChar** ersetzt
 | 03.06.2025 | Angepasst an SDL-release-3.2.16
 | 15.05.2025 | Angepasst an SDL-release-3.2.14
 | 05.05.2025 | Angepasst an SDL-release-3.2.12
