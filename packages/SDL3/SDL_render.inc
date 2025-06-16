@@ -214,7 +214,7 @@ function SDL_RenderRects(renderer: PSDL_Renderer; rects: PSDL_FRect; Count: long
 function SDL_RenderFillRect(renderer: PSDL_Renderer; rect: PSDL_FRect): Tbool; cdecl; external libSDL3;
 function SDL_RenderFillRects(renderer: PSDL_Renderer; rects: PSDL_FRect; Count: longint): Tbool; cdecl; external libSDL3;
 function SDL_RenderTexture(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; dstrect: PSDL_FRect): Tbool; cdecl; external libSDL3;
-function SDL_RenderTextureRotated(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; dstrect: PSDL_FRect; angle: Tdouble;
+function SDL_RenderTextureRotated(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; dstrect: PSDL_FRect; angle: double;
   center: PSDL_FPoint; flip: TSDL_FlipMode): Tbool; cdecl; external libSDL3;
 function SDL_RenderTextureAffine(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; origin: PSDL_FPoint; right: PSDL_FPoint;
   down: PSDL_FPoint): Tbool; cdecl; external libSDL3;

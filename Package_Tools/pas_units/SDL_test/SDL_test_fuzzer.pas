@@ -19,9 +19,9 @@ function SDLTest_RandomUint32:TUint32;cdecl;external ;
 function SDLTest_RandomUint64:TUint64;cdecl;external ;
 function SDLTest_RandomSint64:TSint64;cdecl;external ;
 function SDLTest_RandomUnitFloat:single;cdecl;external ;
-function SDLTest_RandomUnitDouble:Tdouble;cdecl;external ;
+function SDLTest_RandomUnitDouble:double;cdecl;external ;
 function SDLTest_RandomFloat:single;cdecl;external ;
-function SDLTest_RandomDouble:Tdouble;cdecl;external ;
+function SDLTest_RandomDouble:double;cdecl;external ;
 
 function SDLTest_RandomUint8BoundaryValue(boundary1:TUint8; boundary2:TUint8; validDomain:Tbool):TUint8;cdecl;external ;
 function SDLTest_RandomUint16BoundaryValue(boundary1:TUint16; boundary2:TUint16; validDomain:Tbool):TUint16;cdecl;external ;

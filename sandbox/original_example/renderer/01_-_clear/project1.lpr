@@ -38,7 +38,7 @@ type
   var
     app: PAppstate absolute appstate;
     now: double;
-    red, green, blue: Tdouble;
+    red, green, blue: double;
   begin
     now := SDL_GetTicks / 1000.0;
 

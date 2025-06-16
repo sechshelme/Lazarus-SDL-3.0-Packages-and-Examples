@@ -4,8 +4,7 @@
 type
   PSDL_GLContextState = Pointer; // ??????????????????????
 
-  Tbool = boolean;
-  Tdouble = double;
+  Tbool = Boolean8;
 
   TUint8 = uint8;
   TUint16 = uint16;
@@ -75,30 +74,29 @@ const
   // Entspricht Lenght() von Static Arrays
 
 const
-  SDL_MAX_SINT8 = int8(127);
-  SDL_MIN_SINT8 = int8(-128);
+  SDL_MAX_SINT8   = $7F;                  // 127
+  SDL_MIN_SINT8   = -$80;                 // -128
 
-  SDL_MAX_UINT8 = uint8(255);
-  SDL_MIN_UINT8 = uint8(0);
+  SDL_MAX_UINT8   = $FF;                  // 255
+  SDL_MIN_UINT8   = $00;                  // 0
 
-  SDL_MAX_SINT16 = int16(32767);
-  SDL_MIN_SINT16 = int16(-32768);
+  SDL_MAX_SINT16  = $7FFF;                // 32767
+  SDL_MIN_SINT16  = -$8000;               // -32768
 
-  SDL_MAX_UINT16 = int16(65535);
-  SDL_MIN_UINT16 = int16(0);
+  SDL_MAX_UINT16  = $FFFF;                // 65535
+  SDL_MIN_UINT16  = $0000;                // 0
 
-  SDL_MAX_SINT32 = int32(2147483647);
-  SDL_MIN_SINT32 = int32(-2147483648);
+  SDL_MAX_SINT32  = $7FFFFFFF;            // 2147483647
+  SDL_MIN_SINT32  = -$80000000;           // -2147483648
 
-  SDL_MAX_UINT32 = int32(4294967295);
-  SDL_MIN_UINT32 = int32(0);
+  SDL_MAX_UINT32  = $FFFFFFFF;            // 4294967295
+  SDL_MIN_UINT32  = $00000000;            // 0
 
-  SDL_MAX_SINT64 = int64(9223372036854775807);
-  SDL_MIN_SINT64 = int64(-9223372036854775808);
+  SDL_MAX_SINT64  = $7FFFFFFFFFFFFFFF;    // 9223372036854775807
+  SDL_MIN_SINT64  = -$8000000000000000;   // -9223372036854775808
 
-  SDL_MAX_UINT64 = int64(18446744073709551615);
-  SDL_MIN_UINT64 = int64(0);
-
+  SDL_MAX_UINT64  = $FFFFFFFFFFFFFFFF;    // 18446744073709551615
+  SDL_MIN_UINT64  = $0000000000000000;    // 0
 
 const
   SDL_MAX_TIME = SDL_MAX_SINT64;
@@ -236,12 +234,12 @@ function SDL_ultoa(Value: dword; str: pansichar; radix: longint): pansichar; cde
 function SDL_lltoa(Value: int64; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
 function SDL_ulltoa(Value: qword; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
 function SDL_atoi(str: pansichar): longint; cdecl; external libSDL3;
-function SDL_atof(str: pansichar): Tdouble; cdecl; external libSDL3;
+function SDL_atof(str: pansichar): double; cdecl; external libSDL3;
 function SDL_strtol(str: pansichar; endp: PPansichar; base: longint): longint; cdecl; external libSDL3;
 function SDL_strtoul(str: pansichar; endp: PPansichar; base: longint): dword; cdecl; external libSDL3;
 function SDL_strtoll(str: pansichar; endp: PPansichar; base: longint): int64; cdecl; external libSDL3;
 function SDL_strtoull(str: pansichar; endp: PPansichar; base: longint): qword; cdecl; external libSDL3;
-function SDL_strtod(str: pansichar; endp: PPansichar): Tdouble; cdecl; external libSDL3;
+function SDL_strtod(str: pansichar; endp: PPansichar): double; cdecl; external libSDL3;
 function SDL_strcmp(str1: pansichar; str2: pansichar): longint; cdecl; external libSDL3;
 function SDL_strncmp(str1: pansichar; str2: pansichar; maxlen: Tsize_t): longint; cdecl; external libSDL3;
 function SDL_strcasecmp(str1: pansichar; str2: pansichar): longint; cdecl; external libSDL3;
@@ -269,53 +267,53 @@ function SDL_rand_bits: TUint32; cdecl; external libSDL3;
 function SDL_rand_r(state: PUint64; n: TSint32): TSint32; cdecl; external libSDL3;
 function SDL_randf_r(state: PUint64): single; cdecl; external libSDL3;
 function SDL_rand_bits_r(state: PUint64): TUint32; cdecl; external libSDL3;
-function SDL_acos(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_acos(x: double): double; cdecl; external libSDL3;
 function SDL_acosf(x: single): single; cdecl; external libSDL3;
-function SDL_asin(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_asin(x: double): double; cdecl; external libSDL3;
 function SDL_asinf(x: single): single; cdecl; external libSDL3;
-function SDL_atan(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_atan(x: double): double; cdecl; external libSDL3;
 function SDL_atanf(x: single): single; cdecl; external libSDL3;
-function SDL_atan2(y: Tdouble; x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_atan2(y: double; x: double): double; cdecl; external libSDL3;
 function SDL_atan2f(y: single; x: single): single; cdecl; external libSDL3;
-function SDL_ceil(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_ceil(x: double): double; cdecl; external libSDL3;
 function SDL_ceilf(x: single): single; cdecl; external libSDL3;
-function SDL_copysign(x: Tdouble; y: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_copysign(x: double; y: double): double; cdecl; external libSDL3;
 function SDL_copysignf(x: single; y: single): single; cdecl; external libSDL3;
-function SDL_cos(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_cos(x: double): double; cdecl; external libSDL3;
 function SDL_cosf(x: single): single; cdecl; external libSDL3;
-function SDL_exp(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_exp(x: double): double; cdecl; external libSDL3;
 function SDL_expf(x: single): single; cdecl; external libSDL3;
-function SDL_fabs(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_fabs(x: double): double; cdecl; external libSDL3;
 function SDL_fabsf(x: single): single; cdecl; external libSDL3;
-function SDL_floor(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_floor(x: double): double; cdecl; external libSDL3;
 function SDL_floorf(x: single): single; cdecl; external libSDL3;
-function SDL_trunc(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_trunc(x: double): double; cdecl; external libSDL3;
 function SDL_truncf(x: single): single; cdecl; external libSDL3;
-function SDL_fmod(x: Tdouble; y: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_fmod(x: double; y: double): double; cdecl; external libSDL3;
 function SDL_fmodf(x: single; y: single): single; cdecl; external libSDL3;
-function SDL_isinf(x: Tdouble): longint; cdecl; external libSDL3;
+function SDL_isinf(x: double): longint; cdecl; external libSDL3;
 function SDL_isinff(x: single): longint; cdecl; external libSDL3;
-function SDL_isnan(x: Tdouble): longint; cdecl; external libSDL3;
+function SDL_isnan(x: double): longint; cdecl; external libSDL3;
 function SDL_isnanf(x: single): longint; cdecl; external libSDL3;
-function SDL_log(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_log(x: double): double; cdecl; external libSDL3;
 function SDL_logf(x: single): single; cdecl; external libSDL3;
-function SDL_log10(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_log10(x: double): double; cdecl; external libSDL3;
 function SDL_log10f(x: single): single; cdecl; external libSDL3;
-function SDL_modf(x: Tdouble; y: Pdouble): Tdouble; cdecl; external libSDL3;
+function SDL_modf(x: double; y: Pdouble): double; cdecl; external libSDL3;
 function SDL_modff(x: single; y: Psingle): single; cdecl; external libSDL3;
-function SDL_pow(x: Tdouble; y: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_pow(x: double; y: double): double; cdecl; external libSDL3;
 function SDL_powf(x: single; y: single): single; cdecl; external libSDL3;
-function SDL_round(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_round(x: double): double; cdecl; external libSDL3;
 function SDL_roundf(x: single): single; cdecl; external libSDL3;
-function SDL_lround(x: Tdouble): longint; cdecl; external libSDL3;
+function SDL_lround(x: double): longint; cdecl; external libSDL3;
 function SDL_lroundf(x: single): longint; cdecl; external libSDL3;
-function SDL_scalbn(x: Tdouble; n: longint): Tdouble; cdecl; external libSDL3;
+function SDL_scalbn(x: double; n: longint): double; cdecl; external libSDL3;
 function SDL_scalbnf(x: single; n: longint): single; cdecl; external libSDL3;
-function SDL_sin(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_sin(x: double): double; cdecl; external libSDL3;
 function SDL_sinf(x: single): single; cdecl; external libSDL3;
-function SDL_sqrt(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_sqrt(x: double): double; cdecl; external libSDL3;
 function SDL_sqrtf(x: single): single; cdecl; external libSDL3;
-function SDL_tan(x: Tdouble): Tdouble; cdecl; external libSDL3;
+function SDL_tan(x: double): double; cdecl; external libSDL3;
 function SDL_tanf(x: single): single; cdecl; external libSDL3;
 
 type
@@ -325,6 +323,13 @@ type
 function SDL_iconv_open(tocode: pansichar; fromcode: pansichar): TSDL_iconv_t; cdecl; external libSDL3;
 function SDL_iconv_close(cd: TSDL_iconv_t): longint; cdecl; external libSDL3;
 function SDL_iconv(cd: TSDL_iconv_t; inbuf: PPansichar; inbytesleft: Psize_t; outbuf: PPansichar; outbytesleft: Psize_t): Tsize_t; cdecl; external libSDL3;
+
+const
+  SDL_ICONV_ERROR = Tsize_t(-(1));
+  SDL_ICONV_E2BIG = Tsize_t(-(2));
+  SDL_ICONV_EILSEQ = Tsize_t(-(3));
+  SDL_ICONV_EINVAL = Tsize_t(-(4));
+
 function SDL_iconv_string(tocode: pansichar; fromcode: pansichar; inbuf: pansichar; inbytesleft: Tsize_t): pansichar; cdecl; external libSDL3;
 
 function SDL_FOURCC(A, B, C, D: byte): uint32;
@@ -340,11 +345,6 @@ function SDL_iconv_utf8_locale(S: PAnsiChar): PAnsiChar;
 function SDL_iconv_utf8_ucs2(S: PAnsiChar): PUint16;
 function SDL_iconv_utf8_ucs4(S: PAnsiChar): PUint32;
 function SDL_iconv_wchar_utf8(S: Pwchar_t): PAnsiChar;
-
-function SDL_ICONV_ERROR: Tsize_t;
-function SDL_ICONV_E2BIG: Tsize_t;
-function SDL_ICONV_EILSEQ: Tsize_t;
-function SDL_ICONV_EINVAL: Tsize_t;
 
 type
   PSDL_FunctionPointer = ^TSDL_FunctionPointer;
@@ -426,27 +426,6 @@ begin
   end else begin
     Result := if_local1;
   end;
-end;
-
-
-function SDL_ICONV_ERROR: Tsize_t;
-begin
-  SDL_ICONV_ERROR := Tsize_t(-(1));
-end;
-
-function SDL_ICONV_E2BIG: Tsize_t;
-begin
-  SDL_ICONV_E2BIG := Tsize_t(-(2));
-end;
-
-function SDL_ICONV_EILSEQ: Tsize_t;
-begin
-  SDL_ICONV_EILSEQ := Tsize_t(-(3));
-end;
-
-function SDL_ICONV_EINVAL: Tsize_t;
-begin
-  SDL_ICONV_EINVAL := Tsize_t(-(4));
 end;
 
 function SDL_iconv_utf8_locale(S: PAnsiChar): PAnsiChar;

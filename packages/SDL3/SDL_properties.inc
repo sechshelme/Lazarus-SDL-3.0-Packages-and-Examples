@@ -5,6 +5,7 @@ type
   PSDL_PropertiesID = ^TSDL_PropertiesID;
   TSDL_PropertiesID = TUint32;
 
+type
   PSDL_PropertyType = ^TSDL_PropertyType;
   TSDL_PropertyType = longint;
 
