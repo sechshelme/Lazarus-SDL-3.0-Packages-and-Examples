@@ -9,7 +9,7 @@
         <MainUnitHasScaledStatement Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="project1"/>
+      <Title Value="Project1"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -23,9 +23,20 @@
     <RunParams>
       <FormatVersion Value="2"/>
     </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="fp_shaderc_package"/>
+      </Item>
+      <Item>
+        <PackageName Value="ogl_package_noLCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="SDL3_package"/>
+      </Item>
+    </RequiredPackages>
     <Units>
       <Unit>
-        <Filename Value="project1.lpr"/>
+        <Filename Value="Project1.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -33,11 +44,10 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="project1"/>
+      <Filename Value="Project1"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../pas_units"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
