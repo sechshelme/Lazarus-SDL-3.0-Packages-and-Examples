@@ -11,9 +11,6 @@ const
   Screen_Widht = 320;
   Screen_Height = 240;
 
-type
-  TAnsiCharArray = array of ansichar;
-
 var
   // SDL
   glcontext: TSDL_GLContext;
@@ -78,7 +75,7 @@ const
     Load_GLADE;
   end;
 
-  function StrToSpriV(kind: Tshaderc_shader_kind; src: pchar): TAnsiCharArray;
+  function StrToSpriV(kind: Tshaderc_shader_kind; src: pchar): ansistring;
   var
     compiler: Pshaderc_compiler;
     res: Pshaderc_compilation_result;
@@ -91,20 +88,20 @@ const
       SDL_Log('Shaderc error: %s'#10, shaderc_result_get_error_message(res));
       shaderc_result_release(res);
       shaderc_compiler_release(compiler);
-      exit(nil);
+      exit('');
     end;
 
     spirv_size := shaderc_result_get_length(res);
     spirv_data := shaderc_result_get_bytes(res);
 
     SetLength(Result, spirv_size);
-    Move(spirv_data[0], Result[0], spirv_size);
+    Move(spirv_data[0], Result[1], spirv_size);
 
     shaderc_result_release(res);
     shaderc_compiler_release(compiler);
   end;
 
-  procedure LoadShader(kind: TGLenum; data: TAnsiCharArray);
+  procedure LoadShader(kind: TGLenum; data: ansistring);
   var
     so: TGLuint;
   begin
@@ -118,7 +115,7 @@ const
 
   procedure CreateScene;
   var
-    a: TAnsiCharArray = nil;
+    a: ansistring = '';
   begin
     glCreateBuffers(Length(Mesh_Buffers), Mesh_Buffers);
     glNamedBufferStorage(Mesh_Buffers[mbTriangle], Length(vertices) * SizeOf(TVector2f), PVector2f(vertices), 0);
@@ -194,7 +191,17 @@ const
     end;
   end;
 
+  procedure printShaderCVersion;
+  var
+    ver, rev: DWord;
+  begin
+    shaderc_get_spv_version(@ver, @rev);
+    WriteLn('SPIR-V Version: ', ver, ', Revision: ', rev, #10);
+  end;
+
 begin
+  printShaderCVersion;
+
   Init_SDL_and_OpenGL;
   CreateScene;
   RunScene;
