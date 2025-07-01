@@ -50,6 +50,9 @@ const
   (libs: 'libSDL3_sound'; units: 'ctypes, SDL3'),
   (libs: 'libSDL3'; units: 'ctypes, SDL_stdinc'),
 
+  (libs: 'libSDL3_native_midi'; units: 'ctypes, SDL_stdinc'),
+
+
     (libs: ''; units: ''));
 
 

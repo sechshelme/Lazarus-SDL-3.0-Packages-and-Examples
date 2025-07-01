@@ -19,7 +19,7 @@ const
   {$ENDIF}
 
   {$IFDEF Darwin}
-  libSDL3_sound = 'SDL3_sounddylib';
+  libSDL3_sound = 'SDL3_sound.dylib';
   {$ENDIF}
 
   // =====================
