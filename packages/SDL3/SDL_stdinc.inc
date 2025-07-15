@@ -43,7 +43,6 @@ type
   {$IFDEF CPU64}
     Tsize_t = uint64;
   {$ENDIF}
-//  Tsize_t = csize_t;
   Psize_t = ^Tsize_t;
 
   Tuintptr_t = PtrUInt;
