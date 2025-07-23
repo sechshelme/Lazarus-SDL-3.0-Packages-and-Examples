@@ -17,7 +17,6 @@ const
 
 type
   PSDL_AssertData = ^TSDL_AssertData;
-
   TSDL_AssertData = record
     always_ignore: Tbool;
     trigger_count: dword;

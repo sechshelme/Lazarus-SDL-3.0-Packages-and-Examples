@@ -20,17 +20,11 @@ const
   __ARM_NEON = 1;
   __ARM_ARCH = 8;
 
-function SDL_TARGETING(x : longint) : longint;
 
 {$ENDIF read_interface}
 
 
 {$IFDEF read_implementation}
-
-function SDL_TARGETING(x : longint) : longint;
-begin
-//  SDL_TARGETING:=__attribute__(target(x)); ??????????
-end;
 
 
 {$ENDIF read_implementation}

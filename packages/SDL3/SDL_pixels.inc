@@ -282,19 +282,19 @@ const
   SDL_COLORSPACE_YUV_DEFAULT = SDL_COLORSPACE_JPEG;
 
 type
-  PSDL_Color = ^TSDL_Color;
   TSDL_Color = record
     case byte of
       1: (r, g, b, a: uint8);
       2: (items: array[0..3] of uint8);
   end;
+  PSDL_Color = ^TSDL_Color;
 
-  PSDL_FColor = ^TSDL_FColor;
   TSDL_FColor = record
     case byte of
       1: (r, g, b, a: single);
       2: (items: array[0..3] of single);
     end;
+  PSDL_FColor = ^TSDL_FColor;
 
   TSDL_Palette = record
     ncolors: longint;
@@ -334,15 +334,11 @@ function SDL_CreatePalette(ncolors: longint): PSDL_Palette; cdecl; external libS
 function SDL_SetPaletteColors(palette: PSDL_Palette; colors: PSDL_Color; firstcolor: longint; ncolors: longint): Tbool; cdecl; external libSDL3;
 procedure SDL_DestroyPalette(palette: PSDL_Palette); cdecl; external libSDL3;
 function SDL_MapRGB(format: PSDL_PixelFormatDetails; palette: PSDL_Palette; r: TUint8; g: TUint8; b: TUint8): TUint32; cdecl; external libSDL3;
-function SDL_MapRGBA(format: PSDL_PixelFormatDetails; palette: PSDL_Palette; r: TUint8; g: TUint8; b: TUint8;
-  a: TUint8): TUint32; cdecl; external libSDL3;
-procedure SDL_GetRGB(pixel: TUint32; format: PSDL_PixelFormatDetails; palette: PSDL_Palette; r: PUint8; g: PUint8;
-  b: PUint8); cdecl; external libSDL3;
-procedure SDL_GetRGBA(pixel: TUint32; format: PSDL_PixelFormatDetails; palette: PSDL_Palette; r: PUint8; g: PUint8;
-  b: PUint8; a: PUint8); cdecl; external libSDL3;
+function SDL_MapRGBA(format: PSDL_PixelFormatDetails; palette: PSDL_Palette; r: TUint8; g: TUint8; b: TUint8; a: TUint8): TUint32; cdecl; external libSDL3;
+procedure SDL_GetRGB(pixel: TUint32; format: PSDL_PixelFormatDetails; palette: PSDL_Palette; r: PUint8; g: PUint8; b: PUint8); cdecl; external libSDL3;
+procedure SDL_GetRGBA(pixel: TUint32; format: PSDL_PixelFormatDetails; palette: PSDL_Palette; r: PUint8; g: PUint8; b: PUint8; a: PUint8); cdecl; external libSDL3;
 
 function SDL_DEFINE_PIXELFOURCC(A, B, C, D: byte): uint32;
-
 function SDL_DEFINE_PIXELFORMAT(_type, order, layout, bits, bytes: longint): longint;
 
 function SDL_PIXELFLAG(format: longint): longint;

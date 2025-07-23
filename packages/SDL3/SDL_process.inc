@@ -2,9 +2,7 @@
 {$IFDEF read_interface}
 
 type
-  TSDL_Process = record
-  end;
-  PSDL_Process = ^TSDL_Process;
+  PSDL_Process = type Pointer;
 
 function SDL_CreateProcess(args: PPansichar; pipe_stdio: Tbool): PSDL_Process; cdecl; external libSDL3;
 

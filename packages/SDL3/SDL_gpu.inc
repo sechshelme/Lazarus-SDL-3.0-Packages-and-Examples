@@ -432,12 +432,9 @@ type
     min_depth: single;
     max_depth: single;
   end;
-
-  TSDL_GPUTransferBuffer = record
-  end;
-  PSDL_GPUTransferBuffer = ^TSDL_GPUTransferBuffer;
-
   PSDL_GPUViewport = ^TSDL_GPUViewport;
+
+  PSDL_GPUTransferBuffer = type Pointer;
 
   TSDL_GPUTextureTransferInfo = record
     transfer_buffer: PSDL_GPUTransferBuffer;
@@ -453,9 +450,7 @@ type
   end;
   PSDL_GPUTransferBufferLocation = ^TSDL_GPUTransferBufferLocation;
 
-  TSDL_GPUTexture = record
-  end;
-  PSDL_GPUTexture = ^TSDL_GPUTexture;
+  PSDL_GPUTexture = type Pointer;
   PPSDL_GPUTexture = ^PSDL_GPUTexture;
 
   TSDL_GPUTextureLocation = record
@@ -492,9 +487,7 @@ type
   end;
   PSDL_GPUBlitRegion = ^TSDL_GPUBlitRegion;
 
-  TSDL_GPUBuffer = record
-  end;
-  PSDL_GPUBuffer = ^TSDL_GPUBuffer;
+  PSDL_GPUBuffer = type Pointer;
   PPSDL_GPUBuffer = ^PSDL_GPUBuffer;
 
   TSDL_GPUBufferLocation = record
@@ -699,9 +692,7 @@ type
   end;
   PSDL_GPUGraphicsPipelineTargetInfo = ^TSDL_GPUGraphicsPipelineTargetInfo;
 
-  TSDL_GPUShader = record
-  end;
-  PSDL_GPUShader = ^TSDL_GPUShader;
+  PSDL_GPUShader = type Pointer;
 
   TSDL_GPUGraphicsPipelineCreateInfo = record
     vertex_shader: PSDL_GPUShader;
@@ -785,9 +776,7 @@ type
   end;
   PSDL_GPUBufferBinding = ^TSDL_GPUBufferBinding;
 
-  TSDL_GPUSampler = record
-  end;
-  PSDL_GPUSampler = ^TSDL_GPUSampler;
+  PSDL_GPUSampler = type Pointer;
 
   TSDL_GPUTextureSamplerBinding = record
     texture: PSDL_GPUTexture;
@@ -815,37 +804,14 @@ type
   end;
   PSDL_GPUStorageTextureReadWriteBinding = ^TSDL_GPUStorageTextureReadWriteBinding;
 
-  TSDL_GPUDevice = record
-  end;
-  PSDL_GPUDevice = ^TSDL_GPUDevice;
-
-  TSDL_GPUComputePipeline = record
-  end;
-  PSDL_GPUComputePipeline = ^TSDL_GPUComputePipeline;
-
-  TSDL_GPUGraphicsPipeline = record
-  end;
-  PSDL_GPUGraphicsPipeline = ^TSDL_GPUGraphicsPipeline;
-
-  TSDL_GPUCommandBuffer = record
-  end;
-  PSDL_GPUCommandBuffer = ^TSDL_GPUCommandBuffer;
-
-  TSDL_GPURenderPass = record
-  end;
-  PSDL_GPURenderPass = ^TSDL_GPURenderPass;
-
-  TSDL_GPUComputePass = record
-  end;
-  PSDL_GPUComputePass = ^TSDL_GPUComputePass;
-
-  TSDL_GPUCopyPass = record
-  end;
-  PSDL_GPUCopyPass = ^TSDL_GPUCopyPass;
-
-  TSDL_GPUFence = record
-  end;
-  PSDL_GPUFence = ^TSDL_GPUFence;
+  PSDL_GPUDevice = type Pointer;
+  PSDL_GPUComputePipeline = type Pointer;
+  PSDL_GPUGraphicsPipeline = type Pointer;
+  PSDL_GPUCommandBuffer = type Pointer;
+  PSDL_GPURenderPass = type Pointer;
+  PSDL_GPUComputePass = type Pointer;
+  PSDL_GPUCopyPass = type Pointer;
+  PSDL_GPUFence = type Pointer;
   PPSDL_GPUFence = ^PSDL_GPUFence;
 
 function SDL_GPUSupportsShaderFormats(format_flags: TSDL_GPUShaderFormat; Name: pansichar): Tbool; cdecl; external libSDL3;

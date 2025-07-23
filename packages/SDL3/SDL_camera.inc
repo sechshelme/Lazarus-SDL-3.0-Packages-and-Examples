@@ -25,9 +25,7 @@ const
   SDL_CAMERA_POSITION_BACK_FACING = 2;
 
 type
-  TSDL_Camera = record
-  end;
-  PSDL_Camera = ^TSDL_Camera;
+  PSDL_Camera = type Pointer;
 
 function SDL_GetNumCameraDrivers: longint; cdecl; external libSDL3;
 function SDL_GetCameraDriver(index: longint): pansichar; cdecl; external libSDL3;

@@ -2,15 +2,12 @@
 {$IFDEF read_interface}
 
 type
-  PVkAllocationCallbacks = ^TVkAllocationCallbacks;
-  TVkAllocationCallbacks = record
-    {undefined structure}
-  end;
+  PVkAllocationCallbacks = type Pointer;
 
   TVkInstance = Pointer;          // ??????
   TVkSurfaceKHR = Pointer;        // ??????
   PVkSurfaceKHR = ^TVkSurfaceKHR; // ??????
-  TVkPhysicalDevice=Pointer;
+  TVkPhysicalDevice = Pointer;
 
 function SDL_Vulkan_LoadLibrary(path: pansichar): Tbool; cdecl; external libSDL3;
 function SDL_Vulkan_GetVkGetInstanceProcAddr: TSDL_FunctionPointer; cdecl; external libSDL3;

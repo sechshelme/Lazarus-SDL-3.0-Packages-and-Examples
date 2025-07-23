@@ -18,9 +18,7 @@ type
   end;
   PSDL_StorageInterface = ^TSDL_StorageInterface;
 
-  TSDL_Storage = record
-  end;
-  PSDL_Storage = ^TSDL_Storage;
+  PSDL_Storage = type Pointer;
 
 function SDL_OpenTitleStorage(override: pansichar; props: TSDL_PropertiesID): PSDL_Storage; cdecl; external libSDL3;
 function SDL_OpenUserStorage(org: pansichar; app: pansichar; props: TSDL_PropertiesID): PSDL_Storage; cdecl; external libSDL3;

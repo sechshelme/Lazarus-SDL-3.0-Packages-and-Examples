@@ -23,9 +23,7 @@ const
   SDL_SENSOR_GYRO_R = (-(1)) + 7;
 
 type
-  TSDL_Sensor = record
-  end;
-  PSDL_Sensor = ^TSDL_Sensor;
+  PSDL_Sensor = type Pointer;
 
 function SDL_GetSensors(Count: Plongint): PSDL_SensorID; cdecl; external libSDL3;
 function SDL_GetSensorNameForID(instance_id: TSDL_SensorID): pansichar; cdecl; external libSDL3;

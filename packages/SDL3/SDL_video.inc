@@ -21,9 +21,7 @@ const
   SDL_SYSTEM_THEME_DARK = 2;
 
 type
-  TSDL_DisplayModeData = record
-  end;
-  PSDL_DisplayModeData = ^TSDL_DisplayModeData;
+  PSDL_DisplayModeData = type Pointer;
 
   TSDL_DisplayMode = record
     displayID: TSDL_DisplayID;
@@ -171,9 +169,7 @@ const
   SDL_GL_CONTEXT_RESET_LOSE_CONTEXT = $0001;
 
 type
-  TSDL_Window = record
-  end;
-  PSDL_Window = ^TSDL_Window;
+  PSDL_Window = type Pointer;
   PPSDL_Window = ^PSDL_Window;
 
 function SDL_GetNumVideoDrivers: longint; cdecl; external libSDL3;

@@ -141,9 +141,7 @@ type
   TSDL_HapticID = TUint32;
   PSDL_HapticID = ^TSDL_HapticID;
 
-  TSDL_Haptic = record
-  end;
-  PSDL_Haptic = ^TSDL_Haptic;
+  PSDL_Haptic = type Pointer;
 
 function SDL_GetHaptics(Count: Plongint): PSDL_HapticID; cdecl; external libSDL3;
 function SDL_GetHapticNameForID(instance_id: TSDL_HapticID): pansichar; cdecl; external libSDL3;

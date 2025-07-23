@@ -105,7 +105,6 @@ type
           end;
           SDLK_SPACE: begin
             Inc(app^.Value);
-            //            SDL_LogError(0,'value: %i', app^.Value);
             SDL_Log('value: %i', app^.Value);
           end;
         end;

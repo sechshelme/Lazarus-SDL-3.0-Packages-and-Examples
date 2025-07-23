@@ -139,9 +139,7 @@ type
   TSDL_free_func = procedure(mem: pointer); cdecl;
   PSDL_free_func = ^TSDL_free_func;
 
-  TSDL_Environment = record
-  end;
-  PSDL_Environment = ^TSDL_Environment;
+  PSDL_Environment = type Pointer;
 
 procedure SDL_GetOriginalMemoryFunctions(malloc_func: PSDL_malloc_func; calloc_func: PSDL_calloc_func; realloc_func: PSDL_realloc_func; free_func: PSDL_free_func); cdecl; external libSDL3;
 procedure SDL_GetMemoryFunctions(malloc_func: PSDL_malloc_func; calloc_func: PSDL_calloc_func; realloc_func: PSDL_realloc_func; free_func: PSDL_free_func); cdecl; external libSDL3;

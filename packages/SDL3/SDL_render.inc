@@ -39,9 +39,7 @@ type
   end;
   PSDL_Texture = ^TSDL_Texture;
 
-  TSDL_Renderer = record
-  end;
-  PSDL_Renderer = ^TSDL_Renderer;
+  PSDL_Renderer = type Pointer;
   PPSDL_Renderer = ^PSDL_Renderer;
 
 function SDL_GetNumRenderDrivers: longint; cdecl; external libSDL3;

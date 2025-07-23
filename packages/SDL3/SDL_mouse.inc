@@ -58,9 +58,7 @@ function SDL_BUTTON_X1MASK: longint;
 function SDL_BUTTON_X2MASK: longint;
 
 type
-  TSDL_Cursor = record
-  end;
-  PSDL_Cursor = ^TSDL_Cursor;
+  PSDL_Cursor = type Pointer;
 
 function SDL_HasMouse: Tbool; cdecl; external libSDL3;
 function SDL_GetMice(Count: Plongint): PSDL_MouseID; cdecl; external libSDL3;

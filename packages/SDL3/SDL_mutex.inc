@@ -27,21 +27,10 @@
   //const
   //  SDL_NO_THREAD_SAFETY_ANALYSIS = no_thread_safety_analysis;
 type
-  TSDL_Mutex = record
-  end;
-  PSDL_Mutex = ^TSDL_Mutex;
-
-  TSDL_RWLock = record
-  end;
-  PSDL_RWLock = ^TSDL_RWLock;
-
-  TSDL_Semaphore = record
-  end;
-  PSDL_Semaphore = ^TSDL_Semaphore;
-
-  TSDL_Condition = record
-  end;
-  PSDL_Condition = ^TSDL_Condition;
+  PSDL_Mutex = type Pointer;
+  PSDL_RWLock = type Pointer;
+  PSDL_Semaphore = type Pointer;
+  PSDL_Condition = type Pointer;
 
 function SDL_CreateMutex: PSDL_Mutex; cdecl; external libSDL3;
 procedure SDL_LockMutex(mutex: PSDL_Mutex); cdecl; external libSDL3;

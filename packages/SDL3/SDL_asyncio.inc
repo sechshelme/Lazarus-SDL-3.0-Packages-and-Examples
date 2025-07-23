@@ -1,9 +1,7 @@
   {$IFDEF read_interface}
 
 type
-  TSDL_AsyncIO = record
-  end;
-  PSDL_AsyncIO = ^TSDL_AsyncIO;
+  PSDL_AsyncIO = type Pointer;
 
 type
   PSDL_AsyncIOTaskType = ^TSDL_AsyncIOTaskType;
@@ -37,9 +35,7 @@ type
   PSDL_AsyncIOOutcome = ^TSDL_AsyncIOOutcome;
 
 type
-  TSDL_AsyncIOQueue = record
-  end;
-  PSDL_AsyncIOQueue = ^TSDL_AsyncIOQueue;
+  PSDL_AsyncIOQueue = type Pointer;
 
 function SDL_AsyncIOFromFile(file_: PAnsiChar; mode: PAnsiChar): PSDL_AsyncIO; cdecl; external libSDL3;
 function SDL_GetAsyncIOSize(asyncio: PSDL_AsyncIO): TSint64; cdecl; external libSDL3;

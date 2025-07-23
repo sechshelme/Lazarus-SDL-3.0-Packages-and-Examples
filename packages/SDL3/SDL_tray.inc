@@ -12,17 +12,9 @@ const
   SDL_TRAYENTRY_CHECKED = $40000000;
 
 type
-  TSDL_Tray = record
-  end;
-  PSDL_Tray = ^TSDL_Tray;
-
-  TSDL_TrayMenu = record
-  end;
-  PSDL_TrayMenu = ^TSDL_TrayMenu;
-
-  TSDL_TrayEntry = record
-  end;
-  PSDL_TrayEntry = ^TSDL_TrayEntry;
+  PSDL_Tray = type Pointer;
+  PSDL_TrayMenu = type Pointer;
+  PSDL_TrayEntry = type Pointer;
   PPSDL_TrayEntry = ^PSDL_TrayEntry;
 
   TSDL_TrayCallback = procedure(userdata: pointer; entry: PSDL_TrayEntry); cdecl;

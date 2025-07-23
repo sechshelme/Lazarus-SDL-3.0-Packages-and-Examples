@@ -122,9 +122,7 @@ type
   PSDL_GamepadBinding = ^TSDL_GamepadBinding;
   PPSDL_GamepadBinding = ^PSDL_GamepadBinding;
 
-  TPSDL_Gamepad = record
-  end;
-  PSDL_Gamepad = ^TPSDL_Gamepad;
+  PSDL_Gamepad = type Pointer;
 
 function SDL_AddGamepadMapping(mapping: pansichar): longint; cdecl; external libSDL3;
 function SDL_AddGamepadMappingsFromIO(src: PSDL_IOStream; closeio: Tbool): longint; cdecl; external libSDL3;

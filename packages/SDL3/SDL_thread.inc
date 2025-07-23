@@ -30,9 +30,7 @@ const
 type
   TSDL_ThreadFunction = function(Data: pointer): longint; cdecl;
 
-  TSDL_Thread = record
-  end;
-  PSDL_Thread = ^TSDL_Thread;
+  PSDL_Thread = type Pointer;
 
 function SDL_CreateThread(fn: TSDL_ThreadFunction; Name: pansichar; Data: pointer): PSDL_Thread; cdecl; external libSDL3;
 function SDL_CreateThreadWithProperties(props: TSDL_PropertiesID): PSDL_Thread; cdecl; external libSDL3;
@@ -62,7 +60,6 @@ type
   TSDL_TLSDestructorCallback = procedure(Value: pointer); cdecl;
 
 function SDL_SetTLS(id: PSDL_TLSID; Value: pointer; destruc: TSDL_TLSDestructorCallback): Tbool; cdecl; external libSDL3;
-
 procedure SDL_CleanupTLS; cdecl; external libSDL3;
 
 {$ENDIF read_interface}

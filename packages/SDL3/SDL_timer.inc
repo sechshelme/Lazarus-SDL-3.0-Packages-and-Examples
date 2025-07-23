@@ -43,32 +43,32 @@ function SDL_RemoveTimer(id:TSDL_TimerID):Tbool;cdecl;external libSDL3;
 
 function SDL_SECONDS_TO_NS(S: TUint64): TUint64;
 begin
-  SDL_SECONDS_TO_NS:=(TUint64(S))*SDL_NS_PER_SECOND;
+  SDL_SECONDS_TO_NS := (TUint64(S)) * SDL_NS_PER_SECOND;
 end;
 
 function SDL_NS_TO_SECONDS(NS: TUint64): TUint64;
 begin
-  SDL_NS_TO_SECONDS:=NS div SDL_NS_PER_SECOND;
+  SDL_NS_TO_SECONDS := NS div SDL_NS_PER_SECOND;
 end;
 
 function SDL_MS_TO_NS(MS: TUint64): TUint64;
 begin
-  SDL_MS_TO_NS:=(TUint64(MS))*SDL_NS_PER_MS;
+  SDL_MS_TO_NS := (TUint64(MS)) * SDL_NS_PER_MS;
 end;
 
 function SDL_NS_TO_MS(NS: TUint64): TUint64;
 begin
-  SDL_NS_TO_MS:=NS div SDL_NS_PER_MS;
+  SDL_NS_TO_MS := NS div SDL_NS_PER_MS;
 end;
 
 function SDL_US_TO_NS(US: TUint64): TUint64;
 begin
-  SDL_US_TO_NS:=(TUint64(US))*SDL_NS_PER_US;
+  SDL_US_TO_NS := (TUint64(US)) * SDL_NS_PER_US;
 end;
 
 function SDL_NS_TO_US(NS: TUint64): TUint64;
 begin
-  SDL_NS_TO_US:=NS div SDL_NS_PER_US;
+  SDL_NS_TO_US := NS div SDL_NS_PER_US;
 end;
 
 

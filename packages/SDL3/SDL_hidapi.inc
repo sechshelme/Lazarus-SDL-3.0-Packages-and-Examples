@@ -14,7 +14,6 @@ const
 
 type
   PSDL_hid_device_info = ^TSDL_hid_device_info;
-
   TSDL_hid_device_info = record
     path: pansichar;
     vendor_id: word;
@@ -33,9 +32,7 @@ type
     Next: PSDL_hid_device_info;
   end;
 
-  TSDL_hid_device = record
-  end;
-  PSDL_hid_device = ^TSDL_hid_device;
+  PSDL_hid_device = type Pointer;
 
 function SDL_hid_init: longint; cdecl; external libSDL3;
 function SDL_hid_exit: longint; cdecl; external libSDL3;

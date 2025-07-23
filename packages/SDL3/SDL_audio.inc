@@ -44,9 +44,7 @@ type
   end;
   PSDL_AudioSpec = ^TSDL_AudioSpec;
 
-  TSDL_AudioStream = record
-  end;
-  PSDL_AudioStream = ^TSDL_AudioStream;
+  PSDL_AudioStream = type Pointer;
   PPSDL_AudioStream = ^PSDL_AudioStream;
 
 function SDL_GetNumAudioDrivers: longint; cdecl; external libSDL3;

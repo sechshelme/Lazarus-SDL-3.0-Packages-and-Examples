@@ -34,9 +34,7 @@ type
   end;
   PSDL_IOStreamInterface = ^TSDL_IOStreamInterface;
 
-  TSDL_IOStream = record
-  end;
-  PSDL_IOStream = ^TSDL_IOStream;
+  PSDL_IOStream = type Pointer;
 
 function SDL_IOFromFile(file_: pansichar; mode: pansichar): PSDL_IOStream; cdecl; external libSDL3;
 

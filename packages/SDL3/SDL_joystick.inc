@@ -39,9 +39,7 @@ const
   SDL_JOYSTICK_AXIS_MIN = -(32768);
 
 type
-  TSDL_Joystick = record
-  end;
-  PSDL_Joystick = ^TSDL_Joystick;
+  PSDL_Joystick = type Pointer;
 
 procedure SDL_LockJoysticks; cdecl; external libSDL3;
 procedure SDL_UnlockJoysticks; cdecl; external libSDL3;
