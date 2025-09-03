@@ -13,14 +13,15 @@ type
   TSDL_SensorType = longint;
 
 const
-  SDL_SENSOR_INVALID = -(1);
-  SDL_SENSOR_UNKNOWN = (-(1)) + 1;
-  SDL_SENSOR_ACCEL = (-(1)) + 2;
-  SDL_SENSOR_GYRO = (-(1)) + 3;
-  SDL_SENSOR_ACCEL_L = (-(1)) + 4;
-  SDL_SENSOR_GYRO_L = (-(1)) + 5;
-  SDL_SENSOR_ACCEL_R = (-(1)) + 6;
-  SDL_SENSOR_GYRO_R = (-(1)) + 7;
+  SDL_SENSOR_INVALID = -1;
+  SDL_SENSOR_UNKNOWN = (-1) + 1;
+  SDL_SENSOR_ACCEL = (-1) + 2;
+  SDL_SENSOR_GYRO = (-1) + 3;
+  SDL_SENSOR_ACCEL_L = (-1) + 4;
+  SDL_SENSOR_GYRO_L = (-1) + 5;
+  SDL_SENSOR_ACCEL_R = (-1) + 6;
+  SDL_SENSOR_GYRO_R = (-1) + 7;
+  SDL_SENSOR_COUNT = (-1) + 8;
 
 type
   PSDL_Sensor = type Pointer;
