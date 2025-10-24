@@ -1,5 +1,4 @@
-
-{$IFDEF read_interface}
+  {$IFDEF read_interface}
 
 type
   PSDL_GPUPrimitiveType = ^TSDL_GPUPrimitiveType;
@@ -654,7 +653,7 @@ type
     sample_count: TSDL_GPUSampleCount;
     sample_mask: TUint32;
     enable_mask: Tbool;
-    padding1: TUint8;
+    enable_alpha_to_coverage: Tbool;
     padding2: TUint8;
     padding3: TUint8;
   end;
@@ -751,8 +750,8 @@ type
     stencil_store_op: TSDL_GPUStoreOp;
     cycle: Tbool;
     clear_stencil: TUint8;
-    padding1: TUint8;
-    padding2: TUint8;
+    mip_level: TUint8;
+    layer: TUint8;
   end;
   PSDL_GPUDepthStencilTargetInfo = ^TSDL_GPUDepthStencilTargetInfo;
 
@@ -822,13 +821,19 @@ function SDL_CreateGPUDeviceWithProperties(props: TSDL_PropertiesID): PSDL_GPUDe
 const
   SDL_PROP_GPU_DEVICE_CREATE_DEBUGMODE_BOOLEAN = 'SDL.gpu.device.create.debugmode';
   SDL_PROP_GPU_DEVICE_CREATE_PREFERLOWPOWER_BOOLEAN = 'SDL.gpu.device.create.preferlowpower';
+  SDL_PROP_GPU_DEVICE_CREATE_VERBOSE_BOOLEAN = 'SDL.gpu.device.create.verbose';
   SDL_PROP_GPU_DEVICE_CREATE_NAME_STRING = 'SDL.gpu.device.create.name';
+  SDL_PROP_GPU_DEVICE_CREATE_FEATURE_CLIP_DISTANCE_BOOLEAN = 'SDL.gpu.device.create.feature.clip_distance';
+  SDL_PROP_GPU_DEVICE_CREATE_FEATURE_DEPTH_CLAMPING_BOOLEAN = 'SDL.gpu.device.create.feature.depth_clamping';
+  SDL_PROP_GPU_DEVICE_CREATE_FEATURE_INDIRECT_DRAW_FIRST_INSTANCE_BOOLEAN = 'SDL.gpu.device.create.feature.indirect_draw_first_instance';
+  SDL_PROP_GPU_DEVICE_CREATE_FEATURE_ANISOTROPY_BOOLEAN = 'SDL.gpu.device.create.feature.anisotropy';
   SDL_PROP_GPU_DEVICE_CREATE_SHADERS_PRIVATE_BOOLEAN = 'SDL.gpu.device.create.shaders.private';
   SDL_PROP_GPU_DEVICE_CREATE_SHADERS_SPIRV_BOOLEAN = 'SDL.gpu.device.create.shaders.spirv';
   SDL_PROP_GPU_DEVICE_CREATE_SHADERS_DXBC_BOOLEAN = 'SDL.gpu.device.create.shaders.dxbc';
   SDL_PROP_GPU_DEVICE_CREATE_SHADERS_DXIL_BOOLEAN = 'SDL.gpu.device.create.shaders.dxil';
   SDL_PROP_GPU_DEVICE_CREATE_SHADERS_MSL_BOOLEAN = 'SDL.gpu.device.create.shaders.msl';
   SDL_PROP_GPU_DEVICE_CREATE_SHADERS_METALLIB_BOOLEAN = 'SDL.gpu.device.create.shaders.metallib';
+  SDL_PROP_GPU_DEVICE_CREATE_D3D12_ALLOW_FEWER_RESOURCE_SLOTS_BOOLEAN = 'SDL.gpu.device.create.d3d12.allowtier1resourcebinding';
   SDL_PROP_GPU_DEVICE_CREATE_D3D12_SEMANTIC_NAME_STRING = 'SDL.gpu.device.create.d3d12.semantic';
 
 procedure SDL_DestroyGPUDevice(device: PSDL_GPUDevice); cdecl; external libSDL3;
@@ -836,6 +841,15 @@ function SDL_GetNumGPUDrivers: longint; cdecl; external libSDL3;
 function SDL_GetGPUDriver(index: longint): pansichar; cdecl; external libSDL3;
 function SDL_GetGPUDeviceDriver(device: PSDL_GPUDevice): pansichar; cdecl; external libSDL3;
 function SDL_GetGPUShaderFormats(device: PSDL_GPUDevice): TSDL_GPUShaderFormat; cdecl; external libSDL3;
+
+function SDL_GetGPUDeviceProperties(device: PSDL_GPUDevice): TSDL_PropertiesID; cdecl; external libSDL3;
+
+const
+  SDL_PROP_GPU_DEVICE_NAME_STRING = 'SDL.gpu.device.name';
+  SDL_PROP_GPU_DEVICE_DRIVER_NAME_STRING = 'SDL.gpu.device.driver_name';
+  SDL_PROP_GPU_DEVICE_DRIVER_VERSION_STRING = 'SDL.gpu.device.driver_version';
+  SDL_PROP_GPU_DEVICE_DRIVER_INFO_STRING = 'SDL.gpu.device.driver_info';
+
 function SDL_CreateGPUComputePipeline(device: PSDL_GPUDevice; createinfo: PSDL_GPUComputePipelineCreateInfo): PSDL_GPUComputePipeline; cdecl; external libSDL3;
 
 const
@@ -873,6 +887,7 @@ const
   SDL_PROP_GPU_BUFFER_CREATE_NAME_STRING = 'SDL.gpu.buffer.create.name';
 
 function SDL_CreateGPUTransferBuffer(device: PSDL_GPUDevice; createinfo: PSDL_GPUTransferBufferCreateInfo): PSDL_GPUTransferBuffer; cdecl; external libSDL3;
+
 const
   SDL_PROP_GPU_TRANSFERBUFFER_CREATE_NAME_STRING = 'SDL.gpu.transferbuffer.create.name';
 
@@ -939,11 +954,11 @@ function SDL_WindowSupportsGPUPresentMode(device: PSDL_GPUDevice; window: PSDL_W
 function SDL_ClaimWindowForGPUDevice(device: PSDL_GPUDevice; window: PSDL_Window): Tbool; cdecl; external libSDL3;
 procedure SDL_ReleaseWindowFromGPUDevice(device: PSDL_GPUDevice; window: PSDL_Window); cdecl; external libSDL3;
 function SDL_SetGPUSwapchainParameters(device: PSDL_GPUDevice; window: PSDL_Window; swapchain_composition: TSDL_GPUSwapchainComposition; present_mode: TSDL_GPUPresentMode): Tbool; cdecl; external libSDL3;
-function SDL_SetGPUAllowedFramesInFlight(device:PSDL_GPUDevice; allowed_frames_in_flight:TUint32):Tbool;cdecl;external libSDL3;
+function SDL_SetGPUAllowedFramesInFlight(device: PSDL_GPUDevice; allowed_frames_in_flight: TUint32): Tbool; cdecl; external libSDL3;
 function SDL_GetGPUSwapchainTextureFormat(device: PSDL_GPUDevice; window: PSDL_Window): TSDL_GPUTextureFormat; cdecl; external libSDL3;
 function SDL_AcquireGPUSwapchainTexture(command_buffer: PSDL_GPUCommandBuffer; window: PSDL_Window; swapchain_texture: PPSDL_GPUTexture; swapchain_texture_width: PUint32; swapchain_texture_height: PUint32): Tbool; cdecl; external libSDL3;
-function SDL_WaitForGPUSwapchain(device:PSDL_GPUDevice; window:PSDL_Window):Tbool;cdecl;external libSDL3;
-function SDL_WaitAndAcquireGPUSwapchainTexture(command_buffer:PSDL_GPUCommandBuffer; window:PSDL_Window; swapchain_texture:PPSDL_GPUTexture; swapchain_texture_width:PUint32; swapchain_texture_height:PUint32):Tbool;cdecl;external libSDL3;
+function SDL_WaitForGPUSwapchain(device: PSDL_GPUDevice; window: PSDL_Window): Tbool; cdecl; external libSDL3;
+function SDL_WaitAndAcquireGPUSwapchainTexture(command_buffer: PSDL_GPUCommandBuffer; window: PSDL_Window; swapchain_texture: PPSDL_GPUTexture; swapchain_texture_width: PUint32; swapchain_texture_height: PUint32): Tbool; cdecl; external libSDL3;
 function SDL_SubmitGPUCommandBuffer(command_buffer: PSDL_GPUCommandBuffer): Tbool; cdecl; external libSDL3;
 function SDL_SubmitGPUCommandBufferAndAcquireFence(command_buffer: PSDL_GPUCommandBuffer): PSDL_GPUFence; cdecl; external libSDL3;
 function SDL_WaitForGPUIdle(device: PSDL_GPUDevice): Tbool; cdecl; external libSDL3;
@@ -953,6 +968,10 @@ procedure SDL_ReleaseGPUFence(device: PSDL_GPUDevice; fence: PSDL_GPUFence); cde
 function SDL_GPUTextureFormatTexelBlockSize(format: TSDL_GPUTextureFormat): TUint32; cdecl; external libSDL3;
 function SDL_GPUTextureSupportsFormat(device: PSDL_GPUDevice; format: TSDL_GPUTextureFormat; _type: TSDL_GPUTextureType; usage: TSDL_GPUTextureUsageFlags): Tbool; cdecl; external libSDL3;
 function SDL_GPUTextureSupportsSampleCount(device: PSDL_GPUDevice; format: TSDL_GPUTextureFormat; sample_count: TSDL_GPUSampleCount): Tbool; cdecl; external libSDL3;
+function SDL_CalculateGPUTextureFormatSize(format:TSDL_GPUTextureFormat; width:TUint32; height:TUint32; depth_or_layer_count:TUint32):TUint32;cdecl;external libSDL3;
+function SDL_GetPixelFormatFromGPUTextureFormat(format:TSDL_GPUTextureFormat):TSDL_PixelFormat;cdecl;external libSDL3;
+function SDL_GetGPUTextureFormatFromPixelFormat(format:TSDL_PixelFormat):TSDL_GPUTextureFormat;cdecl;external libSDL3;
+
 {$ifdef SDL_PLATFORM_GDK}
 procedure SDL_GDKSuspendGPU(device: PSDL_GPUDevice); cdecl; external libSDL3;
 procedure SDL_GDKResumeGPU(device: PSDL_GPUDevice); cdecl; external libSDL3;
