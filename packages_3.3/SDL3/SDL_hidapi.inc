@@ -41,6 +41,11 @@ function SDL_hid_enumerate(vendor_id: word; product_id: word): PSDL_hid_device_i
 procedure SDL_hid_free_enumeration(devs: PSDL_hid_device_info); cdecl; external libSDL3;
 function SDL_hid_open(vendor_id: word; product_id: word; serial_number: Pwchar_t): PSDL_hid_device; cdecl; external libSDL3;
 function SDL_hid_open_path(path: pansichar): PSDL_hid_device; cdecl; external libSDL3;
+function SDL_hid_get_properties(dev: PSDL_hid_device): TSDL_PropertiesID; cdecl; external libSDL3;
+
+const
+  SDL_PROP_HIDAPI_LIBUSB_DEVICE_HANDLE_POINTER = 'SDL.hidapi.libusb.device.handle';
+
 function SDL_hid_write(dev: PSDL_hid_device; Data: pansichar; length: Tsize_t): longint; cdecl; external libSDL3;
 function SDL_hid_read_timeout(dev: PSDL_hid_device; Data: pansichar; length: Tsize_t; milliseconds: longint): longint; cdecl; external libSDL3;
 function SDL_hid_read(dev: PSDL_hid_device; Data: pansichar; length: Tsize_t): longint; cdecl; external libSDL3;

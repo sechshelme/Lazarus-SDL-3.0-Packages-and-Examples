@@ -21,6 +21,7 @@ function SDL_CreateProcessWithProperties(props: TSDL_PropertiesID): PSDL_Process
 const
   SDL_PROP_PROCESS_CREATE_ARGS_POINTER = 'SDL.process.create.args';
   SDL_PROP_PROCESS_CREATE_ENVIRONMENT_POINTER = 'SDL.process.create.environment';
+  SDL_PROP_PROCESS_CREATE_WORKING_DIRECTORY_STRING ='SDL.process.create.working_directory';
   SDL_PROP_PROCESS_CREATE_STDIN_NUMBER = 'SDL.process.create.stdin_option';
   SDL_PROP_PROCESS_CREATE_STDIN_POINTER = 'SDL.process.create.stdin_source';
   SDL_PROP_PROCESS_CREATE_STDOUT_NUMBER = 'SDL.process.create.stdout_option';
@@ -29,6 +30,7 @@ const
   SDL_PROP_PROCESS_CREATE_STDERR_POINTER = 'SDL.process.create.stderr_source';
   SDL_PROP_PROCESS_CREATE_STDERR_TO_STDOUT_BOOLEAN = 'SDL.process.create.stderr_to_stdout';
   SDL_PROP_PROCESS_CREATE_BACKGROUND_BOOLEAN = 'SDL.process.create.background';
+  SDL_PROP_PROCESS_CREATE_CMDLINE_STRING = 'SDL.process.create.cmdline';
 
 function SDL_GetProcessProperties(process: PSDL_Process): TSDL_PropertiesID; cdecl; external libSDL3;
 

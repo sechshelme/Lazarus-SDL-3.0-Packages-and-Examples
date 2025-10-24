@@ -109,6 +109,10 @@ type
     gl_profile_mask: longint;
     confine: TSDL_Rect;
     hide_cursor: Tbool;
+
+    quit_after_ms_interval : longint;
+    quit_after_ms_timer: TSDL_TimerID;
+
     common_argparser: TSDLTest_ArgumentParser;
     video_argparser: TSDLTest_ArgumentParser;
     audio_argparser: TSDLTest_ArgumentParser;

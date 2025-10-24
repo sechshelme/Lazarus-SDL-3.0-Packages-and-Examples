@@ -1,5 +1,14 @@
+  {$IFDEF read_interface}
 
-{$IFDEF read_interface}
+type
+  PSDL_Haptic = type Pointer;
+
+const
+  SDL_HAPTIC_INFINITY = 4294967295;
+
+type
+  PSDL_HapticEffectType = ^TSDL_HapticEffectType;
+  TSDL_HapticEffectType = TUint16;
 
 const
   SDL_HAPTIC_CONSTANT = 1 shl 0;
@@ -22,21 +31,29 @@ const
   SDL_HAPTIC_AUTOCENTER = 1 shl 17;
   SDL_HAPTIC_STATUS = 1 shl 18;
   SDL_HAPTIC_PAUSE = 1 shl 19;
+
+type
+  PSDL_HapticDirectionType = ^TSDL_HapticDirectionType;
+  TSDL_HapticDirectionType = TUint8;
+
+const
   SDL_HAPTIC_POLAR = 0;
   SDL_HAPTIC_CARTESIAN = 1;
   SDL_HAPTIC_SPHERICAL = 2;
   SDL_HAPTIC_STEERING_AXIS = 3;
-  SDL_HAPTIC_INFINITY = 4294967295;
 
 type
+  PSDL_HapticEffectID = ^TSDL_HapticEffectID;
+  TSDL_HapticEffectID = longint;
+
   TSDL_HapticDirection = record
-    _type: TUint8;
+    _type: TSDL_HapticDirectionType;
     dir: array[0..2] of TSint32;
   end;
   PSDL_HapticDirection = ^TSDL_HapticDirection;
 
   TSDL_HapticConstant = record
-    _type: TUint16;
+    _type: TSDL_HapticEffectType;
     direction: TSDL_HapticDirection;
     length: TUint32;
     delay: TUint16;
@@ -51,7 +68,7 @@ type
   PSDL_HapticConstant = ^TSDL_HapticConstant;
 
   TSDL_HapticPeriodic = record
-    _type: TUint16;
+    _type: TSDL_HapticEffectType;
     direction: TSDL_HapticDirection;
     length: TUint32;
     delay: TUint16;
@@ -69,7 +86,7 @@ type
   PSDL_HapticPeriodic = ^TSDL_HapticPeriodic;
 
   TSDL_HapticCondition = record
-    _type: TUint16;
+    _type: TSDL_HapticEffectType;
     direction: TSDL_HapticDirection;
     length: TUint32;
     delay: TUint16;
@@ -85,7 +102,7 @@ type
   PSDL_HapticCondition = ^TSDL_HapticCondition;
 
   TSDL_HapticRamp = record
-    _type: TUint16;
+    _type: TSDL_HapticEffectType;
     direction: TSDL_HapticDirection;
     length: TUint32;
     delay: TUint16;
@@ -101,7 +118,7 @@ type
   PSDL_HapticRamp = ^TSDL_HapticRamp;
 
   TSDL_HapticLeftRight = record
-    _type: TUint16;
+    _type: TSDL_HapticEffectType;
     length: TUint32;
     large_magnitude: TUint16;
     small_magnitude: TUint16;
@@ -109,7 +126,7 @@ type
   PSDL_HapticLeftRight = ^TSDL_HapticLeftRight;
 
   TSDL_HapticCustom = record
-    _type: TUint16;
+    _type: TSDL_HapticEffectType;
     direction: TSDL_HapticDirection;
     length: TUint32;
     delay: TUint16;
@@ -118,7 +135,7 @@ type
     channels: TUint8;
     period: TUint16;
     samples: TUint16;
-    Data: PUint16;
+    data: PUint16;
     attack_length: TUint16;
     attack_level: TUint16;
     fade_length: TUint16;
@@ -128,7 +145,7 @@ type
 
   TSDL_HapticEffect = record
     case longint of
-      0: (_type: TUint16);
+      0: (_type: TSDL_HapticEffectType);
       1: (constant: TSDL_HapticConstant);
       2: (periodic: TSDL_HapticPeriodic);
       3: (condition: TSDL_HapticCondition);
@@ -138,17 +155,15 @@ type
   end;
   PSDL_HapticEffect = ^TSDL_HapticEffect;
 
-  TSDL_HapticID = TUint32;
   PSDL_HapticID = ^TSDL_HapticID;
+  TSDL_HapticID = TUint32;
 
-  PSDL_Haptic = type Pointer;
-
-function SDL_GetHaptics(Count: Plongint): PSDL_HapticID; cdecl; external libSDL3;
-function SDL_GetHapticNameForID(instance_id: TSDL_HapticID): pansichar; cdecl; external libSDL3;
+function SDL_GetHaptics(count: Plongint): PSDL_HapticID; cdecl; external libSDL3;
+function SDL_GetHapticNameForID(instance_id: TSDL_HapticID): pchar; cdecl; external libSDL3;
 function SDL_OpenHaptic(instance_id: TSDL_HapticID): PSDL_Haptic; cdecl; external libSDL3;
 function SDL_GetHapticFromID(instance_id: TSDL_HapticID): PSDL_Haptic; cdecl; external libSDL3;
 function SDL_GetHapticID(haptic: PSDL_Haptic): TSDL_HapticID; cdecl; external libSDL3;
-function SDL_GetHapticName(haptic: PSDL_Haptic): pansichar; cdecl; external libSDL3;
+function SDL_GetHapticName(haptic: PSDL_Haptic): pchar; cdecl; external libSDL3;
 function SDL_IsMouseHaptic: Tbool; cdecl; external libSDL3;
 function SDL_OpenHapticFromMouse: PSDL_Haptic; cdecl; external libSDL3;
 function SDL_IsJoystickHaptic(joystick: PSDL_Joystick): Tbool; cdecl; external libSDL3;
@@ -159,12 +174,12 @@ function SDL_GetMaxHapticEffectsPlaying(haptic: PSDL_Haptic): longint; cdecl; ex
 function SDL_GetHapticFeatures(haptic: PSDL_Haptic): TUint32; cdecl; external libSDL3;
 function SDL_GetNumHapticAxes(haptic: PSDL_Haptic): longint; cdecl; external libSDL3;
 function SDL_HapticEffectSupported(haptic: PSDL_Haptic; effect: PSDL_HapticEffect): Tbool; cdecl; external libSDL3;
-function SDL_CreateHapticEffect(haptic: PSDL_Haptic; effect: PSDL_HapticEffect): longint; cdecl; external libSDL3;
-function SDL_UpdateHapticEffect(haptic: PSDL_Haptic; effect: longint; Data: PSDL_HapticEffect): Tbool; cdecl; external libSDL3;
-function SDL_RunHapticEffect(haptic: PSDL_Haptic; effect: longint; iterations: TUint32): Tbool; cdecl; external libSDL3;
-function SDL_StopHapticEffect(haptic: PSDL_Haptic; effect: longint): Tbool; cdecl; external libSDL3;
-procedure SDL_DestroyHapticEffect(haptic: PSDL_Haptic; effect: longint); cdecl; external libSDL3;
-function SDL_GetHapticEffectStatus(haptic: PSDL_Haptic; effect: longint): Tbool; cdecl; external libSDL3;
+function SDL_CreateHapticEffect(haptic: PSDL_Haptic; effect: PSDL_HapticEffect): TSDL_HapticEffectID; cdecl; external libSDL3;
+function SDL_UpdateHapticEffect(haptic: PSDL_Haptic; effect: TSDL_HapticEffectID; data: PSDL_HapticEffect): Tbool; cdecl; external libSDL3;
+function SDL_RunHapticEffect(haptic: PSDL_Haptic; effect: TSDL_HapticEffectID; iterations: TUint32): Tbool; cdecl; external libSDL3;
+function SDL_StopHapticEffect(haptic: PSDL_Haptic; effect: TSDL_HapticEffectID): Tbool; cdecl; external libSDL3;
+procedure SDL_DestroyHapticEffect(haptic: PSDL_Haptic; effect: TSDL_HapticEffectID); cdecl; external libSDL3;
+function SDL_GetHapticEffectStatus(haptic: PSDL_Haptic; effect: TSDL_HapticEffectID): Tbool; cdecl; external libSDL3;
 function SDL_SetHapticGain(haptic: PSDL_Haptic; gain: longint): Tbool; cdecl; external libSDL3;
 function SDL_SetHapticAutocenter(haptic: PSDL_Haptic; autocenter: longint): Tbool; cdecl; external libSDL3;
 function SDL_PauseHaptic(haptic: PSDL_Haptic): Tbool; cdecl; external libSDL3;

@@ -40,6 +40,13 @@ const
   SDL_MOUSEWHEEL_FLIPPED = 1;
 
 type
+  TSDL_CursorFrameInfo = record
+    surface: PSDL_Surface;
+    duration: TUint32;
+  end;
+  PSDL_CursorFrameInfo = ^TSDL_CursorFrameInfo;
+
+type
   PSDL_MouseButtonFlags = ^TSDL_MouseButtonFlags;
   TSDL_MouseButtonFlags = TUint32;
 
@@ -60,6 +67,8 @@ function SDL_BUTTON_X2MASK: longint;
 type
   PSDL_Cursor = type Pointer;
 
+  TSDL_MouseMotionTransformCallback = procedure (userdata:pointer; timestamp:TUint64; window:PSDL_Window; mouseID:TSDL_MouseID; x:Psingle;                y:Psingle);cdecl;
+
 function SDL_HasMouse: Tbool; cdecl; external libSDL3;
 function SDL_GetMice(Count: Plongint): PSDL_MouseID; cdecl; external libSDL3;
 function SDL_GetMouseNameForID(instance_id: TSDL_MouseID): pansichar; cdecl; external libSDL3;
@@ -69,12 +78,13 @@ function SDL_GetGlobalMouseState(x: Psingle; y: Psingle): TSDL_MouseButtonFlags;
 function SDL_GetRelativeMouseState(x: Psingle; y: Psingle): TSDL_MouseButtonFlags; cdecl; external libSDL3;
 procedure SDL_WarpMouseInWindow(window: PSDL_Window; x: single; y: single); cdecl; external libSDL3;
 function SDL_WarpMouseGlobal(x: single; y: single): Tbool; cdecl; external libSDL3;
+function SDL_SetRelativeMouseTransform(callback:TSDL_MouseMotionTransformCallback; userdata:pointer):Tbool;cdecl;external libSDL3;
 function SDL_SetWindowRelativeMouseMode(window: PSDL_Window; Enabled: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_GetWindowRelativeMouseMode(window: PSDL_Window): Tbool; cdecl; external libSDL3;
 function SDL_CaptureMouse(Enabled: Tbool): Tbool; cdecl; external libSDL3;
-function SDL_CreateCursor(Data: PUint8; mask: PUint8; w: longint; h: longint; hot_x: longint;
-  hot_y: longint): PSDL_Cursor; cdecl; external libSDL3;
+function SDL_CreateCursor(Data: PUint8; mask: PUint8; w: longint; h: longint; hot_x: longint; hot_y: longint): PSDL_Cursor; cdecl; external libSDL3;
 function SDL_CreateColorCursor(surface: PSDL_Surface; hot_x: longint; hot_y: longint): PSDL_Cursor; cdecl; external libSDL3;
+function SDL_CreateAnimatedCursor(frames:PSDL_CursorFrameInfo; frame_count:longint; hot_x:longint; hot_y:longint):PSDL_Cursor;cdecl;external libSDL3;
 function SDL_CreateSystemCursor(id: TSDL_SystemCursor): PSDL_Cursor; cdecl; external libSDL3;
 function SDL_SetCursor(cursor: PSDL_Cursor): Tbool; cdecl; external libSDL3;
 function SDL_GetCursor: PSDL_Cursor; cdecl; external libSDL3;

@@ -2,6 +2,7 @@
 
 const
   SDL_SOFTWARE_RENDERER = 'software';
+  SDL_GPU_RENDERER = 'gpu';
 
 type
   TSDL_Vertex = record
@@ -11,6 +12,7 @@ type
   end;
   PSDL_Vertex = ^TSDL_Vertex;
 
+type
   PSDL_TextureAccess = ^TSDL_TextureAccess;
   TSDL_TextureAccess = longint;
 
@@ -18,6 +20,16 @@ const
   SDL_TEXTUREACCESS_STATIC = 0;
   SDL_TEXTUREACCESS_STREAMING = 1;
   SDL_TEXTUREACCESS_TARGET = 2;
+
+type
+  PSDL_TextureAddressMode = ^TSDL_TextureAddressMode;
+  TSDL_TextureAddressMode = longint;
+
+const
+  SDL_TEXTURE_ADDRESS_INVALID = -(1);
+  SDL_TEXTURE_ADDRESS_AUTO = (-(1)) + 1;
+  SDL_TEXTURE_ADDRESS_CLAMP = (-(1)) + 2;
+  SDL_TEXTURE_ADDRESS_WRAP = (-(1)) + 3;
 
 type
   PSDL_RendererLogicalPresentation = ^TSDL_RendererLogicalPresentation;
@@ -31,6 +43,10 @@ const
   SDL_LOGICAL_PRESENTATION_INTEGER_SCALE = 4;
 
 type
+  PSDL_Renderer = type Pointer;
+  PPSDL_Renderer = ^PSDL_Renderer;
+
+type
   TSDL_Texture = record
     format: TSDL_PixelFormat;
     w: longint;
@@ -39,14 +55,11 @@ type
   end;
   PSDL_Texture = ^TSDL_Texture;
 
-  PSDL_Renderer = type Pointer;
-  PPSDL_Renderer = ^PSDL_Renderer;
-
 function SDL_GetNumRenderDrivers: longint; cdecl; external libSDL3;
-function SDL_GetRenderDriver(index: longint): pansichar; cdecl; external libSDL3;
-function SDL_CreateWindowAndRenderer(title: pansichar; Width: longint; Height: longint; window_flags: TSDL_WindowFlags; window: PPSDL_Window;
+function SDL_GetRenderDriver(index: longint): pchar; cdecl; external libSDL3;
+function SDL_CreateWindowAndRenderer(title: pchar; width: longint; height: longint; window_flags: TSDL_WindowFlags; window: PPSDL_Window;
   renderer: PPSDL_Renderer): Tbool; cdecl; external libSDL3;
-function SDL_CreateRenderer(window: PSDL_Window; Name: pansichar): PSDL_Renderer; cdecl; external libSDL3;
+function SDL_CreateRenderer(window: PSDL_Window; name: pchar): PSDL_Renderer; cdecl; external libSDL3;
 function SDL_CreateRendererWithProperties(props: TSDL_PropertiesID): PSDL_Renderer; cdecl; external libSDL3;
 
 const
@@ -55,6 +68,10 @@ const
   SDL_PROP_RENDERER_CREATE_SURFACE_POINTER = 'SDL.renderer.create.surface';
   SDL_PROP_RENDERER_CREATE_OUTPUT_COLORSPACE_NUMBER = 'SDL.renderer.create.output_colorspace';
   SDL_PROP_RENDERER_CREATE_PRESENT_VSYNC_NUMBER = 'SDL.renderer.create.present_vsync';
+  SDL_PROP_RENDERER_CREATE_GPU_DEVICE_POINTER = 'SDL.renderer.create.gpu.device';
+  SDL_PROP_RENDERER_CREATE_GPU_SHADERS_SPIRV_BOOLEAN = 'SDL.renderer.create.gpu.shaders_spirv';
+  SDL_PROP_RENDERER_CREATE_GPU_SHADERS_DXIL_BOOLEAN = 'SDL.renderer.create.gpu.shaders_dxil';
+  SDL_PROP_RENDERER_CREATE_GPU_SHADERS_MSL_BOOLEAN = 'SDL.renderer.create.gpu.shaders_msl';
   SDL_PROP_RENDERER_CREATE_VULKAN_INSTANCE_POINTER = 'SDL.renderer.create.vulkan.instance';
   SDL_PROP_RENDERER_CREATE_VULKAN_SURFACE_NUMBER = 'SDL.renderer.create.vulkan.surface';
   SDL_PROP_RENDERER_CREATE_VULKAN_PHYSICAL_DEVICE_POINTER = 'SDL.renderer.create.vulkan.physical_device';
@@ -62,10 +79,12 @@ const
   SDL_PROP_RENDERER_CREATE_VULKAN_GRAPHICS_QUEUE_FAMILY_INDEX_NUMBER = 'SDL.renderer.create.vulkan.graphics_queue_family_index';
   SDL_PROP_RENDERER_CREATE_VULKAN_PRESENT_QUEUE_FAMILY_INDEX_NUMBER = 'SDL.renderer.create.vulkan.present_queue_family_index';
 
+function SDL_CreateGPURenderer(device: PSDL_GPUDevice; window: PSDL_Window): PSDL_Renderer; cdecl; external libSDL3;
+function SDL_GetGPURendererDevice(renderer: PSDL_Renderer): PSDL_GPUDevice; cdecl; external libSDL3;
 function SDL_CreateSoftwareRenderer(surface: PSDL_Surface): PSDL_Renderer; cdecl; external libSDL3;
 function SDL_GetRenderer(window: PSDL_Window): PSDL_Renderer; cdecl; external libSDL3;
 function SDL_GetRenderWindow(renderer: PSDL_Renderer): PSDL_Window; cdecl; external libSDL3;
-function SDL_GetRendererName(renderer: PSDL_Renderer): pansichar; cdecl; external libSDL3;
+function SDL_GetRendererName(renderer: PSDL_Renderer): pchar; cdecl; external libSDL3;
 function SDL_GetRendererProperties(renderer: PSDL_Renderer): TSDL_PropertiesID; cdecl; external libSDL3;
 
 const
@@ -75,6 +94,7 @@ const
   SDL_PROP_RENDERER_VSYNC_NUMBER = 'SDL.renderer.vsync';
   SDL_PROP_RENDERER_MAX_TEXTURE_SIZE_NUMBER = 'SDL.renderer.max_texture_size';
   SDL_PROP_RENDERER_TEXTURE_FORMATS_POINTER = 'SDL.renderer.texture_formats';
+  SDL_PROP_RENDERER_TEXTURE_WRAPPING_BOOLEAN = 'SDL.renderer.texture_wrapping';
   SDL_PROP_RENDERER_OUTPUT_COLORSPACE_NUMBER = 'SDL.renderer.output_colorspace';
   SDL_PROP_RENDERER_HDR_ENABLED_BOOLEAN = 'SDL.renderer.HDR_enabled';
   SDL_PROP_RENDERER_SDR_WHITE_POINT_FLOAT = 'SDL.renderer.SDR_white_point';
@@ -106,6 +126,7 @@ const
   SDL_PROP_TEXTURE_CREATE_ACCESS_NUMBER = 'SDL.texture.create.access';
   SDL_PROP_TEXTURE_CREATE_WIDTH_NUMBER = 'SDL.texture.create.width';
   SDL_PROP_TEXTURE_CREATE_HEIGHT_NUMBER = 'SDL.texture.create.height';
+  SDL_PROP_TEXTURE_CREATE_PALETTE_POINTER = 'SDL.texture.create.palette';
   SDL_PROP_TEXTURE_CREATE_SDR_WHITE_POINT_FLOAT = 'SDL.texture.create.SDR_white_point';
   SDL_PROP_TEXTURE_CREATE_HDR_HEADROOM_FLOAT = 'SDL.texture.create.HDR_headroom';
   SDL_PROP_TEXTURE_CREATE_D3D11_TEXTURE_POINTER = 'SDL.texture.create.d3d11.texture';
@@ -124,6 +145,10 @@ const
   SDL_PROP_TEXTURE_CREATE_OPENGLES2_TEXTURE_U_NUMBER = 'SDL.texture.create.opengles2.texture_u';
   SDL_PROP_TEXTURE_CREATE_OPENGLES2_TEXTURE_V_NUMBER = 'SDL.texture.create.opengles2.texture_v';
   SDL_PROP_TEXTURE_CREATE_VULKAN_TEXTURE_NUMBER = 'SDL.texture.create.vulkan.texture';
+  SDL_PROP_TEXTURE_CREATE_GPU_TEXTURE_POINTER = 'SDL.texture.create.gpu.texture';
+  SDL_PROP_TEXTURE_CREATE_GPU_TEXTURE_UV_POINTER = 'SDL.texture.create.gpu.texture_uv';
+  SDL_PROP_TEXTURE_CREATE_GPU_TEXTURE_U_POINTER = 'SDL.texture.create.gpu.texture_u';
+  SDL_PROP_TEXTURE_CREATE_GPU_TEXTURE_V_POINTER = 'SDL.texture.create.gpu.texture_v';
 
 function SDL_GetTextureProperties(texture: PSDL_Texture): TSDL_PropertiesID; cdecl; external libSDL3;
 
@@ -154,9 +179,15 @@ const
   SDL_PROP_TEXTURE_OPENGLES2_TEXTURE_V_NUMBER = 'SDL.texture.opengles2.texture_v';
   SDL_PROP_TEXTURE_OPENGLES2_TEXTURE_TARGET_NUMBER = 'SDL.texture.opengles2.target';
   SDL_PROP_TEXTURE_VULKAN_TEXTURE_NUMBER = 'SDL.texture.vulkan.texture';
+  SDL_PROP_TEXTURE_GPU_TEXTURE_POINTER = 'SDL.texture.gpu.texture';
+  SDL_PROP_TEXTURE_GPU_TEXTURE_UV_POINTER = 'SDL.texture.gpu.texture_uv';
+  SDL_PROP_TEXTURE_GPU_TEXTURE_U_POINTER = 'SDL.texture.gpu.texture_u';
+  SDL_PROP_TEXTURE_GPU_TEXTURE_V_POINTER = 'SDL.texture.gpu.texture_v';
 
 function SDL_GetRendererFromTexture(texture: PSDL_Texture): PSDL_Renderer; cdecl; external libSDL3;
 function SDL_GetTextureSize(texture: PSDL_Texture; w: Psingle; h: Psingle): Tbool; cdecl; external libSDL3;
+function SDL_SetTexturePalette(texture: PSDL_Texture; palette: PSDL_Palette): Tbool; cdecl; external libSDL3;
+function SDL_GetTexturePalette(texture: PSDL_Texture): PSDL_Palette; cdecl; external libSDL3;
 function SDL_SetTextureColorMod(texture: PSDL_Texture; r: TUint8; g: TUint8; b: TUint8): Tbool; cdecl; external libSDL3;
 function SDL_SetTextureColorModFloat(texture: PSDL_Texture; r: single; g: single; b: single): Tbool; cdecl; external libSDL3;
 function SDL_GetTextureColorMod(texture: PSDL_Texture; r: PUint8; g: PUint8; b: PUint8): Tbool; cdecl; external libSDL3;
@@ -204,13 +235,13 @@ function SDL_SetRenderDrawBlendMode(renderer: PSDL_Renderer; blendMode: TSDL_Ble
 function SDL_GetRenderDrawBlendMode(renderer: PSDL_Renderer; blendMode: PSDL_BlendMode): Tbool; cdecl; external libSDL3;
 function SDL_RenderClear(renderer: PSDL_Renderer): Tbool; cdecl; external libSDL3;
 function SDL_RenderPoint(renderer: PSDL_Renderer; x: single; y: single): Tbool; cdecl; external libSDL3;
-function SDL_RenderPoints(renderer: PSDL_Renderer; points: PSDL_FPoint; Count: longint): Tbool; cdecl; external libSDL3;
+function SDL_RenderPoints(renderer: PSDL_Renderer; points: PSDL_FPoint; count: longint): Tbool; cdecl; external libSDL3;
 function SDL_RenderLine(renderer: PSDL_Renderer; x1: single; y1: single; x2: single; y2: single): Tbool; cdecl; external libSDL3;
-function SDL_RenderLines(renderer: PSDL_Renderer; points: PSDL_FPoint; Count: longint): Tbool; cdecl; external libSDL3;
+function SDL_RenderLines(renderer: PSDL_Renderer; points: PSDL_FPoint; count: longint): Tbool; cdecl; external libSDL3;
 function SDL_RenderRect(renderer: PSDL_Renderer; rect: PSDL_FRect): Tbool; cdecl; external libSDL3;
-function SDL_RenderRects(renderer: PSDL_Renderer; rects: PSDL_FRect; Count: longint): Tbool; cdecl; external libSDL3;
+function SDL_RenderRects(renderer: PSDL_Renderer; rects: PSDL_FRect; count: longint): Tbool; cdecl; external libSDL3;
 function SDL_RenderFillRect(renderer: PSDL_Renderer; rect: PSDL_FRect): Tbool; cdecl; external libSDL3;
-function SDL_RenderFillRects(renderer: PSDL_Renderer; rects: PSDL_FRect; Count: longint): Tbool; cdecl; external libSDL3;
+function SDL_RenderFillRects(renderer: PSDL_Renderer; rects: PSDL_FRect; count: longint): Tbool; cdecl; external libSDL3;
 function SDL_RenderTexture(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; dstrect: PSDL_FRect): Tbool; cdecl; external libSDL3;
 function SDL_RenderTextureRotated(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; dstrect: PSDL_FRect; angle: double;
   center: PSDL_FPoint; flip: TSDL_FlipMode): Tbool; cdecl; external libSDL3;
@@ -219,11 +250,15 @@ function SDL_RenderTextureAffine(renderer: PSDL_Renderer; texture: PSDL_Texture;
 function SDL_RenderTextureTiled(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; scale: single; dstrect: PSDL_FRect): Tbool; cdecl; external libSDL3;
 function SDL_RenderTexture9Grid(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; left_width: single; right_width: single;
   top_height: single; bottom_height: single; scale: single; dstrect: PSDL_FRect): Tbool; cdecl; external libSDL3;
+function SDL_RenderTexture9GridTiled(renderer: PSDL_Renderer; texture: PSDL_Texture; srcrect: PSDL_FRect; left_width: single; right_width: single;
+  top_height: single; bottom_height: single; scale: single; dstrect: PSDL_FRect; tileScale: single): Tbool; cdecl; external libSDL3;
 function SDL_RenderGeometry(renderer: PSDL_Renderer; texture: PSDL_Texture; vertices: PSDL_Vertex; num_vertices: longint; indices: Plongint;
   num_indices: longint): Tbool; cdecl; external libSDL3;
 function SDL_RenderGeometryRaw(renderer: PSDL_Renderer; texture: PSDL_Texture; xy: Psingle; xy_stride: longint; color: PSDL_FColor;
   color_stride: longint; uv: Psingle; uv_stride: longint; num_vertices: longint; indices: pointer;
   num_indices: longint; size_indices: longint): Tbool; cdecl; external libSDL3;
+function SDL_SetRenderTextureAddressMode(renderer: PSDL_Renderer; u_mode: TSDL_TextureAddressMode; v_mode: TSDL_TextureAddressMode): Tbool; cdecl; external libSDL3;
+function SDL_GetRenderTextureAddressMode(renderer: PSDL_Renderer; u_mode: PSDL_TextureAddressMode; v_mode: PSDL_TextureAddressMode): Tbool; cdecl; external libSDL3;
 function SDL_RenderReadPixels(renderer: PSDL_Renderer; rect: PSDL_Rect): PSDL_Surface; cdecl; external libSDL3;
 function SDL_RenderPresent(renderer: PSDL_Renderer): Tbool; cdecl; external libSDL3;
 procedure SDL_DestroyTexture(texture: PSDL_Texture); cdecl; external libSDL3;
@@ -243,8 +278,30 @@ function SDL_GetRenderVSync(renderer: PSDL_Renderer; vsync: Plongint): Tbool; cd
 const
   SDL_DEBUG_TEXT_FONT_CHARACTER_SIZE = 8;
 
-function SDL_RenderDebugText(renderer: PSDL_Renderer; x, y: Single; str: PAnsiChar): boolean; cdecl; external libSDL3;
-function SDL_RenderDebugTextFormat(renderer: PSDL_Renderer; x: Single; y: Single; fmt: PAnsiChar): Tbool; varargs; cdecl; external libSDL3;
+function SDL_RenderDebugText(renderer: PSDL_Renderer; x: single; y: single; str: pchar): Tbool; cdecl; external libSDL3;
+function SDL_RenderDebugTextFormat(renderer: PSDL_Renderer; x: single; y: single; fmt: pchar): Tbool; cdecl; varargs; external libSDL3;
+function SDL_SetDefaultTextureScaleMode(renderer: PSDL_Renderer; scale_mode: TSDL_ScaleMode): Tbool; cdecl; external libSDL3;
+function SDL_GetDefaultTextureScaleMode(renderer: PSDL_Renderer; scale_mode: PSDL_ScaleMode): Tbool; cdecl; external libSDL3;
+
+type
+  TSDL_GPURenderStateCreateInfo = record
+    fragment_shader: PSDL_GPUShader;
+    num_sampler_bindings: TSint32;
+    sampler_bindings: PSDL_GPUTextureSamplerBinding;
+    num_storage_textures: TSint32;
+    storage_textures: ^PSDL_GPUTexture;
+    num_storage_buffers: TSint32;
+    storage_buffers: ^PSDL_GPUBuffer;
+    props: TSDL_PropertiesID;
+  end;
+  PSDL_GPURenderStateCreateInfo = ^TSDL_GPURenderStateCreateInfo;
+
+  PSDL_GPURenderState = type Pointer;
+
+function SDL_CreateGPURenderState(renderer: PSDL_Renderer; createinfo: PSDL_GPURenderStateCreateInfo): PSDL_GPURenderState; cdecl; external libSDL3;
+function SDL_SetGPURenderStateFragmentUniforms(state: PSDL_GPURenderState; slot_index: TUint32; data: pointer; length: TUint32): Tbool; cdecl; external libSDL3;
+function SDL_SetGPURenderState(renderer: PSDL_Renderer; state: PSDL_GPURenderState): Tbool; cdecl; external libSDL3;
+procedure SDL_DestroyGPURenderState(state: PSDL_GPURenderState); cdecl; external libSDL3;
 
 
 {$ENDIF read_interface}

@@ -49,6 +49,7 @@
 {$include SDL3/SDL_pen.inc}
 {$include SDL3/SDL_events.inc}
 {$include SDL3/SDL_init.inc}
+{$include SDL3/SDL_gpu.inc}
 {$include SDL3/SDL_render.inc}
 {$include SDL3/SDL_metal.inc}
 {$include SDL3/SDL_locale.inc}
@@ -56,7 +57,6 @@
 {$include SDL3/SDL_platform.inc}
 {$include SDL3/SDL_revision.inc}
 {$include SDL3/SDL_main.inc}
-{$include SDL3/SDL_gpu.inc}
 {$include SDL3/SDL_asyncio.inc}
 {$include SDL3/SDL_tray.inc}
 

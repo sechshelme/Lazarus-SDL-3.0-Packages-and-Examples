@@ -36,20 +36,14 @@ type
   PSint32 = ^int32;
   PSint64 = ^int64;
 
-  {$IFDEF CPU32}
-    Tsize_t = uint32;
-  {$ENDIF}
-
-  {$IFDEF CPU64}
-    Tsize_t = uint64;
-  {$ENDIF}
+  Tsize_t = SizeUInt;
   Psize_t = ^Tsize_t;
 
   Tuintptr_t = PtrUInt;
   Puintptr_t = ^Tuintptr_t;
 
 
-  Twchar_t = word;
+  Twchar_t = word; // ????
   Pwchar_t = ^Twchar_t;
   PPwchar_t = ^Pwchar_t;
 

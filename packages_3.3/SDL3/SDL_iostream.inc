@@ -49,6 +49,7 @@ function SDL_IOFromMem(mem: pointer; size: Tsize_t): PSDL_IOStream; cdecl; exter
 const
   SDL_PROP_IOSTREAM_MEMORY_POINTER = 'SDL.iostream.memory.base';
   SDL_PROP_IOSTREAM_MEMORY_SIZE_NUMBER = 'SDL.iostream.memory.size';
+  SDL_PROP_IOSTREAM_MEMORY_FREE_FUNC_POINTER = 'SDL.iostream.memory.free';
 
 function SDL_IOFromConstMem(mem: pointer; size: Tsize_t): PSDL_IOStream; cdecl; external libSDL3;
 function SDL_IOFromDynamicMem: PSDL_IOStream; cdecl; external libSDL3;

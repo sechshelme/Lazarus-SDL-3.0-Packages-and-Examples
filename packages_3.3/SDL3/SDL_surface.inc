@@ -19,6 +19,7 @@ const
   SDL_SCALEMODE_INVALID = -1;
   SDL_SCALEMODE_NEAREST = 0;
   SDL_SCALEMODE_LINEAR = 1;
+  SDL_SCALEMODE_PIXELART = 2;
 
 type
   PSDL_FlipMode = ^TSDL_FlipMode;
@@ -28,6 +29,7 @@ const
   SDL_FLIP_NONE = 0;
   SDL_FLIP_HORIZONTAL = 1;
   SDL_FLIP_VERTICAL = 2;
+  SDL_FLIP_HORIZONTAL_AND_VERTICAL = SDL_FLIP_HORIZONTAL or SDL_FLIP_VERTICAL;
 
 type
   TSDL_Surface = record
@@ -70,6 +72,10 @@ function SDL_LoadBMP_IO(src: PSDL_IOStream; closeio: Tbool): PSDL_Surface; cdecl
 function SDL_LoadBMP(file_: pansichar): PSDL_Surface; cdecl; external libSDL3;
 function SDL_SaveBMP_IO(surface: PSDL_Surface; dst: PSDL_IOStream; closeio: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_SaveBMP(surface: PSDL_Surface; file_: pansichar): Tbool; cdecl; external libSDL3;
+function SDL_LoadPNG_IO(src:PSDL_IOStream; closeio:Tbool):PSDL_Surface;cdecl;external libSDL3;
+function SDL_LoadPNG(file_:PAnsiChar):PSDL_Surface;cdecl;external libSDL3;
+function SDL_SavePNG_IO(surface:PSDL_Surface; dst:PSDL_IOStream; closeio:Tbool):Tbool;cdecl;external libSDL3;
+function SDL_SavePNG(surface:PSDL_Surface; file_:PAnsiChar):Tbool;cdecl;external libSDL3;
 function SDL_SetSurfaceRLE(surface: PSDL_Surface; Enabled: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_SurfaceHasRLE(surface: PSDL_Surface): Tbool; cdecl; external libSDL3;
 function SDL_SetSurfaceColorKey(surface: PSDL_Surface; Enabled: Tbool; key: TUint32): Tbool; cdecl; external libSDL3;
@@ -84,6 +90,7 @@ function SDL_GetSurfaceBlendMode(surface: PSDL_Surface; blendMode: PSDL_BlendMod
 function SDL_SetSurfaceClipRect(surface: PSDL_Surface; rect: PSDL_Rect): Tbool; cdecl; external libSDL3;
 function SDL_GetSurfaceClipRect(surface: PSDL_Surface; rect: PSDL_Rect): Tbool; cdecl; external libSDL3;
 function SDL_FlipSurface(surface: PSDL_Surface; flip: TSDL_FlipMode): Tbool; cdecl; external libSDL3;
+function SDL_RotateSurface(surface:PSDL_Surface; angle:single):PSDL_Surface;cdecl;external libSDL3;
 function SDL_DuplicateSurface(surface: PSDL_Surface): PSDL_Surface; cdecl; external libSDL3;
 function SDL_ScaleSurface(surface: PSDL_Surface; Width: longint; Height: longint; scaleMode: TSDL_ScaleMode): PSDL_Surface; cdecl; external libSDL3;
 function SDL_ConvertSurface(surface: PSDL_Surface; format: TSDL_PixelFormat): PSDL_Surface; cdecl; external libSDL3;
@@ -111,14 +118,10 @@ function SDL_BlitSurface9Grid(src: PSDL_Surface; srcrect: PSDL_Rect; left_width:
   bottom_height: longint; scale: single; scaleMode: TSDL_ScaleMode; dst: PSDL_Surface; dstrect: PSDL_Rect): Tbool; cdecl; external libSDL3;
 function SDL_MapSurfaceRGB(surface: PSDL_Surface; r: TUint8; g: TUint8; b: TUint8): TUint32; cdecl; external libSDL3;
 function SDL_MapSurfaceRGBA(surface: PSDL_Surface; r: TUint8; g: TUint8; b: TUint8; a: TUint8): TUint32; cdecl; external libSDL3;
-function SDL_ReadSurfacePixel(surface: PSDL_Surface; x: longint; y: longint; r: PUint8; g: PUint8;
-  b: PUint8; a: PUint8): Tbool; cdecl; external libSDL3;
-function SDL_ReadSurfacePixelFloat(surface: PSDL_Surface; x: longint; y: longint; r: Psingle; g: Psingle;
-  b: Psingle; a: Psingle): Tbool; cdecl; external libSDL3;
-function SDL_WriteSurfacePixel(surface: PSDL_Surface; x: longint; y: longint; r: TUint8; g: TUint8;
-  b: TUint8; a: TUint8): Tbool; cdecl; external libSDL3;
-function SDL_WriteSurfacePixelFloat(surface: PSDL_Surface; x: longint; y: longint; r: single; g: single;
-  b: single; a: single): Tbool; cdecl; external libSDL3;
+function SDL_ReadSurfacePixel(surface: PSDL_Surface; x: longint; y: longint; r: PUint8; g: PUint8; b: PUint8; a: PUint8): Tbool; cdecl; external libSDL3;
+function SDL_ReadSurfacePixelFloat(surface: PSDL_Surface; x: longint; y: longint; r: Psingle; g: Psingle; b: Psingle; a: Psingle): Tbool; cdecl; external libSDL3;
+function SDL_WriteSurfacePixel(surface: PSDL_Surface; x: longint; y: longint; r: TUint8; g: TUint8; b: TUint8; a: TUint8): Tbool; cdecl; external libSDL3;
+function SDL_WriteSurfacePixelFloat(surface: PSDL_Surface; x: longint; y: longint; r: single; g: single; b: single; a: single): Tbool; cdecl; external libSDL3;
 
 function SDL_MUSTLOCK(S: PSDL_Surface): Boolean;
 

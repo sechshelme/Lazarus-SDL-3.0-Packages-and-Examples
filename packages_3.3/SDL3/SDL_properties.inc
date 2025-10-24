@@ -17,6 +17,9 @@ const
   SDL_PROPERTY_TYPE_FLOAT = 4;
   SDL_PROPERTY_TYPE_BOOLEAN = 5;
 
+const
+  SDL_PROP_NAME_STRING = 'SDL.name';
+
 function SDL_GetGlobalProperties: TSDL_PropertiesID; cdecl; external libSDL3;
 function SDL_CreateProperties: TSDL_PropertiesID; cdecl; external libSDL3;
 function SDL_CopyProperties(src: TSDL_PropertiesID; dst: TSDL_PropertiesID): Tbool; cdecl; external libSDL3;
