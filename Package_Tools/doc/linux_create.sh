@@ -10,7 +10,7 @@ git clone https://github.com/libsdl-org/SDL.git
 # Linux
 mkdir build
 cd build
-cmake ../SDL -DSDL_TESTS=ON
+cmake ../SDL -DSDL_TESTS=ON -DSDL_EXAMPLES=ON
 make -j16
 sudo make install
 cd ../..
@@ -24,6 +24,19 @@ git clone https://github.com/libsdl-org/SDL_mixer.git
 mkdir build
 cd build
 cmake ../SDL_mixer
+make -j16
+sudo make install
+cd ../..
+
+echo =======================  SDL3_native_midi ========================
+mkdir SDL3_native_midi
+cd SDL3_native_midi
+git clone https://github.com/libsdl-org/SDL_native_midi.git
+
+# Linux
+mkdir build
+cd build
+cmake ../SDL_native_midi
 make -j16
 sudo make install
 cd ../..

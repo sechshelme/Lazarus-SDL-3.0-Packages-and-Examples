@@ -44,6 +44,27 @@ make -j16
 sudo make install
 cd ../..
 
+echo ====================  SDL3_native_midi
+mkdir SDL3_native_midi
+cd SDL3_native_midi
+# git clone https://github.com/libsdl-org/SDL_midi_native.git --recursive 
+git clone https://github.com/libsdl-org/SDL_native_midi.git
+
+mkdir build_win64
+cd build_win64
+cmake -S ../SDL_native_midi -B . \
+  -DCMAKE_CXX_COMPILER="/usr/bin/x86_64-w64-mingw32-g++" \
+  -DCMAKE_C_COMPILER="/usr/bin/x86_64-w64-mingw32-gcc" \
+  -DCMAKE_RC_COMPILER="/usr/bin/x86_64-w64-mingw32-windres" \
+  -DCMAKE_FIND_ROOT_PATH="/usr/x86_64-w64-mingw32" \
+  -DCMAKE_FIND_ROOT_PATH_MODE_INCLUDE="BOTH" \
+  -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY="ONLY" \
+  -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM="BOTH" \
+  -DCMAKE_SYSTEM_NAME="Windows" 
+make -j16
+sudo make install
+cd ../..
+
 echo ====================  SDL3_net
 mkdir SDL3_net
 cd SDL3_net
