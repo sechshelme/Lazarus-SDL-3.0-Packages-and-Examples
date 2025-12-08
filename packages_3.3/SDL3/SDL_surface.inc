@@ -56,6 +56,7 @@ const
   SDL_PROP_SURFACE_TONEMAP_OPERATOR_STRING = 'SDL.surface.tonemap';
   SDL_PROP_SURFACE_HOTSPOT_X_NUMBER = 'SDL.surface.hotspot.x';
   SDL_PROP_SURFACE_HOTSPOT_Y_NUMBER = 'SDL.surface.hotspot.y';
+  SDL_PROP_SURFACE_ROTATION_NUMBER = 'SDL.surface.rotation';
 
 function SDL_SetSurfaceColorspace(surface: PSDL_Surface; colorspace: TSDL_Colorspace): Tbool; cdecl; external libSDL3;
 function SDL_GetSurfaceColorspace(surface: PSDL_Surface): TSDL_Colorspace; cdecl; external libSDL3;
@@ -68,10 +69,12 @@ function SDL_GetSurfaceImages(surface: PSDL_Surface; Count: Plongint): PPSDL_Sur
 procedure SDL_RemoveSurfaceAlternateImages(surface: PSDL_Surface); cdecl; external libSDL3;
 function SDL_LockSurface(surface: PSDL_Surface): Tbool; cdecl; external libSDL3;
 procedure SDL_UnlockSurface(surface: PSDL_Surface); cdecl; external libSDL3;
+function SDL_LoadSurface_IO(src: PSDL_IOStream; closeio: Boolean): PSDL_Surface; cdecl; external libSDL3;
+function SDL_LoadSurface(file_: PAnsiChar): PSDL_Surface; cdecl; external libSDL3;
 function SDL_LoadBMP_IO(src: PSDL_IOStream; closeio: Tbool): PSDL_Surface; cdecl; external libSDL3;
-function SDL_LoadBMP(file_: pansichar): PSDL_Surface; cdecl; external libSDL3;
+function SDL_LoadBMP(file_: PAnsiChar): PSDL_Surface; cdecl; external libSDL3;
 function SDL_SaveBMP_IO(surface: PSDL_Surface; dst: PSDL_IOStream; closeio: Tbool): Tbool; cdecl; external libSDL3;
-function SDL_SaveBMP(surface: PSDL_Surface; file_: pansichar): Tbool; cdecl; external libSDL3;
+function SDL_SaveBMP(surface: PSDL_Surface; file_: PAnsiChar): Tbool; cdecl; external libSDL3;
 function SDL_LoadPNG_IO(src:PSDL_IOStream; closeio:Tbool):PSDL_Surface;cdecl;external libSDL3;
 function SDL_LoadPNG(file_:PAnsiChar):PSDL_Surface;cdecl;external libSDL3;
 function SDL_SavePNG_IO(surface:PSDL_Surface; dst:PSDL_IOStream; closeio:Tbool):Tbool;cdecl;external libSDL3;

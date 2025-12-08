@@ -835,6 +835,20 @@ const
   SDL_PROP_GPU_DEVICE_CREATE_SHADERS_METALLIB_BOOLEAN = 'SDL.gpu.device.create.shaders.metallib';
   SDL_PROP_GPU_DEVICE_CREATE_D3D12_ALLOW_FEWER_RESOURCE_SLOTS_BOOLEAN = 'SDL.gpu.device.create.d3d12.allowtier1resourcebinding';
   SDL_PROP_GPU_DEVICE_CREATE_D3D12_SEMANTIC_NAME_STRING = 'SDL.gpu.device.create.d3d12.semantic';
+  SDL_PROP_GPU_DEVICE_CREATE_VULKAN_REQUIRE_HARDWARE_ACCELERATION_BOOLEAN = 'SDL.gpu.device.create.vulkan.requirehardwareacceleration';
+  SDL_PROP_GPU_DEVICE_CREATE_VULKAN_OPTIONS_POINTER = 'SDL.gpu.device.create.vulkan.options';
+
+type
+  TSDL_GPUVulkanOptions = record
+    vulkan_api_version: TUint32;
+    feature_list: pointer;
+    vulkan_10_physical_device_features: pointer;
+    device_extension_count: TUint32;
+    device_extension_names: ^pchar;
+    instance_extension_count: TUint32;
+    instance_extension_names: ^pchar;
+  end;
+  PSDL_GPUVulkanOptions = ^TSDL_GPUVulkanOptions;
 
 procedure SDL_DestroyGPUDevice(device: PSDL_GPUDevice); cdecl; external libSDL3;
 function SDL_GetNumGPUDrivers: longint; cdecl; external libSDL3;
@@ -968,9 +982,9 @@ procedure SDL_ReleaseGPUFence(device: PSDL_GPUDevice; fence: PSDL_GPUFence); cde
 function SDL_GPUTextureFormatTexelBlockSize(format: TSDL_GPUTextureFormat): TUint32; cdecl; external libSDL3;
 function SDL_GPUTextureSupportsFormat(device: PSDL_GPUDevice; format: TSDL_GPUTextureFormat; _type: TSDL_GPUTextureType; usage: TSDL_GPUTextureUsageFlags): Tbool; cdecl; external libSDL3;
 function SDL_GPUTextureSupportsSampleCount(device: PSDL_GPUDevice; format: TSDL_GPUTextureFormat; sample_count: TSDL_GPUSampleCount): Tbool; cdecl; external libSDL3;
-function SDL_CalculateGPUTextureFormatSize(format:TSDL_GPUTextureFormat; width:TUint32; height:TUint32; depth_or_layer_count:TUint32):TUint32;cdecl;external libSDL3;
-function SDL_GetPixelFormatFromGPUTextureFormat(format:TSDL_GPUTextureFormat):TSDL_PixelFormat;cdecl;external libSDL3;
-function SDL_GetGPUTextureFormatFromPixelFormat(format:TSDL_PixelFormat):TSDL_GPUTextureFormat;cdecl;external libSDL3;
+function SDL_CalculateGPUTextureFormatSize(format: TSDL_GPUTextureFormat; width: TUint32; height: TUint32; depth_or_layer_count: TUint32): TUint32; cdecl; external libSDL3;
+function SDL_GetPixelFormatFromGPUTextureFormat(format: TSDL_GPUTextureFormat): TSDL_PixelFormat; cdecl; external libSDL3;
+function SDL_GetGPUTextureFormatFromPixelFormat(format: TSDL_PixelFormat): TSDL_GPUTextureFormat; cdecl; external libSDL3;
 
 {$ifdef SDL_PLATFORM_GDK}
 procedure SDL_GDKSuspendGPU(device: PSDL_GPUDevice); cdecl; external libSDL3;

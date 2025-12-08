@@ -20,6 +20,7 @@ const
   SDL_PEN_INPUT_BUTTON_4 = 1 shl 4;
   SDL_PEN_INPUT_BUTTON_5 = 1 shl 5;
   SDL_PEN_INPUT_ERASER_TIP = 1 shl 30;
+  SDL_PEN_INPUT_IN_PROXIMITY = 1 shl 31;
 
 type
   PSDL_PenAxis = ^TSDL_PenAxis;
