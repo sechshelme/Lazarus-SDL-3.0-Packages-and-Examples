@@ -66,8 +66,7 @@ function SDL_BUTTON_X2MASK: longint;
 
 type
   PSDL_Cursor = type Pointer;
-
-  TSDL_MouseMotionTransformCallback = procedure (userdata:pointer; timestamp:TUint64; window:PSDL_Window; mouseID:TSDL_MouseID; x:Psingle;                y:Psingle);cdecl;
+  TSDL_MouseMotionTransformCallback = procedure (userdata:pointer; timestamp:TUint64; window:PSDL_Window; mouseID:TSDL_MouseID; x:Psingle; y:Psingle);cdecl;
 
 function SDL_HasMouse: Tbool; cdecl; external libSDL3;
 function SDL_GetMice(Count: Plongint): PSDL_MouseID; cdecl; external libSDL3;

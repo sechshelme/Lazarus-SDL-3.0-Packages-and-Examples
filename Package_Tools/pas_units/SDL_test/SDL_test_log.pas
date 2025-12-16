@@ -12,6 +12,7 @@ uses
 procedure SDLTest_Log(fmt: pansichar); varargs cdecl; external;
 procedure SDLTest_LogEscapedString(prefix: pansichar; buffer: pointer; size: Tsize_t); cdecl; external;
 procedure SDLTest_LogError(fmt: pansichar); varargs cdecl; external;
+procedure SDLTest_LogMessage(priority : TSDL_LogPriority; fmt: pansichar); varargs cdecl; external;
 
 implementation
 

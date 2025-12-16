@@ -56,7 +56,7 @@ const
   SDL_PROP_SURFACE_TONEMAP_OPERATOR_STRING = 'SDL.surface.tonemap';
   SDL_PROP_SURFACE_HOTSPOT_X_NUMBER = 'SDL.surface.hotspot.x';
   SDL_PROP_SURFACE_HOTSPOT_Y_NUMBER = 'SDL.surface.hotspot.y';
-  SDL_PROP_SURFACE_ROTATION_NUMBER = 'SDL.surface.rotation';
+  SDL_PROP_SURFACE_ROTATION_FLOAT = 'SDL.surface.rotation';
 
 function SDL_SetSurfaceColorspace(surface: PSDL_Surface; colorspace: TSDL_Colorspace): Tbool; cdecl; external libSDL3;
 function SDL_GetSurfaceColorspace(surface: PSDL_Surface): TSDL_Colorspace; cdecl; external libSDL3;

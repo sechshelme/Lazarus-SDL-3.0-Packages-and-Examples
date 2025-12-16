@@ -78,6 +78,7 @@ const
   SDL_WINDOW_TOOLTIP = TUint64($0000000000040000);
   SDL_WINDOW_POPUP_MENU = TUint64($0000000000080000);
   SDL_WINDOW_KEYBOARD_GRABBED = TUint64($0000000000100000);
+  SDL_WINDOW_FILL_DOCUMENT = TUint64($0000000000200000);
   SDL_WINDOW_VULKAN = TUint64($0000000010000000);
   SDL_WINDOW_METAL = TUint64($0000000020000000);
   SDL_WINDOW_TRANSPARENT = TUint64($0000000040000000);
@@ -272,7 +273,6 @@ const
   SDL_PROP_WINDOW_CREATE_WIN32_PIXEL_FORMAT_HWND_POINTER = 'SDL.window.create.win32.pixel_format_hwnd';
   SDL_PROP_WINDOW_CREATE_X11_WINDOW_NUMBER = 'SDL.window.create.x11.window';
   SDL_PROP_WINDOW_CREATE_EMSCRIPTEN_CANVAS_ID_STRING = 'SDL.window.create.emscripten.canvas_id';
-  SDL_PROP_WINDOW_CREATE_EMSCRIPTEN_FILL_DOCUMENT_BOOLEAN = 'SDL.window.create.emscripten.fill_document';
   SDL_PROP_WINDOW_CREATE_EMSCRIPTEN_KEYBOARD_ELEMENT_STRING = 'SDL.window.create.emscripten.keyboard_element';
 
 function SDL_GetWindowID(window: PSDL_Window): TSDL_WindowID; cdecl; external libSDL3;
@@ -317,7 +317,6 @@ const
   SDL_PROP_WINDOW_X11_SCREEN_NUMBER = 'SDL.window.x11.screen';
   SDL_PROP_WINDOW_X11_WINDOW_NUMBER = 'SDL.window.x11.window';
   SDL_PROP_WINDOW_EMSCRIPTEN_CANVAS_ID_STRING = 'SDL.window.emscripten.canvas_id';
-  SDL_PROP_WINDOW_EMSCRIPTEN_FILL_DOCUMENT_BOOLEAN = 'SDL.window.emscripten.fill_document';
   SDL_PROP_WINDOW_EMSCRIPTEN_KEYBOARD_ELEMENT_STRING = 'SDL.window.emscripten.keyboard_element';
 
 function SDL_GetWindowFlags(window: PSDL_Window): TSDL_WindowFlags; cdecl; external libSDL3;
@@ -340,6 +339,7 @@ function SDL_GetWindowMaximumSize(window: PSDL_Window; w: Plongint; h: Plongint)
 function SDL_SetWindowBordered(window: PSDL_Window; bordered: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_SetWindowResizable(window: PSDL_Window; resizable: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_SetWindowAlwaysOnTop(window: PSDL_Window; on_top: Tbool): Tbool; cdecl; external libSDL3;
+function SDL_SetWindowFillDocument(window: PSDL_Window; fill: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_ShowWindow(window: PSDL_Window): Tbool; cdecl; external libSDL3;
 function SDL_HideWindow(window: PSDL_Window): Tbool; cdecl; external libSDL3;
 function SDL_RaiseWindow(window: PSDL_Window): Tbool; cdecl; external libSDL3;
