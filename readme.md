@@ -187,6 +187,7 @@ Für die Zusatzpackete **SDL_image, SDL_ttf, SDL_rtf, SDL_mixer und SDL_net** in
 ## Neuerungen:
 | Datum      | Änderungen 
 | ---        | ---
+| 01.01.2026 | Angepasst an SDL-3.4.0 und SDL_image-3.2.6
 | 16.06.2025 | **Tdouble** entfernt
 | 03.06.2025 | **Char** durch **AnsiChar** ersetzt
 | 03.06.2025 | Angepasst an SDL-release-3.2.16
