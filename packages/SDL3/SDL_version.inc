@@ -3,8 +3,8 @@
 
 const
   SDL_MAJOR_VERSION = 3;
-  SDL_MINOR_VERSION = 2;
-  SDL_MICRO_VERSION = 28;
+  SDL_MINOR_VERSION = 4;
+  SDL_MICRO_VERSION = 0;
 
 function SDL_VERSIONNUM(major, minor, patch: longint): longint;
 function SDL_VERSIONNUM_MAJOR(version: longint): longint;
@@ -14,7 +14,7 @@ function SDL_VERSION: longint;
 function SDL_VERSION_ATLEAST(X, Y, Z: longint): boolean;
 
 function SDL_GetVersion: longint; cdecl; external libSDL3;
-function SDL_GetRevision: pansichar; cdecl; external libSDL3;
+function SDL_GetRevision: PAnsiChar; cdecl; external libSDL3;
 
 {$ENDIF read_interface}
 

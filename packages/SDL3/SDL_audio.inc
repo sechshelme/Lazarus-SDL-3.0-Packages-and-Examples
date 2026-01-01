@@ -71,6 +71,10 @@ procedure SDL_UnbindAudioStream(stream: PSDL_AudioStream); cdecl; external libSD
 function SDL_GetAudioStreamDevice(stream: PSDL_AudioStream): TSDL_AudioDeviceID; cdecl; external libSDL3;
 function SDL_CreateAudioStream(src_spec: PSDL_AudioSpec; dst_spec: PSDL_AudioSpec): PSDL_AudioStream; cdecl; external libSDL3;
 function SDL_GetAudioStreamProperties(stream: PSDL_AudioStream): TSDL_PropertiesID; cdecl; external libSDL3;
+
+const
+  SDL_PROP_AUDIOSTREAM_AUTO_CLEANUP_BOOLEAN = 'SDL.audiostream.auto_cleanup';
+
 function SDL_GetAudioStreamFormat(stream: PSDL_AudioStream; src_spec: PSDL_AudioSpec; dst_spec: PSDL_AudioSpec): Tbool; cdecl; external libSDL3;
 function SDL_SetAudioStreamFormat(stream: PSDL_AudioStream; src_spec: PSDL_AudioSpec; dst_spec: PSDL_AudioSpec): Tbool; cdecl; external libSDL3;
 function SDL_GetAudioStreamFrequencyRatio(stream: PSDL_AudioStream): single; cdecl; external libSDL3;
@@ -82,6 +86,13 @@ function SDL_GetAudioStreamOutputChannelMap(stream: PSDL_AudioStream; Count: Plo
 function SDL_SetAudioStreamInputChannelMap(stream: PSDL_AudioStream; chmap: Plongint; Count: longint): Tbool; cdecl; external libSDL3;
 function SDL_SetAudioStreamOutputChannelMap(stream: PSDL_AudioStream; chmap: Plongint; Count: longint): Tbool; cdecl; external libSDL3;
 function SDL_PutAudioStreamData(stream: PSDL_AudioStream; buf: pointer; len: longint): Tbool; cdecl; external libSDL3;
+
+type
+  TSDL_AudioStreamDataCompleteCallback = procedure(userdata: pointer; buf: pointer; buflen: longint); cdecl;
+
+function SDL_PutAudioStreamDataNoCopy(stream: PSDL_AudioStream; buf: pointer; len: longint; callback: TSDL_AudioStreamDataCompleteCallback; userdata: pointer): Tbool; cdecl; external libSDL3;
+function SDL_PutAudioStreamPlanarData(stream: PSDL_AudioStream; channel_buffers: Ppointer; num_channels: longint; num_samples: longint): Tbool; cdecl; external libSDL3;
+
 function SDL_GetAudioStreamData(stream: PSDL_AudioStream; buf: pointer; len: longint): longint; cdecl; external libSDL3;
 function SDL_GetAudioStreamAvailable(stream: PSDL_AudioStream): longint; cdecl; external libSDL3;
 function SDL_GetAudioStreamQueued(stream: PSDL_AudioStream): longint; cdecl; external libSDL3;

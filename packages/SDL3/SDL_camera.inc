@@ -1,5 +1,4 @@
-
-{$IFDEF read_interface}
+  {$IFDEF read_interface}
 
 type
   TSDL_CameraID = TUint32;
@@ -16,6 +15,7 @@ type
   PSDL_CameraSpec = ^TSDL_CameraSpec;
   PPSDL_CameraSpec = ^PSDL_CameraSpec;
 
+type
   PSDL_CameraPosition = ^TSDL_CameraPosition;
   TSDL_CameraPosition = longint;
 
@@ -23,6 +23,15 @@ const
   SDL_CAMERA_POSITION_UNKNOWN = 0;
   SDL_CAMERA_POSITION_FRONT_FACING = 1;
   SDL_CAMERA_POSITION_BACK_FACING = 2;
+
+type
+  PSDL_CameraPermissionState = ^TSDL_CameraPermissionState;
+  TSDL_CameraPermissionState = longint;
+
+const
+  SDL_CAMERA_PERMISSION_STATE_DENIED = -1;
+  SDL_CAMERA_PERMISSION_STATE_PENDING = 0;
+  SDL_CAMERA_PERMISSION_STATE_APPROVED = 1;
 
 type
   PSDL_Camera = type Pointer;
@@ -35,7 +44,7 @@ function SDL_GetCameraSupportedFormats(instanceid: TSDL_CameraID; Count: Plongin
 function SDL_GetCameraName(instance_id: TSDL_CameraID): pansichar; cdecl; external libSDL3;
 function SDL_GetCameraPosition(instance_id: TSDL_CameraID): TSDL_CameraPosition; cdecl; external libSDL3;
 function SDL_OpenCamera(instance_id: TSDL_CameraID; spec: PSDL_CameraSpec): PSDL_Camera; cdecl; external libSDL3;
-function SDL_GetCameraPermissionState(camera: PSDL_Camera): longint; cdecl; external libSDL3;
+function SDL_GetCameraPermissionState(camera: PSDL_Camera): TSDL_CameraPermissionState; cdecl; external libSDL3;
 function SDL_GetCameraID(camera: PSDL_Camera): TSDL_CameraID; cdecl; external libSDL3;
 function SDL_GetCameraProperties(camera: PSDL_Camera): TSDL_PropertiesID; cdecl; external libSDL3;
 function SDL_GetCameraFormat(camera: PSDL_Camera; spec: PSDL_CameraSpec): Tbool; cdecl; external libSDL3;

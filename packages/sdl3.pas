@@ -6,10 +6,10 @@ uses
   {$IFDEF Linux}
   x, xlib;
   {$ENDIF}
-  {$IFDEF msWindows}
+
+  {$IFDEF Windows}
   Windows;
   {$ENDIF}
-//  ctypes;
 
   {$IFDEF FPC}
   {$PACKRECORDS C}
@@ -20,13 +20,31 @@ const
   libSDL3 = 'SDL3';
   {$ENDIF}
 
-  {$IFDEF msWindows}
+  {$IFDEF Windows}
   libSDL3 = 'SDL3';
   {$ENDIF}
 
   {$IFDEF Darwin}
   libSDL3 = 'libSDL3.dylib';
   {$ENDIF}
+
+type
+  {$IFDEF Linux}
+  Tlong = int64;
+  Tulong = uint64;
+  {$ENDIF}
+
+  {$IFDEF Darwin}
+  Tlong = int64;
+  Tulong = uint64;
+  {$ENDIF}
+
+  {$IFDEF Windows}
+  Tlong = int32;
+  Tulong = uint32;
+  {$ENDIF}
+  Pulong = ^Tulong;
+  Plong = ^Tlong;
 
   {$DEFINE read_interface}
   {$include SDL3_includes.inc}

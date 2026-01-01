@@ -37,6 +37,7 @@ type
   PSDL_DisplayMode = ^TSDL_DisplayMode;
   PPSDL_DisplayMode = ^PSDL_DisplayMode;
 
+type
   PSDL_DisplayOrientation = ^TSDL_DisplayOrientation;
   TSDL_DisplayOrientation = longint;
 
@@ -48,35 +49,40 @@ const
   SDL_ORIENTATION_PORTRAIT_FLIPPED = 4;
 
 type
+  PSDL_Window = type Pointer;
+  PPSDL_Window = ^PSDL_Window;
+
+type
   PSDL_WindowFlags = ^TSDL_WindowFlags;
   TSDL_WindowFlags = TUint64;
 
 const
-  SDL_WINDOW_FULLSCREEN = $0000000000000001;
-  SDL_WINDOW_OPENGL = $0000000000000002;
-  SDL_WINDOW_OCCLUDED = $0000000000000004;
-  SDL_WINDOW_HIDDEN = $0000000000000008;
-  SDL_WINDOW_BORDERLESS = $0000000000000010;
-  SDL_WINDOW_RESIZABLE = $0000000000000020;
-  SDL_WINDOW_MINIMIZED = $0000000000000040;
-  SDL_WINDOW_MAXIMIZED = $0000000000000080;
-  SDL_WINDOW_MOUSE_GRABBED = $0000000000000100;
-  SDL_WINDOW_INPUT_FOCUS = $0000000000000200;
-  SDL_WINDOW_MOUSE_FOCUS = $0000000000000400;
-  SDL_WINDOW_EXTERNAL = $0000000000000800;
-  SDL_WINDOW_MODAL = $0000000000001000;
-  SDL_WINDOW_HIGH_PIXEL_DENSITY = $0000000000002000;
-  SDL_WINDOW_MOUSE_CAPTURE = $0000000000004000;
-  SDL_WINDOW_MOUSE_RELATIVE_MODE = $0000000000008000;
-  SDL_WINDOW_ALWAYS_ON_TOP = $0000000000010000;
-  SDL_WINDOW_UTILITY = $0000000000020000;
-  SDL_WINDOW_TOOLTIP = $0000000000040000;
-  SDL_WINDOW_POPUP_MENU = $0000000000080000;
-  SDL_WINDOW_KEYBOARD_GRABBED = $0000000000100000;
-  SDL_WINDOW_VULKAN = $0000000010000000;
-  SDL_WINDOW_METAL = $0000000020000000;
-  SDL_WINDOW_TRANSPARENT = $0000000040000000;
-  SDL_WINDOW_NOT_FOCUSABLE = $0000000080000000;
+  SDL_WINDOW_FULLSCREEN = TUint64($0000000000000001);
+  SDL_WINDOW_OPENGL = TUint64($0000000000000002);
+  SDL_WINDOW_OCCLUDED = TUint64($0000000000000004);
+  SDL_WINDOW_HIDDEN = TUint64($0000000000000008);
+  SDL_WINDOW_BORDERLESS = TUint64($0000000000000010);
+  SDL_WINDOW_RESIZABLE = TUint64($0000000000000020);
+  SDL_WINDOW_MINIMIZED = TUint64($0000000000000040);
+  SDL_WINDOW_MAXIMIZED = TUint64($0000000000000080);
+  SDL_WINDOW_MOUSE_GRABBED = TUint64($0000000000000100);
+  SDL_WINDOW_INPUT_FOCUS = TUint64($0000000000000200);
+  SDL_WINDOW_MOUSE_FOCUS = TUint64($0000000000000400);
+  SDL_WINDOW_EXTERNAL = TUint64($0000000000000800);
+  SDL_WINDOW_MODAL = TUint64($0000000000001000);
+  SDL_WINDOW_HIGH_PIXEL_DENSITY = TUint64($0000000000002000);
+  SDL_WINDOW_MOUSE_CAPTURE = TUint64($0000000000004000);
+  SDL_WINDOW_MOUSE_RELATIVE_MODE = TUint64($0000000000008000);
+  SDL_WINDOW_ALWAYS_ON_TOP = TUint64($0000000000010000);
+  SDL_WINDOW_UTILITY = TUint64($0000000000020000);
+  SDL_WINDOW_TOOLTIP = TUint64($0000000000040000);
+  SDL_WINDOW_POPUP_MENU = TUint64($0000000000080000);
+  SDL_WINDOW_KEYBOARD_GRABBED = TUint64($0000000000100000);
+  SDL_WINDOW_FILL_DOCUMENT = TUint64($0000000000200000);
+  SDL_WINDOW_VULKAN = TUint64($0000000010000000);
+  SDL_WINDOW_METAL = TUint64($0000000020000000);
+  SDL_WINDOW_TRANSPARENT = TUint64($0000000040000000);
+  SDL_WINDOW_NOT_FOCUSABLE = TUint64($0000000080000000);
 
 const
   SDL_WINDOWPOS_UNDEFINED_MASK = $1FFF0000;
@@ -90,6 +96,18 @@ const
   SDL_FLASH_CANCEL = 0;
   SDL_FLASH_BRIEFLY = 1;
   SDL_FLASH_UNTIL_FOCUSED = 2;
+
+type
+  PSDL_ProgressState = ^TSDL_ProgressState;
+  TSDL_ProgressState = longint;
+
+const
+  SDL_PROGRESS_STATE_INVALID = -(1);
+  SDL_PROGRESS_STATE_NONE = (-(1)) + 1;
+  SDL_PROGRESS_STATE_INDETERMINATE = (-(1)) + 2;
+  SDL_PROGRESS_STATE_NORMAL = (-(1)) + 3;
+  SDL_PROGRESS_STATE_PAUSED = (-(1)) + 4;
+  SDL_PROGRESS_STATE_ERROR = (-(1)) + 5;
 
 type
   PSDL_GLContext = ^TSDL_GLContext;
@@ -110,13 +128,10 @@ type
   PSDL_EGLint = ^TSDL_EGLint;
   TSDL_EGLint = longint;
 
-  PSDL_EGLAttribArrayCallback = ^TSDL_EGLAttribArrayCallback;
   TSDL_EGLAttribArrayCallback = function(userdata: pointer): PSDL_EGLAttrib; cdecl;
-
-  PSDL_EGLIntArrayCallback = ^TSDL_EGLIntArrayCallback;
   TSDL_EGLIntArrayCallback = function(userdata: pointer; display: TSDL_EGLDisplay; config: TSDL_EGLConfig): PSDL_EGLint; cdecl;
-
-  PSDL_GLattr = ^TSDL_GLAttr;
+type
+  PSDL_GLAttr = ^TSDL_GLAttr;
   TSDL_GLAttr = longint;
 
 const
@@ -149,10 +164,18 @@ const
   SDL_GL_FLOATBUFFERS = 26;
   SDL_GL_EGL_PLATFORM = 27;
 
+type
+  PSDL_GLProfile = ^TSDL_GLProfile;
+  TSDL_GLProfile = TUint32;
+
 const
   SDL_GL_CONTEXT_PROFILE_CORE = $0001;
   SDL_GL_CONTEXT_PROFILE_COMPATIBILITY = $0002;
   SDL_GL_CONTEXT_PROFILE_ES = $0004;
+
+type
+  PSDL_GLContextFlag = ^TSDL_GLContextFlag;
+  TSDL_GLContextFlag = TUint32;
 
 const
   SDL_GL_CONTEXT_DEBUG_FLAG = $0001;
@@ -160,37 +183,42 @@ const
   SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG = $0004;
   SDL_GL_CONTEXT_RESET_ISOLATION_FLAG = $0008;
 
+type
+  PSDL_GLContextReleaseFlag = ^TSDL_GLContextReleaseFlag;
+  TSDL_GLContextReleaseFlag = TUint32;
+
 const
   SDL_GL_CONTEXT_RELEASE_BEHAVIOR_NONE = $0000;
   SDL_GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH = $0001;
+
+type
+  PSDL_GLContextResetNotification = ^TSDL_GLContextResetNotification;
+  TSDL_GLContextResetNotification = TUint32;
 
 const
   SDL_GL_CONTEXT_RESET_NO_NOTIFICATION = $0000;
   SDL_GL_CONTEXT_RESET_LOSE_CONTEXT = $0001;
 
-type
-  PSDL_Window = type Pointer;
-  PPSDL_Window = ^PSDL_Window;
-
 function SDL_GetNumVideoDrivers: longint; cdecl; external libSDL3;
-function SDL_GetVideoDriver(index: longint): pansichar; cdecl; external libSDL3;
-function SDL_GetCurrentVideoDriver: pansichar; cdecl; external libSDL3;
+function SDL_GetVideoDriver(index: longint): pchar; cdecl; external libSDL3;
+function SDL_GetCurrentVideoDriver: pchar; cdecl; external libSDL3;
 function SDL_GetSystemTheme: TSDL_SystemTheme; cdecl; external libSDL3;
-function SDL_GetDisplays(Count: Plongint): PSDL_DisplayID; cdecl; external libSDL3;
+function SDL_GetDisplays(count: Plongint): PSDL_DisplayID; cdecl; external libSDL3;
 function SDL_GetPrimaryDisplay: TSDL_DisplayID; cdecl; external libSDL3;
 function SDL_GetDisplayProperties(displayID: TSDL_DisplayID): TSDL_PropertiesID; cdecl; external libSDL3;
 
 const
   SDL_PROP_DISPLAY_HDR_ENABLED_BOOLEAN = 'SDL.display.HDR_enabled';
   SDL_PROP_DISPLAY_KMSDRM_PANEL_ORIENTATION_NUMBER = 'SDL.display.KMSDRM.panel_orientation';
+  SDL_PROP_DISPLAY_WAYLAND_WL_OUTPUT_POINTER = 'SDL.display.wayland.wl_output';
 
-function SDL_GetDisplayName(displayID: TSDL_DisplayID): pansichar; cdecl; external libSDL3;
+function SDL_GetDisplayName(displayID: TSDL_DisplayID): pchar; cdecl; external libSDL3;
 function SDL_GetDisplayBounds(displayID: TSDL_DisplayID; rect: PSDL_Rect): Tbool; cdecl; external libSDL3;
 function SDL_GetDisplayUsableBounds(displayID: TSDL_DisplayID; rect: PSDL_Rect): Tbool; cdecl; external libSDL3;
 function SDL_GetNaturalDisplayOrientation(displayID: TSDL_DisplayID): TSDL_DisplayOrientation; cdecl; external libSDL3;
 function SDL_GetCurrentDisplayOrientation(displayID: TSDL_DisplayID): TSDL_DisplayOrientation; cdecl; external libSDL3;
 function SDL_GetDisplayContentScale(displayID: TSDL_DisplayID): single; cdecl; external libSDL3;
-function SDL_GetFullscreenDisplayModes(displayID: TSDL_DisplayID; Count: Plongint): PPSDL_DisplayMode; cdecl; external libSDL3;
+function SDL_GetFullscreenDisplayModes(displayID: TSDL_DisplayID; count: Plongint): PPSDL_DisplayMode; cdecl; external libSDL3;
 function SDL_GetClosestFullscreenDisplayMode(displayID: TSDL_DisplayID; w: longint; h: longint; refresh_rate: single; include_high_density_modes: Tbool; closest: PSDL_DisplayMode): Tbool; cdecl; external libSDL3;
 function SDL_GetDesktopDisplayMode(displayID: TSDL_DisplayID): PSDL_DisplayMode; cdecl; external libSDL3;
 function SDL_GetCurrentDisplayMode(displayID: TSDL_DisplayID): PSDL_DisplayMode; cdecl; external libSDL3;
@@ -203,15 +231,15 @@ function SDL_SetWindowFullscreenMode(window: PSDL_Window; mode: PSDL_DisplayMode
 function SDL_GetWindowFullscreenMode(window: PSDL_Window): PSDL_DisplayMode; cdecl; external libSDL3;
 function SDL_GetWindowICCProfile(window: PSDL_Window; size: Psize_t): pointer; cdecl; external libSDL3;
 function SDL_GetWindowPixelFormat(window: PSDL_Window): TSDL_PixelFormat; cdecl; external libSDL3;
-function SDL_GetWindows(Count: Plongint): PPSDL_Window; cdecl; external libSDL3;
-function SDL_CreateWindow(title: pansichar; w: longint; h: longint; flags: TSDL_WindowFlags): PSDL_Window; cdecl; external libSDL3;
-function SDL_CreatePopupWindow(parent: PSDL_Window; offset_x: longint; offset_y: longint; w: longint; h: longint;
-  flags: TSDL_WindowFlags): PSDL_Window; cdecl; external libSDL3;
+function SDL_GetWindows(count: Plongint): PPSDL_Window; cdecl; external libSDL3;
+function SDL_CreateWindow(title: pchar; w: longint; h: longint; flags: TSDL_WindowFlags): PSDL_Window; cdecl; external libSDL3;
+function SDL_CreatePopupWindow(parent: PSDL_Window; offset_x: longint; offset_y: longint; w: longint; h: longint; flags: TSDL_WindowFlags): PSDL_Window; cdecl; external libSDL3;
 function SDL_CreateWindowWithProperties(props: TSDL_PropertiesID): PSDL_Window; cdecl; external libSDL3;
 
 const
   SDL_PROP_WINDOW_CREATE_ALWAYS_ON_TOP_BOOLEAN = 'SDL.window.create.always_on_top';
   SDL_PROP_WINDOW_CREATE_BORDERLESS_BOOLEAN = 'SDL.window.create.borderless';
+  SDL_PROP_WINDOW_CREATE_CONSTRAIN_POPUP_BOOLEAN = 'SDL.window.create.constrain_popup';
   SDL_PROP_WINDOW_CREATE_FOCUSABLE_BOOLEAN = 'SDL.window.create.focusable';
   SDL_PROP_WINDOW_CREATE_EXTERNAL_GRAPHICS_CONTEXT_BOOLEAN = 'SDL.window.create.external_graphics_context';
   SDL_PROP_WINDOW_CREATE_FLAGS_NUMBER = 'SDL.window.create.flags';
@@ -244,6 +272,8 @@ const
   SDL_PROP_WINDOW_CREATE_WIN32_HWND_POINTER = 'SDL.window.create.win32.hwnd';
   SDL_PROP_WINDOW_CREATE_WIN32_PIXEL_FORMAT_HWND_POINTER = 'SDL.window.create.win32.pixel_format_hwnd';
   SDL_PROP_WINDOW_CREATE_X11_WINDOW_NUMBER = 'SDL.window.create.x11.window';
+  SDL_PROP_WINDOW_CREATE_EMSCRIPTEN_CANVAS_ID_STRING = 'SDL.window.create.emscripten.canvas_id';
+  SDL_PROP_WINDOW_CREATE_EMSCRIPTEN_KEYBOARD_ELEMENT_STRING = 'SDL.window.create.emscripten.keyboard_element';
 
 function SDL_GetWindowID(window: PSDL_Window): TSDL_WindowID; cdecl; external libSDL3;
 function SDL_GetWindowFromID(id: TSDL_WindowID): PSDL_Window; cdecl; external libSDL3;
@@ -267,6 +297,7 @@ const
   SDL_PROP_WINDOW_KMSDRM_GBM_DEVICE_POINTER = 'SDL.window.kmsdrm.gbm_dev';
   SDL_PROP_WINDOW_COCOA_WINDOW_POINTER = 'SDL.window.cocoa.window';
   SDL_PROP_WINDOW_COCOA_METAL_VIEW_TAG_NUMBER = 'SDL.window.cocoa.metal_view_tag';
+  SDL_PROP_WINDOW_OPENVR_OVERLAY_ID_NUMBER = 'SDL.window.openvr.overlay_id';
   SDL_PROP_WINDOW_VIVANTE_DISPLAY_POINTER = 'SDL.window.vivante.display';
   SDL_PROP_WINDOW_VIVANTE_WINDOW_POINTER = 'SDL.window.vivante.window';
   SDL_PROP_WINDOW_VIVANTE_SURFACE_POINTER = 'SDL.window.vivante.surface';
@@ -285,10 +316,12 @@ const
   SDL_PROP_WINDOW_X11_DISPLAY_POINTER = 'SDL.window.x11.display';
   SDL_PROP_WINDOW_X11_SCREEN_NUMBER = 'SDL.window.x11.screen';
   SDL_PROP_WINDOW_X11_WINDOW_NUMBER = 'SDL.window.x11.window';
+  SDL_PROP_WINDOW_EMSCRIPTEN_CANVAS_ID_STRING = 'SDL.window.emscripten.canvas_id';
+  SDL_PROP_WINDOW_EMSCRIPTEN_KEYBOARD_ELEMENT_STRING = 'SDL.window.emscripten.keyboard_element';
 
 function SDL_GetWindowFlags(window: PSDL_Window): TSDL_WindowFlags; cdecl; external libSDL3;
-function SDL_SetWindowTitle(window: PSDL_Window; title: pansichar): Tbool; cdecl; external libSDL3;
-function SDL_GetWindowTitle(window: PSDL_Window): pansichar; cdecl; external libSDL3;
+function SDL_SetWindowTitle(window: PSDL_Window; title: pchar): Tbool; cdecl; external libSDL3;
+function SDL_GetWindowTitle(window: PSDL_Window): pchar; cdecl; external libSDL3;
 function SDL_SetWindowIcon(window: PSDL_Window; icon: PSDL_Surface): Tbool; cdecl; external libSDL3;
 function SDL_SetWindowPosition(window: PSDL_Window; x: longint; y: longint): Tbool; cdecl; external libSDL3;
 function SDL_GetWindowPosition(window: PSDL_Window; x: Plongint; y: Plongint): Tbool; cdecl; external libSDL3;
@@ -306,6 +339,7 @@ function SDL_GetWindowMaximumSize(window: PSDL_Window; w: Plongint; h: Plongint)
 function SDL_SetWindowBordered(window: PSDL_Window; bordered: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_SetWindowResizable(window: PSDL_Window; resizable: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_SetWindowAlwaysOnTop(window: PSDL_Window; on_top: Tbool): Tbool; cdecl; external libSDL3;
+function SDL_SetWindowFillDocument(window: PSDL_Window; fill: Tbool): Tbool; cdecl; external libSDL3;
 function SDL_ShowWindow(window: PSDL_Window): Tbool; cdecl; external libSDL3;
 function SDL_HideWindow(window: PSDL_Window): Tbool; cdecl; external libSDL3;
 function SDL_RaiseWindow(window: PSDL_Window): Tbool; cdecl; external libSDL3;
@@ -320,7 +354,7 @@ function SDL_SetWindowSurfaceVSync(window: PSDL_Window; vsync: longint): Tbool; 
 
 const
   SDL_WINDOW_SURFACE_VSYNC_DISABLED = 0;
-  SDL_WINDOW_SURFACE_VSYNC_ADAPTIVE = -(1);
+  SDL_WINDOW_SURFACE_VSYNC_ADAPTIVE = -1;
 
 function SDL_GetWindowSurfaceVSync(window: PSDL_Window; vsync: Plongint): Tbool; cdecl; external libSDL3;
 function SDL_UpdateWindowSurface(window: PSDL_Window): Tbool; cdecl; external libSDL3;
@@ -357,23 +391,27 @@ const
   SDL_HITTEST_RESIZE_LEFT = 9;
 
 type
-  TSDL_HitTest = function(win: PSDL_Window; area: PSDL_Point; Data: pointer): TSDL_HitTestResult; cdecl;
+  TSDL_HitTest = function(win: PSDL_Window; area: PSDL_Point; data: pointer): TSDL_HitTestResult; cdecl;
 
 function SDL_SetWindowHitTest(window: PSDL_Window; callback: TSDL_HitTest; callback_data: pointer): Tbool; cdecl; external libSDL3;
 function SDL_SetWindowShape(window: PSDL_Window; shape: PSDL_Surface): Tbool; cdecl; external libSDL3;
 function SDL_FlashWindow(window: PSDL_Window; operation: TSDL_FlashOperation): Tbool; cdecl; external libSDL3;
+function SDL_SetWindowProgressState(window: PSDL_Window; state: TSDL_ProgressState): Tbool; cdecl; external libSDL3;
+function SDL_GetWindowProgressState(window: PSDL_Window): TSDL_ProgressState; cdecl; external libSDL3;
+function SDL_SetWindowProgressValue(window: PSDL_Window; value: single): Tbool; cdecl; external libSDL3;
+function SDL_GetWindowProgressValue(window: PSDL_Window): single; cdecl; external libSDL3;
 procedure SDL_DestroyWindow(window: PSDL_Window); cdecl; external libSDL3;
 function SDL_ScreenSaverEnabled: Tbool; cdecl; external libSDL3;
 function SDL_EnableScreenSaver: Tbool; cdecl; external libSDL3;
 function SDL_DisableScreenSaver: Tbool; cdecl; external libSDL3;
-function SDL_GL_LoadLibrary(path: pansichar): Tbool; cdecl; external libSDL3;
-function SDL_GL_GetProcAddress(proc: pansichar): TSDL_FunctionPointer; cdecl; external libSDL3;
-function SDL_EGL_GetProcAddress(proc: pansichar): TSDL_FunctionPointer; cdecl; external libSDL3;
+function SDL_GL_LoadLibrary(path: pchar): Tbool; cdecl; external libSDL3;
+function SDL_GL_GetProcAddress(proc: pchar): TSDL_FunctionPointer; cdecl; external libSDL3;
+function SDL_EGL_GetProcAddress(proc: pchar): TSDL_FunctionPointer; cdecl; external libSDL3;
 procedure SDL_GL_UnloadLibrary; cdecl; external libSDL3;
-function SDL_GL_ExtensionSupported(extension: pansichar): Tbool; cdecl; external libSDL3;
+function SDL_GL_ExtensionSupported(extension: pchar): Tbool; cdecl; external libSDL3;
 procedure SDL_GL_ResetAttributes; cdecl; external libSDL3;
-function SDL_GL_SetAttribute(attr: TSDL_GLAttr; Value: longint): Tbool; cdecl; external libSDL3;
-function SDL_GL_GetAttribute(attr: TSDL_GLAttr; Value: Plongint): Tbool; cdecl; external libSDL3;
+function SDL_GL_SetAttribute(attr: TSDL_GLAttr; value: longint): Tbool; cdecl; external libSDL3;
+function SDL_GL_GetAttribute(attr: TSDL_GLAttr; value: Plongint): Tbool; cdecl; external libSDL3;
 function SDL_GL_CreateContext(window: PSDL_Window): TSDL_GLContext; cdecl; external libSDL3;
 function SDL_GL_MakeCurrent(window: PSDL_Window; context: TSDL_GLContext): Tbool; cdecl; external libSDL3;
 function SDL_GL_GetCurrentWindow: PSDL_Window; cdecl; external libSDL3;
@@ -385,7 +423,9 @@ procedure SDL_EGL_SetAttributeCallbacks(platformAttribCallback: TSDL_EGLAttribAr
 function SDL_GL_SetSwapInterval(interval: longint): Tbool; cdecl; external libSDL3;
 function SDL_GL_GetSwapInterval(interval: Plongint): Tbool; cdecl; external libSDL3;
 function SDL_GL_SwapWindow(window: PSDL_Window): Tbool; cdecl; external libSDL3;
-function SDL_GL_DestroyContext(context: PSDL_GLContext): Tbool; cdecl; external libSDL3;
+function SDL_GL_DestroyContext(context: TSDL_GLContext): Tbool; cdecl; external libSDL3;
+
+
 
 function SDL_WINDOWPOS_UNDEFINED_DISPLAY(X: longint): longint;
 function SDL_WINDOWPOS_UNDEFINED: longint;

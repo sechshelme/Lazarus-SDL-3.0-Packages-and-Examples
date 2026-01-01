@@ -23,6 +23,7 @@ function SDL_HasLSX: Tbool; cdecl; external libSDL3;
 function SDL_HasLASX: Tbool; cdecl; external libSDL3;
 function SDL_GetSystemRAM: longint; cdecl; external libSDL3;
 function SDL_GetSIMDAlignment: Tsize_t; cdecl; external libSDL3;
+function SDL_GetSystemPageSize: LongInt; cdecl; external libSDL3;
 
 {$ENDIF read_interface}
 

@@ -36,20 +36,14 @@ type
   PSint32 = ^int32;
   PSint64 = ^int64;
 
-  {$IFDEF CPU32}
-    Tsize_t = uint32;
-  {$ENDIF}
-
-  {$IFDEF CPU64}
-    Tsize_t = uint64;
-  {$ENDIF}
+  Tsize_t = SizeUInt;
   Psize_t = ^Tsize_t;
 
   Tuintptr_t = PtrUInt;
   Puintptr_t = ^Tuintptr_t;
 
 
-  Twchar_t = word;
+  Twchar_t = word; // ????
   Pwchar_t = ^Twchar_t;
   PPwchar_t = ^Pwchar_t;
 
@@ -205,7 +199,7 @@ function SDL_wcscmp(str1: Pwchar_t; str2: Pwchar_t): longint; cdecl; external li
 function SDL_wcsncmp(str1: Pwchar_t; str2: Pwchar_t; maxlen: Tsize_t): longint; cdecl; external libSDL3;
 function SDL_wcscasecmp(str1: Pwchar_t; str2: Pwchar_t): longint; cdecl; external libSDL3;
 function SDL_wcsncasecmp(str1: Pwchar_t; str2: Pwchar_t; maxlen: Tsize_t): longint; cdecl; external libSDL3;
-function SDL_wcstol(str: Pwchar_t; endp: PPwchar_t; base: longint): longint; cdecl; external libSDL3;
+function SDL_wcstol(str: Pwchar_t; endp: PPwchar_t; base: longint): Tlong; cdecl; external libSDL3;
 function SDL_strlen(str: pansichar): Tsize_t; cdecl; external libSDL3;
 function SDL_strnlen(str: pansichar; maxlen: Tsize_t): Tsize_t; cdecl; external libSDL3;
 function SDL_strlcpy(dst: pansichar; src: pansichar; maxlen: Tsize_t): Tsize_t; cdecl; external libSDL3;
@@ -226,14 +220,14 @@ function SDL_utf8strlen(str: pansichar): Tsize_t; cdecl; external libSDL3;
 function SDL_utf8strnlen(str: pansichar; bytes: Tsize_t): Tsize_t; cdecl; external libSDL3;
 function SDL_itoa(Value: longint; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
 function SDL_uitoa(Value: dword; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
-function SDL_ltoa(Value: longint; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
-function SDL_ultoa(Value: dword; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
+function SDL_ltoa(Value: Tlong; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
+function SDL_ultoa(Value: Tulong; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
 function SDL_lltoa(Value: int64; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
 function SDL_ulltoa(Value: qword; str: pansichar; radix: longint): pansichar; cdecl; external libSDL3;
 function SDL_atoi(str: pansichar): longint; cdecl; external libSDL3;
 function SDL_atof(str: pansichar): double; cdecl; external libSDL3;
-function SDL_strtol(str: pansichar; endp: PPansichar; base: longint): longint; cdecl; external libSDL3;
-function SDL_strtoul(str: pansichar; endp: PPansichar; base: longint): dword; cdecl; external libSDL3;
+function SDL_strtol(str: pansichar; endp: PPansichar; base: longint): Tlong; cdecl; external libSDL3;
+function SDL_strtoul(str: pansichar; endp: PPansichar; base: longint): Tulong; cdecl; external libSDL3;
 function SDL_strtoll(str: pansichar; endp: PPansichar; base: longint): int64; cdecl; external libSDL3;
 function SDL_strtoull(str: pansichar; endp: PPansichar; base: longint): qword; cdecl; external libSDL3;
 function SDL_strtod(str: pansichar; endp: PPansichar): double; cdecl; external libSDL3;
@@ -302,8 +296,8 @@ function SDL_pow(x: double; y: double): double; cdecl; external libSDL3;
 function SDL_powf(x: single; y: single): single; cdecl; external libSDL3;
 function SDL_round(x: double): double; cdecl; external libSDL3;
 function SDL_roundf(x: single): single; cdecl; external libSDL3;
-function SDL_lround(x: double): longint; cdecl; external libSDL3;
-function SDL_lroundf(x: single): longint; cdecl; external libSDL3;
+function SDL_lround(x: double): Tlong; cdecl; external libSDL3;
+function SDL_lroundf(x: single): Tlong; cdecl; external libSDL3;
 function SDL_scalbn(x: double; n: longint): double; cdecl; external libSDL3;
 function SDL_scalbnf(x: single; n: longint): single; cdecl; external libSDL3;
 function SDL_sin(x: double): double; cdecl; external libSDL3;

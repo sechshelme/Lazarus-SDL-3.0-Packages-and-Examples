@@ -35,6 +35,7 @@ type
 function SDL_CompareAndSwapAtomicU32(a: PSDL_AtomicU32; oldval: TUint32; newval: TUint32): Tbool; cdecl; external libSDL3;
 function SDL_SetAtomicU32(a: PSDL_AtomicU32; v: TUint32): TUint32; cdecl; external libSDL3;
 function SDL_GetAtomicU32(a: PSDL_AtomicU32): TUint32; cdecl; external libSDL3;
+function SDL_AddAtomicU32(a: PSDL_AtomicU32; v:LongInt):TUint32; cdecl; external libSDL3;
 function SDL_CompareAndSwapAtomicPointer(a: Ppointer; oldval: pointer; newval: pointer): Tbool; cdecl; external libSDL3;
 function SDL_SetAtomicPointer(a: Ppointer; v: pointer): pointer; cdecl; external libSDL3;
 function SDL_GetAtomicPointer(a: Ppointer): pointer; cdecl; external libSDL3;

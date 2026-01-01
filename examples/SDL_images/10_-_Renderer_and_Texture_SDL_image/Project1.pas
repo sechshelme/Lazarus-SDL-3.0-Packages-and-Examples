@@ -35,7 +35,7 @@ var
     quit: boolean = False;
     rSrc, rDest: TSDL_FRect;
     keyStat: PBoolean;
-    IsCtrl: TSDL_bool;
+    IsCtrl: Boolean;
   begin
     rDest.x := 0;
     rDest.y := 0;

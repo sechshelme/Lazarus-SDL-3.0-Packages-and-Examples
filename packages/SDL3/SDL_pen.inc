@@ -1,5 +1,4 @@
-
-{$IFDEF read_interface}
+  {$IFDEF read_interface}
 
 type
   TSDL_PenID = TUint32;
@@ -21,6 +20,7 @@ const
   SDL_PEN_INPUT_BUTTON_4 = 1 shl 4;
   SDL_PEN_INPUT_BUTTON_5 = 1 shl 5;
   SDL_PEN_INPUT_ERASER_TIP = 1 shl 30;
+  SDL_PEN_INPUT_IN_PROXIMITY = 1 shl 31;
 
 type
   PSDL_PenAxis = ^TSDL_PenAxis;
@@ -35,6 +35,19 @@ const
   SDL_PEN_AXIS_SLIDER = 5;
   SDL_PEN_AXIS_TANGENTIAL_PRESSURE = 6;
   SDL_PEN_AXIS_COUNT = 7;
+
+type
+  PSDL_PenDeviceType = ^TSDL_PenDeviceType;
+  TSDL_PenDeviceType = longint;
+
+const
+  SDL_PEN_DEVICE_TYPE_INVALID = -1;
+  SDL_PEN_DEVICE_TYPE_UNKNOWN = 0;
+  SDL_PEN_DEVICE_TYPE_DIRECT = 1;
+  SDL_PEN_DEVICE_TYPE_INDIRECT = 2;
+
+function SDL_GetPenDeviceType(instance_id: TSDL_PenID): TSDL_PenDeviceType; cdecl; external libSDL3;
+
 
 {$ENDIF read_interface}
 
