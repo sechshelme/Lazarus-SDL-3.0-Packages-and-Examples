@@ -1,0 +1,2219 @@
+[33mcommit 05d741ac47f6fa67322fec5128a7844a1c246388[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Jan 22 14:12:03 2026 +0100
+
+    sdlmixer_3.1.2
+
+[33mcommit dabb611e640f8a0ca58cb47131db766f3cf0eab9[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Jan 22 13:40:29 2026 +0100
+
+    sdlimage_3.4
+
+[33mcommit 4d8f87822fcac8aed54d6cc4b88f67dd75a3b96e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Jan 1 16:00:03 2026 +0100
+
+    readme
+
+[33mcommit 85c185d608b5135cbc61fd2db3bd775d8225c368[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Jan 1 13:40:49 2026 +0100
+
+    3.4
+
+[33mcommit c6dbcc3cf15e5f80df0b774b434ebc90ed848b54[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Dec 16 19:45:43 2025 +0100
+
+    3.3.6
+
+[33mcommit 863ab8127b77381209386aefe657eefec075c79d[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Dec 8 20:07:07 2025 +0100
+
+    3.3.4
+
+[33mcommit c307b6076f1a8548fc6836819a8c0fc82422e901[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Dec 4 19:44:58 2025 +0100
+
+    long
+
+[33mcommit ed8cae2700e1dd0163e624192ffe8b78b6ad8cca[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Dec 3 11:18:57 2025 +0100
+
+    3.2.28
+
+[33mcommit e5d6f5332f95efbd94da476013327733abca1c8c[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Nov 14 15:25:29 2025 +0100
+
+    script
+
+[33mcommit 48a8c8a4a477d69f751357c3c66ceed63f857161[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Oct 30 18:57:26 2025 +0100
+
+    3.2.26
+
+[33mcommit 6a3a11a213ca084729ab4a77e310d3a3ba57c1ca[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Oct 24 19:53:54 2025 +0200
+
+    sdl3.3
+
+[33mcommit e840b279bf75ca957b3d09cf5b4221104b0e42d7[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Oct 24 17:49:26 2025 +0200
+
+    sdl3.3
+
+[33mcommit 6a531bf341c5e24f82a5f1f22cc4b0b50cb669a1[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Oct 24 16:02:15 2025 +0200
+
+    sdl3.3
+
+[33mcommit b7a3cfdb7a15226e1d41e81b37930d129a653868[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Oct 24 14:19:06 2025 +0200
+
+    sdl3.3
+
+[33mcommit b7cce5366db91d4927bd43e040f0de947b30123e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Oct 4 14:50:26 2025 +0200
+
+    3.2.24
+
+[33mcommit 1b0dbcdfa48e3e46f9afce523f111fde28e4416c[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Sep 3 12:56:55 2025 +0200
+
+    3.2.22
+
+[33mcommit b46c804501ca77bb21b1e686cdedf8954512a085[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Aug 5 14:16:29 2025 +0200
+
+    3.2.20
+
+[33mcommit 30860a5f245372c657869c4743a1653e5ebf17ea[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Jul 23 14:47:56 2025 +0200
+
+    type_pointer
+
+[33mcommit 7a07bc80d6d4513411c8142e0aa5238411ed1786[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Jul 15 15:06:50 2025 +0200
+
+    3.2.18
+
+[33mcommit d2ab7b05229e7c7d2a3a4dff9ca4cee4a9b2db8e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Jul 1 15:51:56 2025 +0200
+
+    midi
+
+[33mcommit 3aafe03e88ecce95b6b5c1a282ea838a97bb926e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Jun 29 16:54:22 2025 +0200
+
+    license
+
+[33mcommit 6519ebfa710ad119662354b41a77ca8923fa55ae[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Jun 29 16:53:55 2025 +0200
+
+    license
+
+[33mcommit a4d3a6049a4facf7172d83ae2a44cf5e8348ff9f[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Jun 29 16:53:06 2025 +0200
+
+    license
+
+[33mcommit 9d39b3233f8db1b1fbf9f2f8e0c16e3f33655a73[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Jun 29 16:51:39 2025 +0200
+
+    licence
+
+[33mcommit e85d14aa03207aca2af5c4cb301e8ec6a5907c70[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Jun 20 20:09:56 2025 +0200
+
+    spriv
+
+[33mcommit 0c210a5662949c92d93e894bf35eb5eed247d5c0[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Jun 16 17:52:04 2025 +0200
+
+    remove_tdouble
+
+[33mcommit 7876da2d95f87dc3a5260450c5abf04e2932aeea[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Jun 3 20:08:10 2025 +0200
+
+    ansichar
+
+[33mcommit c381670ff8a3737640a2c2ee5a7b5acf5dd8b7ef[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Jun 3 20:07:29 2025 +0200
+
+    ansichar
+
+[33mcommit 9b2bde828cddfefa9976e669b513a73355e4b213[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Jun 3 20:05:19 2025 +0200
+
+    ansichar
+
+[33mcommit 35e845163477488e939680d351c8b3080127aca4[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Jun 3 13:36:02 2025 +0200
+
+    3.2.16
+
+[33mcommit 00a19ca447608eaf76411b236ecfc3c3cd11689b[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu May 15 16:51:12 2025 +0200
+
+    3.2.14
+
+[33mcommit 2a0fa30918817f10952c8ca8176e61930ec13a6b[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu May 15 16:50:36 2025 +0200
+
+    3.2.14
+
+[33mcommit bacaf0b9c573b7066cd372e9103d3956b530244e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed May 14 14:00:32 2025 +0200
+
+    sdl_sound
+
+[33mcommit 06aed9f3550b2ebbe0c6e6c3e3efdbe02bd1699a[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon May 5 17:29:13 2025 +0200
+
+    3.2.12
+
+[33mcommit 77aa2be115f2f21933cc21b676598007d449a013[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Apr 26 13:52:58 2025 +0200
+
+    readme
+
+[33mcommit 61881d9ee000a3f35b36b522a8b4bc97a3132607[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Apr 19 14:28:50 2025 +0200
+
+    pen
+
+[33mcommit 3c7a7d7be78c75921a6871ba87b732b47a051258[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Apr 14 14:09:28 2025 +0200
+
+    example
+
+[33mcommit b3afcc37e6f0e49e7ab2f8ed1d5c80ad32343d53[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Apr 13 16:05:55 2025 +0200
+
+    gfx
+
+[33mcommit fa8de44d8e96edfd0ff05ddeab91ac51682a3e9f[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Apr 13 15:45:45 2025 +0200
+
+    gfx
+
+[33mcommit 7d1d4b01110566b3fff1443f1ce44e95aca43d61[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Apr 11 19:39:14 2025 +0200
+
+    example
+
+[33mcommit 296d1c151ae21d6cb78966e4c6b0ead96897b245[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Apr 11 17:49:01 2025 +0200
+
+    example
+
+[33mcommit e85e7fba669d0d876382ef4af7795bdf2025831e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Apr 10 20:00:46 2025 +0200
+
+    examples
+
+[33mcommit 03dcf7751da659a2d7997f00ccf12c0bc6039718[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Apr 9 19:56:39 2025 +0200
+
+    examples
+
+[33mcommit bf6ecc176b1a00ad8d86c37ace57bf7d17e8cf10[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Apr 9 17:47:05 2025 +0200
+
+    examples
+
+[33mcommit e4ee30dc1854585bd546be298eff8b6691253fb8[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Apr 9 17:46:13 2025 +0200
+
+    examples
+
+[33mcommit b697e0957b8778f7692b49237b1e1b13b460e13d[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Apr 9 16:43:55 2025 +0200
+
+    examples
+
+[33mcommit 80d1c9b8c0787d70c5960b335db2cb6e3ba17fbc[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Apr 8 19:54:35 2025 +0200
+
+    example
+
+[33mcommit e78408f2f129a8c6d4b5a31c7c31dd2d8398d0fc[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Apr 7 19:52:30 2025 +0200
+
+    example
+
+[33mcommit f6e381801ee97a43d1f41ccea3d2f06ed7037817[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Apr 7 17:42:02 2025 +0200
+
+    example
+
+[33mcommit fb789aa67ec34df33bc6e0654d7ef951983790a5[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Apr 7 16:02:36 2025 +0200
+
+    example
+
+[33mcommit 8336cb37ffbfc1ffb112d1e91a74577dc9228ce3[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Apr 7 14:13:40 2025 +0200
+
+    example
+
+[33mcommit 47cc57bf6e7b41f1ffbd65cbd51cb861a3630758[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Apr 6 20:00:24 2025 +0200
+
+    rexample
+
+[33mcommit a59e8e6a08e9f221706c7cee72002ee235b43f9b[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Apr 5 16:51:49 2025 +0200
+
+    example
+
+[33mcommit 83e57dfac736c688deb5aee53277e180554f1a7c[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Apr 4 19:59:21 2025 +0200
+
+    example
+
+[33mcommit a2b659703542d0c0a068702a8daac58e728af1d1[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Apr 4 18:09:41 2025 +0200
+
+    example
+
+[33mcommit cdb418c4919d96e6a6f940a3081ec9e422948dd4[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Apr 3 19:57:02 2025 +0200
+
+    example
+
+[33mcommit 34cebd3c3ab2c399694a7d5185e7bf6ebf2c688a[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Apr 3 17:39:16 2025 +0200
+
+    example
+
+[33mcommit a6d08d73f552fd749d27e4eea1758d0e1aff45fb[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Apr 2 19:58:41 2025 +0200
+
+    examples
+
+[33mcommit fb450e88c6715ea03c629e06096799c5ebe7cf6c[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Apr 2 17:46:18 2025 +0200
+
+    bmp
+
+[33mcommit 54fb70976e2eb6e439de545817f4e3c953bfaaee[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Apr 1 17:47:45 2025 +0200
+
+    3.2.10
+
+[33mcommit 65c2e64b9093ecc1021751c9091aaef7b6a8a30e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Mar 18 18:03:46 2025 +0100
+
+    bool
+
+[33mcommit ef19aef0b4be2edcc4cbfa2635bc6e1b70d72c2a[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Mar 12 19:43:33 2025 +0100
+
+    readme
+
+[33mcommit f5e339821390b26bb92e31117e950dca10f41895[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Mar 11 17:21:50 2025 +0100
+
+    distrobox
+
+[33mcommit 340fb6160ff45feea9496f0804b7127cb8f5850f[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Mar 5 14:05:37 2025 +0100
+
+    3.2.8
+
+[33mcommit d0474b6d66965e60dab0444c2a101fc3de82c816[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Mar 4 14:02:13 2025 +0100
+
+    sdl_image
+
+[33mcommit d777eaeb31d2a80cdde3887a6ce7e4339254c7cf[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Mar 2 13:55:09 2025 +0100
+
+    3.2.6
+
+[33mcommit 2add031606693f64ac44e126b1166db2c9d0cc8c[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Feb 24 20:03:02 2025 +0100
+
+    readme
+
+[33mcommit 90c4f31f8cecec92a4ca0d584694b0c771835d72[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Feb 24 20:02:24 2025 +0100
+
+    readme
+
+[33mcommit 3b35de15187f0b85ccb77c23ce0d201626397c5e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Feb 24 19:59:51 2025 +0100
+
+    readme
+
+[33mcommit 5058d2fc1044321e0ac61a2d56f92b400694264e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Feb 24 17:41:05 2025 +0100
+
+    example
+
+[33mcommit accfb9d3d5c889bf77591a41ac9cc50b30f996b1[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Feb 24 17:32:43 2025 +0100
+
+    example
+
+[33mcommit ec479e630beb89b4d04b66abb785bcce376a2889[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Feb 23 17:54:37 2025 +0100
+
+    properties
+
+[33mcommit 2799a81c8a97a6a33cb52453eb4e0a57a76801b2[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Feb 23 13:52:48 2025 +0100
+
+    readme
+
+[33mcommit 866c40472942411e873bf6d16dc8c22656087627[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Feb 23 13:48:49 2025 +0100
+
+    readme
+
+[33mcommit fb0b637ba4cc0d0562637d4fe7a85035dd6eabb5[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Feb 23 13:46:17 2025 +0100
+
+    readme
+
+[33mcommit d612595dad37392263374e5180357b39fe145f55[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Feb 23 13:45:17 2025 +0100
+
+    readme
+
+[33mcommit 3121d1839ee539673719581baae44e488d4821db[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Feb 21 17:32:12 2025 +0100
+
+    ttf_3.1.2
+
+[33mcommit 4b1b4c880719254369404e8b063c8fc9c32cb665[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Tue Feb 18 13:55:20 2025 +0100
+
+    readme
+
+[33mcommit 60d837c59f60de8ed908ec79b9b3ce1cba300f0c[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Feb 17 20:02:49 2025 +0100
+
+    renderr
+
+[33mcommit b82687b88555bca94ee0156ac0f3ff37398f1275[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Feb 9 16:10:35 2025 +0100
+
+    inline
+
+[33mcommit a0293ce36667045ecb0fc4926422acff18ab8a89[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Feb 7 17:19:46 2025 +0100
+
+    3.2.4
+
+[33mcommit 3a7fc653500c102f36a713e9c219ff1e519edb7a[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Feb 7 17:19:08 2025 +0100
+
+    3.2.4
+
+[33mcommit 1f60edd208cd7b80770ff6353a9abc4f821c0080[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Feb 3 18:14:20 2025 +0100
+
+    font
+
+[33mcommit 7a71a507da075a3fa16c04a086c8bf0e227f96fb[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Feb 2 14:00:01 2025 +0100
+
+    git
+
+[33mcommit 6231851a52612513c39b9400042d996f673e7b46[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Feb 2 13:44:38 2025 +0100
+
+    ttf
+
+[33mcommit 758890c3840a6f8d1b6cfc5700be10869820b65b[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Jan 30 15:18:05 2025 +0100
+
+    directory
+
+[33mcommit cf4f81645e29479c1974aa20fab617a13d29bfe9[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Jan 25 13:26:01 2025 +0100
+
+    readme
+
+[33mcommit 132e66947de2ac28de55418a956b32113f03ca49[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Jan 22 14:02:27 2025 +0100
+
+    3.2.0
+
+[33mcommit ab4e6f48118d1cc8130667e2cf2636905a58160e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Jan 22 14:02:05 2025 +0100
+
+    3.2.0
+
+[33mcommit 2e136926574aef53c8a4c6d8988ad89d8c770405[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Jan 17 14:09:57 2025 +0100
+
+    3.1.10
+
+[33mcommit e966adbdc529d453de31e55db4a14c537cc9dd5e[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Jan 17 14:09:22 2025 +0100
+
+    3.1.10
+
+[33mcommit 86828d54b153222913347980a03063afa114233f[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Jan 17 13:54:48 2025 +0100
+
+    3.1.10
+
+[33mcommit 37354eb34ca68f2fa25fc0ea40e9335e27eedb70[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Jan 8 17:06:54 2025 +0100
+
+    3.1.8
+
+[33mcommit c5955fd882e1cef265a32786fe6771bd5da841bf[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Jan 8 17:06:04 2025 +0100
+
+    3.1.8
+
+[33mcommit 88b20e3c126726763c935f0fa2d5f05856eba969[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Jan 8 14:18:43 2025 +0100
+
+    3.1.8
+
+[33mcommit f0b0f8e6fc8407bb6fb0be465793657dadad772f[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Jan 6 17:10:40 2025 +0100
+
+    copyright
+
+[33mcommit 1e25a42506ffe3a51fffc90710c9646f849109df[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Jan 6 17:06:08 2025 +0100
+
+    copyright
+
+[33mcommit f3e1c4de415875691918e845487f8d1b38af8d00[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Jan 5 13:36:54 2025 +0100
+
+    readme
+
+[33mcommit 105665b675570cad80a9868e11ae3b5cb87e7f02[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Jan 4 20:00:09 2025 +0100
+
+    example
+
+[33mcommit 0219ec212fad3ffdcc42f756e787e36528d82ad4[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Dec 23 12:48:38 2024 +0100
+
+    clean
+
+[33mcommit bce1959b4edb5610cbdedd296dd85e1222dd0c49[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Thu Dec 12 14:27:58 2024 +0100
+
+    readme
+
+[33mcommit 65d704ca4eb1d2c664234a0b0df84483e02265cd[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Dec 9 17:22:32 2024 +0100
+
+    clean
+
+[33mcommit eb9183c66473265ca766df31eb0467a75a43b7ba[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sun Dec 8 13:50:34 2024 +0100
+
+    sdl_images_3.1.0
+
+[33mcommit 344c123aacbd915b20dc23e8daed0e5f46e8a2dd[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Dec 7 15:25:35 2024 +0100
+
+    example
+
+[33mcommit 9f0393223e85170dc48c37ccb7dba99707845135[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Mon Dec 2 16:00:16 2024 +0100
+
+    mix
+
+[33mcommit 0591b629fc0a2972fc51535a216104f001ee0eb8[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Nov 29 19:33:19 2024 +0100
+
+    readme
+
+[33mcommit a805273b3e7498def03bd324f977356840f1ccdb[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Nov 29 19:32:11 2024 +0100
+
+    readme
+
+[33mcommit 382b32b5a810de06a05e86e2b19966a10fc2ee83[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Nov 29 19:31:08 2024 +0100
+
+    readme
+
+[33mcommit e4db184286c5c1acb9bf6632dae899d3340a7b72[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Fri Nov 29 19:30:12 2024 +0100
+
+    readme
+
+[33mcommit efe58e07b815bfcee68c865367d00fbda6e99fd2[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Wed Nov 20 13:15:12 2024 +0100
+
+    copyright
+
+[33mcommit ff6acb08ddcd03226204703efc3bfa8675f69f9c[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Nov 9 19:52:19 2024 +0100
+
+    readme
+
+[33mcommit 0a330b9ff4710c404ab8412307a62616624fa7f7[m
+Author: sechshelme <m_burkhard@gmx.ch>
+Date:   Sat Nov 9 18:07:29 2024 +0100
+
+    test
+
+[33mcommit 630059c8a4eb02881279c92d803367337b9d079b[m
+Author: tux <you@example.com>
+Date:   Fri Nov 8 13:24:49 2024 +0100
+
+    dll
+
+[33mcommit 4715b44f962fac7bc97814af445c9e831e6f3283[m
+Author: tux <you@example.com>
+Date:   Mon Nov 4 17:53:53 2024 +0100
+
+    iopengl
+
+[33mcommit 3722c3302424da641e44dc84e8e0aa4fe8d57f68[m
+Author: tux <you@example.com>
+Date:   Mon Nov 4 15:40:52 2024 +0100
+
+    bug
+
+[33mcommit ce2ce1427d3e0b93128210709eb0f3fe57ccabb5[m
+Author: tux <you@example.com>
+Date:   Sun Nov 3 19:48:28 2024 +0100
+
+    tests
+
+[33mcommit d762be4de88c01782d0df2c57b82882919ea4668[m
+Author: tux <you@example.com>
+Date:   Sun Nov 3 17:37:35 2024 +0100
+
+    tests
+
+[33mcommit 5672939e821ae271a71491dc42e441938ee7e690[m
+Author: tux <you@example.com>
+Date:   Sun Nov 3 16:43:55 2024 +0100
+
+    readme
+
+[33mcommit 5438f94545c615fe7072ef85f39149a025017de7[m
+Author: tux <you@example.com>
+Date:   Sun Nov 3 14:29:51 2024 +0100
+
+    update
+
+[33mcommit 205ef24dd03a0d3cb487d765b20ddedfd6fff9d9[m
+Author: tux <you@example.com>
+Date:   Fri Nov 1 18:03:16 2024 +0100
+
+    stream
+
+[33mcommit 27572d2de66579ab8ce2f876958077bbfd9248bc[m
+Author: tux <you@example.com>
+Date:   Thu Oct 31 19:30:06 2024 +0100
+
+    iostream
+
+[33mcommit b08e2d30fbffd10683c8af79ad7ef79fe7fe5633[m
+Author: tux <you@example.com>
+Date:   Thu Oct 31 18:24:46 2024 +0100
+
+    iostream
+
+[33mcommit 2b60272196637b8cc366d32f2eec78ffc3dfc4b9[m
+Author: tux <you@example.com>
+Date:   Tue Oct 29 19:30:18 2024 +0100
+
+    gpu
+
+[33mcommit 97d7d51d9e7c818a2d96655ecb6de96b56b655c3[m
+Author: tux <you@example.com>
+Date:   Tue Oct 29 17:54:05 2024 +0100
+
+    gpu
+
+[33mcommit 39d1d7b94f1935edbaf9fb46299227ac999dbe18[m
+Author: tux <you@example.com>
+Date:   Tue Oct 29 16:04:00 2024 +0100
+
+    gpu
+
+[33mcommit cd071e3c8f728c492564e583425cb430032b5805[m
+Author: tux <you@example.com>
+Date:   Mon Oct 28 19:48:46 2024 +0100
+
+    gpu
+
+[33mcommit 2842b2e415c702595435336b6bd9fa247211c814[m
+Author: tux <you@example.com>
+Date:   Mon Oct 28 18:08:41 2024 +0100
+
+    gpu
+
+[33mcommit 5c2c3588c22b7e1a9f9b12b953bfde9063e75742[m
+Author: tux <you@example.com>
+Date:   Sun Oct 27 19:39:22 2024 +0100
+
+    gpu
+
+[33mcommit 28de7390d0b057d0b0f8a35feb31140b40cb83df[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 20:01:06 2024 +0200
+
+    camera
+
+[33mcommit f7193938d5e35f30e4ae312d41560f12d899dbf6[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 19:27:39 2024 +0200
+
+    readme
+
+[33mcommit b22ba525f69692180cf6d04b55aedbd4d66f91a6[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 19:27:01 2024 +0200
+
+    readme
+
+[33mcommit 3331c642a795f1d319cea0415ef08dd984e62e70[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 19:26:22 2024 +0200
+
+    readme
+
+[33mcommit ddffe73903b0b3026ea9154456d12c2c5815f0bd[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 19:24:24 2024 +0200
+
+    readme
+
+[33mcommit 241c45ae57a17250dc9eb49dcbf2fa6cd0a43378[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 19:23:20 2024 +0200
+
+    readme
+
+[33mcommit cecf90c6ea18575f0d82ed1cf299ee2fd281ffe1[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 19:22:22 2024 +0200
+
+    readme
+
+[33mcommit 95c42d8fef7d2b609556cfcda1d025132aab37b7[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 19:21:06 2024 +0200
+
+    readme
+
+[33mcommit 1c0570804569be3cc83e636e6bb9d694caf2aca7[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 19:19:17 2024 +0200
+
+    readme
+
+[33mcommit 6dbc6c454452bbcb63403e860306b77dd335b948[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 18:01:27 2024 +0200
+
+    sdl_main
+
+[33mcommit a8a0dc52eba150d8001bd4759d99a00f3a5bec0b[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 18:00:14 2024 +0200
+
+    sdl_main
+
+[33mcommit d206393dc50d93cdc5b21b59928dc9a240265020[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 17:59:48 2024 +0200
+
+    sdl_main
+
+[33mcommit ec5cf402795951273b3c021de38820fdc40a2723[m
+Author: tux <you@example.com>
+Date:   Tue Oct 22 17:59:17 2024 +0200
+
+    sdl_main
+
+[33mcommit b04c0b70bd1c59f4b04404e7a5eaad27b08f9a26[m
+Author: tux <you@example.com>
+Date:   Sun Oct 20 19:51:31 2024 +0200
+
+    test
+
+[33mcommit 11baa3cc81b9532bbd55fa4d09e31bb3817a8b78[m
+Author: tux <you@example.com>
+Date:   Sat Oct 19 13:42:34 2024 +0200
+
+    gpu
+
+[33mcommit 41375b241fd6ec51808dd5bd252108246dfa7155[m
+Author: tux <you@example.com>
+Date:   Fri Oct 18 20:07:18 2024 +0200
+
+    gpu
+
+[33mcommit 24a58d23ae5c5ea740cd432aa5ec1c68c200d44f[m
+Author: tux <you@example.com>
+Date:   Thu Oct 17 19:39:57 2024 +0200
+
+    sdl3
+
+[33mcommit 74440643a942dec9aa127d121eb341af0af59ae1[m
+Author: tux <you@example.com>
+Date:   Thu Oct 17 18:18:46 2024 +0200
+
+    sdl3
+
+[33mcommit fb5460937ac59a1ce85e1ef58e0ed571000bb303[m
+Author: tux <you@example.com>
+Date:   Wed Oct 16 18:11:15 2024 +0200
+
+    sdl3
+
+[33mcommit 06d9553ceebc0cd0320a706df5b386442799b4e8[m
+Author: tux <you@example.com>
+Date:   Wed Oct 16 15:26:21 2024 +0200
+
+    sdl3
+
+[33mcommit 0331b14aaebd1524f56cb6c8bc68a396a8471788[m
+Author: tux <you@example.com>
+Date:   Wed Oct 16 14:06:20 2024 +0200
+
+    sdl3
+
+[33mcommit b0b454376327ce656a4655ae4dd242b7cdd9fdcb[m
+Author: tux <you@example.com>
+Date:   Wed Oct 16 13:11:22 2024 +0200
+
+    sdl3
+
+[33mcommit 1600278d80cfda5002e8374ace10a9ad5a98f755[m
+Author: tux <you@example.com>
+Date:   Tue Oct 15 19:50:13 2024 +0200
+
+    sdl3
+
+[33mcommit e524b3d5e6cf4c508246aceb85dcaab5e3f29b0c[m
+Author: tux <you@example.com>
+Date:   Tue Oct 15 18:04:15 2024 +0200
+
+    versuch
+
+[33mcommit ae46b4fa1ed33b1175c6a495eac2cd84ae1fbf3a[m
+Author: tux <you@example.com>
+Date:   Tue Oct 15 14:24:26 2024 +0200
+
+    versuch
+
+[33mcommit efbf2d61673002bf5e45e19ccd98dbfce2370ba4[m
+Author: tux <you@example.com>
+Date:   Mon Oct 14 19:52:23 2024 +0200
+
+    versuch
+
+[33mcommit f0e3fc3dd0e6e1f3f94163f7d2c960c5a029c249[m
+Author: tux <you@example.com>
+Date:   Tue Sep 17 15:39:57 2024 +0200
+
+    readme
+
+[33mcommit e65191eff4f76e88977ff8b3d0d3a3df4ccae7c4[m
+Author: tux <you@example.com>
+Date:   Tue Sep 17 15:39:01 2024 +0200
+
+    readme
+
+[33mcommit ef6d9ec3e055fb546fe2d2b9a7aef1658bd9966c[m
+Author: tux <you@example.com>
+Date:   Tue Sep 17 15:38:29 2024 +0200
+
+    readme
+
+[33mcommit 7ecc2693367e86e5490968b55dc5ba8e13efc4aa[m
+Author: tux <you@example.com>
+Date:   Fri Aug 30 17:50:46 2024 +0200
+
+    readme
+
+[33mcommit ca1380640f47d6ef1746a2ad5e473a4e3fda4405[m
+Author: tux <you@example.com>
+Date:   Sat Aug 24 16:02:13 2024 +0200
+
+    readme
+
+[33mcommit 1bf2a49f99d32c59b275be33f58486044fef2043[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jul 23 16:04:39 2024 +0200
+
+    player
+
+[33mcommit 2d82825c55f1ca16ae9b41a643f2364ecd4e0131[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jul 11 15:49:21 2024 +0200
+
+    readme
+
+[33mcommit 37899e42c05a45d89c75528e50829ec6d92ef85c[m
+Author: sechshelme <you@example.com>
+Date:   Mon Jul 8 14:04:59 2024 +0200
+
+    player
+
+[33mcommit 83e24eb83ab7e70f0252146e16d3787f0f59a451[m
+Author: sechshelme <you@example.com>
+Date:   Fri Jul 5 17:38:44 2024 +0200
+
+    player
+
+[33mcommit 86117bec03356221ea703fe202c38d23b6bdb6a3[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jul 4 20:04:22 2024 +0200
+
+    player
+
+[33mcommit f5c350c65fea87478992d28bc1c920e34154a0fc[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jul 4 19:56:02 2024 +0200
+
+    player
+
+[33mcommit 35c05369eb6866e4e5ae0d3e841d1a2ad975ece0[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jul 4 17:45:23 2024 +0200
+
+    player
+
+[33mcommit c325554826c83055f167351290b4c0da88a8bb62[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jul 3 20:04:35 2024 +0200
+
+    player
+
+[33mcommit c64d1524b131ea8bed869a7e081c89d469839239[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jul 3 19:53:35 2024 +0200
+
+    player
+
+[33mcommit a6d0625ae75d657c543b04ee686b7c6fb0f92694[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jul 3 17:51:18 2024 +0200
+
+    emcc
+
+[33mcommit 36c9c065c07fac649e8aac169ea7d8b49a09f8f4[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jul 3 17:00:05 2024 +0200
+
+    player
+
+[33mcommit 04aef552fd891d882570c38976e2be6dfc679dfb[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jul 3 14:09:06 2024 +0200
+
+    player
+
+[33mcommit cc1c5e666402adf8e8244880d6825022ddca3a03[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jul 2 19:55:01 2024 +0200
+
+    player
+
+[33mcommit eb4f70c8848e5e0f76ebdcc1a52f6170bb0c765b[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jul 2 17:33:03 2024 +0200
+
+    player
+
+[33mcommit 5a0d14609f8b804f9f953c9bcae18f35fe0685f3[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jul 2 15:57:15 2024 +0200
+
+    player
+
+[33mcommit 28d25250cdc4679cb12de6e58cc8896653ee9c57[m
+Author: sechshelme <you@example.com>
+Date:   Mon Jul 1 19:48:36 2024 +0200
+
+    player
+
+[33mcommit cf7c867aeefef642aa0b2cb8695579e2e2bd4e85[m
+Author: sechshelme <you@example.com>
+Date:   Mon Jul 1 18:09:46 2024 +0200
+
+    player
+
+[33mcommit 8b04a6e0d01cdc0c5f198d1d7e054c31ff60db64[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 30 19:46:07 2024 +0200
+
+    player
+
+[33mcommit b08cac9c20c2ce23273a3527fba9ed782d9920ef[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 30 17:10:42 2024 +0200
+
+    player
+
+[33mcommit 3b668b273305c4e59f1c8e76985347bb37dfd76f[m
+Author: sechshelme <you@example.com>
+Date:   Fri Jun 28 17:37:13 2024 +0200
+
+    renderer
+
+[33mcommit 0712f31f19d6055af4dc4849b0bcc20239e7f1ba[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 27 18:09:50 2024 +0200
+
+    renderer
+
+[33mcommit 0cb9eea8d17e1413f2d12e1277d654488dac02a1[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 26 19:40:38 2024 +0200
+
+    renderer
+
+[33mcommit ae40e04dd3343383c2fd00112c0d172dc1a3c415[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 26 19:37:45 2024 +0200
+
+    renderer
+
+[33mcommit 2adad804f77741d01ee68395ceaf955e2d901ebe[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 26 15:56:57 2024 +0200
+
+    renderer
+
+[33mcommit d03987c078b8b03033a03bd5fb83bc97ba0b975e[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 26 14:16:47 2024 +0200
+
+    renderer
+
+[33mcommit fe36be54f1e6c55915e931ce1a4676457376217b[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 25 19:36:58 2024 +0200
+
+    script
+
+[33mcommit c67ab510dcd994a42e85bd60ef901de873f34321[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 25 17:51:14 2024 +0200
+
+    renderer
+
+[33mcommit 85b9467036a7f8149f3cac04d40dd5600b6fb488[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 25 15:58:31 2024 +0200
+
+    renderer
+
+[33mcommit 7cdb9cb7735cc1c315f664aa21b687d2ba65fb22[m
+Author: sechshelme <you@example.com>
+Date:   Mon Jun 24 20:00:55 2024 +0200
+
+    surface
+
+[33mcommit d8622d727849d61bafd64d68796c1bc8a4371794[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 23 12:38:37 2024 +0200
+
+    example
+
+[33mcommit 8d0f45399d60e4646bed7038adf70435b52f3f3b[m
+Author: sechshelme <you@example.com>
+Date:   Sat Jun 22 20:40:45 2024 +0200
+
+    event
+
+[33mcommit 8b39052da0e5154ed60e4c5071a24f9440fbf958[m
+Author: sechshelme <you@example.com>
+Date:   Sat Jun 22 20:07:55 2024 +0200
+
+    event
+
+[33mcommit 402d145bbbbfdd57e3a32589f1a647be0c4e495e[m
+Author: sechshelme <you@example.com>
+Date:   Fri Jun 21 19:47:52 2024 +0200
+
+    font
+
+[33mcommit 68bdc3ef5f524107b13fd440e267551b761b5a53[m
+Author: sechshelme <you@example.com>
+Date:   Fri Jun 21 17:09:55 2024 +0200
+
+    player
+
+[33mcommit fab746c329a24abfe5a87cde5e4d2047104a6d92[m
+Author: sechshelme <you@example.com>
+Date:   Fri Jun 21 13:42:43 2024 +0200
+
+    freetype
+
+[33mcommit bea3941169eb6075fc66a44675a8632a5fe248fe[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 19 19:59:45 2024 +0200
+
+    camera
+
+[33mcommit 744f2520d28790f2c7a20e7f9fba85e0c9226aee[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 19 17:49:14 2024 +0200
+
+    timer
+
+[33mcommit 871f4c4f0bec70055f44de1a6fa808c85b1a39bf[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 19 14:08:12 2024 +0200
+
+    mathgl
+
+[33mcommit 557aa0fcf753ce58ba68d0ed2abfec88185640e3[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 18 20:01:53 2024 +0200
+
+    player
+
+[33mcommit 65d384188953eacaaa78cbfe70e9a9013657985c[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 18 17:36:44 2024 +0200
+
+    qsort
+
+[33mcommit a086118b4c6e313d8444a2fdec969bbdd807ff12[m
+Author: sechshelme <you@example.com>
+Date:   Mon Jun 17 20:16:22 2024 +0200
+
+    player
+
+[33mcommit 1126e23d61d24051814e9c6ddd8211fe1a532448[m
+Author: sechshelme <you@example.com>
+Date:   Mon Jun 17 18:09:49 2024 +0200
+
+    player
+
+[33mcommit 2c2f7d35345095982cf62b7e40e58cc9ffbde565[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 16 19:56:24 2024 +0200
+
+    music
+
+[33mcommit 1427567925e5291de713ab7240efc5a67083de5f[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 16 17:55:17 2024 +0200
+
+    mixer
+
+[33mcommit 3f21654a281ed223a370d22961335f2ef68566e9[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 16 15:30:24 2024 +0200
+
+    script
+
+[33mcommit 5443f405da05d763f356b024a3794a015b93c66e[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 16 15:29:38 2024 +0200
+
+    script
+
+[33mcommit 4e81751c6202d7760f3073612be3c5a04bf2ac6c[m
+Author: sechshelme <you@example.com>
+Date:   Sat Jun 15 16:52:37 2024 +0200
+
+    error
+
+[33mcommit de3df7e21a1e6fe63e8813e20ef38dde2caaa5f9[m
+Author: sechshelme <you@example.com>
+Date:   Sat Jun 15 13:54:04 2024 +0200
+
+    cairo
+
+[33mcommit f48cb47788d2d680e9c7ae744b9ece822be1eed2[m
+Author: sechshelme <you@example.com>
+Date:   Fri Jun 14 20:19:21 2024 +0200
+
+    freetype
+
+[33mcommit f83d566c115414290596ab98046b67c67b469f8f[m
+Author: sechshelme <you@example.com>
+Date:   Fri Jun 14 18:38:48 2024 +0200
+
+    viewport
+
+[33mcommit 80c91ff558d274a3c2274e19fa4b89774ef20472[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 13 19:59:44 2024 +0200
+
+    freetype
+
+[33mcommit a51ae0baee4c3bb2fe75d22832d305a8ad4cb052[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 13 17:40:22 2024 +0200
+
+    freetype
+
+[33mcommit 87dbb832640450dc51f20007b17371aa58743553[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 12 19:49:58 2024 +0200
+
+    freetype
+
+[33mcommit 3387cee08009e560456236c16cc82c14f36b8ba9[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 12 17:48:31 2024 +0200
+
+    freetype
+
+[33mcommit 5c98dc50395caf410383620454d52582c05c8525[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 11 19:55:56 2024 +0200
+
+    freetype
+
+[33mcommit 7913b9119488af8414ffaa59a8f730c72d9b8f1c[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 11 17:40:18 2024 +0200
+
+    freetype
+
+[33mcommit c43dc459006b7a95f6df49646da76f8ea95af9e4[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 11 17:31:04 2024 +0200
+
+    freetype
+
+[33mcommit 2191e17cb035da243985df402912293cf567cc64[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 11 14:04:19 2024 +0200
+
+    script
+
+[33mcommit d747b32c62fba3838a9b28285a208a49f17034ba[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 11 14:04:01 2024 +0200
+
+    script
+
+[33mcommit bfe6e339c887a78d14b894683fb0e7c6edaa2005[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 11 14:01:56 2024 +0200
+
+    script
+
+[33mcommit 36a044776cbd5518148d4da3f7da39a21567a3cc[m
+Author: sechshelme <you@example.com>
+Date:   Tue Jun 11 13:59:49 2024 +0200
+
+    script
+
+[33mcommit 06558b05034ab51ca3b574ff0aeb9261235b6c87[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 9 19:41:10 2024 +0200
+
+    cairo
+
+[33mcommit dad05451fc229d8392bedae039c174c782976eee[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 9 19:35:12 2024 +0200
+
+    cairo
+
+[33mcommit 55716b9bdc8a0016c6547a1c11337ca83477fd7a[m
+Author: sechshelme <you@example.com>
+Date:   Sat Jun 8 19:43:33 2024 +0200
+
+    cairo
+
+[33mcommit e1f85b29ad97ea665a78e5ded4d32ff42d2067dd[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:50:21 2024 +0200
+
+    cairo
+
+[33mcommit 31c77c32fc7f9300c94bfd6a955e1dfd38f3d676[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:24:56 2024 +0200
+
+    readme
+
+[33mcommit d222ab0f343646eff6fb78e72666ce409bf5ed2b[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:24:11 2024 +0200
+
+    readme
+
+[33mcommit cdd2fb9e237ee61eb5de8f6f6f883d3989dfe0ea[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:23:08 2024 +0200
+
+    readme
+
+[33mcommit ae82469d0fecd0a02309fc13ddf6b9933bdef207[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:22:34 2024 +0200
+
+    readme
+
+[33mcommit 78e54a725ad587146d9c173696fafae8150226af[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:21:55 2024 +0200
+
+    readme
+
+[33mcommit 52c9d242601c226a0e49b85017d32abe38b76c53[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:17:54 2024 +0200
+
+    readme
+
+[33mcommit 76695ff2f1d7795b4b4bfdd92f1114803279cc21[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:17:28 2024 +0200
+
+    readme
+
+[33mcommit a6b3d6f44b7282ed4684dbb17f1c3762fff0e05d[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:12:03 2024 +0200
+
+    readme
+
+[33mcommit 313e46c3b9791811331a3476211b75de7a5cefac[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:11:40 2024 +0200
+
+    readme
+
+[33mcommit 178653832484a7e4b677df6312ebc446aef4def6[m
+Author: sechshelme <you@example.com>
+Date:   Thu Jun 6 19:09:49 2024 +0200
+
+    readme
+
+[33mcommit 7c809a00c13993e175ad05847246e520ca4f3d58[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 5 19:52:59 2024 +0200
+
+    cairo
+
+[33mcommit bba97b66b5ff9367ac35170df63623375de643a2[m
+Author: sechshelme <you@example.com>
+Date:   Wed Jun 5 17:10:17 2024 +0200
+
+    dll
+
+[33mcommit 4c735ca0cee2ebcfaeb9ba288bbed1a0bed45cf7[m
+Author: sechshelme <you@example.com>
+Date:   Mon Jun 3 17:59:00 2024 +0200
+
+    locale
+
+[33mcommit 5c3c78c608629b3734baecf33010077b94948c45[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 2 19:25:57 2024 +0200
+
+    cairo
+
+[33mcommit 06ae58a1dd309d9bf0b77c5645e48dbb7dcdbe42[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 2 16:50:51 2024 +0200
+
+    mouse
+
+[33mcommit 47635753b2548a05d903bcb80fc636dfc1c47b90[m
+Author: sechshelme <you@example.com>
+Date:   Sun Jun 2 15:32:41 2024 +0200
+
+    surface
+
+[33mcommit bbd78603c2dd415b94ca3d052e59f7893a710e83[m
+Author: sechshelme <you@example.com>
+Date:   Sat Jun 1 19:56:31 2024 +0200
+
+    cairo
+
+[33mcommit d3f07c546433dc4d9adad730c64ccc504ad1073f[m
+Author: sechshelme <you@example.com>
+Date:   Sat Jun 1 17:37:08 2024 +0200
+
+    cairo
+
+[33mcommit 71617a36edad78cb02bbb04b39ae8a3181bd227c[m
+Author: sechshelme <you@example.com>
+Date:   Fri May 31 17:51:02 2024 +0200
+
+    resize
+
+[33mcommit c8fb338d6b64333045dc75733baa6b56cfcf8644[m
+Author: sechshelme <you@example.com>
+Date:   Thu May 30 18:13:05 2024 +0200
+
+    create_surface
+
+[33mcommit 265384d614ecf8f7b2af52c2511e9c8d4fed818a[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 29 19:52:43 2024 +0200
+
+    surface
+
+[33mcommit 1bd94c3e8b598531d36a2153b28cf55fef05b30e[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 29 17:48:57 2024 +0200
+
+    surface
+
+[33mcommit a66fddbb1e4b8bb3a761999170f9453ef4ba0d62[m
+Author: sechshelme <you@example.com>
+Date:   Tue May 28 19:59:00 2024 +0200
+
+    texture
+
+[33mcommit aae7cafb9f0a68a55094084563e862613cffe007[m
+Author: sechshelme <you@example.com>
+Date:   Tue May 28 16:05:42 2024 +0200
+
+    endia
+
+[33mcommit eb463c5e637ba32983a15bd6104cfcf9f7f216e6[m
+Author: sechshelme <you@example.com>
+Date:   Mon May 27 20:19:29 2024 +0200
+
+    rgb
+
+[33mcommit 03025a37140b3273e06148472a9e3d18e235882d[m
+Author: sechshelme <you@example.com>
+Date:   Mon May 27 18:25:52 2024 +0200
+
+    rgb
+
+[33mcommit c60905fd325b48ed35320a0aee1d68f65fd62e28[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 26 19:53:12 2024 +0200
+
+    utf8
+
+[33mcommit cd57e932e87ddf00fe61f199199a58222cefceb1[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 26 17:48:22 2024 +0200
+
+    utf8
+
+[33mcommit 8c8588e6463be799d124f06b1998d78bff0417ae[m
+Author: sechshelme <you@example.com>
+Date:   Sat May 25 14:03:52 2024 +0200
+
+    freetype
+
+[33mcommit f7b365fb9ab1e12710189bbacae7b51b1a262633[m
+Author: sechshelme <you@example.com>
+Date:   Fri May 24 20:16:43 2024 +0200
+
+    freetype
+
+[33mcommit 6c8470ec103f94c10f4cfc25f89f73b4b3262af5[m
+Author: sechshelme <you@example.com>
+Date:   Thu May 23 18:01:06 2024 +0200
+
+    freetype
+
+[33mcommit 27162c471c9b208580c17381c9dd4a13b49201f9[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 22 17:14:59 2024 +0200
+
+    freetype
+
+[33mcommit 97f5b633c1fd660a9236867d63c81de1614dccd4[m
+Author: sechshelme <you@example.com>
+Date:   Tue May 21 20:15:10 2024 +0200
+
+    freetype
+
+[33mcommit 76fec8e4166d9a4fc7d0057a4938e9285defbe3e[m
+Author: sechshelme <you@example.com>
+Date:   Tue May 21 17:42:38 2024 +0200
+
+    dll
+
+[33mcommit 58d05664f42c7dfea7c00894778ed161c4ab729f[m
+Author: sechshelme <you@example.com>
+Date:   Mon May 20 19:51:43 2024 +0200
+
+    sdlmain
+
+[33mcommit 889e20e90396bf05ac3beb9d0817a1893c4ddc45[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 19 20:02:46 2024 +0200
+
+    opengl
+
+[33mcommit 28b52010d990557771797123cff5d48435b58c91[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 19 17:35:26 2024 +0200
+
+    opengl
+
+[33mcommit 16eabeeecd43780999478ef8aa63cfef9b764eca[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 19 14:08:25 2024 +0200
+
+    textur
+
+[33mcommit f7f5f8cfa53d22adc59ccc56531d7af461b4ae5b[m
+Author: sechshelme <you@example.com>
+Date:   Sat May 18 16:51:11 2024 +0200
+
+    openg
+
+[33mcommit 58e212eabbaa09afddf85a171e7682e90ddcf36b[m
+Author: sechshelme <you@example.com>
+Date:   Fri May 17 20:10:30 2024 +0200
+
+    opengl
+
+[33mcommit cbac55fa85f235f6a12cbe288b80dd2d885c624b[m
+Author: sechshelme <you@example.com>
+Date:   Fri May 17 16:41:21 2024 +0200
+
+    opengl
+
+[33mcommit d93662705e1b91ef4b2da2172d82a256babc21d5[m
+Author: sechshelme <you@example.com>
+Date:   Fri May 17 14:08:33 2024 +0200
+
+    opengl
+
+[33mcommit a82361ee5dbcdc5857b9a7d243fda7d582a4bb8b[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 15 19:56:24 2024 +0200
+
+    freetype
+
+[33mcommit 73e279f4916fca8722482f302d3c11f0ab719dfe[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 15 15:57:51 2024 +0200
+
+    freetype
+
+[33mcommit 66dc36b363a6a9ea9b1b8de9193fd904ea2bf273[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 15 14:13:22 2024 +0200
+
+    font
+
+[33mcommit 5eaa51b5c25082e675f3097e7fc9f286c99d5806[m
+Author: sechshelme <you@example.com>
+Date:   Tue May 14 19:48:04 2024 +0200
+
+    render
+
+[33mcommit da07134ff19c1926de386780a2120462016270ee[m
+Author: sechshelme <you@example.com>
+Date:   Mon May 13 19:39:31 2024 +0200
+
+    renderer
+
+[33mcommit 74622d6d8bcb0c7dd4b7365cd015ae563fcc05dc[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 12 19:57:34 2024 +0200
+
+    font
+
+[33mcommit 3660124153332896a6c18ba7bf87a6cc6bd84387[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 12 17:28:35 2024 +0200
+
+    node
+
+[33mcommit 16b2cf5e9f4c3d9b84bc1995bc310166734ca8e8[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 12 17:13:35 2024 +0200
+
+    node
+
+[33mcommit f02ff622db2a7cfb82089a5c145445a78ea11977[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 12 16:57:47 2024 +0200
+
+    node
+
+[33mcommit c2f403cb82c6a72ff59b849ba61d463e0d7fdcbb[m
+Author: sechshelme <you@example.com>
+Date:   Sat May 11 20:29:00 2024 +0200
+
+    node
+
+[33mcommit ddedeea0f7fa80d6e62d2aa3df231c175cbc7d91[m
+Author: sechshelme <you@example.com>
+Date:   Sat May 11 20:18:25 2024 +0200
+
+    node
+
+[33mcommit de8c49268926ed4050088a29da9abcc90719cc71[m
+Author: sechshelme <you@example.com>
+Date:   Sat May 11 17:26:51 2024 +0200
+
+    knoten
+
+[33mcommit bd8a530f043ca6620045d9cd4b51adf554539f0d[m
+Author: sechshelme <you@example.com>
+Date:   Fri May 10 20:11:44 2024 +0200
+
+    truetype
+
+[33mcommit b605fcbd7992c762ba1668f24a33c46520ea8e83[m
+Author: sechshelme <you@example.com>
+Date:   Fri May 10 15:55:07 2024 +0200
+
+    truetype
+
+[33mcommit b43a58a01c1ed3d0863622c8b694001ce6026538[m
+Author: sechshelme <you@example.com>
+Date:   Fri May 10 14:06:46 2024 +0200
+
+    truetype
+
+[33mcommit 0fc4e6330023af78b180247a798f6855a8be9ade[m
+Author: sechshelme <you@example.com>
+Date:   Thu May 9 19:44:49 2024 +0200
+
+    freetype
+
+[33mcommit a394beeaabd5bd49fcce8f94239b7e115586f0d7[m
+Author: sechshelme <you@example.com>
+Date:   Thu May 9 17:42:34 2024 +0200
+
+    freetype
+
+[33mcommit 9d43c5cc6bdc6082dae3546517ba7c8a0b6e7e6d[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 8 20:19:45 2024 +0200
+
+    freetype
+
+[33mcommit 8e6908d675a253c175df93323b7d7476dc79dacd[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 8 17:42:55 2024 +0200
+
+    freetype
+
+[33mcommit bf654c93f568c41f05595dfbc1c5863ca87e9749[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 8 14:14:01 2024 +0200
+
+    freetype
+
+[33mcommit 582b69b2fb0be05cf9b9feb2c1553e2e5cbbbef7[m
+Author: sechshelme <you@example.com>
+Date:   Mon May 6 20:09:54 2024 +0200
+
+    freetypes
+
+[33mcommit 403099b39c9fafba55d2b2fcda73062e1332234a[m
+Author: sechshelme <you@example.com>
+Date:   Mon May 6 17:29:08 2024 +0200
+
+    sound
+
+[33mcommit 1b4ac68f834a62d8efdd10a5fc6add9d7d33b7be[m
+Author: sechshelme <you@example.com>
+Date:   Mon May 6 14:14:02 2024 +0200
+
+    buttons
+
+[33mcommit ad73870de7b69626b30046c368c966e2a6e6d585[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 5 17:03:49 2024 +0200
+
+    renderer
+
+[33mcommit 35a77c0b5410fbdaf8336bec2e14213a6f64403b[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 5 16:37:52 2024 +0200
+
+    surface
+
+[33mcommit d5bca64b0e6fdc437b6887b72314fc033d380d13[m
+Author: sechshelme <you@example.com>
+Date:   Sun May 5 15:54:16 2024 +0200
+
+    button
+
+[33mcommit 8dc3ab32e8202fa4dd47295c296971da9c379c88[m
+Author: sechshelme <you@example.com>
+Date:   Sat May 4 17:12:36 2024 +0200
+
+    audio
+
+[33mcommit 0833fe6145765e649188fdb466233ba31a33ec84[m
+Author: sechshelme <you@example.com>
+Date:   Sat May 4 16:09:48 2024 +0200
+
+    button
+
+[33mcommit b26710547964ec298e9d136391ad92ea99fe2ec9[m
+Author: sechshelme <you@example.com>
+Date:   Sat May 4 13:57:37 2024 +0200
+
+    release
+
+[33mcommit a419e114d8cfe2d63cb431756824fbbafccc3cda[m
+Author: sechshelme <you@example.com>
+Date:   Thu May 2 20:08:53 2024 +0200
+
+    audio$
+
+[33mcommit 3327e6371d801e5786d3cbec345eb82285d3d108[m
+Author: sechshelme <you@example.com>
+Date:   Thu May 2 16:50:55 2024 +0200
+
+    net
+
+[33mcommit 37e92f25fc056938417e6a656ecd447c56978cef[m
+Author: sechshelme <you@example.com>
+Date:   Thu May 2 13:42:18 2024 +0200
+
+    audio
+
+[33mcommit 2e97d0636a9f5ab3e7d171690e878e08ef10fb47[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 1 20:03:51 2024 +0200
+
+    sound
+
+[33mcommit ff127119690340441808badb727d1feb6c3bc890[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 1 20:01:27 2024 +0200
+
+    sound
+
+[33mcommit 33cb8a10238964d43410fb6824c6775ab109a8d5[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 1 17:11:51 2024 +0200
+
+    sound
+
+[33mcommit 36f26a7d33aab5a3fb28c9e90cf16ea8e538ab47[m
+Author: sechshelme <you@example.com>
+Date:   Wed May 1 14:22:41 2024 +0200
+
+    sound
+
+[33mcommit 6b609cca81fadfc6d885d1885522544905481471[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 30 17:08:58 2024 +0200
+
+    sound
+
+[33mcommit 70866eb29d68a4956cc1227d9ddb7e35b28a640b[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 28 19:50:45 2024 +0200
+
+    dialog
+
+[33mcommit 0399478d84a37d6ced54a7ac7028ef3f29e88a74[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 28 16:06:59 2024 +0200
+
+    freetype
+
+[33mcommit 7de9509167b8b1dd49570b74b855ece5ae483dce[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 28 14:02:14 2024 +0200
+
+    opengl
+
+[33mcommit 9b58db9ce07521a0dee6dbea538cdd6cd73db7c8[m
+Author: sechshelme <you@example.com>
+Date:   Sat Apr 27 20:11:34 2024 +0200
+
+    meson
+
+[33mcommit c0c0a7355a2179a9cf5f24488320b500eb56a262[m
+Author: sechshelme <you@example.com>
+Date:   Fri Apr 26 17:57:27 2024 +0200
+
+    external
+
+[33mcommit 1ff212cb5992509b08abb57a564f44f160cbe170[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 25 20:13:32 2024 +0200
+
+    shabes
+
+[33mcommit 59e03cffab2e84ccdf8dd34dfc1f2cbd2eb45d62[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 24 19:46:38 2024 +0200
+
+    shapes
+
+[33mcommit 6dd9b0d8628787fe72067a3999a8567e46ff4c5e[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 24 17:21:59 2024 +0200
+
+    remove
+
+[33mcommit 7381c82e72c35b96c01b87561776abfd796a8dab[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 24 16:08:14 2024 +0200
+
+    opengl
+
+[33mcommit dbf53222fb475da5ca031c0f3a55255547d72c8f[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 24 13:16:33 2024 +0200
+
+    version
+
+[33mcommit 8139fbc77d308787ba51ecf02facc1a59723688c[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 23 19:47:52 2024 +0200
+
+    resize
+
+[33mcommit e4a3130ca209f278fa66b2e7f872d72ae31cb7f6[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 23 19:36:59 2024 +0200
+
+    timer
+
+[33mcommit c4c2d5bec57fd7ac14e38a45e30ad87396928067[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 23 17:01:02 2024 +0200
+
+    resize
+
+[33mcommit 4910817bfd4157e6dd02cd01984bc2f361c221eb[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 23 15:58:44 2024 +0200
+
+    resize
+
+[33mcommit 35533474d2eb56f0a5b6f6487a381e475655115a[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 23 14:01:54 2024 +0200
+
+    timer
+
+[33mcommit cde37b2c17f1f898eccfd4fc11875c9e54afc48a[m
+Author: sechshelme <you@example.com>
+Date:   Mon Apr 22 19:47:11 2024 +0200
+
+    timer
+
+[33mcommit dc98ecb13e0af8fca85df5585573c52ba5669a9a[m
+Author: sechshelme <you@example.com>
+Date:   Mon Apr 22 17:33:21 2024 +0200
+
+    mingw
+
+[33mcommit 3a783694c3aa6e4013fa29a021f71a11ab13305a[m
+Author: sechshelme <you@example.com>
+Date:   Mon Apr 22 17:28:24 2024 +0200
+
+    timer
+
+[33mcommit 6205d0f3388b8123c4d9e2160465febf3370ec7d[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 21 21:21:31 2024 +0200
+
+    script
+
+[33mcommit a0d3ee8a72e19381f44c2964fe6a61259c4ec0e6[m
+Author: sechshelme <you@example.com>
+Date:   Sat Apr 20 16:56:02 2024 +0200
+
+    rtf
+
+[33mcommit 74a8d5620ba6e05f6d7349e32d47412213f47ef1[m
+Author: sechshelme <you@example.com>
+Date:   Sat Apr 20 16:24:51 2024 +0200
+
+    rtf
+
+[33mcommit fce8f024fe45f9c4172d64c9a2b4dfc1966aa4b0[m
+Author: sechshelme <you@example.com>
+Date:   Fri Apr 19 20:04:30 2024 +0200
+
+    ttf
+
+[33mcommit 0ac945b8bc6aabf57297c88cce15a34dcf6323e6[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 18 20:01:08 2024 +0200
+
+    rtf
+
+[33mcommit 83d7f7d5b5cf79417fac6ed2601fffa5efff4704[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 17 19:54:17 2024 +0200
+
+    drag
+
+[33mcommit a58ac6dbe88e3f5098bec9af9463f2e4cf2aa6da[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 17 16:13:42 2024 +0200
+
+    images
+
+[33mcommit 592f25352f17d831732745b7244edf63af55ef16[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 16 22:08:56 2024 +0200
+
+    images
+
+[33mcommit 356baa8641c1f86a275d993982e23c97889132a7[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 16 19:45:06 2024 +0200
+
+    images
+
+[33mcommit 8292ddd11c1452ef7e24e6f453979faf8b1ccfca[m
+Author: sechshelme <you@example.com>
+Date:   Mon Apr 15 19:39:13 2024 +0200
+
+    mouse
+
+[33mcommit 610424d722c966e8615f3fe32c0b82903fcf0867[m
+Author: sechshelme <you@example.com>
+Date:   Mon Apr 15 17:44:25 2024 +0200
+
+    sdl_quit
+
+[33mcommit 0d838c4e84f9d9bd15cd42a2bfdb891974549961[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 14 19:36:37 2024 +0200
+
+    renderer
+
+[33mcommit f5b25abf3734999baa24159a5ae951a1ae339521[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 14 17:06:49 2024 +0200
+
+    renderer
+
+[33mcommit dacb99cb1524e4284ee20bf1b8c2aad4174474f5[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 14 15:44:21 2024 +0200
+
+    renderer
+
+[33mcommit f865e1800cfed90b74ff124c1acecb1baf215729[m
+Author: sechshelme <you@example.com>
+Date:   Fri Apr 12 20:15:43 2024 +0200
+
+    boolean
+
+[33mcommit e25dbb56f1df8e567226070e3b624d8b156bf4db[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 11 19:44:26 2024 +0200
+
+    info
+
+[33mcommit 34effab993d56f7ec0a1a7dfb5a2fee7d21b0744[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 11 17:42:40 2024 +0200
+
+    thread
+
+[33mcommit 566514eb9997a992a3155853db1ed2da5f4c70cf[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 10 19:32:31 2024 +0200
+
+    cursor
+
+[33mcommit ce487c4e86f07dacba32c4667939aadbce6f586d[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 10 18:03:13 2024 +0200
+
+    cursor
+
+[33mcommit 101a279be4e57d5d88606bce8df8d2b0f9b00b93[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 10 16:32:13 2024 +0200
+
+    cursor
+
+[33mcommit 4d7cfe58ebdd2148073bf6f87304a83062bc7291[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 10 15:41:27 2024 +0200
+
+    cursor
+
+[33mcommit ba75779dd375cc780eee3fd4d19837ed847694bb[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 9 19:32:57 2024 +0200
+
+    camera
+
+[33mcommit 0abaf2a974cdaf171e2e8a239f2a67585f387d52[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 9 17:21:55 2024 +0200
+
+    camera
+
+[33mcommit 89870aef378bc36e4e78bc6acf0af3498173cf2e[m
+Author: sechshelme <you@example.com>
+Date:   Tue Apr 9 13:59:33 2024 +0200
+
+    camera
+
+[33mcommit 8577e8ca11046dee6e22fab2ab960dd7c038c680[m
+Author: sechshelme <you@example.com>
+Date:   Mon Apr 8 19:58:14 2024 +0200
+
+    camera
+
+[33mcommit e1c322393074d9ac4bbe659def98ed21b7ce465c[m
+Author: sechshelme <you@example.com>
+Date:   Mon Apr 8 19:57:37 2024 +0200
+
+    camera
+
+[33mcommit d30f822e86a5faabfdfed3204ef2d5f0a9177d74[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 7 19:36:12 2024 +0200
+
+    camera
+
+[33mcommit fc71584fd8ba7966a1df3e87041b35814b2a1598[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 7 16:31:34 2024 +0200
+
+    test
+
+[33mcommit d26fbdcc093ec8472603475e0e362f52c314f9c2[m
+Author: sechshelme <you@example.com>
+Date:   Sun Apr 7 16:26:54 2024 +0200
+
+    thread
+
+[33mcommit d758a29de94b8c8148b2283b4d3004b7f99502b5[m
+Author: sechshelme <you@example.com>
+Date:   Sat Apr 6 17:18:38 2024 +0200
+
+    c
+
+[33mcommit a9628a17c278c4932aee109754e7ba5ddcf2a37c[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 4 16:53:54 2024 +0200
+
+    readme
+
+[33mcommit 1620c39f5bcc76e9556507cb0eae51bb4a4939cb[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 4 16:53:36 2024 +0200
+
+    external
+
+[33mcommit ed271c8d73324dff9d3310a408ed1208ea9a17d7[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 4 16:52:02 2024 +0200
+
+    external
+
+[33mcommit 78abc670367cfea7b8d47ceeec65797ef2dc1f26[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 4 16:49:29 2024 +0200
+
+    external
+
+[33mcommit ccefb62778b497b676c3cdfa56d0ccdefab5871f[m
+Author: sechshelme <you@example.com>
+Date:   Thu Apr 4 16:14:14 2024 +0200
+
+    opengl
+
+[33mcommit cc924172c94b0a05d891c30e361c0f1288162643[m
+Author: sechshelme <you@example.com>
+Date:   Wed Apr 3 19:51:12 2024 +0200
+
+    opengl
+
+[33mcommit dadb7d59e3ed2b239e595c78cfa1f6b40c9032ee[m
+Author: sechshelme <you@example.com>
+Date:   Sun Mar 31 19:48:36 2024 +0200
+
+    text
+
+[33mcommit 53f9c66790f273e7c3fe46f8c0b735037f9002b2[m
+Author: sechshelme <you@example.com>
+Date:   Fri Mar 29 16:53:52 2024 +0100
+
+    thread
+
+[33mcommit 3b06645c1c1de5f0df33d1540a58cfb35d51ee88[m
+Author: sechshelme <you@example.com>
+Date:   Fri Mar 29 13:39:06 2024 +0100
+
+    log
+
+[33mcommit 59460a2a3260598a7633c3c6a7133ed8be1b39bb[m
+Author: sechshelme <you@example.com>
+Date:   Wed Mar 27 19:46:35 2024 +0100
+
+    position
+
+[33mcommit 83e8db9c566d1e91308e820071f5bc02c07906b2[m
+Author: sechshelme <you@example.com>
+Date:   Tue Mar 26 21:19:06 2024 +0100
+
+    keyboard
+
+[33mcommit aade6270595b70459b295ab68f233a0733b7cb93[m
+Author: sechshelme <you@example.com>
+Date:   Tue Mar 26 16:36:54 2024 +0100
+
+    keyboard
+
+[33mcommit 211b6b4ccc7b9966a7766289a6b17a57129adf29[m
+Author: sechshelme <you@example.com>
+Date:   Mon Mar 25 19:55:17 2024 +0100
+
+    mouse
+
+[33mcommit 175436c141b06530a16f5a0ddb2fcd1b4fe899a4[m
+Author: sechshelme <you@example.com>
+Date:   Mon Mar 25 19:16:28 2024 +0100
+
+    mouse
+
+[33mcommit 01422dac23d0cd9b32ebd830350dda1a8ad2f59d[m
+Author: sechshelme <you@example.com>
+Date:   Sat Mar 23 20:06:38 2024 +0100
+
+    color
+
+[33mcommit 734ddc994cac160f216c85ff9dee0c72035f8f4c[m
+Author: sechshelme <you@example.com>
+Date:   Sat Mar 23 17:19:39 2024 +0100
+
+    opengl
+
+[33mcommit 4a1b4a1a9d52980f866d531bc69730d9fc8f5baf[m
+Author: sechshelme <you@example.com>
+Date:   Thu Mar 21 19:59:13 2024 +0100
+
+    win64
+
+[33mcommit 5d3e9be699fdd899e49d4d7f06815061223da154[m
+Author: sechshelme <you@example.com>
+Date:   Tue Mar 19 17:03:43 2024 +0100
+
+    test
+
+[33mcommit d2f08a040cefa928b858e4c553a4483e549631b4[m
+Author: sechshelme <you@example.com>
+Date:   Tue Mar 19 16:58:41 2024 +0100
+
+    first commit
