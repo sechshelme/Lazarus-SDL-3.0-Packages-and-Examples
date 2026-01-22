@@ -1,7 +1,5 @@
 program Project1;
 
-// https://github.com/Ravbug/sdl3-sample/blob/main/src/main.cpp
-
 uses
   ctypes,
   SDL3,

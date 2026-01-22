@@ -63,9 +63,10 @@ su
 cmake --install build --install-prefix /usr/local
 ```
 
-# Libs aktualisieren
+# lib und bin aktualisieren
 ```bash
 sudo ldconfig
+hash -r
 ```
 
 # CMAKE-Tools

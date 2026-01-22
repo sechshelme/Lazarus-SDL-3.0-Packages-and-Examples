@@ -11,21 +11,21 @@ uses
   Windows;
   {$ENDIF}
 
+  const
+    {$IFDEF Linux}
+    libSDL3 = 'SDL3';
+    {$ENDIF}
+
+    {$IFDEF Windows}
+    libSDL3 = 'SDL3';
+    {$ENDIF}
+
+    {$IFDEF Darwin}
+    libSDL3 = 'libSDL3.dylib';
+    {$ENDIF}
+
   {$IFDEF FPC}
   {$PACKRECORDS C}
-  {$ENDIF}
-
-const
-  {$IFDEF Linux}
-  libSDL3 = 'SDL3';
-  {$ENDIF}
-
-  {$IFDEF Windows}
-  libSDL3 = 'SDL3';
-  {$ENDIF}
-
-  {$IFDEF Darwin}
-  libSDL3 = 'libSDL3.dylib';
   {$ENDIF}
 
 type
