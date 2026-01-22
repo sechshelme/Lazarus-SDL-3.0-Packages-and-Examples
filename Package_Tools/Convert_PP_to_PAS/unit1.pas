@@ -43,14 +43,13 @@ type
 
 const
   Sources: TSources = (
-  (libs: ''; units: 'ctypes, SDL3'),
-  (libs: 'libSDL3_image'; units: 'ctypes, SDL3'),
-  (libs: 'libSDL3_ttf'; units: 'ctypes, SDL3'),
-  (libs: 'libSDL3_gfx'; units: 'ctypes, SDL3'),
-  (libs: 'libSDL3_sound'; units: 'ctypes, SDL3'),
-  (libs: 'libSDL3_native_midi'; units: 'ctypes, SDL_stdinc'),
-  (libs: 'libSDL3'; units: 'ctypes, SDL_stdinc'),
-
+    (libs: 'libSDL3_image'; units: 'SDL3'),
+    (libs: 'libSDL3_mixer'; units: 'SDL3'),
+    (libs: 'libSDL3_ttf'; units: 'SDL3'),
+    (libs: 'libSDL3_gfx'; units: 'SDL3'),
+    (libs: 'libSDL3_sound'; units: 'SDL3'),
+    (libs: 'libSDL3_native_midi'; units: 'SDL3'),
+    (libs: 'libSDL3'; units: 'SDL_stdinc'),
 
     (libs: ''; units: ''));
 

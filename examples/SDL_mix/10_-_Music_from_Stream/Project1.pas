@@ -271,24 +271,26 @@ const    // 22Khz / 8bit / mono
 
   procedure main;
   var
-    music: PMix_Music;
+    music: PMIX_Audio;
     stream: PSDL_IOStream;
   begin
     SDL_Init(SDL_INIT_AUDIO);
 
+    SDL_Log('Version: %d', MIX_Version);
+
     stream := SDL_IOFromConstMem(Pointer(audio), Length(audio));
 
-    Mix_OpenAudio(0, nil);
-
-    music := Mix_LoadMUS_IO(stream, True);
-    if music = nil then begin
-      WriteLn('error music: ', Mix_GetError);
-    end;
-
-    Mix_FadeInMusic(music, -1, 3000);
-
-    Writeln('Press <Enter>');
-    ReadLn;
+    //Mix_OpenAudio(0, nil);
+    //
+    //music := Mix_LoadMUS_IO(stream, True);
+    //if music = nil then begin
+    //  WriteLn('error music: ', Mix_GetError);
+    //end;
+    //
+    //Mix_FadeInMusic(music, -1, 3000);
+    //
+    //Writeln('Press <Enter>');
+    //ReadLn;
   end;
 
 begin
