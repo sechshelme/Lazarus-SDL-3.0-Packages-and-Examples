@@ -32,8 +32,8 @@ type
 
 const
   SDL_MIXER_MAJOR_VERSION = 3;
-  SDL_MIXER_MINOR_VERSION = 1;
-  SDL_MIXER_MICRO_VERSION = 2;
+  SDL_MIXER_MINOR_VERSION = 2;
+  SDL_MIXER_MICRO_VERSION = 0;
 
 function SDL_MIXER_VERSION: longint;
 function SDL_MIXER_VERSION_ATLEAST(X, Y, Z: longint): boolean;
@@ -47,13 +47,18 @@ function MIX_CreateMixerDevice(devid: TSDL_AudioDeviceID; spec: PSDL_AudioSpec):
 function MIX_CreateMixer(spec: PSDL_AudioSpec): PMIX_Mixer; cdecl; external libSDL3_mixer;
 procedure MIX_DestroyMixer(mixer: PMIX_Mixer); cdecl; external libSDL3_mixer;
 function MIX_GetMixerProperties(mixer: PMIX_Mixer): TSDL_PropertiesID; cdecl; external libSDL3_mixer;
+procedure MIX_LockMixer(mixer: PMIX_Mixer); cdecl; external libSDL3_mixer;
+procedure MIX_UnlockMixer(mixer: PMIX_Mixer); cdecl; external libSDL3_mixer;
 
 const
   MIX_PROP_MIXER_DEVICE_NUMBER = 'SDL_mixer.mixer.device';
 
 function MIX_GetMixerFormat(mixer: PMIX_Mixer; spec: PSDL_AudioSpec): Tbool; cdecl; external libSDL3_mixer;
+
+
 function MIX_LoadAudio_IO(mixer: PMIX_Mixer; io: PSDL_IOStream; predecode: Tbool; closeio: Tbool): PMIX_Audio; cdecl; external libSDL3_mixer;
 function MIX_LoadAudio(mixer: PMIX_Mixer; path: pchar; predecode: Tbool): PMIX_Audio; cdecl; external libSDL3_mixer;
+function MIX_LoadAudioNoCopy(mixer: PMIX_Mixer; data: Pointer; datalen: Tsize_t; free_when_done: boolean): PMIX_Audio; cdecl; external libSDL3_mixer;
 function MIX_LoadAudioWithProperties(props: TSDL_PropertiesID): PMIX_Audio; cdecl; external libSDL3_mixer;
 
 const
@@ -130,6 +135,7 @@ const
   MIX_PROP_PLAY_FADE_IN_START_GAIN_FLOAT = 'SDL_mixer.play.fade_in_start_gain';
   MIX_PROP_PLAY_APPEND_SILENCE_FRAMES_NUMBER = 'SDL_mixer.play.append_silence_frames';
   MIX_PROP_PLAY_APPEND_SILENCE_MILLISECONDS_NUMBER = 'SDL_mixer.play.append_silence_milliseconds';
+  MIX_PROP_PLAY_HALT_WHEN_EXHAUSTED_BOOLEAN = 'SDL_mixer.play.halt_when_exhausted';
 
 function MIX_PlayTag(mixer: PMIX_Mixer; tag: pchar; options: TSDL_PropertiesID): Tbool; cdecl; external libSDL3_mixer;
 function MIX_PlayAudio(mixer: PMIX_Mixer; audio: PMIX_Audio): Tbool; cdecl; external libSDL3_mixer;
@@ -200,7 +206,7 @@ type
   TMIX_PostMixCallback = procedure(userdata: pointer; mixer: PMIX_Mixer; spec: PSDL_AudioSpec; pcm: Psingle; samples: longint); cdecl;
 
 function MIX_SetPostMixCallback(mixer: PMIX_Mixer; cb: TMIX_PostMixCallback; userdata: pointer): Tbool; cdecl; external libSDL3_mixer;
-function MIX_Generate(mixer: PMIX_Mixer; buffer: pointer; buflen: longint): Tbool; cdecl; external libSDL3_mixer;
+function MIX_Generate(mixer: PMIX_Mixer; buffer: pointer; buflen: longint): longint; cdecl; external libSDL3_mixer;
 
 type
   PMIX_AudioDecoder = type Pointer;
