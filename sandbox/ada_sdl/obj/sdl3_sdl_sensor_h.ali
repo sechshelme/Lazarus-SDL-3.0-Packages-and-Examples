@@ -1,0 +1,118 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sdl3_sdl_sensor_h%s	sdl3_sdl_sensor_h.ads	f678d35e NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_properties_h%s  sdl3_sdl_properties_h.ads  sdl3_sdl_properties_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_sensor_h.ads	20260331104513 236add4f sdl3_sdl_sensor_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_getsensors sdl3_sdl_sensor_h 165 13 none]
+G c Z s s [sdl_getsensornameforid sdl3_sdl_sensor_h 181 13 none]
+G c Z s s [sdl_getsensortypeforid sdl3_sdl_sensor_h 198 13 none]
+G c Z s s [sdl_getsensornonportabletypeforid sdl3_sdl_sensor_h 215 13 none]
+G c Z s s [sdl_opensensor sdl3_sdl_sensor_h 230 13 none]
+G c Z s s [sdl_getsensorfromid sdl3_sdl_sensor_h 245 13 none]
+G c Z s s [sdl_getsensorproperties sdl3_sdl_sensor_h 260 13 none]
+G c Z s s [sdl_getsensorname sdl3_sdl_sensor_h 275 13 none]
+G c Z s s [sdl_getsensortype sdl3_sdl_sensor_h 290 13 none]
+G c Z s s [sdl_getsensornonportabletype sdl3_sdl_sensor_h 304 13 none]
+G c Z s s [sdl_getsensorid sdl3_sdl_sensor_h 319 13 none]
+G c Z s s [sdl_getsensordata sdl3_sdl_sensor_h 338 13 none]
+G c Z s s [sdl_closesensor sdl3_sdl_sensor_h 354 14 none]
+G c Z s s [sdl_updatesensors sdl3_sdl_sensor_h 371 14 none]
+G c Z s s [sdl_sensorIP sdl3_sdl_sensor_h 54 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 8|6r6 6r24 8r6 10r6 181r72 275r67
+X 4 i-c.ads
+29K20*C 597e17 8|6w17 6r35 8r17 10r17 181r83 275r78
+57I9*int<integer> 8|133r30 165r44 215r83 304r78 341r20
+66M9*unsigned
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 8|10w19 341r32
+59B12*bool{4|92E9} 8|341r43
+X 6 i-cstrin.ads
+44K22*Strings 156e25 8|8w19 181r85 275r80
+59P9*chars_ptr 8|181r93 275r88
+X 7 sdl3_sdl_properties_h.ads
+12K9*SDL3_SDL_properties_h 693e26 8|9w6 260r73
+66M12*SDL_PropertiesID{9|417M12} 8|260r95
+X 8 sdl3_sdl_sensor_h.ads
+12K9*SDL3_SDL_sensor_h 379l5 379e22
+14N4*SDL_STANDARD_GRAVITY
+54R9*SDL_Sensor 230r71 245r76 260r54 275r48 290r48 304r59 319r46 339r23 354r47
+65M12*SDL_SensorID{9|417M12} 165r63 181r51 198r51 215r62 230r43 245r48 319r65
+133I12*SDL_SensorType{4|57I9} 134r49 135r49 136r47 137r46 138r49 139r48 140r49
+. 141r48 142r47 198r72 290r67
+134i4*SDL_SensorType_SDL_SENSOR_INVALID{133I12}
+135i4*SDL_SensorType_SDL_SENSOR_UNKNOWN{133I12}
+136i4*SDL_SensorType_SDL_SENSOR_ACCEL{133I12}
+137i4*SDL_SensorType_SDL_SENSOR_GYRO{133I12}
+138i4*SDL_SensorType_SDL_SENSOR_ACCEL_L{133I12}
+139i4*SDL_SensorType_SDL_SENSOR_GYRO_L{133I12}
+140i4*SDL_SensorType_SDL_SENSOR_ACCEL_R{133I12}
+141i4*SDL_SensorType_SDL_SENSOR_GYRO_R{133I12}
+142i4*SDL_SensorType_SDL_SENSOR_COUNT{133I12}
+165V13*SDL_GetSensors(65M12) 165^29
+165p29 count(4|57I9)
+181V13*SDL_GetSensorNameForID{6|59P9} 181>37
+181m37 instance_id{65M12}
+198V13*SDL_GetSensorTypeForID{133I12} 198>37
+198m37 instance_id{65M12}
+215V13*SDL_GetSensorNonPortableTypeForID{4|57I9} 215>48
+215m48 instance_id{65M12}
+230V13*SDL_OpenSensor(54R9) 230>29
+230m29 instance_id{65M12}
+245V13*SDL_GetSensorFromID(54R9) 245>34
+245m34 instance_id{65M12}
+260V13*SDL_GetSensorProperties{7|66M12} 260^38
+260p38 sensor(54R9)
+275V13*SDL_GetSensorName{6|59P9} 275^32
+275p32 sensor(54R9)
+290V13*SDL_GetSensorType{133I12} 290^32
+290p32 sensor(54R9)
+304V13*SDL_GetSensorNonPortableType{4|57I9} 304^43
+304p43 sensor(54R9)
+319V13*SDL_GetSensorID{65M12} 319^30
+319p30 sensor(54R9)
+338V13*SDL_GetSensorData{5|59E12} 339^7 340^7 341>7
+339p7 sensor(54R9)
+340p7 data(float)
+341i7 num_values{4|57I9}
+354U14*SDL_CloseSensor 354^31
+354p31 sensor(54R9)
+371U14*SDL_UpdateSensors
+X 9 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 8|7w6 65r28 9|6557e22
+417M12*Uint32{16|30M12} 8|65r46
+X 16 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+30M12*uint32_t{17|50M12}
+X 17 x86_64_linux_gnu_bits_types_h.ads
+50M12*uu_uint32_t{4|66M9}
+

@@ -1,0 +1,210 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+
+U sdl3_sdl_mouse_h%s	sdl3_sdl_mouse_h.ads	ce226d9f NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+Y sdl3_sdl_surface_h%s	sdl3_sdl_surface_h.ads	sdl3_sdl_surface_h.ali
+Y sdl3_sdl_video_h%s	sdl3_sdl_video_h.ads	sdl3_sdl_video_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_mouse_h.ads	20260331104513 ea3bd404 sdl3_sdl_mouse_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D sdl3_sdl_surface_h.ads  20260331104513 91d140a0 sdl3_sdl_surface_h%s
+D sdl3_sdl_video_h.ads	20260331104513 c0f601b9 sdl3_sdl_video_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_hasmouse sdl3_sdl_mouse_h 254 13 none]
+G c Z s s [sdl_getmice sdl3_sdl_mouse_h 281 13 none]
+G c Z s s [sdl_getmousenameforid sdl3_sdl_mouse_h 302 13 none]
+G c Z s s [sdl_getmousefocus sdl3_sdl_mouse_h 317 13 none]
+G c Z s s [sdl_getmousestate sdl3_sdl_mouse_h 354 13 none]
+G c Z s s [sdl_getglobalmousestate sdl3_sdl_mouse_h 395 13 none]
+G c Z s s [sdl_getrelativemousestate sdl3_sdl_mouse_h 434 13 none]
+G c Z s s [sdl_warpmouseinwindow sdl3_sdl_mouse_h 461 14 none]
+G c Z s s [sdl_warpmouseglobal sdl3_sdl_mouse_h 492 13 none]
+G c Z s s [sdl_setrelativemousetransform sdl3_sdl_mouse_h 514 13 none]
+G c Z s s [sdl_setwindowrelativemousemode sdl3_sdl_mouse_h 546 13 none]
+G c Z s s [sdl_getwindowrelativemousemode sdl3_sdl_mouse_h 564 13 none]
+G c Z s s [sdl_capturemouse sdl3_sdl_mouse_h 616 13 none]
+G c Z s s [sdl_createcursor sdl3_sdl_mouse_h 667 13 none]
+G c Z s s [sdl_createcolorcursor sdl3_sdl_mouse_h 711 13 none]
+G c Z s s [sdl_createanimatedcursor sdl3_sdl_mouse_h 766 13 none]
+G c Z s s [sdl_createsystemcursor sdl3_sdl_mouse_h 789 13 none]
+G c Z s s [sdl_setcursor sdl3_sdl_mouse_h 813 13 none]
+G c Z s s [sdl_getcursor sdl3_sdl_mouse_h 833 13 none]
+G c Z s s [sdl_getdefaultcursor sdl3_sdl_mouse_h 852 13 none]
+G c Z s s [sdl_destroycursor sdl3_sdl_mouse_h 875 14 none]
+G c Z s s [sdl_showcursor sdl3_sdl_mouse_h 894 13 none]
+G c Z s s [sdl_hidecursor sdl3_sdl_mouse_h 913 13 none]
+G c Z s s [sdl_cursorvisible sdl3_sdl_mouse_h 932 13 none]
+G c Z s s [sdl_cursorIP sdl3_sdl_mouse_h 103 9 none]
+G c Z s s [sdl_cursorframeinfoIP sdl3_sdl_mouse_h 175 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 11r6 12r6 302r70
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 11r17 12r17 302r81
+57I9*int<integer> 7|281r41 670r11 671r11 672r15 673r15 713r15 714r15 768r21
+. 769r15 770r15
+66M9*unsigned
+68M9*unsigned_long
+71M9*unsigned_char
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 7|11w19 254r33 492r63 514r123 546r100 546r124 564r97
+. 616r41 616r65 813r63 894r35 913r35 932r38
+59B12*bool{4|92E9} 7|254r44 492r74 514r134 546r111 546r135 564r108 616r52
+. 616r76 813r74 894r46 913r46 932r49
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|12w19 302r83
+59P9*chars_ptr 7|302r91
+X 7 sdl3_sdl_mouse_h.ads
+14K9*SDL3_SDL_mouse_h 938l5 938e21
+16N4*SDL_BUTTON_LEFT
+17N4*SDL_BUTTON_MIDDLE
+18N4*SDL_BUTTON_RIGHT
+19N4*SDL_BUTTON_X1
+20N4*SDL_BUTTON_X2
+93M12*SDL_MouseID{8|417M12} 236r17 281r60 302r50
+103R9*SDL_Cursor 673r34 714r34 770r34 789r74 813r44 833r41 852r48 875r49
+111E9*SDL_SystemCursor 133e4 789r42
+112n7*SDL_SYSTEM_CURSOR_DEFAULT{111E9}
+113n7*SDL_SYSTEM_CURSOR_TEXT{111E9}
+114n7*SDL_SYSTEM_CURSOR_WAIT{111E9}
+115n7*SDL_SYSTEM_CURSOR_CROSSHAIR{111E9}
+116n7*SDL_SYSTEM_CURSOR_PROGRESS{111E9}
+117n7*SDL_SYSTEM_CURSOR_NWSE_RESIZE{111E9}
+118n7*SDL_SYSTEM_CURSOR_NESW_RESIZE{111E9}
+119n7*SDL_SYSTEM_CURSOR_EW_RESIZE{111E9}
+120n7*SDL_SYSTEM_CURSOR_NS_RESIZE{111E9}
+121n7*SDL_SYSTEM_CURSOR_MOVE{111E9}
+122n7*SDL_SYSTEM_CURSOR_NOT_ALLOWED{111E9}
+123n7*SDL_SYSTEM_CURSOR_POINTER{111E9}
+124n7*SDL_SYSTEM_CURSOR_NW_RESIZE{111E9}
+125n7*SDL_SYSTEM_CURSOR_N_RESIZE{111E9}
+126n7*SDL_SYSTEM_CURSOR_NE_RESIZE{111E9}
+127n7*SDL_SYSTEM_CURSOR_E_RESIZE{111E9}
+128n7*SDL_SYSTEM_CURSOR_SE_RESIZE{111E9}
+129n7*SDL_SYSTEM_CURSOR_S_RESIZE{111E9}
+130n7*SDL_SYSTEM_CURSOR_SW_RESIZE{111E9}
+131n7*SDL_SYSTEM_CURSOR_W_RESIZE{111E9}
+132n7*SDL_SYSTEM_CURSOR_COUNT{111E9}
+161E9*SDL_MouseWheelDirection 164e4
+162n7*SDL_MOUSEWHEEL_NORMAL{161E9}
+163n7*SDL_MOUSEWHEEL_FLIPPED{161E9}
+175R9*SDL_CursorFrameInfo 179e4 767r23
+176p7*surface
+177m7*duration{8|417M12}
+198M12*SDL_MouseButtonFlags{8|417M12} 354r75 395r81 434r83
+232P9*SDL_MouseMotionTransformCallback 233>10 234>10 235^10 236>10 237^10
+. 238^10 514r55
+233m10 arg1{12|67M9}
+234m10 arg2{8|437M12}
+235p10 arg3
+236m10 arg4{93M12}
+237p10 arg5(float)
+238p10 arg6(float)
+254V13*SDL_HasMouse{5|59E12}
+281V13*SDL_GetMice(93M12) 281^26
+281p26 count(4|57I9)
+302V13*SDL_GetMouseNameForID{6|59P9} 302>36
+302m36 instance_id{93M12}
+317V13*SDL_GetMouseFocus
+354V13*SDL_GetMouseState{198M12} 354^32 354^50
+354p32 x(float)
+354p50 y(float)
+395V13*SDL_GetGlobalMouseState{198M12} 395^38 395^56
+395p38 x(float)
+395p56 y(float)
+434V13*SDL_GetRelativeMouseState{198M12} 434^40 434^58
+434p40 x(float)
+434p58 y(float)
+461U14*SDL_WarpMouseInWindow 462^7 463>7 464>7
+462p7 window
+463f7 x{float}
+464f7 y{float}
+492V13*SDL_WarpMouseGlobal{5|59E12} 492>34 492>45
+492f34 x{float}
+492f45 y{float}
+514V13*SDL_SetRelativeMouseTransform{5|59E12} 514>44 514>89
+514p44 callback{232P9}
+514m89 userdata{12|67M9}
+546V13*SDL_SetWindowRelativeMouseMode{5|59E12} 546^45 546>90
+546p45 window
+546b90 enabled{5|59E12}
+564V13*SDL_GetWindowRelativeMouseMode{5|59E12} 564^45
+564p45 window
+616V13*SDL_CaptureMouse{5|59E12} 616>31
+616b31 enabled{5|59E12}
+667V13*SDL_CreateCursor(103R9) 668^7 669^7 670>7 671>7 672>7 673>7
+668p7 data(8|385M12)
+669p7 mask(8|385M12)
+670i7 w{4|57I9}
+671i7 h{4|57I9}
+672i7 hot_x{4|57I9}
+673i7 hot_y{4|57I9}
+711V13*SDL_CreateColorCursor(103R9) 712^7 713>7 714>7
+712p7 surface
+713i7 hot_x{4|57I9}
+714i7 hot_y{4|57I9}
+766V13*SDL_CreateAnimatedCursor(103R9) 767^7 768>7 769>7 770>7
+767p7 frames(175R9)
+768i7 frame_count{4|57I9}
+769i7 hot_x{4|57I9}
+770i7 hot_y{4|57I9}
+789V13*SDL_CreateSystemCursor(103R9) 789>37
+789e37 id{111E9}
+813V13*SDL_SetCursor{5|59E12} 813^28
+813p28 cursor(103R9)
+833V13*SDL_GetCursor(103R9)
+852V13*SDL_GetDefaultCursor(103R9)
+875U14*SDL_DestroyCursor 875^33
+875p33 cursor(103R9)
+894V13*SDL_ShowCursor{5|59E12}
+913V13*SDL_HideCursor{5|59E12}
+932V13*SDL_CursorVisible{5|59E12}
+X 8 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 7|7w6 93r27 177r26 198r36 234r17 668r21 669r21 8|6557e22
+385M12*Uint8{17|26M12} 7|668r39 669r39
+417M12*Uint32{17|30M12} 7|93r45 177r44 198r54
+437M12*Uint64{17|32M12} 7|234r35
+X 9 sdl3_sdl_surface_h.ads
+17K9 SDL3_SDL_surface_h 7|176r24 712r24
+X 10 sdl3_sdl_video_h.ads
+18K9 SDL3_SDL_video_h 7|235r24 317r45 462r23 546r61 564r61
+X 12 system.ads
+37K9*System 7|9w6 233r17 514r100 12|153e11
+67M9*Address 7|233r24 514r107
+X 17 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+26M12*uint8_t{18|42M12}
+30M12*uint32_t{18|50M12}
+32M12*uint64_t{18|54M12}
+X 18 x86_64_linux_gnu_bits_types_h.ads
+42M12*uu_uint8_t{4|71M9}
+50M12*uu_uint32_t{4|66M9}
+54M12*uu_uint64_t{4|68M9}
+

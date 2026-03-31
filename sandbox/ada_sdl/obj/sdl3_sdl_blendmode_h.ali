@@ -1,0 +1,74 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sdl3_sdl_blendmode_h%s  sdl3_sdl_blendmode_h.ads  947d9668 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_blendmode_h.ads  20260331104513 e93fac7e sdl3_sdl_blendmode_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_composecustomblendmode sdl3_sdl_blendmode_h 200 13 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35
+66M9*unsigned 7|67r34 90r31
+X 7 sdl3_sdl_blendmode_h.ads
+9K9*SDL3_SDL_blendmode_h 212l5 212e25
+11N4*SDL_BLENDMODE_NONE
+12N4*SDL_BLENDMODE_BLEND
+13N4*SDL_BLENDMODE_BLEND_PREMULTIPLIED
+14N4*SDL_BLENDMODE_ADD
+15N4*SDL_BLENDMODE_ADD_PREMULTIPLIED
+16N4*SDL_BLENDMODE_MOD
+17N4*SDL_BLENDMODE_MUL
+18N4*SDL_BLENDMODE_INVALID
+58M12*SDL_BlendMode{8|417M12} 206r51
+67M12*SDL_BlendOperation{4|66M9} 68r57 69r62 70r66 71r61 72r61 203r24 206r24
+68m4*SDL_BlendOperation_SDL_BLENDOPERATION_ADD{67M12}
+69m4*SDL_BlendOperation_SDL_BLENDOPERATION_SUBTRACT{67M12}
+70m4*SDL_BlendOperation_SDL_BLENDOPERATION_REV_SUBTRACT{67M12}
+71m4*SDL_BlendOperation_SDL_BLENDOPERATION_MINIMUM{67M12}
+72m4*SDL_BlendOperation_SDL_BLENDOPERATION_MAXIMUM{67M12}
+90M12*SDL_BlendFactor{4|66M9} 91r52 92r51 93r57 94r67 95r57 96r67 97r57 98r67
+. 99r57 100r67 201r24 202r24 204r24 205r24
+91m4*SDL_BlendFactor_SDL_BLENDFACTOR_ZERO{90M12}
+92m4*SDL_BlendFactor_SDL_BLENDFACTOR_ONE{90M12}
+93m4*SDL_BlendFactor_SDL_BLENDFACTOR_SRC_COLOR{90M12}
+94m4*SDL_BlendFactor_SDL_BLENDFACTOR_ONE_MINUS_SRC_COLOR{90M12}
+95m4*SDL_BlendFactor_SDL_BLENDFACTOR_SRC_ALPHA{90M12}
+96m4*SDL_BlendFactor_SDL_BLENDFACTOR_ONE_MINUS_SRC_ALPHA{90M12}
+97m4*SDL_BlendFactor_SDL_BLENDFACTOR_DST_COLOR{90M12}
+98m4*SDL_BlendFactor_SDL_BLENDFACTOR_ONE_MINUS_DST_COLOR{90M12}
+99m4*SDL_BlendFactor_SDL_BLENDFACTOR_DST_ALPHA{90M12}
+100m4*SDL_BlendFactor_SDL_BLENDFACTOR_ONE_MINUS_DST_ALPHA{90M12}
+200V13*SDL_ComposeCustomBlendMode{58M12} 201>7 202>7 203>7 204>7 205>7 206>7
+201m7 srcColorFactor{90M12}
+202m7 dstColorFactor{90M12}
+203m7 colorOperation{67M12}
+204m7 srcAlphaFactor{90M12}
+205m7 dstAlphaFactor{90M12}
+206m7 alphaOperation{67M12}
+X 8 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 7|7w6 58r29 8|6557e22
+417M12*Uint32{15|30M12} 7|58r47
+

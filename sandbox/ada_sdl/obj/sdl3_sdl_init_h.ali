@@ -1,0 +1,134 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+
+U sdl3_sdl_init_h%s	sdl3_sdl_init_h.ads	6b92d4f4 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+Y sdl3_sdl_events_h%s	sdl3_sdl_events_h.ads	sdl3_sdl_events_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_events_h.ads	20260331104513 c0851939 sdl3_sdl_events_h%s
+D sdl3_sdl_init_h.ads	20260331104513 de29354f sdl3_sdl_init_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_init sdl3_sdl_init_h 256 13 none]
+G c Z s s [sdl_initsubsystem sdl3_sdl_init_h 277 13 none]
+G c Z s s [sdl_quitsubsystem sdl3_sdl_init_h 296 14 none]
+G c Z s s [sdl_wasinit sdl3_sdl_init_h 314 13 none]
+G c Z s s [sdl_quit sdl3_sdl_init_h 336 14 none]
+G c Z s s [sdl_ismainthread sdl3_sdl_init_h 360 13 none]
+G c Z s s [sdl_runonmainthread sdl3_sdl_init_h 403 13 none]
+G c Z s s [sdl_setappmetadata sdl3_sdl_init_h 448 13 none]
+G c Z s s [sdl_setappmetadataproperty sdl3_sdl_init_h 518 13 none]
+G c Z s s [sdl_getappmetadataproperty sdl3_sdl_init_h 545 13 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 8|6r6 6r24 10r6 11r6 449r17 450r20 451r23 518r48 518r88
+. 545r48 545r87
+X 4 i-c.ads
+29K20*C 597e17 8|6w17 6r35 10r17 11r17 449r28 450r31 451r34 518r59 518r99
+. 545r59 545r98
+57I9*int<integer> 8|145r17
+66M9*unsigned
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 8|10w19 256r53 277r62 360r37 406r23 406r47 451r62
+. 518r127
+59B12*bool{4|92E9} 8|256r64 277r73 360r48 406r34 406r58 451r73 518r138
+X 6 i-cstrin.ads
+44K22*Strings 156e25 8|11w19 449r30 450r33 451r36 518r61 518r101 545r61 545r100
+59P9*chars_ptr 8|449r38 450r41 451r44 518r69 518r109 545r69 545r108
+X 7 sdl3_sdl_events_h.ads
+24K9 SDL3_SDL_events_h 8|181r84
+X 8 sdl3_sdl_init_h.ads
+13K9*SDL3_SDL_init_h 551l5 551e20
+15N4*SDL_INIT_AUDIO
+16N4*SDL_INIT_VIDEO
+17N4*SDL_INIT_JOYSTICK
+18N4*SDL_INIT_HAPTIC
+19N4*SDL_INIT_GAMEPAD
+20N4*SDL_INIT_EVENTS
+21N4*SDL_INIT_SENSOR
+22N4*SDL_INIT_CAMERA
+24a4*SDL_PROP_APP_METADATA_NAME_STRING{string}
+25a4*SDL_PROP_APP_METADATA_VERSION_STRING{string}
+26a4*SDL_PROP_APP_METADATA_IDENTIFIER_STRING{string}
+27a4*SDL_PROP_APP_METADATA_CREATOR_STRING{string}
+28a4*SDL_PROP_APP_METADATA_COPYRIGHT_STRING{string}
+29a4*SDL_PROP_APP_METADATA_URL_STRING{string}
+30a4*SDL_PROP_APP_METADATA_TYPE_STRING{string}
+93M12*SDL_InitFlags{9|417M12} 256r31 277r40 296r41 314r34 314r56
+116E9*SDL_AppResult 120e4 146r40 163r79 181r120 197r77
+117n7*SDL_APP_CONTINUE{116E9}
+118n7*SDL_APP_SUCCESS{116E9}
+119n7*SDL_APP_FAILURE{116E9}
+143P9*SDL_AppInit_func(116E9) 144>10 145>10 146>10
+144m10 arg1{11|67M9}
+145i10 arg2{4|57I9}
+146m10 arg3{11|67M9}
+163P9*SDL_AppIterate_func(116E9) 163>49
+163m49 arg1{11|67M9}
+181P9*SDL_AppEvent_func(116E9) 181>47 181^70
+181m47 arg1{11|67M9}
+181p70 arg2
+197P9*SDL_AppQuit_func 197>47 197>70
+197m47 arg1{11|67M9}
+197e70 arg2{116E9}
+256V13*SDL_Init{5|59E12} 256>23
+256m23 flags{93M12}
+277V13*SDL_InitSubSystem{5|59E12} 277>32
+277m32 flags{93M12}
+296U14*SDL_QuitSubSystem 296>33
+296m33 flags{93M12}
+314V13*SDL_WasInit{93M12} 314>26
+314m26 flags{93M12}
+336U14*SDL_Quit
+360V13*SDL_IsMainThread{5|59E12}
+375P9*SDL_MainThreadCallback 375>53 404r18
+375m53 arg1{11|67M9}
+403V13*SDL_RunOnMainThread{5|59E12} 404>7 405>7 406>7
+404p7 callback{375P9}
+405m7 userdata{11|67M9}
+406b7 wait_complete{5|59E12}
+448V13*SDL_SetAppMetadata{5|59E12} 449>7 450>7 451>7
+449p7 appname{6|59P9}
+450p7 appversion{6|59P9}
+451p7 appidentifier{6|59P9}
+518V13*SDL_SetAppMetadataProperty{5|59E12} 518>41 518>80
+518p41 name{6|59P9}
+518p80 value{6|59P9}
+545V13*SDL_GetAppMetadataProperty{6|59P9} 545>41
+545p41 name{6|59P9}
+X 9 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 8|7w6 93r29 9|6557e22
+417M12*Uint32{16|30M12} 8|93r47
+X 11 system.ads
+37K9*System 8|8w6 144r17 146r17 163r56 181r54 197r54 375r60 405r18 11|153e11
+67M9*Address 8|144r24 146r24 163r63 181r61 197r61 375r67 405r25
+X 16 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+30M12*uint32_t{17|50M12}
+X 17 x86_64_linux_gnu_bits_types_h.ads
+50M12*uu_uint32_t{4|66M9}
+

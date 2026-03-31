@@ -1,0 +1,366 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+
+U sdl3_sdl_audio_h%s	sdl3_sdl_audio_h.ads	4667b705 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+Y sdl3_sdl_iostream_h%s	sdl3_sdl_iostream_h.ads	sdl3_sdl_iostream_h.ali
+W sdl3_sdl_properties_h%s  sdl3_sdl_properties_h.ads  sdl3_sdl_properties_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_audio_h.ads	20260331104513 7c8cccac sdl3_sdl_audio_h%s
+D sdl3_sdl_iostream_h.ads  20260331104513 ad94da00 sdl3_sdl_iostream_h%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_getnumaudiodrivers sdl3_sdl_audio_h 492 13 none]
+G c Z s s [sdl_getaudiodriver sdl3_sdl_audio_h 520 13 none]
+G c Z s s [sdl_getcurrentaudiodriver sdl3_sdl_audio_h 540 13 none]
+G c Z s s [sdl_getaudioplaybackdevices sdl3_sdl_audio_h 573 13 none]
+G c Z s s [sdl_getaudiorecordingdevices sdl3_sdl_audio_h 606 13 none]
+G c Z s s [sdl_getaudiodevicename sdl3_sdl_audio_h 635 13 none]
+G c Z s s [sdl_getaudiodeviceformat sdl3_sdl_audio_h 674 13 none]
+G c Z s s [sdl_getaudiodevicechannelmap sdl3_sdl_audio_h 704 13 none]
+G c Z s s [sdl_openaudiodevice sdl3_sdl_audio_h 784 13 none]
+G c Z s s [sdl_isaudiodevicephysical sdl3_sdl_audio_h 813 13 none]
+G c Z s s [sdl_isaudiodeviceplayback sdl3_sdl_audio_h 831 13 none]
+G c Z s s [sdl_pauseaudiodevice sdl3_sdl_audio_h 866 13 none]
+G c Z s s [sdl_resumeaudiodevice sdl3_sdl_audio_h 898 13 none]
+G c Z s s [sdl_audiodevicepaused sdl3_sdl_audio_h 924 13 none]
+G c Z s s [sdl_getaudiodevicegain sdl3_sdl_audio_h 951 13 none]
+G c Z s s [sdl_setaudiodevicegain sdl3_sdl_audio_h 990 13 none]
+G c Z s s [sdl_closeaudiodevice sdl3_sdl_audio_h 1015 14 none]
+G c Z s s [sdl_bindaudiostreams sdl3_sdl_audio_h 1059 13 none]
+G c Z s s [sdl_bindaudiostream sdl3_sdl_audio_h 1087 13 none]
+G c Z s s [sdl_unbindaudiostreams sdl3_sdl_audio_h 1112 14 none]
+G c Z s s [sdl_unbindaudiostream sdl3_sdl_audio_h 1132 14 none]
+G c Z s s [sdl_getaudiostreamdevice sdl3_sdl_audio_h 1157 13 none]
+G c Z s s [sdl_createaudiostream sdl3_sdl_audio_h 1183 13 none]
+G c Z s s [sdl_getaudiostreamproperties sdl3_sdl_audio_h 1211 13 none]
+G c Z s s [sdl_getaudiostreamformat sdl3_sdl_audio_h 1233 13 none]
+G c Z s s [sdl_setaudiostreamformat sdl3_sdl_audio_h 1277 13 none]
+G c Z s s [sdl_getaudiostreamfrequencyratio sdl3_sdl_audio_h 1300 13 none]
+G c Z s s [sdl_setaudiostreamfrequencyratio sdl3_sdl_audio_h 1332 13 none]
+G c Z s s [sdl_getaudiostreamgain sdl3_sdl_audio_h 1357 13 none]
+G c Z s s [sdl_setaudiostreamgain sdl3_sdl_audio_h 1386 13 none]
+G c Z s s [sdl_getaudiostreaminputchannelmap sdl3_sdl_audio_h 1414 13 none]
+G c Z s s [sdl_getaudiostreamoutputchannelmap sdl3_sdl_audio_h 1442 13 none]
+G c Z s s [sdl_setaudiostreaminputchannelmap sdl3_sdl_audio_h 1506 13 none]
+G c Z s s [sdl_setaudiostreamoutputchannelmap sdl3_sdl_audio_h 1571 13 none]
+G c Z s s [sdl_putaudiostreamdata sdl3_sdl_audio_h 1608 13 none]
+G c Z s s [sdl_putaudiostreamdatanocopy sdl3_sdl_audio_h 1697 13 none]
+G c Z s s [sdl_putaudiostreamplanardata sdl3_sdl_audio_h 1759 13 none]
+G c Z s s [sdl_getaudiostreamdata sdl3_sdl_audio_h 1797 13 none]
+G c Z s s [sdl_getaudiostreamavailable sdl3_sdl_audio_h 1830 13 none]
+G c Z s s [sdl_getaudiostreamqueued sdl3_sdl_audio_h 1872 13 none]
+G c Z s s [sdl_flushaudiostream sdl3_sdl_audio_h 1896 13 none]
+G c Z s s [sdl_clearaudiostream sdl3_sdl_audio_h 1921 13 none]
+G c Z s s [sdl_pauseaudiostreamdevice sdl3_sdl_audio_h 1949 13 none]
+G c Z s s [sdl_resumeaudiostreamdevice sdl3_sdl_audio_h 1976 13 none]
+G c Z s s [sdl_audiostreamdevicepaused sdl3_sdl_audio_h 1999 13 none]
+G c Z s s [sdl_lockaudiostream sdl3_sdl_audio_h 2031 13 none]
+G c Z s s [sdl_unlockaudiostream sdl3_sdl_audio_h 2053 13 none]
+G c Z s s [sdl_setaudiostreamgetcallback sdl3_sdl_audio_h 2151 13 none]
+G c Z s s [sdl_setaudiostreamputcallback sdl3_sdl_audio_h 2207 13 none]
+G c Z s s [sdl_destroyaudiostream sdl3_sdl_audio_h 2235 14 none]
+G c Z s s [sdl_openaudiodevicestream sdl3_sdl_audio_h 2301 13 none]
+G c Z s s [sdl_setaudiopostmixcallback sdl3_sdl_audio_h 2406 13 none]
+G c Z s s [sdl_loadwav_io sdl3_sdl_audio_h 2493 13 none]
+G c Z s s [sdl_loadwav sdl3_sdl_audio_h 2538 13 none]
+G c Z s s [sdl_mixaudio sdl3_sdl_audio_h 2582 13 none]
+G c Z s s [sdl_convertaudiosamples sdl3_sdl_audio_h 2621 13 none]
+G c Z s s [sdl_getaudioformatname sdl3_sdl_audio_h 2644 13 none]
+G c Z s s [sdl_getsilencevalueforformat sdl3_sdl_audio_h 2664 13 none]
+G c Z s s [sdl_audiospecIP sdl3_sdl_audio_h 419 9 none]
+G c Z s s [sdl_audiostreamIP sdl3_sdl_audio_h 467 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 8r6 9r6 520r53 540r46 635r71 2539r14 2644r70
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 8r17 9r17 520r64 540r57 635r82 2539r25 2644r81
+57I9*int<integer> 7|421r26 422r22 492r43 520r41 573r57 606r58 677r30 704r85
+. 704r104 1062r21 1112r78 1414r96 1414r115 1442r97 1442r116 1508r22 1509r15
+. 1573r22 1574r15 1611r13 1648r17 1700r13 1762r22 1763r21 1800r13 1800r25
+. 1830r82 1872r79 2102r17 2103r17 2350r17 2624r17 2627r24 2664r76
+66M9*unsigned 7|244r31
+71M9*unsigned_char
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 7|9w19 677r42 813r74 831r74 866r69 898r70 924r70
+. 990r85 1062r33 1087r101 1236r47 1280r56 1332r102 1386r91 1509r27 1574r27
+. 1611r25 1702r41 1763r33 1896r75 1921r75 1949r81 1976r82 1999r82 2031r74
+. 2053r76 2154r41 2210r41 2409r41 2495r17 2498r59 2542r59 2587r30 2627r36
+59B12*bool{4|92E9} 7|677r53 813r85 831r85 866r80 898r81 924r81 990r96 1062r44
+. 1087r112 1236r58 1280r67 1332r113 1386r102 1509r38 1574r38 1611r36 1702r52
+. 1763r44 1896r86 1921r86 1949r92 1976r93 1999r93 2031r85 2053r87 2154r52
+. 2210r52 2409r52 2495r28 2498r70 2542r70 2587r41 2627r47
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|8w19 520r66 540r59 635r84 2539r27 2644r83
+59P9*chars_ptr 7|520r74 540r67 635r92 2539r35 2644r91
+X 7 sdl3_sdl_audio_h.ads
+14K9*SDL3_SDL_audio_h 2670l5 2670e21
+16N4*SDL_AUDIO_MASK_BITSIZE
+18N4*SDL_AUDIO_MASK_FLOAT
+20N4*SDL_AUDIO_MASK_BIG_ENDIAN
+22N4*SDL_AUDIO_MASK_SIGNED
+46a4*SDL_PROP_AUDIOSTREAM_AUTO_CLEANUP_BOOLEAN{string}
+244M12*SDL_AudioFormat{4|66M9} 245r49 246r44 247r44 248r47 249r47 250r47
+. 251r47 252r47 253r47 254r45 255r45 256r45 420r24 2585r16 2644r46 2664r52
+245m4*SDL_AudioFormat_SDL_AUDIO_UNKNOWN{244M12}
+246m4*SDL_AudioFormat_SDL_AUDIO_U8{244M12}
+247m4*SDL_AudioFormat_SDL_AUDIO_S8{244M12}
+248m4*SDL_AudioFormat_SDL_AUDIO_S16LE{244M12}
+249m4*SDL_AudioFormat_SDL_AUDIO_S16BE{244M12}
+250m4*SDL_AudioFormat_SDL_AUDIO_S32LE{244M12}
+251m4*SDL_AudioFormat_SDL_AUDIO_S32BE{244M12}
+252m4*SDL_AudioFormat_SDL_AUDIO_F32LE{244M12}
+253m4*SDL_AudioFormat_SDL_AUDIO_F32BE{244M12}
+254m4*SDL_AudioFormat_SDL_AUDIO_S16{244M12}
+255m4*SDL_AudioFormat_SDL_AUDIO_S32{244M12}
+256m4*SDL_AudioFormat_SDL_AUDIO_F32{244M12}
+388M12*SDL_AudioDeviceID{10|417M12} 573r76 606r77 635r45 675r15 704r51 784r42
+. 784r106 813r48 831r48 866r43 898r44 924r44 951r45 990r45 1015r44 1060r15
+. 1087r42 1157r79 2302r15 2407r15
+419R9*SDL_AudioSpec 424e4 676r21 784r84 1183r63 1183r105 1235r25 1236r25
+. 1279r34 1280r34 2303r30 2348r33 2496r21 2540r21 2622r34 2625r34
+420m7*format{244M12}
+421i7*channels{4|57I9}
+422i7*freq{4|57I9}
+467R9*SDL_AudioStream 1087r77 1132r53 1157r55 1183r134 1211r59 1234r23 1278r23
+. 1300r63 1332r63 1357r53 1386r53 1414r64 1442r65 1507r23 1572r23 1609r23
+. 1698r23 1760r23 1798r23 1830r58 1872r55 1896r51 1921r51 1949r57 1976r58
+. 1999r58 2031r50 2053r52 2101r24 2152r23 2208r23 2235r54 2305r48
+492V13*SDL_GetNumAudioDrivers{4|57I9}
+520V13*SDL_GetAudioDriver{6|59P9} 520>33
+520i33 index{4|57I9}
+540V13*SDL_GetCurrentAudioDriver{6|59P9}
+573V13*SDL_GetAudioPlaybackDevices(388M12) 573^42
+573p42 count(4|57I9)
+606V13*SDL_GetAudioRecordingDevices(388M12) 606^43
+606p43 count(4|57I9)
+635V13*SDL_GetAudioDeviceName{6|59P9} 635>37
+635m37 devid{388M12}
+674V13*SDL_GetAudioDeviceFormat{5|59E12} 675>7 676^7 677^7
+675m7 devid{388M12}
+676p7 spec(419R9)
+677p7 sample_frames(4|57I9)
+704V13*SDL_GetAudioDeviceChannelMap(4|57I9) 704>43 704^70
+704m43 devid{388M12}
+704p70 count(4|57I9)
+784V13*SDL_OpenAudioDevice{388M12} 784>34 784^61
+784m34 devid{388M12}
+784p61 spec(419R9)
+813V13*SDL_IsAudioDevicePhysical{5|59E12} 813>40
+813m40 devid{388M12}
+831V13*SDL_IsAudioDevicePlayback{5|59E12} 831>40
+831m40 devid{388M12}
+866V13*SDL_PauseAudioDevice{5|59E12} 866>35
+866m35 devid{388M12}
+898V13*SDL_ResumeAudioDevice{5|59E12} 898>36
+898m36 devid{388M12}
+924V13*SDL_AudioDevicePaused{5|59E12} 924>36
+924m36 devid{388M12}
+951V13*SDL_GetAudioDeviceGain{float} 951>37
+951m37 devid{388M12}
+990V13*SDL_SetAudioDeviceGain{5|59E12} 990>37 990>64
+990m37 devid{388M12}
+990f64 gain{float}
+1015U14*SDL_CloseAudioDevice 1015>36
+1015m36 devid{388M12}
+1059V13*SDL_BindAudioStreams{5|59E12} 1060>7 1061>7 1062>7
+1060m7 devid{388M12}
+1061m7 streams{12|67M9}
+1062i7 num_streams{4|57I9}
+1087V13*SDL_BindAudioStream{5|59E12} 1087>34 1087^61
+1087m34 devid{388M12}
+1087p61 stream(467R9)
+1112U14*SDL_UnbindAudioStreams 1112>38 1112>64
+1112m38 streams{12|67M9}
+1112i64 num_streams{4|57I9}
+1132U14*SDL_UnbindAudioStream 1132^37
+1132p37 stream(467R9)
+1157V13*SDL_GetAudioStreamDevice{388M12} 1157^39
+1157p39 stream(467R9)
+1183V13*SDL_CreateAudioStream(467R9) 1183^36 1183^78
+1183p36 src_spec(419R9)
+1183p78 dst_spec(419R9)
+1211V13*SDL_GetAudioStreamProperties{9|66M12} 1211^43
+1211p43 stream(467R9)
+1233V13*SDL_GetAudioStreamFormat{5|59E12} 1234^7 1235^7 1236^7
+1234p7 stream(467R9)
+1235p7 src_spec(419R9)
+1236p7 dst_spec(419R9)
+1277V13*SDL_SetAudioStreamFormat{5|59E12} 1278^7 1279^7 1280^7
+1278p7 stream(467R9)
+1279p7 src_spec(419R9)
+1280p7 dst_spec(419R9)
+1300V13*SDL_GetAudioStreamFrequencyRatio{float} 1300^47
+1300p47 stream(467R9)
+1332V13*SDL_SetAudioStreamFrequencyRatio{5|59E12} 1332^47 1332>80
+1332p47 stream(467R9)
+1332f80 ratio{float}
+1357V13*SDL_GetAudioStreamGain{float} 1357^37
+1357p37 stream(467R9)
+1386V13*SDL_SetAudioStreamGain{5|59E12} 1386^37 1386>70
+1386p37 stream(467R9)
+1386f70 gain{float}
+1414V13*SDL_GetAudioStreamInputChannelMap(4|57I9) 1414^48 1414^81
+1414p48 stream(467R9)
+1414p81 count(4|57I9)
+1442V13*SDL_GetAudioStreamOutputChannelMap(4|57I9) 1442^49 1442^82
+1442p49 stream(467R9)
+1442p82 count(4|57I9)
+1506V13*SDL_SetAudioStreamInputChannelMap{5|59E12} 1507^7 1508^7 1509>7
+1507p7 stream(467R9)
+1508p7 chmap(4|57I9)
+1509i7 count{4|57I9}
+1571V13*SDL_SetAudioStreamOutputChannelMap{5|59E12} 1572^7 1573^7 1574>7
+1572p7 stream(467R9)
+1573p7 chmap(4|57I9)
+1574i7 count{4|57I9}
+1608V13*SDL_PutAudioStreamData{5|59E12} 1609^7 1610>7 1611>7
+1609p7 stream(467R9)
+1610m7 buf{12|67M9}
+1611i7 len{4|57I9}
+1645P9*SDL_AudioStreamDataCompleteCallback 1646>10 1647>10 1648>10 1701r18
+1646m10 arg1{12|67M9}
+1647m10 arg2{12|67M9}
+1648i10 arg3{4|57I9}
+1697V13*SDL_PutAudioStreamDataNoCopy{5|59E12} 1698^7 1699>7 1700>7 1701>7
+. 1702>7
+1698p7 stream(467R9)
+1699m7 buf{12|67M9}
+1700i7 len{4|57I9}
+1701p7 callback{1645P9}
+1702m7 userdata{12|67M9}
+1759V13*SDL_PutAudioStreamPlanarData{5|59E12} 1760^7 1761>7 1762>7 1763>7
+1760p7 stream(467R9)
+1761m7 channel_buffers{12|67M9}
+1762i7 num_channels{4|57I9}
+1763i7 num_samples{4|57I9}
+1797V13*SDL_GetAudioStreamData{4|57I9} 1798^7 1799>7 1800>7
+1798p7 stream(467R9)
+1799m7 buf{12|67M9}
+1800i7 len{4|57I9}
+1830V13*SDL_GetAudioStreamAvailable{4|57I9} 1830^42
+1830p42 stream(467R9)
+1872V13*SDL_GetAudioStreamQueued{4|57I9} 1872^39
+1872p39 stream(467R9)
+1896V13*SDL_FlushAudioStream{5|59E12} 1896^35
+1896p35 stream(467R9)
+1921V13*SDL_ClearAudioStream{5|59E12} 1921^35
+1921p35 stream(467R9)
+1949V13*SDL_PauseAudioStreamDevice{5|59E12} 1949^41
+1949p41 stream(467R9)
+1976V13*SDL_ResumeAudioStreamDevice{5|59E12} 1976^42
+1976p42 stream(467R9)
+1999V13*SDL_AudioStreamDevicePaused{5|59E12} 1999^42
+1999p42 stream(467R9)
+2031V13*SDL_LockAudioStream{5|59E12} 2031^34
+2031p34 stream(467R9)
+2053V13*SDL_UnlockAudioStream{5|59E12} 2053^36
+2053p36 stream(467R9)
+2099P9*SDL_AudioStreamCallback 2100>10 2101^10 2102>10 2103>10 2153r18 2209r18
+. 2304r18
+2100m10 arg1{12|67M9}
+2101p10 arg2(467R9)
+2102i10 arg3{4|57I9}
+2103i10 arg4{4|57I9}
+2151V13*SDL_SetAudioStreamGetCallback{5|59E12} 2152^7 2153>7 2154>7
+2152p7 stream(467R9)
+2153p7 callback{2099P9}
+2154m7 userdata{12|67M9}
+2207V13*SDL_SetAudioStreamPutCallback{5|59E12} 2208^7 2209>7 2210>7
+2208p7 stream(467R9)
+2209p7 callback{2099P9}
+2210m7 userdata{12|67M9}
+2235U14*SDL_DestroyAudioStream 2235^38
+2235p38 stream(467R9)
+2301V13*SDL_OpenAudioDeviceStream(467R9) 2302>7 2303^7 2304>7 2305>7
+2302m7 devid{388M12}
+2303p7 spec(419R9)
+2304p7 callback{2099P9}
+2305m7 userdata{12|67M9}
+2346P9*SDL_AudioPostmixCallback 2347>10 2348^10 2349^10 2350>10 2408r18
+2347m10 arg1{12|67M9}
+2348p10 arg2(419R9)
+2349p10 arg3(float)
+2350i10 arg4{4|57I9}
+2406V13*SDL_SetAudioPostmixCallback{5|59E12} 2407>7 2408>7 2409>7
+2407m7 devid{388M12}
+2408p7 callback{2346P9}
+2409m7 userdata{12|67M9}
+2493V13*SDL_LoadWAV_IO{5|59E12} 2494^7 2495>7 2496^7 2497>7 2498^7
+2494p7 src
+2495b7 closeio{5|59E12}
+2496p7 spec(419R9)
+2497m7 audio_buf{12|67M9}
+2498p7 audio_len(10|417M12)
+2538V13*SDL_LoadWAV{5|59E12} 2539>7 2540^7 2541>7 2542^7
+2539p7 path{6|59P9}
+2540p7 spec(419R9)
+2541m7 audio_buf{12|67M9}
+2542p7 audio_len(10|417M12)
+2582V13*SDL_MixAudio{5|59E12} 2583^7 2584^7 2585>7 2586>7 2587>7
+2583p7 dst(10|385M12)
+2584p7 src(10|385M12)
+2585m7 format{244M12}
+2586m7 len{10|417M12}
+2587f7 volume{float}
+2621V13*SDL_ConvertAudioSamples{5|59E12} 2622^7 2623^7 2624>7 2625^7 2626>7
+. 2627^7
+2622p7 src_spec(419R9)
+2623p7 src_data(10|385M12)
+2624i7 src_len{4|57I9}
+2625p7 dst_spec(419R9)
+2626m7 dst_data{12|67M9}
+2627p7 dst_len(4|57I9)
+2644V13*SDL_GetAudioFormatName{6|59P9} 2644>37
+2644m37 format{244M12}
+2664V13*SDL_GetSilenceValueForFormat{4|57I9} 2664>43
+2664m43 format{244M12}
+X 8 sdl3_sdl_iostream_h.ads
+14K9 SDL3_SDL_iostream_h 7|2494r20
+X 9 sdl3_sdl_properties_h.ads
+12K9*SDL3_SDL_properties_h 7|11w6 1211r83 9|693e26
+66M12*SDL_PropertiesID{10|417M12} 7|1211r105
+X 10 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 7|7w6 388r33 2498r26 2542r26 2583r20 2584r20 2586r13
+. 2623r25 10|6557e22
+385M12*Uint8{17|26M12} 7|2583r38 2584r38 2623r43
+417M12*Uint32{17|30M12} 7|388r51 2498r44 2542r44 2586r31
+X 12 system.ads
+37K9*System 7|10w6 1061r17 1112r48 1610r13 1646r17 1647r17 1699r13 1702r18
+. 1761r25 1799r13 2100r17 2154r18 2210r18 2305r18 2347r17 2409r18 2497r19
+. 2541r19 2626r18 12|153e11
+67M9*Address 7|1061r24 1112r55 1610r20 1646r24 1647r24 1699r20 1702r25 1761r32
+. 1799r20 2100r24 2154r25 2210r25 2305r25 2347r24 2409r25 2497r26 2541r26
+. 2626r25
+X 17 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+26M12*uint8_t{18|42M12}
+X 18 x86_64_linux_gnu_bits_types_h.ads
+42M12*uu_uint8_t{4|71M9}
+

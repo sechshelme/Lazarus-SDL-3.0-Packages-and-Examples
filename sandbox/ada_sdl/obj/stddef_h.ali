@@ -1,0 +1,31 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U stddef_h%s		stddef_h.ads		c73021f6 NE OO PK IL
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+G a e
+X 3 interfac.ads
+38K9*Interfaces 232e15 5|6r6 6r24
+X 4 i-c.ads
+29K20*C 597e17 5|6w17 6r35
+57I9*int<integer> 5|100r23
+68M9*unsigned_long 5|70r22
+X 5 stddef_h.ads
+8K9*stddef_h 119l5 119e13
+70M12*size_t{4|68M9}
+100I12*wchar_t{4|57I9}
+

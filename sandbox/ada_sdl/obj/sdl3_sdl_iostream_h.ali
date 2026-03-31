@@ -1,0 +1,359 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_OBSOLESCENT_FEATURES
+
+U sdl3_sdl_iostream_h%s	sdl3_sdl_iostream_h.ads	a1813648 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_properties_h%s  sdl3_sdl_properties_h.ads  sdl3_sdl_properties_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+W stddef_h%s		stddef_h.ads		stddef_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_iostream_h.ads  20260331104513 ad94da00 sdl3_sdl_iostream_h%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_iofromfile sdl3_sdl_iostream_h 306 13 none]
+G c Z s s [sdl_iofrommem sdl3_sdl_iostream_h 357 13 none]
+G c Z s s [sdl_iofromconstmem sdl3_sdl_iostream_h 408 13 none]
+G c Z s s [sdl_iofromdynamicmem sdl3_sdl_iostream_h 442 13 none]
+G c Z s s [sdl_openio sdl3_sdl_iostream_h 477 13 none]
+G c Z s s [sdl_closeio sdl3_sdl_iostream_h 513 13 none]
+G c Z s s [sdl_getioproperties sdl3_sdl_iostream_h 530 13 none]
+G c Z s s [sdl_getiostatus sdl3_sdl_iostream_h 554 13 none]
+G c Z s s [sdl_getiosize sdl3_sdl_iostream_h 572 13 none]
+G c Z s s [sdl_seekio sdl3_sdl_iostream_h 605 13 none]
+G c Z s s [sdl_tellio sdl3_sdl_iostream_h 632 13 none]
+G c Z s s [sdl_readio sdl3_sdl_iostream_h 666 13 none]
+G c Z s s [sdl_writeio sdl3_sdl_iostream_h 709 13 none]
+G c Z s s [sdl_ioprintf sdl3_sdl_iostream_h 737 13 none]
+G c Z s s [sdl_iovprintf sdl3_sdl_iostream_h 762 13 none]
+G c Z s s [sdl_flushio sdl3_sdl_iostream_h 789 13 none]
+G c Z s s [sdl_loadfile_io sdl3_sdl_iostream_h 819 13 none]
+G c Z s s [sdl_loadfile sdl3_sdl_iostream_h 849 13 none]
+G c Z s s [sdl_savefile_io sdl3_sdl_iostream_h 874 13 none]
+G c Z s s [sdl_savefile sdl3_sdl_iostream_h 901 13 none]
+G c Z s s [sdl_readu8 sdl3_sdl_iostream_h 934 13 none]
+G c Z s s [sdl_reads8 sdl3_sdl_iostream_h 957 13 none]
+G c Z s s [sdl_readu16le sdl3_sdl_iostream_h 984 13 none]
+G c Z s s [sdl_reads16le sdl3_sdl_iostream_h 1011 13 none]
+G c Z s s [sdl_readu16be sdl3_sdl_iostream_h 1038 13 none]
+G c Z s s [sdl_reads16be sdl3_sdl_iostream_h 1065 13 none]
+G c Z s s [sdl_readu32le sdl3_sdl_iostream_h 1092 13 none]
+G c Z s s [sdl_reads32le sdl3_sdl_iostream_h 1119 13 none]
+G c Z s s [sdl_readu32be sdl3_sdl_iostream_h 1146 13 none]
+G c Z s s [sdl_reads32be sdl3_sdl_iostream_h 1173 13 none]
+G c Z s s [sdl_readu64le sdl3_sdl_iostream_h 1200 13 none]
+G c Z s s [sdl_reads64le sdl3_sdl_iostream_h 1227 13 none]
+G c Z s s [sdl_readu64be sdl3_sdl_iostream_h 1254 13 none]
+G c Z s s [sdl_reads64be sdl3_sdl_iostream_h 1281 13 none]
+G c Z s s [sdl_writeu8 sdl3_sdl_iostream_h 1308 13 none]
+G c Z s s [sdl_writes8 sdl3_sdl_iostream_h 1326 13 none]
+G c Z s s [sdl_writeu16le sdl3_sdl_iostream_h 1349 13 none]
+G c Z s s [sdl_writes16le sdl3_sdl_iostream_h 1372 13 none]
+G c Z s s [sdl_writeu16be sdl3_sdl_iostream_h 1394 13 none]
+G c Z s s [sdl_writes16be sdl3_sdl_iostream_h 1416 13 none]
+G c Z s s [sdl_writeu32le sdl3_sdl_iostream_h 1439 13 none]
+G c Z s s [sdl_writes32le sdl3_sdl_iostream_h 1462 13 none]
+G c Z s s [sdl_writeu32be sdl3_sdl_iostream_h 1484 13 none]
+G c Z s s [sdl_writes32be sdl3_sdl_iostream_h 1506 13 none]
+G c Z s s [sdl_writeu64le sdl3_sdl_iostream_h 1529 13 none]
+G c Z s s [sdl_writes64le sdl3_sdl_iostream_h 1552 13 none]
+G c Z s s [sdl_writeu64be sdl3_sdl_iostream_h 1574 13 none]
+G c Z s s [sdl_writes64be sdl3_sdl_iostream_h 1596 13 none]
+G c Z s s [sdl_iostreaminterfaceIP sdl3_sdl_iostream_h 113 9 none]
+G c Z s s [sdl_iostreamIP sdl3_sdl_iostream_h 210 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 10r6 11r6 306r36 306r75 737r64 764r13 849r34
+. 902r14
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 10r17 11r17 306r47 306r86 737r75 764r24 849r45
+. 902r25
+57I9*int<integer>
+58I9*short<short_integer>
+59I9*long<long_integer>
+63I9*signed_char<short_short_integer>
+66M9*unsigned
+67M9*unsigned_short
+68M9*unsigned_long
+71M9*unsigned_char
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 7|10w19 130r90 131r62 513r64 789r64 822r17 878r17
+. 878r41 904r42 934r99 957r99 984r103 1011r103 1038r103 1065r103 1092r103
+. 1119r103 1146r103 1173r103 1200r103 1227r103 1254r103 1281r103 1308r93
+. 1326r93 1349r97 1372r97 1394r97 1416r97 1439r97 1462r97 1484r97 1506r97
+. 1529r97 1552r97 1574r97 1596r97
+59B12*bool{4|92E9} 7|130r101 131r73 513r75 789r75 822r28 878r28 878r52 904r53
+. 934r110 957r110 984r114 1011r114 1038r114 1065r114 1092r114 1119r114 1146r114
+. 1173r114 1200r114 1227r114 1254r114 1281r114 1308r104 1326r104 1349r108
+. 1372r108 1394r108 1416r108 1439r108 1462r108 1484r108 1506r108 1529r108
+. 1552r108 1574r108 1596r108
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|11w19 306r49 306r88 737r77 764r26 849r47 902r27
+59P9*chars_ptr 7|306r57 306r96 737r85 764r34 849r55 902r35
+X 7 sdl3_sdl_iostream_h.ads
+14K9*SDL3_SDL_iostream_h 1604l5 1604e24
+16a4*SDL_PROP_IOSTREAM_WINDOWS_HANDLE_POINTER{string}
+17a4*SDL_PROP_IOSTREAM_STDIO_FILE_POINTER{string}
+18a4*SDL_PROP_IOSTREAM_FILE_DESCRIPTOR_NUMBER{string}
+19a4*SDL_PROP_IOSTREAM_ANDROID_AASSET_POINTER{string}
+21a4*SDL_PROP_IOSTREAM_MEMORY_POINTER{string}
+22a4*SDL_PROP_IOSTREAM_MEMORY_SIZE_NUMBER{string}
+23a4*SDL_PROP_IOSTREAM_MEMORY_FREE_FUNC_POINTER{string}
+25a4*SDL_PROP_IOSTREAM_DYNAMIC_MEMORY_POINTER{string}
+26a4*SDL_PROP_IOSTREAM_DYNAMIC_CHUNKSIZE_NUMBER{string}
+64E9*SDL_IOStatus 71e4 124r27 129r27 130r69 554r68
+65n7*SDL_IO_STATUS_READY{64E9}
+66n7*SDL_IO_STATUS_ERROR{64E9}
+67n7*SDL_IO_STATUS_EOF{64E9}
+68n7*SDL_IO_STATUS_NOT_READY{64E9}
+69n7*SDL_IO_STATUS_READONLY{64E9}
+70n7*SDL_IO_STATUS_WRITEONLY{64E9}
+88E9*SDL_IOWhence 92e4 119r20 608r16
+89n7*SDL_IO_SEEK_SET{88E9}
+90n7*SDL_IO_SEEK_CUR{88E9}
+91n7*SDL_IO_SEEK_END{88E9}
+113R9*SDL_IOStreamInterface 133e4 477r49
+114m7*version{9|417M12}
+115p7*size(4|59I9)
+115m31 arg1{11|67M9}
+116p7*seek(4|59I9)
+117m13 arg1{11|67M9}
+118i13 arg2{9|427I12}
+119e13 arg3{88E9}
+120p7*read(4|68M9)
+121m13 arg1{11|67M9}
+122m13 arg2{11|67M9}
+123m13 arg3{10|70M12}
+124p13 arg4(64E9)
+125p7*write(4|68M9)
+126m13 arg1{11|67M9}
+127m13 arg2{11|67M9}
+128m13 arg3{10|70M12}
+129p13 arg4(64E9)
+130p7*flush(4|92E9)
+130m32 arg1{11|67M9}
+130p55 arg2(64E9)
+131p7*close(4|92E9)
+131m32 arg1{11|67M9}
+210R9*SDL_IOStream 306r121 357r88 408r93 442r48 477r113 513r43 530r51 554r47
+. 572r45 606r24 632r42 667r24 710r24 737r44 763r24 789r43 820r20 875r20 934r38
+. 957r38 984r41 1011r41 1038r41 1065r41 1092r41 1119r41 1146r41 1173r41 1200r41
+. 1227r41 1254r41 1281r41 1308r39 1326r39 1349r42 1372r42 1394r42 1416r42
+. 1439r42 1462r42 1484r42 1506r42 1529r42 1552r42 1574r42 1596r42
+306V13*SDL_IOFromFile(210R9) 306>29 306>68
+306p29 file{6|59P9}
+306p68 mode{6|59P9}
+357V13*SDL_IOFromMem(210R9) 357>28 357>50
+357m28 mem{11|67M9}
+357m50 size{10|70M12}
+408V13*SDL_IOFromConstMem(210R9) 408>33 408>55
+408m33 mem{11|67M9}
+408m55 size{10|70M12}
+442V13*SDL_IOFromDynamicMem(210R9)
+477V13*SDL_OpenIO(210R9) 477^25 477>72
+477p25 iface(113R9)
+477m72 userdata{11|67M9}
+513V13*SDL_CloseIO{5|59E12} 513^26
+513p26 context(210R9)
+530V13*SDL_GetIOProperties{8|66M12} 530^34
+530p34 context(210R9)
+554V13*SDL_GetIOStatus{64E9} 554^30
+554p30 context(210R9)
+572V13*SDL_GetIOSize{9|427I12} 572^28
+572p28 context(210R9)
+605V13*SDL_SeekIO{9|427I12} 606^7 607>7 608>7
+606p7 context(210R9)
+607i7 offset{9|427I12}
+608e7 whence{88E9}
+632V13*SDL_TellIO{9|427I12} 632^25
+632p25 context(210R9)
+666V13*SDL_ReadIO{10|70M12} 667^7 668>7 669>7
+667p7 context(210R9)
+668m7 ptr{11|67M9}
+669m7 size{10|70M12}
+709V13*SDL_WriteIO{10|70M12} 710^7 711>7 712>7
+710p7 context(210R9)
+711m7 ptr{11|67M9}
+712m7 size{10|70M12}
+737V13*SDL_IOprintf{10|70M12} 737^27 737>58
+737p27 context(210R9)
+737p58 fmt{6|59P9}
+762V13*SDL_IOvprintf{10|70M12} 763^7 764>7 765^7
+763p7 context(210R9)
+764p7 fmt{6|59P9}
+765p7 ap(11|67M9)
+789V13*SDL_FlushIO{5|59E12} 789^26
+789p26 context(210R9)
+819V13*SDL_LoadFile_IO{11|67M9} 820^7 821^7 822>7
+820p7 src(210R9)
+821p7 datasize(10|70M12)
+822b7 closeio{5|59E12}
+849V13*SDL_LoadFile{11|67M9} 849>27 849^66
+849p27 file{6|59P9}
+849p66 datasize(10|70M12)
+874V13*SDL_SaveFile_IO{5|59E12} 875^7 876>7 877>7 878>7
+875p7 src(210R9)
+876m7 data{11|67M9}
+877m7 datasize{10|70M12}
+878b7 closeio{5|59E12}
+901V13*SDL_SaveFile{5|59E12} 902>7 903>7 904>7
+902p7 file{6|59P9}
+903m7 data{11|67M9}
+904m7 datasize{10|70M12}
+934V13*SDL_ReadU8{5|59E12} 934^25 934^52
+934p25 src(210R9)
+934p52 value(9|385M12)
+957V13*SDL_ReadS8{5|59E12} 957^25 957^52
+957p25 src(210R9)
+957p52 value(9|377I12)
+984V13*SDL_ReadU16LE{5|59E12} 984^28 984^55
+984p28 src(210R9)
+984p55 value(9|401M12)
+1011V13*SDL_ReadS16LE{5|59E12} 1011^28 1011^55
+1011p28 src(210R9)
+1011p55 value(9|393I12)
+1038V13*SDL_ReadU16BE{5|59E12} 1038^28 1038^55
+1038p28 src(210R9)
+1038p55 value(9|401M12)
+1065V13*SDL_ReadS16BE{5|59E12} 1065^28 1065^55
+1065p28 src(210R9)
+1065p55 value(9|393I12)
+1092V13*SDL_ReadU32LE{5|59E12} 1092^28 1092^55
+1092p28 src(210R9)
+1092p55 value(9|417M12)
+1119V13*SDL_ReadS32LE{5|59E12} 1119^28 1119^55
+1119p28 src(210R9)
+1119p55 value(9|409I12)
+1146V13*SDL_ReadU32BE{5|59E12} 1146^28 1146^55
+1146p28 src(210R9)
+1146p55 value(9|417M12)
+1173V13*SDL_ReadS32BE{5|59E12} 1173^28 1173^55
+1173p28 src(210R9)
+1173p55 value(9|409I12)
+1200V13*SDL_ReadU64LE{5|59E12} 1200^28 1200^55
+1200p28 src(210R9)
+1200p55 value(9|437M12)
+1227V13*SDL_ReadS64LE{5|59E12} 1227^28 1227^55
+1227p28 src(210R9)
+1227p55 value(9|427I12)
+1254V13*SDL_ReadU64BE{5|59E12} 1254^28 1254^55
+1254p28 src(210R9)
+1254p55 value(9|437M12)
+1281V13*SDL_ReadS64BE{5|59E12} 1281^28 1281^55
+1281p28 src(210R9)
+1281p55 value(9|427I12)
+1308V13*SDL_WriteU8{5|59E12} 1308^26 1308>53
+1308p26 dst(210R9)
+1308m53 value{9|385M12}
+1326V13*SDL_WriteS8{5|59E12} 1326^26 1326>53
+1326p26 dst(210R9)
+1326i53 value{9|377I12}
+1349V13*SDL_WriteU16LE{5|59E12} 1349^29 1349>56
+1349p29 dst(210R9)
+1349m56 value{9|401M12}
+1372V13*SDL_WriteS16LE{5|59E12} 1372^29 1372>56
+1372p29 dst(210R9)
+1372i56 value{9|393I12}
+1394V13*SDL_WriteU16BE{5|59E12} 1394^29 1394>56
+1394p29 dst(210R9)
+1394m56 value{9|401M12}
+1416V13*SDL_WriteS16BE{5|59E12} 1416^29 1416>56
+1416p29 dst(210R9)
+1416i56 value{9|393I12}
+1439V13*SDL_WriteU32LE{5|59E12} 1439^29 1439>56
+1439p29 dst(210R9)
+1439m56 value{9|417M12}
+1462V13*SDL_WriteS32LE{5|59E12} 1462^29 1462>56
+1462p29 dst(210R9)
+1462i56 value{9|409I12}
+1484V13*SDL_WriteU32BE{5|59E12} 1484^29 1484>56
+1484p29 dst(210R9)
+1484m56 value{9|417M12}
+1506V13*SDL_WriteS32BE{5|59E12} 1506^29 1506>56
+1506p29 dst(210R9)
+1506i56 value{9|409I12}
+1529V13*SDL_WriteU64LE{5|59E12} 1529^29 1529>56
+1529p29 dst(210R9)
+1529m56 value{9|437M12}
+1552V13*SDL_WriteS64LE{5|59E12} 1552^29 1552>56
+1552p29 dst(210R9)
+1552i56 value{9|427I12}
+1574V13*SDL_WriteU64BE{5|59E12} 1574^29 1574>56
+1574p29 dst(210R9)
+1574m56 value{9|437M12}
+1596V13*SDL_WriteS64BE{5|59E12} 1596^29 1596>56
+1596p29 dst(210R9)
+1596i56 value{9|427I12}
+X 8 sdl3_sdl_properties_h.ads
+12K9*SDL3_SDL_properties_h 7|12w6 530r72 8|693e26
+66M12*SDL_PropertiesID{9|417M12} 7|530r94
+X 9 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 7|7w6 114r25 115r61 118r20 119r41 572r66 607r16 608r37
+. 632r63 934r67 957r67 984r70 1011r70 1038r70 1065r70 1092r70 1119r70 1146r70
+. 1173r70 1200r70 1227r70 1254r70 1281r70 1308r61 1326r61 1349r64 1372r64
+. 1394r64 1416r64 1439r64 1462r64 1484r64 1506r64 1529r64 1552r64 1574r64
+. 1596r64 9|6557e22
+377I12*Sint8{15|26I12} 7|957r85 1326r79
+385M12*Uint8{16|26M12} 7|934r85 1308r79
+393I12*Sint16{15|28I12} 7|1011r88 1065r88 1372r82 1416r82
+401M12*Uint16{16|28M12} 7|984r88 1038r88 1349r82 1394r82
+409I12*Sint32{15|30I12} 7|1119r88 1173r88 1462r82 1506r82
+417M12*Uint32{16|30M12} 7|114r43 1092r88 1146r88 1439r82 1484r82
+427I12*Sint64{15|32I12} 7|115r79 118r38 119r59 572r84 607r34 608r55 632r81
+. 1227r88 1281r88 1552r82 1596r82
+437M12*Uint64{16|32M12} 7|1200r88 1254r88 1529r82 1574r82
+X 10 stddef_h.ads
+8K9*stddef_h 7|9w6 123r20 124r48 128r20 129r48 357r57 408r62 669r14 669r38
+. 712r14 712r38 738r16 765r42 821r25 849r84 877r18 904r18 10|119e13
+70M12*size_t{4|68M9} 7|123r29 124r57 128r29 129r57 357r66 408r71 669r23 669r47
+. 712r23 712r47 738r25 765r51 821r34 849r93 877r27 904r27
+X 11 system.ads
+37K9*System 7|8w6 115r38 117r20 121r20 122r20 126r20 127r20 130r39 131r39
+. 357r34 408r39 477r83 668r13 711r13 765r19 822r41 849r108 876r14 903r14
+. 11|153e11
+67M9*Address 7|115r45 117r27 121r27 122r27 126r27 127r27 130r46 131r46 357r41
+. 408r46 477r90 668r20 711r20 765r26 822r48 849r115 876r21 903r21
+X 15 x86_64_linux_gnu_bits_stdint_intn_h.ads
+26I12*int8_t{17|40I12}
+28I12*int16_t{17|44I12}
+30I12*int32_t{17|48I12}
+32I12*int64_t{17|52I12}
+X 16 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+26M12*uint8_t{17|42M12}
+28M12*uint16_t{17|46M12}
+30M12*uint32_t{17|50M12}
+X 17 x86_64_linux_gnu_bits_types_h.ads
+40I12*uu_int8_t{4|63I9}
+42M12*uu_uint8_t{4|71M9}
+44I12*uu_int16_t{4|58I9}
+46M12*uu_uint16_t{4|67M9}
+48I12*uu_int32_t{4|57I9}
+50M12*uu_uint32_t{4|66M9}
+52I12*uu_int64_t{4|59I9}
+

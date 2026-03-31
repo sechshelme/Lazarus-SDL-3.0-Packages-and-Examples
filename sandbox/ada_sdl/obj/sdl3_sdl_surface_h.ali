@@ -1,0 +1,510 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_OBSOLESCENT_FEATURES
+
+U sdl3_sdl_surface_h%s	sdl3_sdl_surface_h.ads	2e3f8c26 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_blendmode_h%s  sdl3_sdl_blendmode_h.ads  sdl3_sdl_blendmode_h.ali
+Y sdl3_sdl_iostream_h%s	sdl3_sdl_iostream_h.ads	sdl3_sdl_iostream_h.ali
+W sdl3_sdl_pixels_h%s	sdl3_sdl_pixels_h.ads	sdl3_sdl_pixels_h.ali
+W sdl3_sdl_properties_h%s  sdl3_sdl_properties_h.ads  sdl3_sdl_properties_h.ali
+Y sdl3_sdl_rect_h%s	sdl3_sdl_rect_h.ads	sdl3_sdl_rect_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_blendmode_h.ads  20260331104513 e93fac7e sdl3_sdl_blendmode_h%s
+D sdl3_sdl_iostream_h.ads  20260331104513 ad94da00 sdl3_sdl_iostream_h%s
+D sdl3_sdl_pixels_h.ads	20260331104513 93ccfcde sdl3_sdl_pixels_h%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_rect_h.ads	20260331104513 fff6e78f sdl3_sdl_rect_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D sdl3_sdl_surface_h.ads  20260331104513 91d140a0 sdl3_sdl_surface_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_createsurface sdl3_sdl_surface_h 189 13 none]
+G c Z s s [sdl_createsurfacefrom sdl3_sdl_surface_h 226 13 none]
+G c Z s s [sdl_destroysurface sdl3_sdl_surface_h 251 14 none]
+G c Z s s [sdl_getsurfaceproperties sdl3_sdl_surface_h 295 13 none]
+G c Z s s [sdl_setsurfacecolorspace sdl3_sdl_surface_h 320 13 none]
+G c Z s s [sdl_getsurfacecolorspace sdl3_sdl_surface_h 344 13 none]
+G c Z s s [sdl_createsurfacepalette sdl3_sdl_surface_h 379 13 none]
+G c Z s s [sdl_setsurfacepalette sdl3_sdl_surface_h 406 13 none]
+G c Z s s [sdl_getsurfacepalette sdl3_sdl_surface_h 425 13 none]
+G c Z s s [sdl_addsurfacealternateimage sdl3_sdl_surface_h 457 13 none]
+G c Z s s [sdl_surfacehasalternateimages sdl3_sdl_surface_h 477 13 none]
+G c Z s s [sdl_getsurfaceimages sdl3_sdl_surface_h 509 13 none]
+G c Z s s [sdl_removesurfacealternateimages sdl3_sdl_surface_h 532 14 none]
+G c Z s s [sdl_locksurface sdl3_sdl_surface_h 564 13 none]
+G c Z s s [sdl_unlocksurface sdl3_sdl_surface_h 583 14 none]
+G c Z s s [sdl_loadsurface_io sdl3_sdl_surface_h 608 13 none]
+G c Z s s [sdl_loadsurface sdl3_sdl_surface_h 631 13 none]
+G c Z s s [sdl_loadbmp_io sdl3_sdl_surface_h 657 13 none]
+G c Z s s [sdl_loadbmp sdl3_sdl_surface_h 681 13 none]
+G c Z s s [sdl_savebmp_io sdl3_sdl_surface_h 711 13 none]
+G c Z s s [sdl_savebmp sdl3_sdl_surface_h 742 13 none]
+G c Z s s [sdl_loadpng_io sdl3_sdl_surface_h 772 13 none]
+G c Z s s [sdl_loadpng sdl3_sdl_surface_h 800 13 none]
+G c Z s s [sdl_savepng_io sdl3_sdl_surface_h 824 13 none]
+G c Z s s [sdl_savepng sdl3_sdl_surface_h 849 13 none]
+G c Z s s [sdl_setsurfacerle sdl3_sdl_surface_h 875 13 none]
+G c Z s s [sdl_surfacehasrle sdl3_sdl_surface_h 895 13 none]
+G c Z s s [sdl_setsurfacecolorkey sdl3_sdl_surface_h 926 13 none]
+G c Z s s [sdl_surfacehascolorkey sdl3_sdl_surface_h 950 13 none]
+G c Z s s [sdl_getsurfacecolorkey sdl3_sdl_surface_h 976 13 none]
+G c Z s s [sdl_setsurfacecolormod sdl3_sdl_surface_h 1006 13 none]
+G c Z s s [sdl_getsurfacecolormod sdl3_sdl_surface_h 1034 13 none]
+G c Z s s [sdl_setsurfacealphamod sdl3_sdl_surface_h 1065 13 none]
+G c Z s s [sdl_getsurfacealphamod sdl3_sdl_surface_h 1086 13 none]
+G c Z s s [sdl_setsurfaceblendmode sdl3_sdl_surface_h 1111 13 none]
+G c Z s s [sdl_getsurfaceblendmode sdl3_sdl_surface_h 1131 13 none]
+G c Z s s [sdl_setsurfacecliprect sdl3_sdl_surface_h 1159 13 none]
+G c Z s s [sdl_getsurfacecliprect sdl3_sdl_surface_h 1185 13 none]
+G c Z s s [sdl_flipsurface sdl3_sdl_surface_h 1204 13 none]
+G c Z s s [sdl_rotatesurface sdl3_sdl_surface_h 1237 13 none]
+G c Z s s [sdl_duplicatesurface sdl3_sdl_surface_h 1262 13 none]
+G c Z s s [sdl_scalesurface sdl3_sdl_surface_h 1288 13 none]
+G c Z s s [sdl_convertsurface sdl3_sdl_surface_h 1325 13 none]
+G c Z s s [sdl_convertsurfaceandcolorspace sdl3_sdl_surface_h 1358 13 none]
+G c Z s s [sdl_convertpixels sdl3_sdl_surface_h 1391 13 none]
+G c Z s s [sdl_convertpixelsandcolorspace sdl3_sdl_surface_h 1436 13 none]
+G c Z s s [sdl_premultiplyalpha sdl3_sdl_surface_h 1478 13 none]
+G c Z s s [sdl_premultiplysurfacealpha sdl3_sdl_surface_h 1509 13 none]
+G c Z s s [sdl_clearsurface sdl3_sdl_surface_h 1536 13 none]
+G c Z s s [sdl_fillsurfacerect sdl3_sdl_surface_h 1573 13 none]
+G c Z s s [sdl_fillsurfacerects sdl3_sdl_surface_h 1608 13 none]
+G c Z s s [sdl_blitsurface sdl3_sdl_surface_h 1689 13 none]
+G c Z s s [sdl_blitsurfaceunchecked sdl3_sdl_surface_h 1721 13 none]
+G c Z s s [sdl_blitsurfacescaled sdl3_sdl_surface_h 1753 13 none]
+G c Z s s [sdl_blitsurfaceuncheckedscaled sdl3_sdl_surface_h 1787 13 none]
+G c Z s s [sdl_stretchsurface sdl3_sdl_surface_h 1819 13 none]
+G c Z s s [sdl_blitsurfacetiled sdl3_sdl_surface_h 1853 13 none]
+G c Z s s [sdl_blitsurfacetiledwithscale sdl3_sdl_surface_h 1890 13 none]
+G c Z s s [sdl_blitsurface9grid sdl3_sdl_surface_h 1936 13 none]
+G c Z s s [sdl_mapsurfacergb sdl3_sdl_surface_h 1983 13 none]
+G c Z s s [sdl_mapsurfacergba sdl3_sdl_surface_h 2025 13 none]
+G c Z s s [sdl_readsurfacepixel sdl3_sdl_surface_h 2064 13 none]
+G c Z s s [sdl_readsurfacepixelfloat sdl3_sdl_surface_h 2102 13 none]
+G c Z s s [sdl_writesurfacepixel sdl3_sdl_surface_h 2139 13 none]
+G c Z s s [sdl_writesurfacepixelfloat sdl3_sdl_surface_h 2173 13 none]
+G c Z s s [sdl_surfaceIP sdl3_sdl_surface_h 151 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 13|6r6 6r24 11r6 13r6 631r37 681r33 742r63 800r33
+. 849r63
+X 4 i-c.ads
+29K20*C 597e17 13|6w17 6r35 11r17 13r17 631r48 681r44 742r74 800r44 849r74
+57I9*int<integer> 13|95r29 154r19 155r19 156r23 158r26 190r15 191r16 227r15
+. 228r16 231r15 509r80 1290r15 1291r16 1392r15 1393r16 1396r19 1399r19 1437r15
+. 1438r16 1443r19 1448r19 1479r15 1480r16 1483r19 1486r19 1611r15 1939r20
+. 1940r21 1941r20 1942r23 2066r11 2067r11 2104r11 2105r11 2141r11 2142r11
+. 2175r11 2176r11
+66M9*unsigned
+71M9*unsigned_char
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 13|11w19 320r123 406r121 457r108 477r81 564r67 608r90
+. 657r86 714r17 714r41 742r102 772r86 827r17 827r41 849r102 875r72 875r96
+. 895r69 928r17 929r46 950r74 976r113 1010r43 1038r50 1065r107 1086r114 1111r123
+. 1131r130 1159r123 1185r114 1204r88 1399r31 1448r31 1487r16 1487r40 1509r81
+. 1509r105 1541r25 1576r48 1612r48 1693r66 1725r66 1758r41 1792r41 1824r41
+. 1857r66 1896r66 1946r66 2071r50 2109r32 2146r43 2180r25
+59B12*bool{4|92E9} 13|320r134 406r132 457r119 477r92 564r78 608r101 657r97
+. 714r28 714r52 742r113 772r97 827r28 827r52 849r113 875r83 875r107 895r80
+. 928r28 929r57 950r85 976r124 1010r54 1038r61 1065r118 1086r125 1111r134
+. 1131r141 1159r134 1185r125 1204r99 1399r42 1448r42 1487r27 1487r51 1509r92
+. 1509r116 1541r36 1576r59 1612r59 1693r77 1725r77 1758r52 1792r52 1824r52
+. 1857r77 1896r77 1946r77 2071r61 2109r43 2146r54 2180r36
+X 6 i-cstrin.ads
+44K22*Strings 156e25 13|13w19 631r50 681r46 742r76 800r46 849r76
+59P9*chars_ptr 13|631r58 681r54 742r84 800r54 849r84
+X 7 sdl3_sdl_blendmode_h.ads
+9K9*SDL3_SDL_blendmode_h 212e25 13|14w6 1111r80 1131r87
+58M12*SDL_BlendMode{12|417M12} 13|1111r101 1131r108
+X 8 sdl3_sdl_iostream_h.ads
+14K9 SDL3_SDL_iostream_h 13|608r46 657r42 713r20 772r42 826r20
+X 9 sdl3_sdl_pixels_h.ads
+11K9*SDL3_SDL_pixels_h 1548e22 13|8w6 153r24 192r16 229r16 320r82 344r76
+. 379r83 406r83 425r80 1325r72 1360r16 1361r24 1362r20 1394r20 1397r20 1439r20
+. 1440r24 1444r20 1445r24 1481r20 1484r20
+545M12*SDL_PixelFormat{4|66M9} 13|153r42 192r34 229r34 1325r90 1360r34 1394r38
+. 1397r38 1439r38 1444r38 1481r38 1484r38
+1023M12*SDL_Colorspace{4|66M9} 13|320r100 344r94 1362r38 1440r42 1445r42
+1166R9*SDL_Palette 1172e4 13|379r101 406r101 425r98 1361r42
+X 10 sdl3_sdl_properties_h.ads
+12K9*SDL3_SDL_properties_h 693e26 13|10w6 295r76 1363r15 1441r24 1446r24
+66M12*SDL_PropertiesID{12|417M12} 13|295r98 1363r37 1441r46 1446r46
+X 11 sdl3_sdl_rect_h.ads
+9K9 SDL3_SDL_rect_h 13|1159r90 1185r81 1575r30 1610r31 1691r33 1693r33 1723r33
+. 1725r33 1755r33 1757r33 1789r33 1791r33 1821r33 1823r33 1855r33 1857r33
+. 1892r33 1896r33 1938r33 1946r33
+X 12 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 6557e22 13|7w6 81r32 929r13 976r80 1008r11 1009r11
+. 1010r11 1036r18 1037r18 1038r18 1065r75 1086r82 1576r15 1612r15 1985r11
+. 1986r11 1987r11 1987r43 2027r11 2028r11 2029r11 2030r11 2030r43 2068r18
+. 2069r18 2070r18 2071r18 2143r11 2144r11 2145r11 2146r11
+385M12*Uint8{20|26M12} 13|1008r29 1009r29 1010r29 1036r36 1037r36 1038r36
+. 1065r93 1086r100 1985r29 1986r29 1987r29 2027r29 2028r29 2029r29 2030r29
+. 2068r36 2069r36 2070r36 2071r36 2143r29 2144r29 2145r29 2146r29
+417M12*Uint32{20|30M12} 13|81r50 929r31 976r98 1576r33 1612r33 1987r61 2030r61
+X 13 sdl3_sdl_surface_h.ads
+17K9*SDL3_SDL_surface_h 2186l5 2186e23
+19N4*SDL_SURFACE_PREALLOCATED
+20N4*SDL_SURFACE_LOCK_NEEDED
+21N4*SDL_SURFACE_LOCKED
+22N4*SDL_SURFACE_SIMD_ALIGNED
+26a4*SDL_PROP_SURFACE_SDR_WHITE_POINT_FLOAT{string}
+27a4*SDL_PROP_SURFACE_HDR_HEADROOM_FLOAT{string}
+28a4*SDL_PROP_SURFACE_TONEMAP_OPERATOR_STRING{string}
+29a4*SDL_PROP_SURFACE_HOTSPOT_X_NUMBER{string}
+30a4*SDL_PROP_SURFACE_HOTSPOT_Y_NUMBER{string}
+31a4*SDL_PROP_SURFACE_ROTATION_FLOAT{string}
+81M12*SDL_SurfaceFlags{12|417M12} 152r23
+95I12*SDL_ScaleMode{4|57I9} 96r51 97r51 98r50 99r52 1292r19 1758r19 1792r19
+. 1824r19 1894r19 1944r19
+96i4*SDL_ScaleMode_SDL_SCALEMODE_INVALID{95I12}
+97i4*SDL_ScaleMode_SDL_SCALEMODE_NEAREST{95I12}
+98i4*SDL_ScaleMode_SDL_SCALEMODE_LINEAR{95I12}
+99i4*SDL_ScaleMode_SDL_SCALEMODE_PIXELART{95I12}
+110E9*SDL_FlipMode 115e4 1204r67
+111n7*SDL_FLIP_NONE{110E9}
+112n7*SDL_FLIP_HORIZONTAL{110E9}
+113n7*SDL_FLIP_VERTICAL{110E9}
+114n7*SDL_FLIP_HORIZONTAL_AND_VERTICAL{110E9}
+151R9*SDL_Surface 161e4 192r65 231r34 251r51 295r56 320r56 344r56 379r56
+. 406r53 425r53 457r60 457r88 477r61 509r52 532r65 564r47 583r50 608r121
+. 631r83 657r117 681r79 712r24 742r43 772r117 800r79 825r24 849r43 875r49
+. 895r49 927r24 950r54 976r54 1007r24 1035r24 1065r54 1086r54 1111r55 1131r55
+. 1159r54 1185r54 1204r47 1237r49 1237r91 1262r52 1262r79 1289r24 1292r48
+. 1325r50 1325r121 1359r24 1363r69 1509r59 1537r24 1574r20 1609r20 1690r20
+. 1692r20 1722r20 1724r20 1754r20 1756r20 1788r20 1790r20 1820r20 1822r20
+. 1854r20 1856r20 1891r20 1895r20 1937r20 1945r20 1984r24 2026r24 2065r24
+. 2103r24 2140r24 2174r24
+152m7*flags{81M12}
+153m7*format{9|545M12}
+154i7*w{4|57I9}
+155i7*h{4|57I9}
+156i7*pitch{4|57I9}
+157m7*pixels{15|67M9}
+158i7*refcount{4|57I9}
+159m7*reserved{15|67M9}
+189V13*SDL_CreateSurface(151R9) 190>7 191>7 192>7
+190i7 width{4|57I9}
+191i7 height{4|57I9}
+192m7 format{9|545M12}
+226V13*SDL_CreateSurfaceFrom(151R9) 227>7 228>7 229>7 230>7 231>7
+227i7 width{4|57I9}
+228i7 height{4|57I9}
+229m7 format{9|545M12}
+230m7 pixels{15|67M9}
+231i7 pitch{4|57I9}
+251U14*SDL_DestroySurface 251^34
+251p34 surface(151R9)
+295V13*SDL_GetSurfaceProperties{10|66M12} 295^39
+295p39 surface(151R9)
+320V13*SDL_SetSurfaceColorspace{5|59E12} 320^39 320>69
+320p39 surface(151R9)
+320m69 colorspace{9|1023M12}
+344V13*SDL_GetSurfaceColorspace{9|1023M12} 344^39
+344p39 surface(151R9)
+379V13*SDL_CreateSurfacePalette(9|1166R9) 379^39
+379p39 surface(151R9)
+406V13*SDL_SetSurfacePalette{5|59E12} 406^36 406^66
+406p36 surface(151R9)
+406p66 palette(9|1166R9)
+425V13*SDL_GetSurfacePalette(9|1166R9) 425^36
+425p36 surface(151R9)
+457V13*SDL_AddSurfaceAlternateImage{5|59E12} 457^43 457^73
+457p43 surface(151R9)
+457p73 image(151R9)
+477V13*SDL_SurfaceHasAlternateImages{5|59E12} 477^44
+477p44 surface(151R9)
+509V13*SDL_GetSurfaceImages{15|67M9} 509^35 509^65
+509p35 surface(151R9)
+509p65 count(4|57I9)
+532U14*SDL_RemoveSurfaceAlternateImages 532^48
+532p48 surface(151R9)
+564V13*SDL_LockSurface{5|59E12} 564^30
+564p30 surface(151R9)
+583U14*SDL_UnlockSurface 583^33
+583p33 surface(151R9)
+608V13*SDL_LoadSurface_IO(151R9) 608^33 608>80
+608p33 src
+608b80 closeio{5|59E12}
+631V13*SDL_LoadSurface(151R9) 631>30
+631p30 file{6|59P9}
+657V13*SDL_LoadBMP_IO(151R9) 657^29 657>76
+657p29 src
+657b76 closeio{5|59E12}
+681V13*SDL_LoadBMP(151R9) 681>26
+681p26 file{6|59P9}
+711V13*SDL_SaveBMP_IO{5|59E12} 712^7 713^7 714>7
+712p7 surface(151R9)
+713p7 dst
+714b7 closeio{5|59E12}
+742V13*SDL_SaveBMP{5|59E12} 742^26 742>56
+742p26 surface(151R9)
+742p56 file{6|59P9}
+772V13*SDL_LoadPNG_IO(151R9) 772^29 772>76
+772p29 src
+772b76 closeio{5|59E12}
+800V13*SDL_LoadPNG(151R9) 800>26
+800p26 file{6|59P9}
+824V13*SDL_SavePNG_IO{5|59E12} 825^7 826^7 827>7
+825p7 surface(151R9)
+826p7 dst
+827b7 closeio{5|59E12}
+849V13*SDL_SavePNG{5|59E12} 849^26 849>56
+849p26 surface(151R9)
+849p56 file{6|59P9}
+875V13*SDL_SetSurfaceRLE{5|59E12} 875^32 875>62
+875p32 surface(151R9)
+875b62 enabled{5|59E12}
+895V13*SDL_SurfaceHasRLE{5|59E12} 895^32
+895p32 surface(151R9)
+926V13*SDL_SetSurfaceColorKey{5|59E12} 927^7 928>7 929>7
+927p7 surface(151R9)
+928b7 enabled{5|59E12}
+929m7 key{12|417M12}
+950V13*SDL_SurfaceHasColorKey{5|59E12} 950^37
+950p37 surface(151R9)
+976V13*SDL_GetSurfaceColorKey{5|59E12} 976^37 976^67
+976p37 surface(151R9)
+976p67 key(12|417M12)
+1006V13*SDL_SetSurfaceColorMod{5|59E12} 1007^7 1008>7 1009>7 1010>7
+1007p7 surface(151R9)
+1008m7 r{12|385M12}
+1009m7 g{12|385M12}
+1010m7 b{12|385M12}
+1034V13*SDL_GetSurfaceColorMod{5|59E12} 1035^7 1036^7 1037^7 1038^7
+1035p7 surface(151R9)
+1036p7 r(12|385M12)
+1037p7 g(12|385M12)
+1038p7 b(12|385M12)
+1065V13*SDL_SetSurfaceAlphaMod{5|59E12} 1065^37 1065>67
+1065p37 surface(151R9)
+1065m67 alpha{12|385M12}
+1086V13*SDL_GetSurfaceAlphaMod{5|59E12} 1086^37 1086^67
+1086p37 surface(151R9)
+1086p67 alpha(12|385M12)
+1111V13*SDL_SetSurfaceBlendMode{5|59E12} 1111^38 1111>68
+1111p38 surface(151R9)
+1111m68 blendMode{7|58M12}
+1131V13*SDL_GetSurfaceBlendMode{5|59E12} 1131^38 1131^68
+1131p38 surface(151R9)
+1131p68 blendMode(7|58M12)
+1159V13*SDL_SetSurfaceClipRect{5|59E12} 1159^37 1159^67
+1159p37 surface(151R9)
+1159p67 rect
+1185V13*SDL_GetSurfaceClipRect{5|59E12} 1185^37 1185^67
+1185p37 surface(151R9)
+1185p67 rect
+1204V13*SDL_FlipSurface{5|59E12} 1204^30 1204>60
+1204p30 surface(151R9)
+1204e60 flip{110E9}
+1237V13*SDL_RotateSurface(151R9) 1237^32 1237>62
+1237p32 surface(151R9)
+1237f62 angle{float}
+1262V13*SDL_DuplicateSurface(151R9) 1262^35
+1262p35 surface(151R9)
+1288V13*SDL_ScaleSurface(151R9) 1289^7 1290>7 1291>7 1292>7
+1289p7 surface(151R9)
+1290i7 width{4|57I9}
+1291i7 height{4|57I9}
+1292i7 scaleMode{95I12}
+1325V13*SDL_ConvertSurface(151R9) 1325^33 1325>63
+1325p33 surface(151R9)
+1325m63 format{9|545M12}
+1358V13*SDL_ConvertSurfaceAndColorspace(151R9) 1359^7 1360>7 1361^7 1362>7
+. 1363>7
+1359p7 surface(151R9)
+1360m7 format{9|545M12}
+1361p7 palette(9|1166R9)
+1362m7 colorspace{9|1023M12}
+1363m7 props{10|66M12}
+1391V13*SDL_ConvertPixels{5|59E12} 1392>7 1393>7 1394>7 1395>7 1396>7 1397>7
+. 1398>7 1399>7
+1392i7 width{4|57I9}
+1393i7 height{4|57I9}
+1394m7 src_format{9|545M12}
+1395m7 src{15|67M9}
+1396i7 src_pitch{4|57I9}
+1397m7 dst_format{9|545M12}
+1398m7 dst{15|67M9}
+1399i7 dst_pitch{4|57I9}
+1436V13*SDL_ConvertPixelsAndColorspace{5|59E12} 1437>7 1438>7 1439>7 1440>7
+. 1441>7 1442>7 1443>7 1444>7 1445>7 1446>7 1447>7 1448>7
+1437i7 width{4|57I9}
+1438i7 height{4|57I9}
+1439m7 src_format{9|545M12}
+1440m7 src_colorspace{9|1023M12}
+1441m7 src_properties{10|66M12}
+1442m7 src{15|67M9}
+1443i7 src_pitch{4|57I9}
+1444m7 dst_format{9|545M12}
+1445m7 dst_colorspace{9|1023M12}
+1446m7 dst_properties{10|66M12}
+1447m7 dst{15|67M9}
+1448i7 dst_pitch{4|57I9}
+1478V13*SDL_PremultiplyAlpha{5|59E12} 1479>7 1480>7 1481>7 1482>7 1483>7
+. 1484>7 1485>7 1486>7 1487>7
+1479i7 width{4|57I9}
+1480i7 height{4|57I9}
+1481m7 src_format{9|545M12}
+1482m7 src{15|67M9}
+1483i7 src_pitch{4|57I9}
+1484m7 dst_format{9|545M12}
+1485m7 dst{15|67M9}
+1486i7 dst_pitch{4|57I9}
+1487b7 linear{5|59E12}
+1509V13*SDL_PremultiplySurfaceAlpha{5|59E12} 1509^42 1509>72
+1509p42 surface(151R9)
+1509b72 linear{5|59E12}
+1536V13*SDL_ClearSurface{5|59E12} 1537^7 1538>7 1539>7 1540>7 1541>7
+1537p7 surface(151R9)
+1538f7 r{float}
+1539f7 g{float}
+1540f7 b{float}
+1541f7 a{float}
+1573V13*SDL_FillSurfaceRect{5|59E12} 1574^7 1575^7 1576>7
+1574p7 dst(151R9)
+1575p7 rect
+1576m7 color{12|417M12}
+1608V13*SDL_FillSurfaceRects{5|59E12} 1609^7 1610^7 1611>7 1612>7
+1609p7 dst(151R9)
+1610p7 rects
+1611i7 count{4|57I9}
+1612m7 color{12|417M12}
+1689V13*SDL_BlitSurface{5|59E12} 1690^7 1691^7 1692^7 1693^7
+1690p7 src(151R9)
+1691p7 srcrect
+1692p7 dst(151R9)
+1693p7 dstrect
+1721V13*SDL_BlitSurfaceUnchecked{5|59E12} 1722^7 1723^7 1724^7 1725^7
+1722p7 src(151R9)
+1723p7 srcrect
+1724p7 dst(151R9)
+1725p7 dstrect
+1753V13*SDL_BlitSurfaceScaled{5|59E12} 1754^7 1755^7 1756^7 1757^7 1758>7
+1754p7 src(151R9)
+1755p7 srcrect
+1756p7 dst(151R9)
+1757p7 dstrect
+1758i7 scaleMode{95I12}
+1787V13*SDL_BlitSurfaceUncheckedScaled{5|59E12} 1788^7 1789^7 1790^7 1791^7
+. 1792>7
+1788p7 src(151R9)
+1789p7 srcrect
+1790p7 dst(151R9)
+1791p7 dstrect
+1792i7 scaleMode{95I12}
+1819V13*SDL_StretchSurface{5|59E12} 1820^7 1821^7 1822^7 1823^7 1824>7
+1820p7 src(151R9)
+1821p7 srcrect
+1822p7 dst(151R9)
+1823p7 dstrect
+1824i7 scaleMode{95I12}
+1853V13*SDL_BlitSurfaceTiled{5|59E12} 1854^7 1855^7 1856^7 1857^7
+1854p7 src(151R9)
+1855p7 srcrect
+1856p7 dst(151R9)
+1857p7 dstrect
+1890V13*SDL_BlitSurfaceTiledWithScale{5|59E12} 1891^7 1892^7 1893>7 1894>7
+. 1895^7 1896^7
+1891p7 src(151R9)
+1892p7 srcrect
+1893f7 scale{float}
+1894i7 scaleMode{95I12}
+1895p7 dst(151R9)
+1896p7 dstrect
+1936V13*SDL_BlitSurface9Grid{5|59E12} 1937^7 1938^7 1939>7 1940>7 1941>7
+. 1942>7 1943>7 1944>7 1945^7 1946^7
+1937p7 src(151R9)
+1938p7 srcrect
+1939i7 left_width{4|57I9}
+1940i7 right_width{4|57I9}
+1941i7 top_height{4|57I9}
+1942i7 bottom_height{4|57I9}
+1943f7 scale{float}
+1944i7 scaleMode{95I12}
+1945p7 dst(151R9)
+1946p7 dstrect
+1983V13*SDL_MapSurfaceRGB{12|417M12} 1984^7 1985>7 1986>7 1987>7
+1984p7 surface(151R9)
+1985m7 r{12|385M12}
+1986m7 g{12|385M12}
+1987m7 b{12|385M12}
+2025V13*SDL_MapSurfaceRGBA{12|417M12} 2026^7 2027>7 2028>7 2029>7 2030>7
+2026p7 surface(151R9)
+2027m7 r{12|385M12}
+2028m7 g{12|385M12}
+2029m7 b{12|385M12}
+2030m7 a{12|385M12}
+2064V13*SDL_ReadSurfacePixel{5|59E12} 2065^7 2066>7 2067>7 2068^7 2069^7
+. 2070^7 2071^7
+2065p7 surface(151R9)
+2066i7 x{4|57I9}
+2067i7 y{4|57I9}
+2068p7 r(12|385M12)
+2069p7 g(12|385M12)
+2070p7 b(12|385M12)
+2071p7 a(12|385M12)
+2102V13*SDL_ReadSurfacePixelFloat{5|59E12} 2103^7 2104>7 2105>7 2106^7 2107^7
+. 2108^7 2109^7
+2103p7 surface(151R9)
+2104i7 x{4|57I9}
+2105i7 y{4|57I9}
+2106p7 r(float)
+2107p7 g(float)
+2108p7 b(float)
+2109p7 a(float)
+2139V13*SDL_WriteSurfacePixel{5|59E12} 2140^7 2141>7 2142>7 2143>7 2144>7
+. 2145>7 2146>7
+2140p7 surface(151R9)
+2141i7 x{4|57I9}
+2142i7 y{4|57I9}
+2143m7 r{12|385M12}
+2144m7 g{12|385M12}
+2145m7 b{12|385M12}
+2146m7 a{12|385M12}
+2173V13*SDL_WriteSurfacePixelFloat{5|59E12} 2174^7 2175>7 2176>7 2177>7 2178>7
+. 2179>7 2180>7
+2174p7 surface(151R9)
+2175i7 x{4|57I9}
+2176i7 y{4|57I9}
+2177f7 r{float}
+2178f7 g{float}
+2179f7 b{float}
+2180f7 a{float}
+X 15 system.ads
+37K9*System 13|9w6 157r16 159r18 230r16 509r92 1395r13 1398r13 1442r13 1447r13
+. 1482r13 1485r13 15|153e11
+67M9*Address 13|157r23 159r25 230r23 509r99 1395r20 1398r20 1442r20 1447r20
+. 1482r20 1485r20
+X 20 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+26M12*uint8_t{21|42M12}
+30M12*uint32_t{21|50M12}
+X 21 x86_64_linux_gnu_bits_types_h.ads
+42M12*uu_uint8_t{4|71M9}
+

@@ -1,0 +1,80 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sdl3_sdl_touch_h%s	sdl3_sdl_touch_h.ads	237f8cb6 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D sdl3_sdl_touch_h.ads	20260331104513 e85c94ac sdl3_sdl_touch_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_gettouchdevices sdl3_sdl_touch_h 145 13 none]
+G c Z s s [sdl_gettouchdevicename sdl3_sdl_touch_h 160 13 none]
+G c Z s s [sdl_gettouchdevicetype sdl3_sdl_touch_h 174 13 none]
+G c Z s s [sdl_gettouchfingers sdl3_sdl_touch_h 193 13 none]
+G c Z s s [sdl_fingerIP sdl3_sdl_touch_h 106 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 8|6r6 6r24 8r6 160r67
+X 4 i-c.ads
+29K20*C 597e17 8|6w17 6r35 8r17 160r78
+57I9*int<integer> 8|84r35 145r49 193r72
+68M9*unsigned_long
+X 6 i-cstrin.ads
+44K22*Strings 156e25 8|8w19 160r80
+59P9*chars_ptr 8|160r88
+X 7 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 6557e22 8|7w6 61r27 76r28
+437M12*Uint64{15|32M12} 8|61r45 76r46
+X 8 sdl3_sdl_touch_h.ads
+11K9*SDL3_SDL_touch_h 199l5 199e21
+61M12*SDL_TouchID{7|437M12} 145r68 160r47 174r47 193r44
+76M12*SDL_FingerID{7|437M12} 107r20
+84I12*SDL_TouchDeviceType{4|57I9} 85r60 86r59 87r70 88r70 174r67
+85i4*SDL_TouchDeviceType_SDL_TOUCH_DEVICE_INVALID{84I12}
+86i4*SDL_TouchDeviceType_SDL_TOUCH_DEVICE_DIRECT{84I12}
+87i4*SDL_TouchDeviceType_SDL_TOUCH_DEVICE_INDIRECT_ABSOLUTE{84I12}
+88i4*SDL_TouchDeviceType_SDL_TOUCH_DEVICE_INDIRECT_RELATIVE{84I12}
+106R9*SDL_Finger 112e4
+107m7*id{76M12}
+108f7*x{float}
+109f7*y{float}
+110f7*pressure{float}
+145V13*SDL_GetTouchDevices(61M12) 145^34
+145p34 count(4|57I9)
+160V13*SDL_GetTouchDeviceName{6|59P9} 160>37
+160m37 touchID{61M12}
+174V13*SDL_GetTouchDeviceType{84I12} 174>37
+174m37 touchID{61M12}
+193V13*SDL_GetTouchFingers{10|67M9} 193>34 193^57
+193m34 touchID{61M12}
+193p57 count(4|57I9)
+X 10 system.ads
+37K9*System 8|9w6 193r84 10|153e11
+67M9*Address 8|193r91
+X 15 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+32M12*uint64_t{16|54M12}
+X 16 x86_64_linux_gnu_bits_types_h.ads
+54M12*uu_uint64_t{4|68M9}
+

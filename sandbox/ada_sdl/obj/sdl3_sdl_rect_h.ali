@@ -1,0 +1,148 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sdl3_sdl_rect_h%s	sdl3_sdl_rect_h.ads	1db16b00 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D sdl3_sdl_rect_h.ads	20260331104513 fff6e78f sdl3_sdl_rect_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+G a e
+G c Z s s [sdl_recttofrect sdl3_sdl_rect_h 128 14 none]
+G c Z s s [sdl_pointinrect sdl3_sdl_rect_h 155 13 none]
+G c Z s s [sdl_rectempty sdl3_sdl_rect_h 179 13 none]
+G c Z s s [sdl_rectsequal sdl3_sdl_rect_h 204 13 none]
+G c Z s s [sdl_hasrectintersection sdl3_sdl_rect_h 225 13 none]
+G c Z s s [sdl_getrectintersection sdl3_sdl_rect_h 246 13 none]
+G c Z s s [sdl_getrectunion sdl3_sdl_rect_h 267 13 none]
+G c Z s s [sdl_getrectenclosingpoints sdl3_sdl_rect_h 293 13 none]
+G c Z s s [sdl_getrectandlineintersection sdl3_sdl_rect_h 321 13 none]
+G c Z s s [sdl_pointinrectfloat sdl3_sdl_rect_h 354 13 none]
+G c Z s s [sdl_rectemptyfloat sdl3_sdl_rect_h 378 13 none]
+G c Z s s [sdl_rectsequalepsilon sdl3_sdl_rect_h 409 13 none]
+G c Z s s [sdl_rectsequalfloat sdl3_sdl_rect_h 443 13 none]
+G c Z s s [sdl_hasrectintersectionfloat sdl3_sdl_rect_h 462 13 none]
+G c Z s s [sdl_getrectintersectionfloat sdl3_sdl_rect_h 483 13 none]
+G c Z s s [sdl_getrectunionfloat sdl3_sdl_rect_h 504 13 none]
+G c Z s s [sdl_getrectenclosingpointsfloat sdl3_sdl_rect_h 531 13 none]
+G c Z s s [sdl_getrectandlineintersectionfloat sdl3_sdl_rect_h 560 13 none]
+G c Z s s [sdl_pointIP sdl3_sdl_rect_h 45 9 none]
+G c Z s s [sdl_fpointIP sdl3_sdl_rect_h 60 9 none]
+G c Z s s [sdl_rectIP sdl3_sdl_rect_h 80 9 none]
+G c Z s s [sdl_frectIP sdl3_sdl_rect_h 108 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 6|6r6 6r24 7r6
+X 4 i-c.ads
+29K20*C 597e17 6|6w17 6r35 7r17
+57I9*int<integer> 6|46r19 47r19 81r19 82r19 83r19 84r19 295r15 323r19 324r19
+. 325r19 326r19 533r15
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 6|7w19 155r98 179r65 204r96 225r105 249r40 270r40
+. 297r40 326r31 354r105 378r71 412r31 443r103 462r112 486r41 507r41 535r41
+. 565r33
+59B12*bool{4|92E9} 6|155r109 179r76 204r107 225r116 249r51 270r51 297r51
+. 326r42 354r116 378r82 412r42 443r114 462r123 486r52 507r52 535r52 565r44
+X 6 sdl3_sdl_rect_h.ads
+9K9*SDL3_SDL_rect_h 571l5 571e20
+45R9*SDL_Point 49e4 155r50 294r32
+46i7*x{4|57I9}
+47i7*y{4|57I9}
+60R9*SDL_FPoint 64e4 354r55 532r32
+61f7*x{float}
+62f7*y{float}
+80R9*SDL_Rect 86e4 128r54 155r81 179r48 204r49 204r79 225r58 225r88 247r27
+. 248r27 249r23 268r27 269r27 270r23 296r30 297r23 322r30
+81i7*x{4|57I9}
+82i7*y{4|57I9}
+83i7*w{4|57I9}
+84i7*h{4|57I9}
+108R9*SDL_FRect 114e4 128r79 354r87 378r53 410r27 411r27 443r54 443r85 462r63
+. 462r94 484r27 485r27 486r23 505r27 506r27 507r23 534r30 535r23 561r30
+109f7*x{float}
+110f7*y{float}
+111f7*w{float}
+112f7*h{float}
+128U14*SDL_RectToFRect 128^31 128^64
+128p31 rect(80R9)
+128p64 frect(108R9)
+155V13*SDL_PointInRect{5|59E12} 155^30 155^61
+155p30 p(45R9)
+155p61 r(80R9)
+179V13*SDL_RectEmpty{5|59E12} 179^28
+179p28 r(80R9)
+204V13*SDL_RectsEqual{5|59E12} 204^29 204^59
+204p29 a(80R9)
+204p59 b(80R9)
+225V13*SDL_HasRectIntersection{5|59E12} 225^38 225^68
+225p38 A(80R9)
+225p68 B(80R9)
+246V13*SDL_GetRectIntersection{5|59E12} 247^7 248^7 249^7
+247p7 A(80R9)
+248p7 B(80R9)
+249p7 result(80R9)
+267V13*SDL_GetRectUnion{5|59E12} 268^7 269^7 270^7
+268p7 A(80R9)
+269p7 B(80R9)
+270p7 result(80R9)
+293V13*SDL_GetRectEnclosingPoints{5|59E12} 294^7 295>7 296^7 297^7
+294p7 points(45R9)
+295i7 count{4|57I9}
+296p7 clip(80R9)
+297p7 result(80R9)
+321V13*SDL_GetRectAndLineIntersection{5|59E12} 322^7 323^7 324^7 325^7 326^7
+322p7 rect(80R9)
+323p7 X1(4|57I9)
+324p7 Y1(4|57I9)
+325p7 X2(4|57I9)
+326p7 Y2(4|57I9)
+354V13*SDL_PointInRectFloat{5|59E12} 354^35 354^67
+354p35 p(60R9)
+354p67 r(108R9)
+378V13*SDL_RectEmptyFloat{5|59E12} 378^33
+378p33 r(108R9)
+409V13*SDL_RectsEqualEpsilon{5|59E12} 410^7 411^7 412>7
+410p7 a(108R9)
+411p7 b(108R9)
+412f7 epsilon{float}
+443V13*SDL_RectsEqualFloat{5|59E12} 443^34 443^65
+443p34 a(108R9)
+443p65 b(108R9)
+462V13*SDL_HasRectIntersectionFloat{5|59E12} 462^43 462^74
+462p43 A(108R9)
+462p74 B(108R9)
+483V13*SDL_GetRectIntersectionFloat{5|59E12} 484^7 485^7 486^7
+484p7 A(108R9)
+485p7 B(108R9)
+486p7 result(108R9)
+504V13*SDL_GetRectUnionFloat{5|59E12} 505^7 506^7 507^7
+505p7 A(108R9)
+506p7 B(108R9)
+507p7 result(108R9)
+531V13*SDL_GetRectEnclosingPointsFloat{5|59E12} 532^7 533>7 534^7 535^7
+532p7 points(60R9)
+533i7 count{4|57I9}
+534p7 clip(108R9)
+535p7 result(108R9)
+560V13*SDL_GetRectAndLineIntersectionFloat{5|59E12} 561^7 562^7 563^7 564^7
+. 565^7
+561p7 rect(108R9)
+562p7 X1(float)
+563p7 Y1(float)
+564p7 X2(float)
+565p7 Y2(float)
+

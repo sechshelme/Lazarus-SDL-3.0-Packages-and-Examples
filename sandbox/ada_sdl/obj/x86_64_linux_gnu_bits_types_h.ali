@@ -1,0 +1,114 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U x86_64_linux_gnu_bits_types_h%s  x86_64_linux_gnu_bits_types_h.ads  73db872b NE OO PK IL
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [Tanon_array1295BIP x86_64_linux_gnu_bits_types_h 146 4 none]
+G c Z s s [uu_fsid_tIP x86_64_linux_gnu_bits_types_h 147 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 10|6r6 6r24 8r6 224r27
+X 4 i-c.ads
+29K20*C 597e17 10|6w17 6r35 8r17 224r38
+57I9*int<integer> 10|48r26 143r24 146r53 176r26 179r24 182r28 236r31
+58I9*short<short_integer> 10|44r26
+59I9*long<long_integer> 10|52r26 74r25 79r27 137r24 140r26 153r26 165r25
+. 171r30 173r32 188r28 192r27 194r29 207r27 210r26 213r34 227r27
+63I9*signed_char<short_short_integer> 10|40r25
+66M9*unsigned 10|35r24 50r27 119r24 122r24 131r25 162r23 168r29 230r28
+67M9*unsigned_short 10|33r26 46r27
+68M9*unsigned_long 10|37r25 54r27 76r27 81r28 116r24 125r24 128r26 134r26
+. 156r25 159r27 197r29 199r31 202r29 204r31 216r34
+71M9*unsigned_char 10|31r25 42r26
+X 5 i-cstrin.ads
+44K22*Strings 156e25 10|8w19 224r40
+59P9*chars_ptr 10|224r48
+X 6 system.ads
+37K9*System 153e11 10|7w6 185r27
+67M9*Address 10|185r34
+X 10 x86_64_linux_gnu_bits_types_h.ads
+10K9*x86_64_linux_gnu_bits_types_h 242l5 242e34
+31M12*uu_u_char{4|71M9}
+33M12*uu_u_short{4|67M9}
+35M12*uu_u_int{4|66M9}
+37M12*uu_u_long{4|68M9}
+40I12*uu_int8_t{4|63I9} 57r31
+42M12*uu_uint8_t{4|71M9} 59r32
+44I12*uu_int16_t{4|58I9} 61r32
+46M12*uu_uint16_t{4|67M9} 63r33
+48I12*uu_int32_t{4|57I9} 65r32
+50M12*uu_uint32_t{4|66M9} 67r33
+52I12*uu_int64_t{4|59I9} 69r32
+54M12*uu_uint64_t{4|68M9} 71r33
+57I12*uu_int_least8_t{40I12}
+59M12*uu_uint_least8_t{42M12}
+61I12*uu_int_least16_t{44I12}
+63M12*uu_uint_least16_t{46M12}
+65I12*uu_int_least32_t{48I12}
+67M12*uu_uint_least32_t{50M12}
+69I12*uu_int_least64_t{52I12}
+71M12*uu_uint_least64_t{54M12}
+74I12*uu_quad_t{4|59I9}
+76M12*uu_u_quad_t{4|68M9}
+79I12*uu_intmax_t{4|59I9}
+81M12*uu_uintmax_t{4|68M9}
+116M12*uu_dev_t{4|68M9}
+119M12*uu_uid_t{4|66M9}
+122M12*uu_gid_t{4|66M9}
+125M12*uu_ino_t{4|68M9}
+128M12*uu_ino64_t{4|68M9}
+131M12*uu_mode_t{4|66M9}
+134M12*uu_nlink_t{4|68M9}
+137I12*uu_off_t{4|59I9}
+140I12*uu_off64_t{4|59I9} 222r25
+143I12*uu_pid_t{4|57I9}
+146A9*anon_array1295(4|57I9)<integer> 148r24
+147R9*uu_fsid_t 150e4
+148a7*uu_val{146A9}
+153I12*uu_clock_t{4|59I9}
+156M12*uu_rlim_t{4|68M9}
+159M12*uu_rlim64_t{4|68M9}
+162M12*uu_id_t{4|66M9}
+165I12*uu_time_t{4|59I9}
+168M12*uu_useconds_t{4|66M9}
+171I12*uu_suseconds_t{4|59I9}
+173I12*uu_suseconds64_t{4|59I9}
+176I12*uu_daddr_t{4|57I9}
+179I12*uu_key_t{4|57I9}
+182I12*uu_clockid_t{4|57I9}
+185M9*uu_timer_t<6|67M9>
+188I12*uu_blksize_t{4|59I9}
+192I12*uu_blkcnt_t{4|59I9}
+194I12*uu_blkcnt64_t{4|59I9}
+197M12*uu_fsblkcnt_t{4|68M9}
+199M12*uu_fsblkcnt64_t{4|68M9}
+202M12*uu_fsfilcnt_t{4|68M9}
+204M12*uu_fsfilcnt64_t{4|68M9}
+207I12*uu_fsword_t{4|59I9}
+210I12*uu_ssize_t{4|59I9}
+213I12*uu_syscall_slong_t{4|59I9}
+216M12*uu_syscall_ulong_t{4|68M9}
+222I12*uu_loff_t{140I12}
+224P9*uu_caddr_t<5|59P9>
+227I12*uu_intptr_t{4|59I9}
+230M12*uu_socklen_t{4|66M9}
+236I12*uu_sig_atomic_t{4|57I9}
+

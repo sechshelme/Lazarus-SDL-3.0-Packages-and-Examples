@@ -1,0 +1,186 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_OBSOLESCENT_FEATURES
+
+U sdl3_sdl_keyboard_h%s	sdl3_sdl_keyboard_h.ads	2a388ba7 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_keycode_h%s	sdl3_sdl_keycode_h.ads	sdl3_sdl_keycode_h.ali
+W sdl3_sdl_properties_h%s  sdl3_sdl_properties_h.ads  sdl3_sdl_properties_h.ali
+Y sdl3_sdl_rect_h%s	sdl3_sdl_rect_h.ads	sdl3_sdl_rect_h.ali
+W sdl3_sdl_scancode_h%s	sdl3_sdl_scancode_h.ads	sdl3_sdl_scancode_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+Y sdl3_sdl_video_h%s	sdl3_sdl_video_h.ads	sdl3_sdl_video_h.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_keyboard_h.ads  20260331104513 8203330b sdl3_sdl_keyboard_h%s
+D sdl3_sdl_keycode_h.ads  20260331104513 86fe1963 sdl3_sdl_keycode_h%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_rect_h.ads	20260331104513 fff6e78f sdl3_sdl_rect_h%s
+D sdl3_sdl_scancode_h.ads  20260331104513 c4d749e8 sdl3_sdl_scancode_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D sdl3_sdl_video_h.ads	20260331104513 c0f601b9 sdl3_sdl_video_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_haskeyboard sdl3_sdl_keyboard_h 79 13 none]
+G c Z s s [sdl_getkeyboards sdl3_sdl_keyboard_h 106 13 none]
+G c Z s s [sdl_getkeyboardnameforid sdl3_sdl_keyboard_h 127 13 none]
+G c Z s s [sdl_getkeyboardfocus sdl3_sdl_keyboard_h 142 13 none]
+G c Z s s [sdl_getkeyboardstate sdl3_sdl_keyboard_h 179 13 none]
+G c Z s s [sdl_resetkeyboard sdl3_sdl_keyboard_h 196 14 none]
+G c Z s s [sdl_getmodstate sdl3_sdl_keyboard_h 214 13 none]
+G c Z s s [sdl_setmodstate sdl3_sdl_keyboard_h 239 14 none]
+G c Z s s [sdl_getkeyfromscancode sdl3_sdl_keyboard_h 267 13 none]
+G c Z s s [sdl_getscancodefromkey sdl3_sdl_keyboard_h 295 13 none]
+G c Z s s [sdl_setscancodename sdl3_sdl_keyboard_h 317 13 none]
+G c Z s s [sdl_getscancodename sdl3_sdl_keyboard_h 347 13 none]
+G c Z s s [sdl_getscancodefromname sdl3_sdl_keyboard_h 368 13 none]
+G c Z s s [sdl_getkeyname sdl3_sdl_keyboard_h 392 13 none]
+G c Z s s [sdl_getkeyfromname sdl3_sdl_keyboard_h 413 13 none]
+G c Z s s [sdl_starttextinput sdl3_sdl_keyboard_h 445 13 none]
+G c Z s s [sdl_starttextinputwithproperties sdl3_sdl_keyboard_h 557 13 none]
+G c Z s s [sdl_textinputactive sdl3_sdl_keyboard_h 575 13 none]
+G c Z s s [sdl_stoptextinput sdl3_sdl_keyboard_h 597 13 none]
+G c Z s s [sdl_clearcomposition sdl3_sdl_keyboard_h 617 13 none]
+G c Z s s [sdl_settextinputarea sdl3_sdl_keyboard_h 644 13 none]
+G c Z s s [sdl_gettextinputarea sdl3_sdl_keyboard_h 672 13 none]
+G c Z s s [sdl_hasscreenkeyboardsupport sdl3_sdl_keyboard_h 694 13 none]
+G c Z s s [sdl_screenkeyboardshown sdl3_sdl_keyboard_h 712 13 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 8r6 9r6 127r76 317r86 347r86 368r45 392r74
+. 413r40
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 8r17 9r17 127r87 317r97 347r97 368r56 392r85 413r51
+57I9*int<integer> 7|106r46 179r52 647r16 675r23
+66M9*unsigned
+67M9*unsigned_short
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 7|8w19 79r36 179r71 270r19 317r125 445r85 557r147
+. 575r86 597r84 617r87 647r28 675r35 694r49 712r90
+59B12*bool{4|92E9} 7|79r47 179r82 270r30 317r136 445r96 557r158 575r97 597r95
+. 617r98 647r39 675r46 694r60 712r101
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|9w19 127r89 317r99 347r99 368r58 392r87 413r53
+59P9*chars_ptr 7|127r97 317r107 347r107 368r66 392r95 413r61
+X 7 sdl3_sdl_keyboard_h.ads
+16K9*SDL3_SDL_keyboard_h 718l5 718e24
+18a4*SDL_PROP_TEXTINPUT_TYPE_NUMBER{string}
+19a4*SDL_PROP_TEXTINPUT_CAPITALIZATION_NUMBER{string}
+20a4*SDL_PROP_TEXTINPUT_AUTOCORRECT_BOOLEAN{string}
+21a4*SDL_PROP_TEXTINPUT_MULTILINE_BOOLEAN{string}
+22a4*SDL_PROP_TEXTINPUT_ANDROID_INPUTTYPE_NUMBER{string}
+64M12*SDL_KeyboardID{12|417M12} 106r65 127r53
+79V13*SDL_HasKeyboard{5|59E12}
+106V13*SDL_GetKeyboards(64M12) 106^31
+106p31 count(4|57I9)
+127V13*SDL_GetKeyboardNameForID{6|59P9} 127>39
+127m39 instance_id{64M12}
+142V13*SDL_GetKeyboardFocus
+179V13*SDL_GetKeyboardState(5|59E12) 179^35
+179p35 numkeys(4|57I9)
+196U14*SDL_ResetKeyboard
+214V13*SDL_GetModState{8|349M12}
+239U14*SDL_SetModState 239>31
+239m31 modstate{8|349M12}
+267V13*SDL_GetKeyFromScancode{8|341M12} 268>7 269>7 270>7
+268m7 scancode{11|53M12}
+269m7 modstate{8|349M12}
+270b7 key_event{5|59E12}
+295V13*SDL_GetScancodeFromKey{11|53M12} 295>37 295^75
+295m37 key{8|341M12}
+295p75 modstate(8|349M12)
+317V13*SDL_SetScancodeName{5|59E12} 317>34 317>79
+317m34 scancode{11|53M12}
+317p79 name{6|59P9}
+347V13*SDL_GetScancodeName{6|59P9} 347>34
+347m34 scancode{11|53M12}
+368V13*SDL_GetScancodeFromName{11|53M12} 368>38
+368p38 name{6|59P9}
+392V13*SDL_GetKeyName{6|59P9} 392>29
+392m29 key{8|341M12}
+413V13*SDL_GetKeyFromName{8|341M12} 413>33
+413p33 name{6|59P9}
+445V13*SDL_StartTextInput{5|59E12} 445^33
+445p33 window
+462E9*SDL_TextInputType 472e4
+463n7*SDL_TEXTINPUT_TYPE_TEXT{462E9}
+464n7*SDL_TEXTINPUT_TYPE_TEXT_NAME{462E9}
+465n7*SDL_TEXTINPUT_TYPE_TEXT_EMAIL{462E9}
+466n7*SDL_TEXTINPUT_TYPE_TEXT_USERNAME{462E9}
+467n7*SDL_TEXTINPUT_TYPE_TEXT_PASSWORD_HIDDEN{462E9}
+468n7*SDL_TEXTINPUT_TYPE_TEXT_PASSWORD_VISIBLE{462E9}
+469n7*SDL_TEXTINPUT_TYPE_NUMBER{462E9}
+470n7*SDL_TEXTINPUT_TYPE_NUMBER_PASSWORD_HIDDEN{462E9}
+471n7*SDL_TEXTINPUT_TYPE_NUMBER_PASSWORD_VISIBLE{462E9}
+495E9*SDL_Capitalization 500e4
+496n7*SDL_CAPITALIZE_NONE{495E9}
+497n7*SDL_CAPITALIZE_SENTENCES{495E9}
+498n7*SDL_CAPITALIZE_WORDS{495E9}
+499n7*SDL_CAPITALIZE_LETTERS{495E9}
+557V13*SDL_StartTextInputWithProperties{5|59E12} 557^47 557>92
+557p47 window
+557m92 props{9|66M12}
+575V13*SDL_TextInputActive{5|59E12} 575^34
+575p34 window
+597V13*SDL_StopTextInput{5|59E12} 597^32
+597p32 window
+617V13*SDL_ClearComposition{5|59E12} 617^35
+617p35 window
+644V13*SDL_SetTextInputArea{5|59E12} 645^7 646^7 647>7
+645p7 window
+646p7 rect
+647i7 cursor{4|57I9}
+672V13*SDL_GetTextInputArea{5|59E12} 673^7 674^7 675^7
+673p7 window
+674p7 rect
+675p7 cursor(4|57I9)
+694V13*SDL_HasScreenKeyboardSupport{5|59E12}
+712V13*SDL_ScreenKeyboardShown{5|59E12} 712^38
+712p38 window
+X 8 sdl3_sdl_keycode_h.ads
+9K9*SDL3_SDL_keycode_h 7|11w6 214r36 239r42 269r18 270r43 295r43 295r93 392r35
+. 413r79 8|351e23
+341M12*SDL_Keycode{12|417M12} 7|270r62 295r62 392r54 413r98
+349M12*SDL_Keymod{12|401M12} 7|214r55 239r61 269r37 295r112
+X 9 sdl3_sdl_properties_h.ads
+12K9*SDL3_SDL_properties_h 7|13w6 557r100 9|693e26
+66M12*SDL_PropertiesID{12|417M12} 7|557r122
+X 10 sdl3_sdl_rect_h.ads
+9K9 SDL3_SDL_rect_h 7|646r30 674r21
+X 11 sdl3_sdl_scancode_h.ads
+8K9*SDL3_SDL_scancode_h 7|12w6 268r18 295r131 317r45 347r45 368r84 11|484e24
+53M12*SDL_Scancode{4|66M9} 7|268r38 295r151 317r65 347r65 368r104
+X 12 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 7|7w6 64r30 12|6557e22
+401M12*Uint16{20|28M12}
+417M12*Uint32{20|30M12} 7|64r48
+X 13 sdl3_sdl_video_h.ads
+18K9 SDL3_SDL_video_h 7|142r48 445r49 557r63 575r50 597r48 617r51 645r23
+. 673r23 712r54
+X 20 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+28M12*uint16_t{21|46M12}
+30M12*uint32_t{21|50M12}
+X 21 x86_64_linux_gnu_bits_types_h.ads
+46M12*uu_uint16_t{4|67M9}
+

@@ -1,0 +1,61 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sdl3_sdl_guid_h%s	sdl3_sdl_guid_h.ads	8c4e357d NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_guid_h.ads	20260331104513 050082df sdl3_sdl_guid_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_guidtostring sdl3_sdl_guid_h 79 14 none]
+G c Z s s [sdl_stringtoguid sdl3_sdl_guid_h 104 13 none]
+G c Z s s [Tanon_array2521BIP sdl3_sdl_guid_h 58 4 none]
+G c Z s s [sdl_guidIP sdl3_sdl_guid_h 59 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 8r6 81r17 104r41
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 8r17 81r28 104r52
+57I9*int<integer> 7|82r16
+71M9*unsigned_char
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|8w19 81r30 104r54
+59P9*chars_ptr 7|81r38 104r62
+X 7 sdl3_sdl_guid_h.ads
+10K9*SDL3_SDL_guid_h 110l5 110e20
+58A9*anon_array2521(8|385M12)<integer> 60r22
+59R9*SDL_GUID 62e4 80r14 104r80
+60a7*data{58A9}
+79U14*SDL_GUIDToString 80>7 81>7 82>7
+80r7 guid{59R9}
+81p7 pszGUID{6|59P9}
+82i7 cbGUID{4|57I9}
+104V13*SDL_StringToGUID{59R9} 104>31
+104p31 pchGUID{6|59P9}
+X 8 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 7|7w6 58r54 8|6557e22
+385M12*Uint8{15|26M12} 7|58r72
+X 15 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+26M12*uint8_t{16|42M12}
+X 16 x86_64_linux_gnu_bits_types_h.ads
+42M12*uu_uint8_t{4|71M9}
+

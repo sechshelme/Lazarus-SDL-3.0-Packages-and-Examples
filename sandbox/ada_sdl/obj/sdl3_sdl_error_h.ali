@@ -1,0 +1,56 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sdl3_sdl_error_h%s	sdl3_sdl_error_h.ads	db3419e2 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_error_h.ads	20260331104513 8f12b761 sdl3_sdl_error_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+G a e
+G c Z s s [sdl_seterror sdl3_sdl_error_h 90 13 none]
+G c Z s s [sdl_seterrorv sdl3_sdl_error_h 114 13 none]
+G c Z s s [sdl_outofmemory sdl3_sdl_error_h 131 13 none]
+G c Z s s [sdl_geterror sdl3_sdl_error_h 172 13 none]
+G c Z s s [sdl_clearerror sdl3_sdl_error_h 190 13 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 7r6 8r6 90r33 114r34 172r33
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 7r17 8r17 90r44 114r45 172r44
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 7|8w19 91r16 114r101 131r36 190r35
+59B12*bool{4|92E9} 7|91r27 114r112 131r47 190r46
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|7w19 90r46 114r47 172r46
+59P9*chars_ptr 7|90r54 114r55 172r54
+X 7 sdl3_sdl_error_h.ads
+11K9*SDL3_SDL_error_h 240l5 240e21
+90V13*SDL_SetError{5|59E12} 90>27
+90p27 fmt{6|59P9}
+114V13*SDL_SetErrorV{5|59E12} 114>28 114^66
+114p28 fmt{6|59P9}
+114p66 ap(8|67M9)
+131V13*SDL_OutOfMemory{5|59E12}
+172V13*SDL_GetError{6|59P9}
+190V13*SDL_ClearError{5|59E12}
+X 8 system.ads
+37K9*System 7|9w6 114r78 8|153e11
+67M9*Address 7|114r85
+

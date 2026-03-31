@@ -1,0 +1,895 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FLOATING_POINT
+RV NO_LONG_LONG_INTEGERS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+
+U sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	f0d6df90 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W stddef_h%s		stddef_h.ads		stddef_h.ali
+W system%s		system.ads		system.ali
+W x86_64_linux_gnu_bits_stdint_intn_h%s  x86_64_linux_gnu_bits_stdint_intn_h.ads  x86_64_linux_gnu_bits_stdint_intn_h.ali
+W x86_64_linux_gnu_bits_stdint_uintn_h%s  x86_64_linux_gnu_bits_stdint_uintn_h.ads  x86_64_linux_gnu_bits_stdint_uintn_h.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_malloc sdl3_sdl_stdinc_h 1042 13 none]
+G c Z s s [sdl_calloc sdl3_sdl_stdinc_h 1071 13 none]
+G c Z s s [sdl_realloc sdl3_sdl_stdinc_h 1115 13 none]
+G c Z s s [sdl_free sdl3_sdl_stdinc_h 1139 14 none]
+G c Z s s [sdl_getoriginalmemoryfunctions sdl3_sdl_stdinc_h 1249 14 none]
+G c Z s s [sdl_getmemoryfunctions sdl3_sdl_stdinc_h 1276 14 none]
+G c Z s s [sdl_setmemoryfunctions sdl3_sdl_stdinc_h 1312 13 none]
+G c Z s s [sdl_aligned_alloc sdl3_sdl_stdinc_h 1344 13 none]
+G c Z s s [sdl_aligned_free sdl3_sdl_stdinc_h 1366 14 none]
+G c Z s s [sdl_getnumallocations sdl3_sdl_stdinc_h 1382 13 none]
+G c Z s s [sdl_getenvironment sdl3_sdl_stdinc_h 1425 13 none]
+G c Z s s [sdl_createenvironment sdl3_sdl_stdinc_h 1451 13 none]
+G c Z s s [sdl_getenvironmentvariable sdl3_sdl_stdinc_h 1475 13 none]
+G c Z s s [sdl_getenvironmentvariables sdl3_sdl_stdinc_h 1500 13 none]
+G c Z s s [sdl_setenvironmentvariable sdl3_sdl_stdinc_h 1528 13 none]
+G c Z s s [sdl_unsetenvironmentvariable sdl3_sdl_stdinc_h 1557 13 none]
+G c Z s s [sdl_destroyenvironment sdl3_sdl_stdinc_h 1575 14 none]
+G c Z s s [sdl_getenv sdl3_sdl_stdinc_h 1594 13 none]
+G c Z s s [sdl_getenv_unsafe sdl3_sdl_stdinc_h 1617 13 none]
+G c Z s s [sdl_setenv_unsafe sdl3_sdl_stdinc_h 1639 13 none]
+G c Z s s [sdl_unsetenv_unsafe sdl3_sdl_stdinc_h 1661 13 none]
+G c Z s s [sdl_qsort sdl3_sdl_stdinc_h 1729 14 none]
+G c Z s s [sdl_bsearch sdl3_sdl_stdinc_h 1787 13 none]
+G c Z s s [sdl_qsort_r sdl3_sdl_stdinc_h 1871 14 none]
+G c Z s s [sdl_bsearch_r sdl3_sdl_stdinc_h 1938 13 none]
+G c Z s s [sdl_abs sdl3_sdl_stdinc_h 1960 13 none]
+G c Z s s [sdl_isalpha sdl3_sdl_stdinc_h 2036 13 none]
+G c Z s s [sdl_isalnum sdl3_sdl_stdinc_h 2055 13 none]
+G c Z s s [sdl_isblank sdl3_sdl_stdinc_h 2074 13 none]
+G c Z s s [sdl_iscntrl sdl3_sdl_stdinc_h 2093 13 none]
+G c Z s s [sdl_isdigit sdl3_sdl_stdinc_h 2112 13 none]
+G c Z s s [sdl_isxdigit sdl3_sdl_stdinc_h 2131 13 none]
+G c Z s s [sdl_ispunct sdl3_sdl_stdinc_h 2153 13 none]
+G c Z s s [sdl_isspace sdl3_sdl_stdinc_h 2179 13 none]
+G c Z s s [sdl_isupper sdl3_sdl_stdinc_h 2198 13 none]
+G c Z s s [sdl_islower sdl3_sdl_stdinc_h 2217 13 none]
+G c Z s s [sdl_isprint sdl3_sdl_stdinc_h 2240 13 none]
+G c Z s s [sdl_isgraph sdl3_sdl_stdinc_h 2265 13 none]
+G c Z s s [sdl_toupper sdl3_sdl_stdinc_h 2287 13 none]
+G c Z s s [sdl_tolower sdl3_sdl_stdinc_h 2309 13 none]
+G c Z s s [sdl_crc16 sdl3_sdl_stdinc_h 2334 13 none]
+G c Z s s [sdl_crc32 sdl3_sdl_stdinc_h 2362 13 none]
+G c Z s s [sdl_murmur3_32 sdl3_sdl_stdinc_h 2395 13 none]
+G c Z s s [sdl_memcpy sdl3_sdl_stdinc_h 2422 13 none]
+G c Z s s [sdl_memmove sdl3_sdl_stdinc_h 2474 13 none]
+G c Z s s [sdl_memset sdl3_sdl_stdinc_h 2502 13 none]
+G c Z s s [sdl_memset4 sdl3_sdl_stdinc_h 2529 13 none]
+G c Z s s [sdl_memcmp sdl3_sdl_stdinc_h 2607 13 none]
+G c Z s s [sdl_wcslen sdl3_sdl_stdinc_h 2641 13 none]
+G c Z s s [sdl_wcsnlen sdl3_sdl_stdinc_h 2676 13 none]
+G c Z s s [sdl_wcslcpy sdl3_sdl_stdinc_h 2707 13 none]
+G c Z s s [sdl_wcslcat sdl3_sdl_stdinc_h 2743 13 none]
+G c Z s s [sdl_wcsdup sdl3_sdl_stdinc_h 2768 13 none]
+G c Z s s [sdl_wcsstr sdl3_sdl_stdinc_h 2792 13 none]
+G c Z s s [sdl_wcsnstr sdl3_sdl_stdinc_h 2821 13 none]
+G c Z s s [sdl_wcscmp sdl3_sdl_stdinc_h 2847 13 none]
+G c Z s s [sdl_wcsncmp sdl3_sdl_stdinc_h 2882 13 none]
+G c Z s s [sdl_wcscasecmp sdl3_sdl_stdinc_h 2919 13 none]
+G c Z s s [sdl_wcsncasecmp sdl3_sdl_stdinc_h 2965 13 none]
+G c Z s s [sdl_wcstol sdl3_sdl_stdinc_h 2999 13 none]
+G c Z s s [sdl_strlen sdl3_sdl_stdinc_h 3026 13 none]
+G c Z s s [sdl_strnlen sdl3_sdl_stdinc_h 3054 13 none]
+G c Z s s [sdl_strlcpy sdl3_sdl_stdinc_h 3087 13 none]
+G c Z s s [sdl_utf8strlcpy sdl3_sdl_stdinc_h 3122 13 none]
+G c Z s s [sdl_strlcat sdl3_sdl_stdinc_h 3157 13 none]
+G c Z s s [sdl_strdup sdl3_sdl_stdinc_h 3182 13 none]
+G c Z s s [sdl_strndup sdl3_sdl_stdinc_h 3211 13 none]
+G c Z s s [sdl_strrev sdl3_sdl_stdinc_h 3236 13 none]
+G c Z s s [sdl_strupr sdl3_sdl_stdinc_h 3261 13 none]
+G c Z s s [sdl_strlwr sdl3_sdl_stdinc_h 3286 13 none]
+G c Z s s [sdl_strchr sdl3_sdl_stdinc_h 3310 13 none]
+G c Z s s [sdl_strrchr sdl3_sdl_stdinc_h 3333 13 none]
+G c Z s s [sdl_strstr sdl3_sdl_stdinc_h 3357 13 none]
+G c Z s s [sdl_strnstr sdl3_sdl_stdinc_h 3384 13 none]
+G c Z s s [sdl_strcasestr sdl3_sdl_stdinc_h 3419 13 none]
+G c Z s s [sdl_strtok_r sdl3_sdl_stdinc_h 3452 13 none]
+G c Z s s [sdl_utf8strlen sdl3_sdl_stdinc_h 3487 13 none]
+G c Z s s [sdl_utf8strnlen sdl3_sdl_stdinc_h 3524 13 none]
+G c Z s s [sdl_itoa sdl3_sdl_stdinc_h 3556 13 none]
+G c Z s s [sdl_uitoa sdl3_sdl_stdinc_h 3591 13 none]
+G c Z s s [sdl_ltoa sdl3_sdl_stdinc_h 3626 13 none]
+G c Z s s [sdl_ultoa sdl3_sdl_stdinc_h 3661 13 none]
+G c Z s s [sdl_lltoa sdl3_sdl_stdinc_h 3696 13 none]
+G c Z s s [sdl_ulltoa sdl3_sdl_stdinc_h 3731 13 none]
+G c Z s s [sdl_atoi sdl3_sdl_stdinc_h 3761 13 none]
+G c Z s s [sdl_atof sdl3_sdl_stdinc_h 3787 13 none]
+G c Z s s [sdl_strtol sdl3_sdl_stdinc_h 3825 13 none]
+G c Z s s [sdl_strtoul sdl3_sdl_stdinc_h 3865 13 none]
+G c Z s s [sdl_strtoll sdl3_sdl_stdinc_h 3905 13 none]
+G c Z s s [sdl_strtoull sdl3_sdl_stdinc_h 3946 13 none]
+G c Z s s [sdl_strtod sdl3_sdl_stdinc_h 3982 13 none]
+G c Z s s [sdl_strcmp sdl3_sdl_stdinc_h 4006 13 none]
+G c Z s s [sdl_strncmp sdl3_sdl_stdinc_h 4040 13 none]
+G c Z s s [sdl_strcasecmp sdl3_sdl_stdinc_h 4075 13 none]
+G c Z s s [sdl_strncasecmp sdl3_sdl_stdinc_h 4118 13 none]
+G c Z s s [sdl_strpbrk sdl3_sdl_stdinc_h 4143 13 none]
+G c Z s s [sdl_steputf8 sdl3_sdl_stdinc_h 4206 13 none]
+G c Z s s [sdl_stepbackutf8 sdl3_sdl_stdinc_h 4241 13 none]
+G c Z s s [sdl_ucs4toutf8 sdl3_sdl_stdinc_h 4274 13 none]
+G c Z s s [sdl_sscanf sdl3_sdl_stdinc_h 4295 13 none]
+G c Z s s [sdl_vsscanf sdl3_sdl_stdinc_h 4319 13 none]
+G c Z s s [sdl_snprintf sdl3_sdl_stdinc_h 4359 13 none]
+G c Z s s [sdl_swprintf sdl3_sdl_stdinc_h 4401 13 none]
+G c Z s s [sdl_vsnprintf sdl3_sdl_stdinc_h 4429 13 none]
+G c Z s s [sdl_vswprintf sdl3_sdl_stdinc_h 4458 13 none]
+G c Z s s [sdl_asprintf sdl3_sdl_stdinc_h 4495 13 none]
+G c Z s s [sdl_vasprintf sdl3_sdl_stdinc_h 4519 13 none]
+G c Z s s [sdl_srand sdl3_sdl_stdinc_h 4546 14 none]
+G c Z s s [sdl_rand sdl3_sdl_stdinc_h 4584 13 none]
+G c Z s s [sdl_randf sdl3_sdl_stdinc_h 4611 13 none]
+G c Z s s [sdl_rand_bits sdl3_sdl_stdinc_h 4638 13 none]
+G c Z s s [sdl_rand_r sdl3_sdl_stdinc_h 4677 13 none]
+G c Z s s [sdl_randf_r sdl3_sdl_stdinc_h 4708 13 none]
+G c Z s s [sdl_rand_bits_r sdl3_sdl_stdinc_h 4737 13 none]
+G c Z s s [sdl_acos sdl3_sdl_stdinc_h 4787 13 none]
+G c Z s s [sdl_acosf sdl3_sdl_stdinc_h 4821 13 none]
+G c Z s s [sdl_asin sdl3_sdl_stdinc_h 4855 13 none]
+G c Z s s [sdl_asinf sdl3_sdl_stdinc_h 4889 13 none]
+G c Z s s [sdl_atan sdl3_sdl_stdinc_h 4925 13 none]
+G c Z s s [sdl_atanf sdl3_sdl_stdinc_h 4961 13 none]
+G c Z s s [sdl_atan2 sdl3_sdl_stdinc_h 5001 13 none]
+G c Z s s [sdl_atan2f sdl3_sdl_stdinc_h 5041 13 none]
+G c Z s s [sdl_ceil sdl3_sdl_stdinc_h 5073 13 none]
+G c Z s s [sdl_ceilf sdl3_sdl_stdinc_h 5105 13 none]
+G c Z s s [sdl_copysign sdl3_sdl_stdinc_h 5135 13 none]
+G c Z s s [sdl_copysignf sdl3_sdl_stdinc_h 5165 13 none]
+G c Z s s [sdl_cos sdl3_sdl_stdinc_h 5197 13 none]
+G c Z s s [sdl_cosf sdl3_sdl_stdinc_h 5229 13 none]
+G c Z s s [sdl_exp sdl3_sdl_stdinc_h 5265 13 none]
+G c Z s s [sdl_expf sdl3_sdl_stdinc_h 5301 13 none]
+G c Z s s [sdl_fabs sdl3_sdl_stdinc_h 5326 13 none]
+G c Z s s [sdl_fabsf sdl3_sdl_stdinc_h 5351 13 none]
+G c Z s s [sdl_floor sdl3_sdl_stdinc_h 5383 13 none]
+G c Z s s [sdl_floorf sdl3_sdl_stdinc_h 5415 13 none]
+G c Z s s [sdl_trunc sdl3_sdl_stdinc_h 5448 13 none]
+G c Z s s [sdl_truncf sdl3_sdl_stdinc_h 5481 13 none]
+G c Z s s [sdl_fmod sdl3_sdl_stdinc_h 5515 13 none]
+G c Z s s [sdl_fmodf sdl3_sdl_stdinc_h 5549 13 none]
+G c Z s s [sdl_isinf sdl3_sdl_stdinc_h 5567 13 none]
+G c Z s s [sdl_isinff sdl3_sdl_stdinc_h 5585 13 none]
+G c Z s s [sdl_isnan sdl3_sdl_stdinc_h 5603 13 none]
+G c Z s s [sdl_isnanf sdl3_sdl_stdinc_h 5621 13 none]
+G c Z s s [sdl_log sdl3_sdl_stdinc_h 5655 13 none]
+G c Z s s [sdl_logf sdl3_sdl_stdinc_h 5688 13 none]
+G c Z s s [sdl_log10 sdl3_sdl_stdinc_h 5722 13 none]
+G c Z s s [sdl_log10f sdl3_sdl_stdinc_h 5756 13 none]
+G c Z s s [sdl_modf sdl3_sdl_stdinc_h 5780 13 none]
+G c Z s s [sdl_modff sdl3_sdl_stdinc_h 5804 13 none]
+G c Z s s [sdl_pow sdl3_sdl_stdinc_h 5840 13 none]
+G c Z s s [sdl_powf sdl3_sdl_stdinc_h 5876 13 none]
+G c Z s s [sdl_round sdl3_sdl_stdinc_h 5909 13 none]
+G c Z s s [sdl_roundf sdl3_sdl_stdinc_h 5942 13 none]
+G c Z s s [sdl_lround sdl3_sdl_stdinc_h 5975 13 none]
+G c Z s s [sdl_lroundf sdl3_sdl_stdinc_h 6008 13 none]
+G c Z s s [sdl_scalbn sdl3_sdl_stdinc_h 6037 13 none]
+G c Z s s [sdl_scalbnf sdl3_sdl_stdinc_h 6066 13 none]
+G c Z s s [sdl_sin sdl3_sdl_stdinc_h 6098 13 none]
+G c Z s s [sdl_sinf sdl3_sdl_stdinc_h 6130 13 none]
+G c Z s s [sdl_sqrt sdl3_sdl_stdinc_h 6160 13 none]
+G c Z s s [sdl_sqrtf sdl3_sdl_stdinc_h 6190 13 none]
+G c Z s s [sdl_tan sdl3_sdl_stdinc_h 6224 13 none]
+G c Z s s [sdl_tanf sdl3_sdl_stdinc_h 6258 13 none]
+G c Z s s [sdl_iconv_open sdl3_sdl_stdinc_h 6291 13 none]
+G c Z s s [sdl_iconv_close sdl3_sdl_stdinc_h 6309 13 none]
+G c Z s s [sdl_iconv sdl3_sdl_stdinc_h 6351 13 none]
+G c Z s s [sdl_iconv_string sdl3_sdl_stdinc_h 6387 13 none]
+G c Z s s [sdl_size_mul_check_overflow sdl3_sdl_stdinc_h 6479 13 none]
+G c Z s s [sdl_size_mul_check_overflow_builtin sdl3_sdl_stdinc_h 6491 13 none]
+G c Z s s [sdl_size_add_check_overflow sdl3_sdl_stdinc_h 6517 13 none]
+G c Z s s [sdl_size_add_check_overflow_builtin sdl3_sdl_stdinc_h 6528 13 none]
+G c Z s s [sdl_alignment_testIP sdl3_sdl_stdinc_h 914 9 none]
+G c Z s s [sdl_environmentIP sdl3_sdl_stdinc_h 1401 9 none]
+G c Z s s [sdl_iconv_data_tIP sdl3_sdl_stdinc_h 6271 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 11r6 12r6 1475r78 1475r117 1530r14 1531r15
+. 1557r80 1594r32 1594r71 1617r39 1617r78 1640r14 1641r15 1661r41 3026r31
+. 3054r32 3088r13 3089r13 3123r13 3124r13 3158r13 3159r13 3182r31 3182r70
+. 3211r32 3211r97 3236r31 3236r70 3261r31 3261r70 3286r31 3286r70 3310r31
+. 3310r79 3333r32 3333r80 3357r36 3357r77 3357r116 3385r18 3386r16 3387r40
+. 3419r40 3419r81 3419r120 3453r13 3454r15 3455r40 3487r35 3524r36 3558r13
+. 3559r27 3593r13 3594r27 3628r13 3629r27 3663r13 3664r27 3698r13 3699r27
+. 3733r13 3734r27 3761r29 3787r29 3826r13 3866r13 3906r13 3947r13 3982r31
+. 4006r32 4006r71 4041r14 4042r14 4075r36 4075r75 4119r14 4120r14 4143r32
+. 4143r75 4143r114 4241r39 4274r55 4274r94 4295r32 4295r70 4320r14 4321r13
+. 4360r14 4362r13 4430r14 4432r13 4495r56 4521r13 6291r38 6291r81 6388r16
+. 6389r18 6390r15 6391r45
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 11r17 12r17 1475r89 1475r128 1530r25 1531r26 1557r91
+. 1594r43 1594r82 1617r50 1617r89 1640r25 1641r26 1661r52 3026r42 3054r43
+. 3088r24 3089r24 3123r24 3124r24 3158r24 3159r24 3182r42 3182r81 3211r43
+. 3211r108 3236r42 3236r81 3261r42 3261r81 3286r42 3286r81 3310r42 3310r90
+. 3333r43 3333r91 3357r47 3357r88 3357r127 3385r29 3386r27 3387r51 3419r51
+. 3419r92 3419r131 3453r24 3454r26 3455r51 3487r46 3524r47 3558r24 3559r38
+. 3593r24 3594r38 3628r24 3629r38 3663r24 3664r38 3698r24 3699r38 3733r24
+. 3734r38 3761r40 3787r40 3826r24 3866r24 3906r24 3947r24 3982r42 4006r43
+. 4006r82 4041r25 4042r25 4075r47 4075r86 4119r25 4120r25 4143r43 4143r86
+. 4143r125 4241r50 4274r66 4274r105 4295r43 4295r81 4320r25 4321r24 4360r25
+. 4362r24 4430r25 4432r24 4495r67 4521r24 6291r49 6291r92 6388r27 6389r29
+. 6390r26 6391r56
+57I9*int<integer> 7|1382r42 1642r19 1642r31 1661r80 1681r102 1816r40 1960r26
+. 1960r38 2036r30 2036r42 2055r30 2055r42 2074r30 2074r42 2093r30 2093r42
+. 2112r30 2112r42 2131r31 2131r43 2153r30 2153r42 2179r30 2179r42 2198r30
+. 2198r42 2217r30 2217r42 2240r30 2240r42 2265r30 2265r42 2287r30 2287r42
+. 2309r30 2309r42 2504r11 2610r37 2847r96 2885r40 2919r100 2968r40 3002r14
+. 3310r67 3333r68 3557r15 3559r15 3594r15 3629r15 3664r15 3699r15 3734r15
+. 3761r68 3828r14 3868r14 3908r14 3949r14 4006r110 4043r40 4075r114 4121r40
+. 4296r16 4322r42 4363r16 4405r16 4433r42 4462r42 4496r16 4522r42 5567r43
+. 5585r43 5603r43 5621r43 6037r41 6066r41 6309r55
+58I9*short<short_integer>
+59I9*long<long_integer> 7|3002r26 3627r15 3828r26 5975r44 6008r44
+63I9*signed_char<short_short_integer>
+66M9*unsigned 7|3592r15
+67M9*unsigned_short
+68M9*unsigned_long 7|3662r15 3868r26
+69M9*unsigned_long_long
+71M9*unsigned_char
+92B9*C_bool<boolean>
+98F9*double<long_float> 7|3787r68 3982r93 4787r27 4787r42 4855r27 4855r42
+. 4925r27 4925r42 5001r28 5001r40 5001r55 5073r27 5073r42 5135r31 5135r43
+. 5135r58 5197r26 5197r41 5265r26 5265r41 5326r27 5326r42 5383r28 5383r43
+. 5448r28 5448r43 5515r27 5515r39 5515r54 5567r28 5603r28 5655r26 5655r41
+. 5722r28 5722r43 5780r27 5780r46 5780r61 5840r26 5840r38 5840r53 5909r28
+. 5909r43 5975r29 6037r29 6037r53 6098r26 6098r41 6160r27 6160r42 6224r26
+. 6224r41
+X 5 i-cexten.ads
+37K22*Extensions 850e28 7|11w19 1316r41 1451r48 1532r19 1532r43 1557r119
+. 3732r15 3949r26 6482r44 6494r44 6520r44 6531r44
+59B12*bool{4|92E9} 7|1316r52 1451r59 1532r30 1532r54 1557r130 6482r55 6494r55
+. 6520r55 6531r55
+64M12*unsigned_long_long{4|69M9} 7|3732r26 3949r37
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|12w19 1475r91 1475r130 1530r27 1531r28 1557r93 1594r45
+. 1594r84 1617r52 1617r91 1640r27 1641r28 1661r54 3026r44 3054r45 3088r26
+. 3089r26 3123r26 3124r26 3158r26 3159r26 3182r44 3182r83 3211r45 3211r110
+. 3236r44 3236r83 3261r44 3261r83 3286r44 3286r83 3310r44 3310r92 3333r45
+. 3333r93 3357r49 3357r90 3357r129 3385r31 3386r29 3387r53 3419r53 3419r94
+. 3419r133 3453r26 3454r28 3455r53 3487r48 3524r49 3558r26 3559r40 3593r26
+. 3594r40 3628r26 3629r40 3663r26 3664r40 3698r26 3699r40 3733r26 3734r40
+. 3761r42 3787r42 3826r26 3866r26 3906r26 3947r26 3982r44 4006r45 4006r84
+. 4041r27 4042r27 4075r49 4075r88 4119r27 4120r27 4143r45 4143r88 4143r127
+. 4241r52 4274r68 4274r107 4295r45 4295r83 4320r27 4321r26 4360r27 4362r26
+. 4430r27 4432r26 4495r69 4521r26 6291r51 6291r94 6388r29 6389r31 6390r28
+. 6391r58
+59P9*chars_ptr 7|1475r99 1475r138 1530r35 1531r36 1557r101 1594r53 1594r92
+. 1617r60 1617r99 1640r35 1641r36 1661r62 3026r52 3054r53 3088r34 3089r34
+. 3123r34 3124r34 3158r34 3159r34 3182r52 3182r91 3211r53 3211r118 3236r52
+. 3236r91 3261r52 3261r91 3286r52 3286r91 3310r52 3310r100 3333r53 3333r101
+. 3357r57 3357r98 3357r137 3385r39 3386r37 3387r61 3419r61 3419r102 3419r141
+. 3453r34 3454r36 3455r61 3487r56 3524r57 3558r34 3559r48 3593r34 3594r48
+. 3628r34 3629r48 3663r34 3664r48 3698r34 3699r48 3733r34 3734r48 3761r50
+. 3787r50 3826r34 3866r34 3906r34 3947r34 3982r52 4006r53 4006r92 4041r35
+. 4042r35 4075r57 4075r96 4119r35 4120r35 4143r53 4143r96 4143r135 4241r60
+. 4274r76 4274r115 4295r53 4295r91 4320r35 4321r34 4360r35 4362r34 4430r35
+. 4432r34 4495r77 4521r34 6291r59 6291r102 6388r37 6389r39 6390r36 6391r66
+X 7 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 6557l5 6557e22
+52N4*SDL_FLT_EPSILON
+62a4*SDL_PRILL_PREFIX{string}
+97N4*SDL_INVALID_UNICODE_CODEPOINT
+99N4*SDL_PI_D
+101N4*SDL_PI_F
+377I12*Sint8{13|26I12}
+385M12*Uint8{14|26M12} 915r19
+393I12*Sint16{13|28I12}
+401M12*Uint16{14|28M12} 2335r13 2337r37
+409I12*Sint32{13|30I12} 4584r27 4584r42 4677r52 4677r67
+417M12*Uint32{14|30M12} 2363r13 2365r37 2398r14 2398r29 2531r13 4206r89 4241r101
+. 4274r41 4638r34 4737r60
+427I12*Sint64{13|32I12} 453r24
+437M12*Uint64{14|32M12} 4546r32 4677r40 4708r41 4737r45
+453I12*SDL_Time{427I12}
+914R9*SDL_alignment_test 918e4
+915m7*a{385M12}
+916m7*b{9|67M9}
+929E9*SDL_DUMMY_ENUM 931e4
+930n7*DUMMY_ENUM_VALUE{929E9}
+1042V13*SDL_malloc{9|67M9} 1042>25
+1042m25 size{8|70M12}
+1071V13*SDL_calloc{9|67M9} 1071>25 1071>50
+1071m25 nmemb{8|70M12}
+1071m50 size{8|70M12}
+1115V13*SDL_realloc{9|67M9} 1115>26 1115>48
+1115m26 mem{9|67M9}
+1115m48 size{8|70M12}
+1139U14*SDL_free 1139>24
+1139m24 mem{9|67M9}
+1162P9*SDL_malloc_func(9|67M9) 1162>45 1313r21
+1162m45 arg1{8|70M12}
+1185P9*SDL_calloc_func(9|67M9) 1185>45 1185>69 1314r21
+1185m45 arg1{8|70M12}
+1185m69 arg2{8|70M12}
+1208P9*SDL_realloc_func(9|67M9) 1208>46 1208>69 1315r22
+1208m46 arg1{9|67M9}
+1208m69 arg2{8|70M12}
+1228P9*SDL_free_func 1228>44 1316r19
+1228m44 arg1{9|67M9}
+1249U14*SDL_GetOriginalMemoryFunctions 1250>7 1251>7 1252>7 1253>7
+1250m7 malloc_func{9|67M9}
+1251m7 calloc_func{9|67M9}
+1252m7 realloc_func{9|67M9}
+1253m7 free_func{9|67M9}
+1276U14*SDL_GetMemoryFunctions 1277>7 1278>7 1279>7 1280>7
+1277m7 malloc_func{9|67M9}
+1278m7 calloc_func{9|67M9}
+1279m7 realloc_func{9|67M9}
+1280m7 free_func{9|67M9}
+1312V13*SDL_SetMemoryFunctions{5|59E12} 1313>7 1314>7 1315>7 1316>7
+1313p7 malloc_func{1162P9}
+1314p7 calloc_func{1185P9}
+1315p7 realloc_func{1208P9}
+1316p7 free_func{1228P9}
+1344V13*SDL_aligned_alloc{9|67M9} 1344>32 1344>61
+1344m32 alignment{8|70M12}
+1344m61 size{8|70M12}
+1366U14*SDL_aligned_free 1366>32
+1366m32 mem{9|67M9}
+1382V13*SDL_GetNumAllocations{4|57I9}
+1401R9*SDL_Environment 1425r46 1451r79 1475r54 1500r55 1529r20 1557r56 1575r51
+1425V13*SDL_GetEnvironment(1401R9)
+1451V13*SDL_CreateEnvironment(1401R9) 1451>36
+1451b36 populated{5|59E12}
+1475V13*SDL_GetEnvironmentVariable{6|59P9} 1475^41 1475>71
+1475p41 env(1401R9)
+1475p71 name{6|59P9}
+1500V13*SDL_GetEnvironmentVariables{9|67M9} 1500^42
+1500p42 env(1401R9)
+1528V13*SDL_SetEnvironmentVariable{5|59E12} 1529^7 1530>7 1531>7 1532>7
+1529p7 env(1401R9)
+1530p7 name{6|59P9}
+1531p7 value{6|59P9}
+1532b7 overwrite{5|59E12}
+1557V13*SDL_UnsetEnvironmentVariable{5|59E12} 1557^43 1557>73
+1557p43 env(1401R9)
+1557p73 name{6|59P9}
+1575U14*SDL_DestroyEnvironment 1575^38
+1575p38 env(1401R9)
+1594V13*SDL_getenv{6|59P9} 1594>25
+1594p25 name{6|59P9}
+1617V13*SDL_getenv_unsafe{6|59P9} 1617>32
+1617p32 name{6|59P9}
+1639V13*SDL_setenv_unsafe{4|57I9} 1640>7 1641>7 1642>7
+1640p7 name{6|59P9}
+1641p7 value{6|59P9}
+1642i7 overwrite{4|57I9}
+1661V13*SDL_unsetenv_unsafe{4|57I9} 1661>34
+1661p34 name{6|59P9}
+1681P9*SDL_CompareCallback(4|57I9) 1681>49 1681>72 1733r17 1792r17
+1681m49 arg1{9|67M9}
+1681m72 arg2{9|67M9}
+1729U14*SDL_qsort 1730>7 1731>7 1732>7 1733>7
+1730m7 base{9|67M9}
+1731m7 nmemb{8|70M12}
+1732m7 size{8|70M12}
+1733p7 compare{1681P9}
+1787V13*SDL_bsearch{9|67M9} 1788>7 1789>7 1790>7 1791>7 1792>7
+1788m7 key{9|67M9}
+1789m7 base{9|67M9}
+1790m7 nmemb{8|70M12}
+1791m7 size{8|70M12}
+1792p7 compare{1681P9}
+1813P9*SDL_CompareCallback_r(4|57I9) 1814>10 1815>10 1816>10 1875r17 1943r17
+1814m10 arg1{9|67M9}
+1815m10 arg2{9|67M9}
+1816m10 arg3{9|67M9}
+1871U14*SDL_qsort_r 1872>7 1873>7 1874>7 1875>7 1876>7
+1872m7 base{9|67M9}
+1873m7 nmemb{8|70M12}
+1874m7 size{8|70M12}
+1875p7 compare{1813P9}
+1876m7 userdata{9|67M9}
+1938V13*SDL_bsearch_r{9|67M9} 1939>7 1940>7 1941>7 1942>7 1943>7 1944>7
+1939m7 key{9|67M9}
+1940m7 base{9|67M9}
+1941m7 nmemb{8|70M12}
+1942m7 size{8|70M12}
+1943p7 compare{1813P9}
+1944m7 userdata{9|67M9}
+1960V13*SDL_abs{4|57I9} 1960>22
+1960i22 x{4|57I9}
+2036V13*SDL_isalpha{4|57I9} 2036>26
+2036i26 x{4|57I9}
+2055V13*SDL_isalnum{4|57I9} 2055>26
+2055i26 x{4|57I9}
+2074V13*SDL_isblank{4|57I9} 2074>26
+2074i26 x{4|57I9}
+2093V13*SDL_iscntrl{4|57I9} 2093>26
+2093i26 x{4|57I9}
+2112V13*SDL_isdigit{4|57I9} 2112>26
+2112i26 x{4|57I9}
+2131V13*SDL_isxdigit{4|57I9} 2131>27
+2131i27 x{4|57I9}
+2153V13*SDL_ispunct{4|57I9} 2153>26
+2153i26 x{4|57I9}
+2179V13*SDL_isspace{4|57I9} 2179>26
+2179i26 x{4|57I9}
+2198V13*SDL_isupper{4|57I9} 2198>26
+2198i26 x{4|57I9}
+2217V13*SDL_islower{4|57I9} 2217>26
+2217i26 x{4|57I9}
+2240V13*SDL_isprint{4|57I9} 2240>26
+2240i26 x{4|57I9}
+2265V13*SDL_isgraph{4|57I9} 2265>26
+2265i26 x{4|57I9}
+2287V13*SDL_toupper{4|57I9} 2287>26
+2287i26 x{4|57I9}
+2309V13*SDL_tolower{4|57I9} 2309>26
+2309i26 x{4|57I9}
+2334V13*SDL_crc16{401M12} 2335>7 2336>7 2337>7
+2335m7 crc{401M12}
+2336m7 data{9|67M9}
+2337m7 len{8|70M12}
+2362V13*SDL_crc32{417M12} 2363>7 2364>7 2365>7
+2363m7 crc{417M12}
+2364m7 data{9|67M9}
+2365m7 len{8|70M12}
+2395V13*SDL_murmur3_32{417M12} 2396>7 2397>7 2398>7
+2396m7 data{9|67M9}
+2397m7 len{8|70M12}
+2398m7 seed{417M12}
+2422V13*SDL_memcpy{9|67M9} 2423>7 2424>7 2425>7
+2423m7 dst{9|67M9}
+2424m7 src{9|67M9}
+2425m7 len{8|70M12}
+2474V13*SDL_memmove{9|67M9} 2475>7 2476>7 2477>7
+2475m7 dst{9|67M9}
+2476m7 src{9|67M9}
+2477m7 len{8|70M12}
+2502V13*SDL_memset{9|67M9} 2503>7 2504>7 2505>7
+2503m7 dst{9|67M9}
+2504i7 c{4|57I9}
+2505m7 len{8|70M12}
+2529V13*SDL_memset4{9|67M9} 2530>7 2531>7 2532>7
+2530m7 dst{9|67M9}
+2531m7 val{417M12}
+2532m7 dwords{8|70M12}
+2607V13*SDL_memcmp{4|57I9} 2608>7 2609>7 2610>7
+2608m7 s1{9|67M9}
+2609m7 s2{9|67M9}
+2610m7 len{8|70M12}
+2641V13*SDL_wcslen{8|70M12} 2641^25
+2641p25 wstr(8|100I12)
+2676V13*SDL_wcsnlen{8|70M12} 2676^26 2676>58
+2676p26 wstr(8|100I12)
+2676m58 maxlen{8|70M12}
+2707V13*SDL_wcslcpy{8|70M12} 2708^7 2709^7 2710>7
+2708p7 dst(8|100I12)
+2709p7 src(8|100I12)
+2710m7 maxlen{8|70M12}
+2743V13*SDL_wcslcat{8|70M12} 2744^7 2745^7 2746>7
+2744p7 dst(8|100I12)
+2745p7 src(8|100I12)
+2746m7 maxlen{8|70M12}
+2768V13*SDL_wcsdup(8|100I12) 2768^25
+2768p25 wstr(8|100I12)
+2792V13*SDL_wcsstr(8|100I12) 2792^25 2792^61
+2792p25 haystack(8|100I12)
+2792p61 needle(8|100I12)
+2821V13*SDL_wcsnstr(8|100I12) 2822^7 2823^7 2824>7
+2822p7 haystack(8|100I12)
+2823p7 needle(8|100I12)
+2824m7 maxlen{8|70M12}
+2847V13*SDL_wcscmp{4|57I9} 2847^25 2847^57
+2847p25 str1(8|100I12)
+2847p57 str2(8|100I12)
+2882V13*SDL_wcsncmp{4|57I9} 2883^7 2884^7 2885>7
+2883p7 str1(8|100I12)
+2884p7 str2(8|100I12)
+2885m7 maxlen{8|70M12}
+2919V13*SDL_wcscasecmp{4|57I9} 2919^29 2919^61
+2919p29 str1(8|100I12)
+2919p61 str2(8|100I12)
+2965V13*SDL_wcsncasecmp{4|57I9} 2966^7 2967^7 2968>7
+2966p7 str1(8|100I12)
+2967p7 str2(8|100I12)
+2968m7 maxlen{8|70M12}
+2999V13*SDL_wcstol{4|59I9} 3000^7 3001>7 3002>7
+3000p7 str(8|100I12)
+3001m7 endp{9|67M9}
+3002i7 base{4|57I9}
+3026V13*SDL_strlen{8|70M12} 3026>25
+3026p25 str{6|59P9}
+3054V13*SDL_strnlen{8|70M12} 3054>26 3054>64
+3054p26 str{6|59P9}
+3054m64 maxlen{8|70M12}
+3087V13*SDL_strlcpy{8|70M12} 3088>7 3089>7 3090>7
+3088p7 dst{6|59P9}
+3089p7 src{6|59P9}
+3090m7 maxlen{8|70M12}
+3122V13*SDL_utf8strlcpy{8|70M12} 3123>7 3124>7 3125>7
+3123p7 dst{6|59P9}
+3124p7 src{6|59P9}
+3125m7 dst_bytes{8|70M12}
+3157V13*SDL_strlcat{8|70M12} 3158>7 3159>7 3160>7
+3158p7 dst{6|59P9}
+3159p7 src{6|59P9}
+3160m7 maxlen{8|70M12}
+3182V13*SDL_strdup{6|59P9} 3182>25
+3182p25 str{6|59P9}
+3211V13*SDL_strndup{6|59P9} 3211>26 3211>64
+3211p26 str{6|59P9}
+3211m64 maxlen{8|70M12}
+3236V13*SDL_strrev{6|59P9} 3236>25
+3236p25 str{6|59P9}
+3261V13*SDL_strupr{6|59P9} 3261>25
+3261p25 str{6|59P9}
+3286V13*SDL_strlwr{6|59P9} 3286>25
+3286p25 str{6|59P9}
+3310V13*SDL_strchr{6|59P9} 3310>25 3310>63
+3310p25 str{6|59P9}
+3310i63 c{4|57I9}
+3333V13*SDL_strrchr{6|59P9} 3333>26 3333>64
+3333p26 str{6|59P9}
+3333i64 c{4|57I9}
+3357V13*SDL_strstr{6|59P9} 3357>25 3357>68
+3357p25 haystack{6|59P9}
+3357p68 needle{6|59P9}
+3384V13*SDL_strnstr{6|59P9} 3385>7 3386>7 3387>7
+3385p7 haystack{6|59P9}
+3386p7 needle{6|59P9}
+3387m7 maxlen{8|70M12}
+3419V13*SDL_strcasestr{6|59P9} 3419>29 3419>72
+3419p29 haystack{6|59P9}
+3419p72 needle{6|59P9}
+3452V13*SDL_strtok_r{6|59P9} 3453>7 3454>7 3455>7
+3453p7 str{6|59P9}
+3454p7 delim{6|59P9}
+3455m7 saveptr{9|67M9}
+3487V13*SDL_utf8strlen{8|70M12} 3487>29
+3487p29 str{6|59P9}
+3524V13*SDL_utf8strnlen{8|70M12} 3524>30 3524>68
+3524p30 str{6|59P9}
+3524m68 bytes{8|70M12}
+3556V13*SDL_itoa{6|59P9} 3557>7 3558>7 3559>7
+3557i7 value{4|57I9}
+3558p7 str{6|59P9}
+3559i7 radix{4|57I9}
+3591V13*SDL_uitoa{6|59P9} 3592>7 3593>7 3594>7
+3592m7 value{4|66M9}
+3593p7 str{6|59P9}
+3594i7 radix{4|57I9}
+3626V13*SDL_ltoa{6|59P9} 3627>7 3628>7 3629>7
+3627i7 value{4|59I9}
+3628p7 str{6|59P9}
+3629i7 radix{4|57I9}
+3661V13*SDL_ultoa{6|59P9} 3662>7 3663>7 3664>7
+3662m7 value{4|68M9}
+3663p7 str{6|59P9}
+3664i7 radix{4|57I9}
+3696V13*SDL_lltoa{6|59P9} 3697>7 3698>7 3699>7
+3697i7 value{long_long_integer}
+3698p7 str{6|59P9}
+3699i7 radix{4|57I9}
+3731V13*SDL_ulltoa{6|59P9} 3732>7 3733>7 3734>7
+3732m7 value{5|64M12}
+3733p7 str{6|59P9}
+3734i7 radix{4|57I9}
+3761V13*SDL_atoi{4|57I9} 3761>23
+3761p23 str{6|59P9}
+3787V13*SDL_atof{4|98F9} 3787>23
+3787p23 str{6|59P9}
+3825V13*SDL_strtol{4|59I9} 3826>7 3827>7 3828>7
+3826p7 str{6|59P9}
+3827m7 endp{9|67M9}
+3828i7 base{4|57I9}
+3865V13*SDL_strtoul{4|68M9} 3866>7 3867>7 3868>7
+3866p7 str{6|59P9}
+3867m7 endp{9|67M9}
+3868i7 base{4|57I9}
+3905V13*SDL_strtoll{long_long_integer} 3906>7 3907>7 3908>7
+3906p7 str{6|59P9}
+3907m7 endp{9|67M9}
+3908i7 base{4|57I9}
+3946V13*SDL_strtoull{5|64M12} 3947>7 3948>7 3949>7
+3947p7 str{6|59P9}
+3948m7 endp{9|67M9}
+3949i7 base{4|57I9}
+3982V13*SDL_strtod{4|98F9} 3982>25 3982>63
+3982p25 str{6|59P9}
+3982m63 endp{9|67M9}
+4006V13*SDL_strcmp{4|57I9} 4006>25 4006>64
+4006p25 str1{6|59P9}
+4006p64 str2{6|59P9}
+4040V13*SDL_strncmp{4|57I9} 4041>7 4042>7 4043>7
+4041p7 str1{6|59P9}
+4042p7 str2{6|59P9}
+4043m7 maxlen{8|70M12}
+4075V13*SDL_strcasecmp{4|57I9} 4075>29 4075>68
+4075p29 str1{6|59P9}
+4075p68 str2{6|59P9}
+4118V13*SDL_strncasecmp{4|57I9} 4119>7 4120>7 4121>7
+4119p7 str1{6|59P9}
+4120p7 str2{6|59P9}
+4121m7 maxlen{8|70M12}
+4143V13*SDL_strpbrk{6|59P9} 4143>26 4143>64
+4143p26 str{6|59P9}
+4143p64 breakset{6|59P9}
+4206V13*SDL_StepUTF8{417M12} 4206>27 4206^50
+4206m27 pstr{9|67M9}
+4206p50 pslen(8|70M12)
+4241V13*SDL_StepBackUTF8{417M12} 4241>31 4241>71
+4241p31 start{6|59P9}
+4241m71 pstr{9|67M9}
+4274V13*SDL_UCS4ToUTF8{6|59P9} 4274>29 4274>49
+4274m29 codepoint{417M12}
+4274p49 dst{6|59P9}
+4295V13*SDL_sscanf{4|57I9} 4295>25 4295>64
+4295p25 text{6|59P9}
+4295p64 fmt{6|59P9}
+4319V13*SDL_vsscanf{4|57I9} 4320>7 4321>7 4322^7
+4320p7 text{6|59P9}
+4321p7 fmt{6|59P9}
+4322p7 ap(9|67M9)
+4359V13*SDL_snprintf{4|57I9} 4360>7 4361>7 4362>7
+4360p7 text{6|59P9}
+4361m7 maxlen{8|70M12}
+4362p7 fmt{6|59P9}
+4401V13*SDL_swprintf{4|57I9} 4402^7 4403>7 4404^7
+4402p7 text(8|100I12)
+4403m7 maxlen{8|70M12}
+4404p7 fmt(8|100I12)
+4429V13*SDL_vsnprintf{4|57I9} 4430>7 4431>7 4432>7 4433^7
+4430p7 text{6|59P9}
+4431m7 maxlen{8|70M12}
+4432p7 fmt{6|59P9}
+4433p7 ap(9|67M9)
+4458V13*SDL_vswprintf{4|57I9} 4459^7 4460>7 4461^7 4462^7
+4459p7 text(8|100I12)
+4460m7 maxlen{8|70M12}
+4461p7 fmt(8|100I12)
+4462p7 ap(9|67M9)
+4495V13*SDL_asprintf{4|57I9} 4495>27 4495>50
+4495m27 strp{9|67M9}
+4495p50 fmt{6|59P9}
+4519V13*SDL_vasprintf{4|57I9} 4520>7 4521>7 4522^7
+4520m7 strp{9|67M9}
+4521p7 fmt{6|59P9}
+4522p7 ap(9|67M9)
+4546U14*SDL_srand 4546>25
+4546m25 seed{437M12}
+4584V13*SDL_rand{409I12} 4584>23
+4584i23 n{409I12}
+4611V13*SDL_randf{float}
+4638V13*SDL_rand_bits{417M12}
+4677V13*SDL_rand_r{409I12} 4677^25 4677>48
+4677p25 state(437M12)
+4677i48 n{409I12}
+4708V13*SDL_randf_r{float} 4708^26
+4708p26 state(437M12)
+4737V13*SDL_rand_bits_r{417M12} 4737^30
+4737p30 state(437M12)
+4787V13*SDL_acos{4|98F9} 4787>23
+4787f23 x{4|98F9}
+4821V13*SDL_acosf{float} 4821>24
+4821f24 x{float}
+4855V13*SDL_asin{4|98F9} 4855>23
+4855f23 x{4|98F9}
+4889V13*SDL_asinf{float} 4889>24
+4889f24 x{float}
+4925V13*SDL_atan{4|98F9} 4925>23
+4925f23 x{4|98F9}
+4961V13*SDL_atanf{float} 4961>24
+4961f24 x{float}
+5001V13*SDL_atan2{4|98F9} 5001>24 5001>36
+5001f24 y{4|98F9}
+5001f36 x{4|98F9}
+5041V13*SDL_atan2f{float} 5041>25 5041>36
+5041f25 y{float}
+5041f36 x{float}
+5073V13*SDL_ceil{4|98F9} 5073>23
+5073f23 x{4|98F9}
+5105V13*SDL_ceilf{float} 5105>24
+5105f24 x{float}
+5135V13*SDL_copysign{4|98F9} 5135>27 5135>39
+5135f27 x{4|98F9}
+5135f39 y{4|98F9}
+5165V13*SDL_copysignf{float} 5165>28 5165>39
+5165f28 x{float}
+5165f39 y{float}
+5197V13*SDL_cos{4|98F9} 5197>22
+5197f22 x{4|98F9}
+5229V13*SDL_cosf{float} 5229>23
+5229f23 x{float}
+5265V13*SDL_exp{4|98F9} 5265>22
+5265f22 x{4|98F9}
+5301V13*SDL_expf{float} 5301>23
+5301f23 x{float}
+5326V13*SDL_fabs{4|98F9} 5326>23
+5326f23 x{4|98F9}
+5351V13*SDL_fabsf{float} 5351>24
+5351f24 x{float}
+5383V13*SDL_floor{4|98F9} 5383>24
+5383f24 x{4|98F9}
+5415V13*SDL_floorf{float} 5415>25
+5415f25 x{float}
+5448V13*SDL_trunc{4|98F9} 5448>24
+5448f24 x{4|98F9}
+5481V13*SDL_truncf{float} 5481>25
+5481f25 x{float}
+5515V13*SDL_fmod{4|98F9} 5515>23 5515>35
+5515f23 x{4|98F9}
+5515f35 y{4|98F9}
+5549V13*SDL_fmodf{float} 5549>24 5549>35
+5549f24 x{float}
+5549f35 y{float}
+5567V13*SDL_isinf{4|57I9} 5567>24
+5567f24 x{4|98F9}
+5585V13*SDL_isinff{4|57I9} 5585>25
+5585f25 x{float}
+5603V13*SDL_isnan{4|57I9} 5603>24
+5603f24 x{4|98F9}
+5621V13*SDL_isnanf{4|57I9} 5621>25
+5621f25 x{float}
+5655V13*SDL_log{4|98F9} 5655>22
+5655f22 x{4|98F9}
+5688V13*SDL_logf{float} 5688>23
+5688f23 x{float}
+5722V13*SDL_log10{4|98F9} 5722>24
+5722f24 x{4|98F9}
+5756V13*SDL_log10f{float} 5756>25
+5756f25 x{float}
+5780V13*SDL_modf{4|98F9} 5780>23 5780^35
+5780f23 x{4|98F9}
+5780p35 y(4|98F9)
+5804V13*SDL_modff{float} 5804>24 5804^35
+5804f24 x{float}
+5804p35 y(float)
+5840V13*SDL_pow{4|98F9} 5840>22 5840>34
+5840f22 x{4|98F9}
+5840f34 y{4|98F9}
+5876V13*SDL_powf{float} 5876>23 5876>34
+5876f23 x{float}
+5876f34 y{float}
+5909V13*SDL_round{4|98F9} 5909>24
+5909f24 x{4|98F9}
+5942V13*SDL_roundf{float} 5942>25
+5942f25 x{float}
+5975V13*SDL_lround{4|59I9} 5975>25
+5975f25 x{4|98F9}
+6008V13*SDL_lroundf{4|59I9} 6008>26
+6008f26 x{float}
+6037V13*SDL_scalbn{4|98F9} 6037>25 6037>37
+6037f25 x{4|98F9}
+6037i37 n{4|57I9}
+6066V13*SDL_scalbnf{float} 6066>26 6066>37
+6066f26 x{float}
+6066i37 n{4|57I9}
+6098V13*SDL_sin{4|98F9} 6098>22
+6098f22 x{4|98F9}
+6130V13*SDL_sinf{float} 6130>23
+6130f23 x{float}
+6160V13*SDL_sqrt{4|98F9} 6160>23
+6160f23 x{4|98F9}
+6190V13*SDL_sqrtf{float} 6190>24
+6190f24 x{float}
+6224V13*SDL_tan{4|98F9} 6224>22
+6224f22 x{4|98F9}
+6258V13*SDL_tanf{float} 6258>23
+6258f23 x{float}
+6271R9*SDL_iconv_data_t 6273r35
+6273P9*SDL_iconv_t(6271R9) 6291r120 6309r35 6352r12
+6291V13*SDL_iconv_open{6273P9} 6291>29 6291>70
+6291p29 tocode{6|59P9}
+6291p70 fromcode{6|59P9}
+6309V13*SDL_iconv_close{4|57I9} 6309>30
+6309p30 cd{6273P9}
+6351V13*SDL_iconv{8|70M12} 6352>7 6353>7 6354^7 6355>7 6356^7
+6352p7 cd{6273P9}
+6353m7 inbuf{9|67M9}
+6354p7 inbytesleft(8|70M12)
+6355m7 outbuf{9|67M9}
+6356p7 outbytesleft(8|70M12)
+6387V13*SDL_iconv_string{6|59P9} 6388>7 6389>7 6390>7 6391>7
+6388p7 tocode{6|59P9}
+6389p7 fromcode{6|59P9}
+6390p7 inbuf{6|59P9}
+6391m7 inbytesleft{8|70M12}
+6479V13*SDL_size_mul_check_overflow{5|59E12} 6480>7 6481>7 6482^7
+6480m7 a{8|70M12}
+6481m7 b{8|70M12}
+6482p7 ret(8|70M12)
+6491V13*SDL_size_mul_check_overflow_builtin{5|59E12} 6492>7 6493>7 6494^7
+6492m7 a{8|70M12}
+6493m7 b{8|70M12}
+6494p7 ret(8|70M12)
+6517V13*SDL_size_add_check_overflow{5|59E12} 6518>7 6519>7 6520^7
+6518m7 a{8|70M12}
+6519m7 b{8|70M12}
+6520p7 ret(8|70M12)
+6528V13*SDL_size_add_check_overflow_builtin{5|59E12} 6529>7 6530>7 6531^7
+6529m7 a{8|70M12}
+6530m7 b{8|70M12}
+6531p7 ret(8|70M12)
+6553P9*SDL_FunctionPointer
+X 8 stddef_h.ads
+8K9*stddef_h 7|10w6 1042r32 1071r33 1071r57 1115r55 1162r52 1185r52 1185r76
+. 1208r76 1344r44 1344r68 1731r15 1732r14 1790r15 1791r14 1873r15 1874r14
+. 1941r15 1942r14 2337r13 2365r13 2397r13 2425r13 2477r13 2505r13 2532r16
+. 2610r13 2641r39 2641r64 2676r40 2676r67 2676r91 2708r20 2709r20 2710r16
+. 2710r40 2744r20 2745r20 2746r16 2746r40 2768r39 2768r71 2792r43 2792r77
+. 2792r109 2822r25 2823r23 2824r16 2824r47 2847r39 2847r71 2883r21 2884r21
+. 2885r16 2919r43 2919r75 2966r21 2967r21 2968r16 3000r20 3026r70 3054r73
+. 3054r97 3090r16 3090r40 3125r19 3125r43 3160r16 3160r40 3211r73 3387r16
+. 3487r74 3524r76 3524r100 4043r16 4121r16 4206r65 4361r16 4402r21 4403r16
+. 4404r20 4431r16 4459r21 4460r16 4461r20 6354r28 6356r29 6356r53 6391r21
+. 6480r11 6481r11 6482r20 6492r11 6493r11 6494r20 6518r11 6519r11 6520r20
+. 6529r11 6530r11 6531r20 8|119e13
+70M12*size_t{4|68M9} 7|1042r41 1071r42 1071r66 1115r64 1162r61 1185r61 1185r85
+. 1208r85 1344r53 1344r77 1731r24 1732r23 1790r24 1791r23 1873r24 1874r23
+. 1941r24 1942r23 2337r22 2365r22 2397r22 2425r22 2477r22 2505r22 2532r25
+. 2610r22 2641r73 2676r76 2676r100 2710r25 2710r49 2746r25 2746r49 2824r25
+. 2885r25 2968r25 3026r79 3054r82 3054r106 3090r25 3090r49 3125r28 3125r52
+. 3160r25 3160r49 3211r82 3387r25 3487r83 3524r85 3524r109 4043r25 4121r25
+. 4206r74 4361r25 4403r25 4431r25 4460r25 6354r37 6356r38 6356r62 6391r30
+. 6480r20 6481r20 6482r29 6492r20 6493r20 6494r29 6518r20 6519r20 6520r29
+. 6529r20 6530r20 6531r29
+100I12*wchar_t{4|57I9} 7|2641r48 2676r49 2708r29 2709r29 2744r29 2745r29
+. 2768r48 2768r80 2792r52 2792r86 2792r118 2822r34 2823r32 2824r56 2847r48
+. 2847r80 2883r30 2884r30 2919r52 2919r84 2966r30 2967r30 3000r29 4402r30
+. 4404r29 4459r30 4461r29
+X 9 system.ads
+37K9*System 7|9w6 916r11 1042r56 1071r81 1115r32 1115r79 1139r30 1162r76
+. 1185r100 1208r53 1208r100 1228r51 1250r21 1251r21 1252r22 1253r19 1277r21
+. 1278r21 1279r22 1280r19 1344r92 1366r38 1500r79 1681r56 1681r79 1730r14
+. 1788r13 1789r14 1792r45 1814r17 1815r17 1816r17 1872r14 1876r18 1939r13
+. 1940r14 1944r18 1944r41 2336r14 2364r14 2396r14 2423r13 2424r13 2425r37
+. 2475r13 2476r13 2477r37 2503r13 2505r37 2530r13 2532r40 2608r12 2609r12
+. 3001r14 3455r17 3827r14 3867r14 3907r14 3948r14 3982r70 4206r34 4241r78
+. 4322r19 4433r19 4462r19 4495r34 4520r14 4522r19 6353r15 6355r16 9|153e11
+67M9*Address 7|916r18 1042r63 1071r88 1115r39 1115r86 1139r37 1162r83 1185r107
+. 1208r60 1208r107 1228r58 1250r28 1251r28 1252r29 1253r26 1277r28 1278r28
+. 1279r29 1280r26 1344r99 1366r45 1500r86 1681r63 1681r86 1730r21 1788r20
+. 1789r21 1792r52 1814r24 1815r24 1816r24 1872r21 1876r25 1939r20 1940r21
+. 1944r25 1944r48 2336r21 2364r21 2396r21 2423r20 2424r20 2425r44 2475r20
+. 2476r20 2477r44 2503r20 2505r44 2530r20 2532r47 2608r19 2609r19 3001r21
+. 3455r24 3827r21 3867r21 3907r21 3948r21 3982r77 4206r41 4241r85 4322r26
+. 4433r26 4462r26 4495r41 4520r21 4522r26 6353r22 6355r23
+X 13 x86_64_linux_gnu_bits_stdint_intn_h.ads
+9K9*x86_64_linux_gnu_bits_stdint_intn_h 7|7w6 377r21 393r22 409r22 427r22
+. 13|34e40
+26I12*int8_t{15|40I12} 7|377r57
+28I12*int16_t{15|44I12} 7|393r58
+30I12*int32_t{15|48I12} 7|409r58
+32I12*int64_t{15|52I12} 7|427r58
+X 14 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+9K9*x86_64_linux_gnu_bits_stdint_uintn_h 7|8w6 385r21 401r22 417r22 437r22
+. 14|34e41
+26M12*uint8_t{15|42M12} 7|385r58
+28M12*uint16_t{15|46M12} 7|401r59
+30M12*uint32_t{15|50M12} 7|417r59
+32M12*uint64_t{15|54M12} 7|437r59
+X 15 x86_64_linux_gnu_bits_types_h.ads
+40I12*uu_int8_t{4|63I9}
+42M12*uu_uint8_t{4|71M9}
+44I12*uu_int16_t{4|58I9}
+46M12*uu_uint16_t{4|67M9}
+48I12*uu_int32_t{4|57I9}
+52I12*uu_int64_t{4|59I9}
+

@@ -1,0 +1,736 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_OBSOLESCENT_FEATURES
+
+U sdl3_sdl_video_h%s	sdl3_sdl_video_h.ads	c100c6c6 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_pixels_h%s	sdl3_sdl_pixels_h.ads	sdl3_sdl_pixels_h.ali
+W sdl3_sdl_properties_h%s  sdl3_sdl_properties_h.ads  sdl3_sdl_properties_h.ali
+Y sdl3_sdl_rect_h%s	sdl3_sdl_rect_h.ads	sdl3_sdl_rect_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+Y sdl3_sdl_surface_h%s	sdl3_sdl_surface_h.ads	sdl3_sdl_surface_h.ali
+W stddef_h%s		stddef_h.ads		stddef_h.ali
+W stdint_h%s		stdint_h.ads		stdint_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_pixels_h.ads	20260331104513 93ccfcde sdl3_sdl_pixels_h%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_rect_h.ads	20260331104513 fff6e78f sdl3_sdl_rect_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D sdl3_sdl_surface_h.ads  20260331104513 91d140a0 sdl3_sdl_surface_h%s
+D sdl3_sdl_video_h.ads	20260331104513 c0f601b9 sdl3_sdl_video_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D stdint_h.ads		20260331104513 f00870c6 stdint_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_getnumvideodrivers sdl3_sdl_video_h 719 13 none]
+G c Z s s [sdl_getvideodriver sdl3_sdl_video_h 745 13 none]
+G c Z s s [sdl_getcurrentvideodriver sdl3_sdl_video_h 768 13 none]
+G c Z s s [sdl_getsystemtheme sdl3_sdl_video_h 783 13 none]
+G c Z s s [sdl_getdisplays sdl3_sdl_video_h 802 13 none]
+G c Z s s [sdl_getprimarydisplay sdl3_sdl_video_h 820 13 none]
+G c Z s s [sdl_getdisplayproperties sdl3_sdl_video_h 862 13 none]
+G c Z s s [sdl_getdisplayname sdl3_sdl_video_h 881 13 none]
+G c Z s s [sdl_getdisplaybounds sdl3_sdl_video_h 905 13 none]
+G c Z s s [sdl_getdisplayusablebounds sdl3_sdl_video_h 935 13 none]
+G c Z s s [sdl_getnaturaldisplayorientation sdl3_sdl_video_h 954 13 none]
+G c Z s s [sdl_getcurrentdisplayorientation sdl3_sdl_video_h 973 13 none]
+G c Z s s [sdl_getdisplaycontentscale sdl3_sdl_video_h 1004 13 none]
+G c Z s s [sdl_getfullscreendisplaymodes sdl3_sdl_video_h 1036 13 none]
+G c Z s s [sdl_getclosestfullscreendisplaymode sdl3_sdl_video_h 1071 13 none]
+G c Z s s [sdl_getdesktopdisplaymode sdl3_sdl_video_h 1102 13 none]
+G c Z s s [sdl_getcurrentdisplaymode sdl3_sdl_video_h 1127 13 none]
+G c Z s s [sdl_getdisplayforpoint sdl3_sdl_video_h 1147 13 none]
+G c Z s s [sdl_getdisplayforrect sdl3_sdl_video_h 1168 13 none]
+G c Z s s [sdl_getdisplayforwindow sdl3_sdl_video_h 1189 13 none]
+G c Z s s [sdl_getwindowpixeldensity sdl3_sdl_video_h 1212 13 none]
+G c Z s s [sdl_getwindowdisplayscale sdl3_sdl_video_h 1240 13 none]
+G c Z s s [sdl_setwindowfullscreenmode sdl3_sdl_video_h 1279 13 none]
+G c Z s s [sdl_getwindowfullscreenmode sdl3_sdl_video_h 1299 13 none]
+G c Z s s [sdl_getwindowiccprofile sdl3_sdl_video_h 1318 13 none]
+G c Z s s [sdl_getwindowpixelformat sdl3_sdl_video_h 1336 13 none]
+G c Z s s [sdl_getwindows sdl3_sdl_video_h 1356 13 none]
+G c Z s s [sdl_createwindow sdl3_sdl_video_h 1449 13 none]
+G c Z s s [sdl_createpopupwindow sdl3_sdl_video_h 1533 13 none]
+G c Z s s [sdl_createwindowwithproperties sdl3_sdl_video_h 1692 13 none]
+G c Z s s [sdl_getwindowid sdl3_sdl_video_h 1714 13 none]
+G c Z s s [sdl_getwindowfromid sdl3_sdl_video_h 1736 13 none]
+G c Z s s [sdl_getwindowparent sdl3_sdl_video_h 1755 13 none]
+G c Z s s [sdl_getwindowproperties sdl3_sdl_video_h 1888 13 none]
+G c Z s s [sdl_getwindowflags sdl3_sdl_video_h 1913 13 none]
+G c Z s s [sdl_setwindowtitle sdl3_sdl_video_h 1935 13 none]
+G c Z s s [sdl_getwindowtitle sdl3_sdl_video_h 1954 13 none]
+G c Z s s [sdl_setwindowicon sdl3_sdl_video_h 1985 13 none]
+G c Z s s [sdl_setwindowposition sdl3_sdl_video_h 2030 13 none]
+G c Z s s [sdl_getwindowposition sdl3_sdl_video_h 2062 13 none]
+G c Z s s [sdl_setwindowsize sdl3_sdl_video_h 2106 13 none]
+G c Z s s [sdl_getwindowsize sdl3_sdl_video_h 2137 13 none]
+G c Z s s [sdl_getwindowsafearea sdl3_sdl_video_h 2166 13 none]
+G c Z s s [sdl_setwindowaspectratio sdl3_sdl_video_h 2211 13 none]
+G c Z s s [sdl_getwindowaspectratio sdl3_sdl_video_h 2237 13 none]
+G c Z s s [sdl_getwindowborderssize sdl3_sdl_video_h 2281 13 none]
+G c Z s s [sdl_getwindowsizeinpixels sdl3_sdl_video_h 2310 13 none]
+G c Z s s [sdl_setwindowminimumsize sdl3_sdl_video_h 2335 13 none]
+G c Z s s [sdl_getwindowminimumsize sdl3_sdl_video_h 2362 13 none]
+G c Z s s [sdl_setwindowmaximumsize sdl3_sdl_video_h 2387 13 none]
+G c Z s s [sdl_getwindowmaximumsize sdl3_sdl_video_h 2414 13 none]
+G c Z s s [sdl_setwindowbordered sdl3_sdl_video_h 2443 13 none]
+G c Z s s [sdl_setwindowresizable sdl3_sdl_video_h 2469 13 none]
+G c Z s s [sdl_setwindowalwaysontop sdl3_sdl_video_h 2492 13 none]
+G c Z s s [sdl_setwindowfilldocument sdl3_sdl_video_h 2527 13 none]
+G c Z s s [sdl_showwindow sdl3_sdl_video_h 2547 13 none]
+G c Z s s [sdl_hidewindow sdl3_sdl_video_h 2567 13 none]
+G c Z s s [sdl_raisewindow sdl3_sdl_video_h 2591 13 none]
+G c Z s s [sdl_maximizewindow sdl3_sdl_video_h 2629 13 none]
+G c Z s s [sdl_minimizewindow sdl3_sdl_video_h 2662 13 none]
+G c Z s s [sdl_restorewindow sdl3_sdl_video_h 2696 13 none]
+G c Z s s [sdl_setwindowfullscreen sdl3_sdl_video_h 2732 13 none]
+G c Z s s [sdl_syncwindow sdl3_sdl_video_h 2767 13 none]
+G c Z s s [sdl_windowhassurface sdl3_sdl_video_h 2786 13 none]
+G c Z s s [sdl_getwindowsurface sdl3_sdl_video_h 2819 13 none]
+G c Z s s [sdl_setwindowsurfacevsync sdl3_sdl_video_h 2849 13 none]
+G c Z s s [sdl_getwindowsurfacevsync sdl3_sdl_video_h 2870 13 none]
+G c Z s s [sdl_updatewindowsurface sdl3_sdl_video_h 2895 13 none]
+G c Z s s [sdl_updatewindowsurfacerects sdl3_sdl_video_h 2928 13 none]
+G c Z s s [sdl_destroywindowsurface sdl3_sdl_video_h 2951 13 none]
+G c Z s s [sdl_setwindowkeyboardgrab sdl3_sdl_video_h 2988 13 none]
+G c Z s s [sdl_setwindowmousegrab sdl3_sdl_video_h 3012 13 none]
+G c Z s s [sdl_getwindowkeyboardgrab sdl3_sdl_video_h 3030 13 none]
+G c Z s s [sdl_getwindowmousegrab sdl3_sdl_video_h 3051 13 none]
+G c Z s s [sdl_getgrabbedwindow sdl3_sdl_video_h 3069 13 none]
+G c Z s s [sdl_setwindowmouserect sdl3_sdl_video_h 3095 13 none]
+G c Z s s [sdl_getwindowmouserect sdl3_sdl_video_h 3116 13 none]
+G c Z s s [sdl_setwindowopacity sdl3_sdl_video_h 3141 13 none]
+G c Z s s [sdl_getwindowopacity sdl3_sdl_video_h 3163 13 none]
+G c Z s s [sdl_setwindowparent sdl3_sdl_video_h 3201 13 none]
+G c Z s s [sdl_setwindowmodal sdl3_sdl_video_h 3225 13 none]
+G c Z s s [sdl_setwindowfocusable sdl3_sdl_video_h 3243 13 none]
+G c Z s s [sdl_showwindowsystemmenu sdl3_sdl_video_h 3272 13 none]
+G c Z s s [sdl_setwindowhittest sdl3_sdl_video_h 3373 13 none]
+G c Z s s [sdl_setwindowshape sdl3_sdl_video_h 3408 13 none]
+G c Z s s [sdl_flashwindow sdl3_sdl_video_h 3426 13 none]
+G c Z s s [sdl_setwindowprogressstate sdl3_sdl_video_h 3445 13 none]
+G c Z s s [sdl_getwindowprogressstate sdl3_sdl_video_h 3462 13 none]
+G c Z s s [sdl_setwindowprogressvalue sdl3_sdl_video_h 3481 13 none]
+G c Z s s [sdl_getwindowprogressvalue sdl3_sdl_video_h 3498 13 none]
+G c Z s s [sdl_destroywindow sdl3_sdl_video_h 3524 14 none]
+G c Z s s [sdl_screensaverenabled sdl3_sdl_video_h 3546 13 none]
+G c Z s s [sdl_enablescreensaver sdl3_sdl_video_h 3565 13 none]
+G c Z s s [sdl_disablescreensaver sdl3_sdl_video_h 3590 13 none]
+G c Z s s [sdl_gl_loadlibrary sdl3_sdl_video_h 3623 13 none]
+G c Z s s [sdl_gl_getprocaddress sdl3_sdl_video_h 3682 13 none]
+G c Z s s [sdl_egl_getprocaddress sdl3_sdl_video_h 3705 13 none]
+G c Z s s [sdl_gl_unloadlibrary sdl3_sdl_video_h 3720 14 none]
+G c Z s s [sdl_gl_extensionsupported sdl3_sdl_video_h 3747 13 none]
+G c Z s s [sdl_gl_resetattributes sdl3_sdl_video_h 3763 14 none]
+G c Z s s [sdl_gl_setattribute sdl3_sdl_video_h 3790 13 none]
+G c Z s s [sdl_gl_getattribute sdl3_sdl_video_h 3812 13 none]
+G c Z s s [sdl_gl_createcontext sdl3_sdl_video_h 3846 13 none]
+G c Z s s [sdl_gl_makecurrent sdl3_sdl_video_h 3868 13 none]
+G c Z s s [sdl_gl_getcurrentwindow sdl3_sdl_video_h 3884 13 none]
+G c Z s s [sdl_gl_getcurrentcontext sdl3_sdl_video_h 3902 13 none]
+G c Z s s [sdl_egl_getcurrentdisplay sdl3_sdl_video_h 3918 13 none]
+G c Z s s [sdl_egl_getcurrentconfig sdl3_sdl_video_h 3934 13 none]
+G c Z s s [sdl_egl_getwindowsurface sdl3_sdl_video_h 3951 13 none]
+G c Z s s [sdl_egl_setattributecallbacks sdl3_sdl_video_h 3977 14 none]
+G c Z s s [sdl_gl_setswapinterval sdl3_sdl_video_h 4016 13 none]
+G c Z s s [sdl_gl_getswapinterval sdl3_sdl_video_h 4041 13 none]
+G c Z s s [sdl_gl_swapwindow sdl3_sdl_video_h 4065 13 none]
+G c Z s s [sdl_gl_destroycontext sdl3_sdl_video_h 4084 13 none]
+G c Z s s [sdl_displaymodedataIP sdl3_sdl_video_h 272 9 none]
+G c Z s s [sdl_displaymodeIP sdl3_sdl_video_h 287 9 none]
+G c Z s s [sdl_windowIP sdl3_sdl_video_h 335 9 none]
+G c Z s s [sdl_glcontextstateIP sdl3_sdl_video_h 492 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 12|6r6 6r24 11r6 14r6 745r53 768r46 881r67 1450r15
+. 1935r69 1954r68 3623r40 3682r43 3705r44 3747r52
+X 4 i-c.ads
+29K20*C 597e17 12|6w17 6r35 11r17 14r17 745r64 768r57 881r78 1450r26 1935r80
+. 1954r79 3623r51 3682r54 3705r55 3747r63
+57I9*int<integer> 12|290r19 291r19 294r40 295r42 467r33 534r26 719r43 745r41
+. 802r45 1036r86 1073r11 1074r11 1356r44 1451r11 1452r11 1535r18 1536r18
+. 1537r11 1538r11 2032r11 2033r11 2064r18 2065r18 2108r11 2109r11 2139r18
+. 2140r18 2283r20 2284r21 2285r23 2286r22 2312r18 2313r18 2337r15 2338r15
+. 2364r18 2365r18 2389r15 2390r15 2416r18 2417r18 2849r76 2870r83 2931r18
+. 3274r11 3275r11 3790r61 3812r68 4016r48 4041r55
+59I9*long<long_integer>
+66M9*unsigned
+68M9*unsigned_long
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 12|14w19 905r109 935r115 1076r36 1077r48 1279r117
+. 1935r108 1985r113 2033r23 2065r30 2109r23 2140r30 2166r111 2214r34 2240r41
+. 2286r34 2313r30 2338r27 2365r30 2390r27 2417r30 2443r75 2443r99 2469r77
+. 2469r101 2492r76 2492r100 2527r75 2527r99 2547r64 2567r64 2591r65 2629r68
+. 2662r68 2696r67 2732r79 2732r103 2767r64 2786r70 2849r88 2870r95 2895r73
+. 2931r30 2951r74 2988r78 2988r102 3012r75 3012r99 3030r75 3051r72 3095r121
+. 3141r87 3201r97 3225r69 3225r93 3243r77 3243r101 3275r23 3376r46 3408r115
+. 3426r97 3445r103 3481r91 3546r43 3565r42 3590r43 3623r79 3747r91 3790r73
+. 3812r80 3868r93 4016r60 4041r67 4065r67 4084r68
+59B12*bool{4|92E9} 12|905r120 935r126 1076r47 1077r59 1279r128 1935r119 1985r124
+. 2033r34 2065r41 2109r34 2140r41 2166r122 2214r45 2240r52 2286r45 2313r41
+. 2338r38 2365r41 2390r38 2417r41 2443r86 2443r110 2469r88 2469r112 2492r87
+. 2492r111 2527r86 2527r110 2547r75 2567r75 2591r76 2629r79 2662r79 2696r78
+. 2732r90 2732r114 2767r75 2786r81 2849r99 2870r106 2895r84 2931r41 2951r85
+. 2988r89 2988r113 3012r86 3012r110 3030r86 3051r83 3095r132 3141r98 3201r108
+. 3225r80 3225r104 3243r88 3243r112 3275r34 3376r57 3408r126 3426r108 3445r114
+. 3481r102 3546r54 3565r53 3590r54 3623r90 3747r102 3790r84 3812r91 3868r104
+. 4016r71 4041r78 4065r78 4084r79
+X 6 i-cstrin.ads
+44K22*Strings 156e25 12|11w19 745r66 768r59 881r80 1450r28 1935r82 1954r81
+. 3623r53 3682r56 3705r57 3747r65
+59P9*chars_ptr 12|745r74 768r67 881r88 1450r36 1935r90 1954r89 3623r61 3682r64
+. 3705r65 3747r73
+X 7 sdl3_sdl_pixels_h.ads
+11K9*SDL3_SDL_pixels_h 1548e22 12|8w6 289r24 1336r74
+545M12*SDL_PixelFormat{4|66M9} 12|289r42 1336r92
+X 8 sdl3_sdl_properties_h.ads
+12K9*SDL3_SDL_properties_h 693e26 12|12w6 862r73 1692r53 1888r73
+66M12*SDL_PropertiesID{10|417M12} 12|862r95 1692r75 1888r95
+X 9 sdl3_sdl_rect_h.ads
+9K9 SDL3_SDL_rect_h 12|905r76 935r82 1147r61 1168r59 2166r78 2930r31 3095r88
+. 3116r88 3326r33
+X 10 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 6557e22 12|7w6 218r29 228r28 356r31 679r29 687r33
+. 696r40 704r46 3682r82 3705r83
+417M12*Uint32{20|30M12} 12|218r47 228r46 679r47 687r51 696r58 704r64
+437M12*Uint64{20|32M12} 12|356r49
+6553P9*SDL_FunctionPointer 12|3682r100 3705r101
+X 11 sdl3_sdl_surface_h.ads
+17K9 SDL3_SDL_surface_h 12|1985r74 2819r77 3408r76
+X 12 sdl3_sdl_video_h.ads
+18K9*SDL3_SDL_video_h 4092l5 4092e21
+20a4*SDL_PROP_GLOBAL_VIDEO_WAYLAND_WL_DISPLAY_POINTER{string}
+48N4*SDL_WINDOWPOS_UNDEFINED_MASK
+55N4*SDL_WINDOWPOS_CENTERED_MASK
+62N4*SDL_GL_CONTEXT_PROFILE_CORE
+63N4*SDL_GL_CONTEXT_PROFILE_COMPATIBILITY
+64N4*SDL_GL_CONTEXT_PROFILE_ES
+66N4*SDL_GL_CONTEXT_DEBUG_FLAG
+67N4*SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG
+68N4*SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG
+69N4*SDL_GL_CONTEXT_RESET_ISOLATION_FLAG
+71N4*SDL_GL_CONTEXT_RELEASE_BEHAVIOR_NONE
+72N4*SDL_GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH
+74N4*SDL_GL_CONTEXT_RESET_NO_NOTIFICATION
+75N4*SDL_GL_CONTEXT_RESET_LOSE_CONTEXT
+77a4*SDL_PROP_DISPLAY_HDR_ENABLED_BOOLEAN{string}
+78a4*SDL_PROP_DISPLAY_KMSDRM_PANEL_ORIENTATION_NUMBER{string}
+79a4*SDL_PROP_DISPLAY_WAYLAND_WL_OUTPUT_POINTER{string}
+80a4*SDL_PROP_DISPLAY_WINDOWS_HMONITOR_POINTER{string}
+82a4*SDL_PROP_WINDOW_CREATE_ALWAYS_ON_TOP_BOOLEAN{string}
+83a4*SDL_PROP_WINDOW_CREATE_BORDERLESS_BOOLEAN{string}
+84a4*SDL_PROP_WINDOW_CREATE_CONSTRAIN_POPUP_BOOLEAN{string}
+85a4*SDL_PROP_WINDOW_CREATE_FOCUSABLE_BOOLEAN{string}
+86a4*SDL_PROP_WINDOW_CREATE_EXTERNAL_GRAPHICS_CONTEXT_BOOLEAN{string}
+87a4*SDL_PROP_WINDOW_CREATE_FLAGS_NUMBER{string}
+88a4*SDL_PROP_WINDOW_CREATE_FULLSCREEN_BOOLEAN{string}
+89a4*SDL_PROP_WINDOW_CREATE_HEIGHT_NUMBER{string}
+90a4*SDL_PROP_WINDOW_CREATE_HIDDEN_BOOLEAN{string}
+91a4*SDL_PROP_WINDOW_CREATE_HIGH_PIXEL_DENSITY_BOOLEAN{string}
+92a4*SDL_PROP_WINDOW_CREATE_MAXIMIZED_BOOLEAN{string}
+93a4*SDL_PROP_WINDOW_CREATE_MENU_BOOLEAN{string}
+94a4*SDL_PROP_WINDOW_CREATE_METAL_BOOLEAN{string}
+95a4*SDL_PROP_WINDOW_CREATE_MINIMIZED_BOOLEAN{string}
+96a4*SDL_PROP_WINDOW_CREATE_MODAL_BOOLEAN{string}
+97a4*SDL_PROP_WINDOW_CREATE_MOUSE_GRABBED_BOOLEAN{string}
+98a4*SDL_PROP_WINDOW_CREATE_OPENGL_BOOLEAN{string}
+99a4*SDL_PROP_WINDOW_CREATE_PARENT_POINTER{string}
+100a4*SDL_PROP_WINDOW_CREATE_RESIZABLE_BOOLEAN{string}
+101a4*SDL_PROP_WINDOW_CREATE_TITLE_STRING{string}
+102a4*SDL_PROP_WINDOW_CREATE_TRANSPARENT_BOOLEAN{string}
+103a4*SDL_PROP_WINDOW_CREATE_TOOLTIP_BOOLEAN{string}
+104a4*SDL_PROP_WINDOW_CREATE_UTILITY_BOOLEAN{string}
+105a4*SDL_PROP_WINDOW_CREATE_VULKAN_BOOLEAN{string}
+106a4*SDL_PROP_WINDOW_CREATE_WIDTH_NUMBER{string}
+107a4*SDL_PROP_WINDOW_CREATE_X_NUMBER{string}
+108a4*SDL_PROP_WINDOW_CREATE_Y_NUMBER{string}
+109a4*SDL_PROP_WINDOW_CREATE_COCOA_WINDOW_POINTER{string}
+110a4*SDL_PROP_WINDOW_CREATE_COCOA_VIEW_POINTER{string}
+111a4*SDL_PROP_WINDOW_CREATE_WINDOWSCENE_POINTER{string}
+112a4*SDL_PROP_WINDOW_CREATE_WAYLAND_SURFACE_ROLE_CUSTOM_BOOLEAN{string}
+113a4*SDL_PROP_WINDOW_CREATE_WAYLAND_CREATE_EGL_WINDOW_BOOLEAN{string}
+114a4*SDL_PROP_WINDOW_CREATE_WAYLAND_WL_SURFACE_POINTER{string}
+115a4*SDL_PROP_WINDOW_CREATE_WIN32_HWND_POINTER{string}
+116a4*SDL_PROP_WINDOW_CREATE_WIN32_PIXEL_FORMAT_HWND_POINTER{string}
+117a4*SDL_PROP_WINDOW_CREATE_X11_WINDOW_NUMBER{string}
+118a4*SDL_PROP_WINDOW_CREATE_EMSCRIPTEN_CANVAS_ID_STRING{string}
+119a4*SDL_PROP_WINDOW_CREATE_EMSCRIPTEN_KEYBOARD_ELEMENT_STRING{string}
+121a4*SDL_PROP_WINDOW_SHAPE_POINTER{string}
+122a4*SDL_PROP_WINDOW_HDR_ENABLED_BOOLEAN{string}
+123a4*SDL_PROP_WINDOW_SDR_WHITE_LEVEL_FLOAT{string}
+124a4*SDL_PROP_WINDOW_HDR_HEADROOM_FLOAT{string}
+125a4*SDL_PROP_WINDOW_ANDROID_WINDOW_POINTER{string}
+126a4*SDL_PROP_WINDOW_ANDROID_SURFACE_POINTER{string}
+127a4*SDL_PROP_WINDOW_UIKIT_WINDOW_POINTER{string}
+128a4*SDL_PROP_WINDOW_UIKIT_METAL_VIEW_TAG_NUMBER{string}
+129a4*SDL_PROP_WINDOW_UIKIT_OPENGL_FRAMEBUFFER_NUMBER{string}
+130a4*SDL_PROP_WINDOW_UIKIT_OPENGL_RENDERBUFFER_NUMBER{string}
+131a4*SDL_PROP_WINDOW_UIKIT_OPENGL_RESOLVE_FRAMEBUFFER_NUMBER{string}
+132a4*SDL_PROP_WINDOW_KMSDRM_DEVICE_INDEX_NUMBER{string}
+133a4*SDL_PROP_WINDOW_KMSDRM_DRM_FD_NUMBER{string}
+134a4*SDL_PROP_WINDOW_KMSDRM_GBM_DEVICE_POINTER{string}
+135a4*SDL_PROP_WINDOW_COCOA_WINDOW_POINTER{string}
+136a4*SDL_PROP_WINDOW_COCOA_METAL_VIEW_TAG_NUMBER{string}
+137a4*SDL_PROP_WINDOW_OPENVR_OVERLAY_ID_NUMBER{string}
+138a4*SDL_PROP_WINDOW_VIVANTE_DISPLAY_POINTER{string}
+139a4*SDL_PROP_WINDOW_VIVANTE_WINDOW_POINTER{string}
+140a4*SDL_PROP_WINDOW_VIVANTE_SURFACE_POINTER{string}
+141a4*SDL_PROP_WINDOW_WIN32_HWND_POINTER{string}
+142a4*SDL_PROP_WINDOW_WIN32_HDC_POINTER{string}
+143a4*SDL_PROP_WINDOW_WIN32_INSTANCE_POINTER{string}
+144a4*SDL_PROP_WINDOW_WAYLAND_DISPLAY_POINTER{string}
+145a4*SDL_PROP_WINDOW_WAYLAND_SURFACE_POINTER{string}
+146a4*SDL_PROP_WINDOW_WAYLAND_VIEWPORT_POINTER{string}
+147a4*SDL_PROP_WINDOW_WAYLAND_EGL_WINDOW_POINTER{string}
+148a4*SDL_PROP_WINDOW_WAYLAND_XDG_SURFACE_POINTER{string}
+149a4*SDL_PROP_WINDOW_WAYLAND_XDG_TOPLEVEL_POINTER{string}
+150a4*SDL_PROP_WINDOW_WAYLAND_XDG_TOPLEVEL_EXPORT_HANDLE_STRING{string}
+151a4*SDL_PROP_WINDOW_WAYLAND_XDG_POPUP_POINTER{string}
+152a4*SDL_PROP_WINDOW_WAYLAND_XDG_POSITIONER_POINTER{string}
+153a4*SDL_PROP_WINDOW_X11_DISPLAY_POINTER{string}
+154a4*SDL_PROP_WINDOW_X11_SCREEN_NUMBER{string}
+155a4*SDL_PROP_WINDOW_X11_WINDOW_NUMBER{string}
+156a4*SDL_PROP_WINDOW_EMSCRIPTEN_CANVAS_ID_STRING{string}
+157a4*SDL_PROP_WINDOW_EMSCRIPTEN_KEYBOARD_ELEMENT_STRING{string}
+159N4*SDL_WINDOW_SURFACE_VSYNC_DISABLED
+160N4*SDL_WINDOW_SURFACE_VSYNC_ADAPTIVE
+218M12*SDL_DisplayID{10|417M12} 288r27 802r64 820r42 862r51 881r45 905r47
+. 935r53 954r59 973r59 1004r53 1036r56 1072r19 1102r52 1127r52 1147r95 1168r92
+. 1189r73
+228M12*SDL_WindowID{10|417M12} 1714r65 1736r39
+253E9*SDL_SystemTheme 257e4 783r39
+254n7*SDL_SYSTEM_THEME_UNKNOWN{253E9}
+255n7*SDL_SYSTEM_THEME_LIGHT{253E9}
+256n7*SDL_SYSTEM_THEME_DARK{253E9}
+272R9*SDL_DisplayModeData 296r25
+287R9*SDL_DisplayMode 298e4 1077r24 1102r90 1127r90 1279r93 1299r93
+288m7*displayID{218M12}
+289m7*format{7|545M12}
+290i7*w{4|57I9}
+291i7*h{4|57I9}
+292f7*pixel_density{float}
+293f7*refresh_rate{float}
+294i7*refresh_rate_numerator{4|57I9}
+295i7*refresh_rate_denominator{4|57I9}
+296p7*internal(272R9)
+314E9*SDL_DisplayOrientation 320e4 954r81 973r81
+315n7*SDL_ORIENTATION_UNKNOWN{314E9}
+316n7*SDL_ORIENTATION_LANDSCAPE{314E9}
+317n7*SDL_ORIENTATION_LANDSCAPE_FLIPPED{314E9}
+318n7*SDL_ORIENTATION_PORTRAIT{314E9}
+319n7*SDL_ORIENTATION_PORTRAIT_FLIPPED{314E9}
+335R9*SDL_Window 1189r54 1212r56 1240r56 1279r58 1299r58 1318r54 1336r55
+. 1453r46 1534r23 1539r46 1692r107 1714r46 1736r67 1755r50 1755r76 1888r54
+. 1913r49 1935r49 1954r49 1985r48 2031r23 2063r23 2107r23 2138r23 2166r52
+. 2212r23 2238r23 2282r23 2311r23 2336r23 2363r23 2388r23 2415r23 2443r52
+. 2469r53 2492r55 2527r56 2547r45 2567r45 2591r46 2629r49 2662r49 2696r48
+. 2732r54 2767r45 2786r51 2819r51 2849r56 2870r56 2895r54 2929r23 2951r55
+. 2988r56 3012r53 3030r56 3051r53 3069r48 3095r53 3116r53 3141r51 3163r51
+. 3201r50 3201r78 3225r49 3243r53 3273r23 3325r24 3374r23 3408r49 3426r46
+. 3445r57 3462r57 3481r57 3498r57 3524r49 3846r51 3868r49 3884r51 3951r55
+. 4065r48
+356M12*SDL_WindowFlags{10|437M12} 1453r15 1539r15 1913r68
+452E9*SDL_FlashOperation 456e4 3426r70
+453n7*SDL_FLASH_CANCEL{452E9}
+454n7*SDL_FLASH_BRIEFLY{452E9}
+455n7*SDL_FLASH_UNTIL_FOCUSED{452E9}
+467I12*SDL_ProgressState{4|57I9} 468r60 469r57 470r66 471r59 472r59 473r58
+. 3445r77 3462r76
+468i4*SDL_ProgressState_SDL_PROGRESS_STATE_INVALID{467I12}
+469i4*SDL_ProgressState_SDL_PROGRESS_STATE_NONE{467I12}
+470i4*SDL_ProgressState_SDL_PROGRESS_STATE_INDETERMINATE{467I12}
+471i4*SDL_ProgressState_SDL_PROGRESS_STATE_NORMAL{467I12}
+472i4*SDL_ProgressState_SDL_PROGRESS_STATE_PAUSED{467I12}
+473i4*SDL_ProgressState_SDL_PROGRESS_STATE_ERROR{467I12}
+492R9*SDL_GLContextState 494r37
+494P9*SDL_GLContext(492R9) 3846r70 3868r71 3902r45 4084r46
+502M9*SDL_EGLDisplay<15|67M9> 595r17 3918r46
+510M9*SDL_EGLConfig<15|67M9> 596r17 3934r45
+518M9*SDL_EGLSurface<15|67M9> 3951r74
+526I12*SDL_EGLAttrib{14|133I12} 560r93
+534I12*SDL_EGLint{4|57I9} 596r46
+560P9*SDL_EGLAttribArrayCallback(526I12) 560>56 3978r32
+560m56 arg1{15|67M9}
+593P9*SDL_EGLIntArrayCallback(534I12) 594>10 595>10 596>10 3979r31 3980r31
+594m10 arg1{15|67M9}
+595m10 arg2{502M9}
+596m10 arg3{510M9}
+617E9*SDL_GLAttr 646e4 3790r41 3812r41
+618n7*SDL_GL_RED_SIZE{617E9}
+619n7*SDL_GL_GREEN_SIZE{617E9}
+620n7*SDL_GL_BLUE_SIZE{617E9}
+621n7*SDL_GL_ALPHA_SIZE{617E9}
+622n7*SDL_GL_BUFFER_SIZE{617E9}
+623n7*SDL_GL_DOUBLEBUFFER{617E9}
+624n7*SDL_GL_DEPTH_SIZE{617E9}
+625n7*SDL_GL_STENCIL_SIZE{617E9}
+626n7*SDL_GL_ACCUM_RED_SIZE{617E9}
+627n7*SDL_GL_ACCUM_GREEN_SIZE{617E9}
+628n7*SDL_GL_ACCUM_BLUE_SIZE{617E9}
+629n7*SDL_GL_ACCUM_ALPHA_SIZE{617E9}
+630n7*SDL_GL_STEREO{617E9}
+631n7*SDL_GL_MULTISAMPLEBUFFERS{617E9}
+632n7*SDL_GL_MULTISAMPLESAMPLES{617E9}
+633n7*SDL_GL_ACCELERATED_VISUAL{617E9}
+634n7*SDL_GL_RETAINED_BACKING{617E9}
+635n7*SDL_GL_CONTEXT_MAJOR_VERSION{617E9}
+636n7*SDL_GL_CONTEXT_MINOR_VERSION{617E9}
+637n7*SDL_GL_CONTEXT_FLAGS{617E9}
+638n7*SDL_GL_CONTEXT_PROFILE_MASK{617E9}
+639n7*SDL_GL_SHARE_WITH_CURRENT_CONTEXT{617E9}
+640n7*SDL_GL_FRAMEBUFFER_SRGB_CAPABLE{617E9}
+641n7*SDL_GL_CONTEXT_RELEASE_BEHAVIOR{617E9}
+642n7*SDL_GL_CONTEXT_RESET_NOTIFICATION{617E9}
+643n7*SDL_GL_CONTEXT_NO_ERROR{617E9}
+644n7*SDL_GL_FLOATBUFFERS{617E9}
+645n7*SDL_GL_EGL_PLATFORM{617E9}
+679M12*SDL_GLProfile{10|417M12}
+687M12*SDL_GLContextFlag{10|417M12}
+696M12*SDL_GLContextReleaseFlag{10|417M12}
+704M12*SDL_GLContextResetNotification{10|417M12}
+719V13*SDL_GetNumVideoDrivers{4|57I9}
+745V13*SDL_GetVideoDriver{6|59P9} 745>33
+745i33 index{4|57I9}
+768V13*SDL_GetCurrentVideoDriver{6|59P9}
+783V13*SDL_GetSystemTheme{253E9}
+802V13*SDL_GetDisplays(218M12) 802^30
+802p30 count(4|57I9)
+820V13*SDL_GetPrimaryDisplay{218M12}
+862V13*SDL_GetDisplayProperties{8|66M12} 862>39
+862m39 displayID{218M12}
+881V13*SDL_GetDisplayName{6|59P9} 881>33
+881m33 displayID{218M12}
+905V13*SDL_GetDisplayBounds{5|59E12} 905>35 905^62
+905m35 displayID{218M12}
+905p62 rect
+935V13*SDL_GetDisplayUsableBounds{5|59E12} 935>41 935^68
+935m41 displayID{218M12}
+935p68 rect
+954V13*SDL_GetNaturalDisplayOrientation{314E9} 954>47
+954m47 displayID{218M12}
+973V13*SDL_GetCurrentDisplayOrientation{314E9} 973>47
+973m47 displayID{218M12}
+1004V13*SDL_GetDisplayContentScale{float} 1004>41
+1004m41 displayID{218M12}
+1036V13*SDL_GetFullscreenDisplayModes{15|67M9} 1036>44 1036^71
+1036m44 displayID{218M12}
+1036p71 count(4|57I9)
+1071V13*SDL_GetClosestFullscreenDisplayMode{5|59E12} 1072>7 1073>7 1074>7
+. 1075>7 1076>7 1077^7
+1072m7 displayID{218M12}
+1073i7 w{4|57I9}
+1074i7 h{4|57I9}
+1075f7 refresh_rate{float}
+1076b7 include_high_density_modes{5|59E12}
+1077p7 closest(287R9)
+1102V13*SDL_GetDesktopDisplayMode(287R9) 1102>40
+1102m40 displayID{218M12}
+1127V13*SDL_GetCurrentDisplayMode(287R9) 1127>40
+1127m40 displayID{218M12}
+1147V13*SDL_GetDisplayForPoint{218M12} 1147^37
+1147p37 point
+1168V13*SDL_GetDisplayForRect{218M12} 1168^36
+1168p36 rect
+1189V13*SDL_GetDisplayForWindow{218M12} 1189^38
+1189p38 window(335R9)
+1212V13*SDL_GetWindowPixelDensity{float} 1212^40
+1212p40 window(335R9)
+1240V13*SDL_GetWindowDisplayScale{float} 1240^40
+1240p40 window(335R9)
+1279V13*SDL_SetWindowFullscreenMode{5|59E12} 1279^42 1279^70
+1279p42 window(335R9)
+1279p70 mode(287R9)
+1299V13*SDL_GetWindowFullscreenMode(287R9) 1299^42
+1299p42 window(335R9)
+1318V13*SDL_GetWindowICCProfile{15|67M9} 1318^38 1318^66
+1318p38 window(335R9)
+1318p66 size(13|70M12)
+1336V13*SDL_GetWindowPixelFormat{7|545M12} 1336^39
+1336p39 window(335R9)
+1356V13*SDL_GetWindows{15|67M9} 1356^29
+1356p29 count(4|57I9)
+1449V13*SDL_CreateWindow(335R9) 1450>7 1451>7 1452>7 1453>7
+1450p7 title{6|59P9}
+1451i7 w{4|57I9}
+1452i7 h{4|57I9}
+1453m7 flags{356M12}
+1533V13*SDL_CreatePopupWindow(335R9) 1534^7 1535>7 1536>7 1537>7 1538>7 1539>7
+1534p7 parent(335R9)
+1535i7 offset_x{4|57I9}
+1536i7 offset_y{4|57I9}
+1537i7 w{4|57I9}
+1538i7 h{4|57I9}
+1539m7 flags{356M12}
+1692V13*SDL_CreateWindowWithProperties(335R9) 1692>45
+1692m45 props{8|66M12}
+1714V13*SDL_GetWindowID{228M12} 1714^30
+1714p30 window(335R9)
+1736V13*SDL_GetWindowFromID(335R9) 1736>34
+1736m34 id{228M12}
+1755V13*SDL_GetWindowParent(335R9) 1755^34
+1755p34 window(335R9)
+1888V13*SDL_GetWindowProperties{8|66M12} 1888^38
+1888p38 window(335R9)
+1913V13*SDL_GetWindowFlags{356M12} 1913^33
+1913p33 window(335R9)
+1935V13*SDL_SetWindowTitle{5|59E12} 1935^33 1935>61
+1935p33 window(335R9)
+1935p61 title{6|59P9}
+1954V13*SDL_GetWindowTitle{6|59P9} 1954^33
+1954p33 window(335R9)
+1985V13*SDL_SetWindowIcon{5|59E12} 1985^32 1985^60
+1985p32 window(335R9)
+1985p60 icon
+2030V13*SDL_SetWindowPosition{5|59E12} 2031^7 2032>7 2033>7
+2031p7 window(335R9)
+2032i7 x{4|57I9}
+2033i7 y{4|57I9}
+2062V13*SDL_GetWindowPosition{5|59E12} 2063^7 2064^7 2065^7
+2063p7 window(335R9)
+2064p7 x(4|57I9)
+2065p7 y(4|57I9)
+2106V13*SDL_SetWindowSize{5|59E12} 2107^7 2108>7 2109>7
+2107p7 window(335R9)
+2108i7 w{4|57I9}
+2109i7 h{4|57I9}
+2137V13*SDL_GetWindowSize{5|59E12} 2138^7 2139^7 2140^7
+2138p7 window(335R9)
+2139p7 w(4|57I9)
+2140p7 h(4|57I9)
+2166V13*SDL_GetWindowSafeArea{5|59E12} 2166^36 2166^64
+2166p36 window(335R9)
+2166p64 rect
+2211V13*SDL_SetWindowAspectRatio{5|59E12} 2212^7 2213>7 2214>7
+2212p7 window(335R9)
+2213f7 min_aspect{float}
+2214f7 max_aspect{float}
+2237V13*SDL_GetWindowAspectRatio{5|59E12} 2238^7 2239^7 2240^7
+2238p7 window(335R9)
+2239p7 min_aspect(float)
+2240p7 max_aspect(float)
+2281V13*SDL_GetWindowBordersSize{5|59E12} 2282^7 2283^7 2284^7 2285^7 2286^7
+2282p7 window(335R9)
+2283p7 top(4|57I9)
+2284p7 left(4|57I9)
+2285p7 bottom(4|57I9)
+2286p7 right(4|57I9)
+2310V13*SDL_GetWindowSizeInPixels{5|59E12} 2311^7 2312^7 2313^7
+2311p7 window(335R9)
+2312p7 w(4|57I9)
+2313p7 h(4|57I9)
+2335V13*SDL_SetWindowMinimumSize{5|59E12} 2336^7 2337>7 2338>7
+2336p7 window(335R9)
+2337i7 min_w{4|57I9}
+2338i7 min_h{4|57I9}
+2362V13*SDL_GetWindowMinimumSize{5|59E12} 2363^7 2364^7 2365^7
+2363p7 window(335R9)
+2364p7 w(4|57I9)
+2365p7 h(4|57I9)
+2387V13*SDL_SetWindowMaximumSize{5|59E12} 2388^7 2389>7 2390>7
+2388p7 window(335R9)
+2389i7 max_w{4|57I9}
+2390i7 max_h{4|57I9}
+2414V13*SDL_GetWindowMaximumSize{5|59E12} 2415^7 2416^7 2417^7
+2415p7 window(335R9)
+2416p7 w(4|57I9)
+2417p7 h(4|57I9)
+2443V13*SDL_SetWindowBordered{5|59E12} 2443^36 2443>64
+2443p36 window(335R9)
+2443b64 bordered{5|59E12}
+2469V13*SDL_SetWindowResizable{5|59E12} 2469^37 2469>65
+2469p37 window(335R9)
+2469b65 resizable{5|59E12}
+2492V13*SDL_SetWindowAlwaysOnTop{5|59E12} 2492^39 2492>67
+2492p39 window(335R9)
+2492b67 on_top{5|59E12}
+2527V13*SDL_SetWindowFillDocument{5|59E12} 2527^40 2527>68
+2527p40 window(335R9)
+2527b68 fill{5|59E12}
+2547V13*SDL_ShowWindow{5|59E12} 2547^29
+2547p29 window(335R9)
+2567V13*SDL_HideWindow{5|59E12} 2567^29
+2567p29 window(335R9)
+2591V13*SDL_RaiseWindow{5|59E12} 2591^30
+2591p30 window(335R9)
+2629V13*SDL_MaximizeWindow{5|59E12} 2629^33
+2629p33 window(335R9)
+2662V13*SDL_MinimizeWindow{5|59E12} 2662^33
+2662p33 window(335R9)
+2696V13*SDL_RestoreWindow{5|59E12} 2696^32
+2696p32 window(335R9)
+2732V13*SDL_SetWindowFullscreen{5|59E12} 2732^38 2732>66
+2732p38 window(335R9)
+2732b66 fullscreen{5|59E12}
+2767V13*SDL_SyncWindow{5|59E12} 2767^29
+2767p29 window(335R9)
+2786V13*SDL_WindowHasSurface{5|59E12} 2786^35
+2786p35 window(335R9)
+2819V13*SDL_GetWindowSurface 2819^35
+2819p35 window(335R9)
+2849V13*SDL_SetWindowSurfaceVSync{5|59E12} 2849^40 2849>68
+2849p40 window(335R9)
+2849i68 vsync{4|57I9}
+2870V13*SDL_GetWindowSurfaceVSync{5|59E12} 2870^40 2870^68
+2870p40 window(335R9)
+2870p68 vsync(4|57I9)
+2895V13*SDL_UpdateWindowSurface{5|59E12} 2895^38
+2895p38 window(335R9)
+2928V13*SDL_UpdateWindowSurfaceRects{5|59E12} 2929^7 2930^7 2931>7
+2929p7 window(335R9)
+2930p7 rects
+2931i7 numrects{4|57I9}
+2951V13*SDL_DestroyWindowSurface{5|59E12} 2951^39
+2951p39 window(335R9)
+2988V13*SDL_SetWindowKeyboardGrab{5|59E12} 2988^40 2988>68
+2988p40 window(335R9)
+2988b68 grabbed{5|59E12}
+3012V13*SDL_SetWindowMouseGrab{5|59E12} 3012^37 3012>65
+3012p37 window(335R9)
+3012b65 grabbed{5|59E12}
+3030V13*SDL_GetWindowKeyboardGrab{5|59E12} 3030^40
+3030p40 window(335R9)
+3051V13*SDL_GetWindowMouseGrab{5|59E12} 3051^37
+3051p37 window(335R9)
+3069V13*SDL_GetGrabbedWindow(335R9)
+3095V13*SDL_SetWindowMouseRect{5|59E12} 3095^37 3095^65
+3095p37 window(335R9)
+3095p65 rect
+3116V13*SDL_GetWindowMouseRect 3116^37
+3116p37 window(335R9)
+3141V13*SDL_SetWindowOpacity{5|59E12} 3141^35 3141>63
+3141p35 window(335R9)
+3141f63 opacity{float}
+3163V13*SDL_GetWindowOpacity{float} 3163^35
+3163p35 window(335R9)
+3201V13*SDL_SetWindowParent{5|59E12} 3201^34 3201^62
+3201p34 window(335R9)
+3201p62 parent(335R9)
+3225V13*SDL_SetWindowModal{5|59E12} 3225^33 3225>61
+3225p33 window(335R9)
+3225b61 modal{5|59E12}
+3243V13*SDL_SetWindowFocusable{5|59E12} 3243^37 3243>65
+3243p37 window(335R9)
+3243b65 focusable{5|59E12}
+3272V13*SDL_ShowWindowSystemMenu{5|59E12} 3273^7 3274>7 3275>7
+3273p7 window(335R9)
+3274i7 x{4|57I9}
+3275i7 y{4|57I9}
+3290E9*SDL_HitTestResult 3301e4 3327r40
+3291n7*SDL_HITTEST_NORMAL{3290E9}
+3292n7*SDL_HITTEST_DRAGGABLE{3290E9}
+3293n7*SDL_HITTEST_RESIZE_TOPLEFT{3290E9}
+3294n7*SDL_HITTEST_RESIZE_TOP{3290E9}
+3295n7*SDL_HITTEST_RESIZE_TOPRIGHT{3290E9}
+3296n7*SDL_HITTEST_RESIZE_RIGHT{3290E9}
+3297n7*SDL_HITTEST_RESIZE_BOTTOMRIGHT{3290E9}
+3298n7*SDL_HITTEST_RESIZE_BOTTOM{3290E9}
+3299n7*SDL_HITTEST_RESIZE_BOTTOMLEFT{3290E9}
+3300n7*SDL_HITTEST_RESIZE_LEFT{3290E9}
+3324P9*SDL_HitTest(3290E9) 3325^10 3326^10 3327>10 3375r18
+3325p10 arg1(335R9)
+3326p10 arg2
+3327m10 arg3{15|67M9}
+3373V13*SDL_SetWindowHitTest{5|59E12} 3374^7 3375>7 3376>7
+3374p7 window(335R9)
+3375p7 callback{3324P9}
+3376m7 callback_data{15|67M9}
+3408V13*SDL_SetWindowShape{5|59E12} 3408^33 3408^61
+3408p33 window(335R9)
+3408p61 shape
+3426V13*SDL_FlashWindow{5|59E12} 3426^30 3426>58
+3426p30 window(335R9)
+3426e58 operation{452E9}
+3445V13*SDL_SetWindowProgressState{5|59E12} 3445^41 3445>69
+3445p41 window(335R9)
+3445i69 state{467I12}
+3462V13*SDL_GetWindowProgressState{467I12} 3462^41
+3462p41 window(335R9)
+3481V13*SDL_SetWindowProgressValue{5|59E12} 3481^41 3481>69
+3481p41 window(335R9)
+3481f69 value{float}
+3498V13*SDL_GetWindowProgressValue{float} 3498^41
+3498p41 window(335R9)
+3524U14*SDL_DestroyWindow 3524^33
+3524p33 window(335R9)
+3546V13*SDL_ScreenSaverEnabled{5|59E12}
+3565V13*SDL_EnableScreenSaver{5|59E12}
+3590V13*SDL_DisableScreenSaver{5|59E12}
+3623V13*SDL_GL_LoadLibrary{5|59E12} 3623>33
+3623p33 path{6|59P9}
+3682V13*SDL_GL_GetProcAddress{10|6553P9} 3682>36
+3682p36 proc{6|59P9}
+3705V13*SDL_EGL_GetProcAddress{10|6553P9} 3705>37
+3705p37 proc{6|59P9}
+3720U14*SDL_GL_UnloadLibrary
+3747V13*SDL_GL_ExtensionSupported{5|59E12} 3747>40
+3747p40 extension{6|59P9}
+3763U14*SDL_GL_ResetAttributes
+3790V13*SDL_GL_SetAttribute{5|59E12} 3790>34 3790>53
+3790e34 attr{617E9}
+3790i53 value{4|57I9}
+3812V13*SDL_GL_GetAttribute{5|59E12} 3812>34 3812^53
+3812e34 attr{617E9}
+3812p53 value(4|57I9)
+3846V13*SDL_GL_CreateContext{494P9} 3846^35
+3846p35 window(335R9)
+3868V13*SDL_GL_MakeCurrent{5|59E12} 3868^33 3868>61
+3868p33 window(335R9)
+3868p61 context{494P9}
+3884V13*SDL_GL_GetCurrentWindow(335R9)
+3902V13*SDL_GL_GetCurrentContext{494P9}
+3918V13*SDL_EGL_GetCurrentDisplay{502M9}
+3934V13*SDL_EGL_GetCurrentConfig{510M9}
+3951V13*SDL_EGL_GetWindowSurface{518M9} 3951^39
+3951p39 window(335R9)
+3977U14*SDL_EGL_SetAttributeCallbacks 3978>7 3979>7 3980>7 3981>7
+3978p7 platformAttribCallback{560P9}
+3979p7 surfaceAttribCallback{593P9}
+3980p7 contextAttribCallback{593P9}
+3981m7 userdata{15|67M9}
+4016V13*SDL_GL_SetSwapInterval{5|59E12} 4016>37
+4016i37 interval{4|57I9}
+4041V13*SDL_GL_GetSwapInterval{5|59E12} 4041^37
+4041p37 interval(4|57I9)
+4065V13*SDL_GL_SwapWindow{5|59E12} 4065^32
+4065p32 window(335R9)
+4084V13*SDL_GL_DestroyContext{5|59E12} 4084>36
+4084p36 context{494P9}
+X 13 stddef_h.ads
+8K9*stddef_h 12|15w6 1318r80 13|119e13
+70M12*size_t{4|68M9} 12|1318r89
+X 14 stdint_h.ads
+9K9*stdint_h 12|10w6 526r29 14|166e13
+133I12*intptr_t{4|59I9} 12|526r38
+X 15 system.ads
+37K9*System 12|9w6 502r31 510r30 518r31 560r63 594r17 1036r98 1318r104 1356r56
+. 3327r17 3376r23 3981r18 15|153e11
+67M9*Address 12|502r38 510r37 518r38 560r70 594r24 1036r105 1318r111 1356r63
+. 3327r24 3376r30 3981r25
+X 20 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+30M12*uint32_t{21|50M12}
+32M12*uint64_t{21|54M12}
+

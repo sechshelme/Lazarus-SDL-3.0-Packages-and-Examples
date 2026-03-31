@@ -1,0 +1,87 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U stdint_h%s		stdint_h.ads		35b2d5e1 NE OO PK IL
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W x86_64_linux_gnu_bits_types_h%s  x86_64_linux_gnu_bits_types_h.ads  x86_64_linux_gnu_bits_types_h.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D stdint_h.ads		20260331104513 f00870c6 stdint_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+X 3 interfac.ads
+38K9*Interfaces 232e15 6|6r6 6r24
+X 4 i-c.ads
+29K20*C 597e17 6|6w17 6r35
+59I9*long<long_integer> 6|117r28 119r28 121r28 133r24
+63I9*signed_char<short_short_integer> 6|115r27
+68M9*unsigned_long 6|126r29 128r29 130r29 135r25
+71M9*unsigned_char 6|124r28
+X 6 stdint_h.ads
+9K9*stdint_h 166l5 166e13
+11N4*INT8_MIN
+12N4*INT16_MIN
+13N4*INT32_MIN
+16N4*INT8_MAX
+17N4*INT16_MAX
+18N4*INT32_MAX
+21N4*UINT8_MAX
+22N4*UINT16_MAX
+23N4*UINT32_MAX
+26N4*INT_LEAST8_MIN
+27N4*INT_LEAST16_MIN
+28N4*INT_LEAST32_MIN
+31N4*INT_LEAST8_MAX
+32N4*INT_LEAST16_MAX
+33N4*INT_LEAST32_MAX
+36N4*UINT_LEAST8_MAX
+37N4*UINT_LEAST16_MAX
+38N4*UINT_LEAST32_MAX
+41N4*INT_FAST8_MIN
+43N4*INT_FAST16_MIN
+44N4*INT_FAST32_MIN
+47N4*INT_FAST8_MAX
+49N4*INT_FAST16_MAX
+50N4*INT_FAST32_MAX
+53N4*UINT_FAST8_MAX
+55N4*UINT_FAST16_MAX
+56N4*UINT_FAST32_MAX
+59N4*INTPTR_MIN
+60N4*INTPTR_MAX
+61N4*UINTPTR_MAX
+66N4*PTRDIFF_MIN
+67N4*PTRDIFF_MAX
+69N4*SIG_ATOMIC_MIN
+70N4*SIG_ATOMIC_MAX
+72N4*SIZE_MAX
+74N4*WINT_MIN
+75N4*WINT_MAX
+115I12*int_fast8_t{4|63I9}
+117I12*int_fast16_t{4|59I9}
+119I12*int_fast32_t{4|59I9}
+121I12*int_fast64_t{4|59I9}
+124M12*uint_fast8_t{4|71M9}
+126M12*uint_fast16_t{4|68M9}
+128M12*uint_fast32_t{4|68M9}
+130M12*uint_fast64_t{4|68M9}
+133I12*intptr_t{4|59I9}
+135M12*uintptr_t{4|68M9}
+138I12*intmax_t{11|79I12}
+140M12*uintmax_t{11|81M12}
+X 11 x86_64_linux_gnu_bits_types_h.ads
+10K9*x86_64_linux_gnu_bits_types_h 6|7w6 138r24 140r25 11|242e34
+79I12*uu_intmax_t{4|59I9} 6|138r54
+81M12*uu_uintmax_t{4|68M9} 6|140r55
+

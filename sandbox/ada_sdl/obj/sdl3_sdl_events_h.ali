@@ -1,0 +1,822 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+
+U sdl3_sdl_events_h%s	sdl3_sdl_events_h.ads	41d7183d NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_audio_h%s	sdl3_sdl_audio_h.ads	sdl3_sdl_audio_h.ali
+W sdl3_sdl_camera_h%s	sdl3_sdl_camera_h.ads	sdl3_sdl_camera_h.ali
+W sdl3_sdl_joystick_h%s	sdl3_sdl_joystick_h.ads	sdl3_sdl_joystick_h.ali
+W sdl3_sdl_keyboard_h%s	sdl3_sdl_keyboard_h.ads	sdl3_sdl_keyboard_h.ali
+W sdl3_sdl_keycode_h%s	sdl3_sdl_keycode_h.ads	sdl3_sdl_keycode_h.ali
+W sdl3_sdl_mouse_h%s	sdl3_sdl_mouse_h.ads	sdl3_sdl_mouse_h.ali
+W sdl3_sdl_pen_h%s	sdl3_sdl_pen_h.ads	sdl3_sdl_pen_h.ali
+W sdl3_sdl_power_h%s	sdl3_sdl_power_h.ads	sdl3_sdl_power_h.ali
+W sdl3_sdl_scancode_h%s	sdl3_sdl_scancode_h.ads	sdl3_sdl_scancode_h.ali
+W sdl3_sdl_sensor_h%s	sdl3_sdl_sensor_h.ads	sdl3_sdl_sensor_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+W sdl3_sdl_touch_h%s	sdl3_sdl_touch_h.ads	sdl3_sdl_touch_h.ali
+W sdl3_sdl_video_h%s	sdl3_sdl_video_h.ads	sdl3_sdl_video_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_audio_h.ads	20260331104513 7c8cccac sdl3_sdl_audio_h%s
+D sdl3_sdl_camera_h.ads	20260331104513 a74ea162 sdl3_sdl_camera_h%s
+D sdl3_sdl_events_h.ads	20260331104513 c0851939 sdl3_sdl_events_h%s
+D sdl3_sdl_guid_h.ads	20260331104513 050082df sdl3_sdl_guid_h%s
+D sdl3_sdl_iostream_h.ads  20260331104513 ad94da00 sdl3_sdl_iostream_h%s
+D sdl3_sdl_joystick_h.ads  20260331104513 0152825a sdl3_sdl_joystick_h%s
+D sdl3_sdl_keyboard_h.ads  20260331104513 8203330b sdl3_sdl_keyboard_h%s
+D sdl3_sdl_keycode_h.ads  20260331104513 86fe1963 sdl3_sdl_keycode_h%s
+D sdl3_sdl_mouse_h.ads	20260331104513 ea3bd404 sdl3_sdl_mouse_h%s
+D sdl3_sdl_pen_h.ads	20260331104513 efd9ae2c sdl3_sdl_pen_h%s
+D sdl3_sdl_pixels_h.ads	20260331104513 93ccfcde sdl3_sdl_pixels_h%s
+D sdl3_sdl_power_h.ads	20260331104513 e0f447e0 sdl3_sdl_power_h%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_rect_h.ads	20260331104513 fff6e78f sdl3_sdl_rect_h%s
+D sdl3_sdl_scancode_h.ads  20260331104513 c4d749e8 sdl3_sdl_scancode_h%s
+D sdl3_sdl_sensor_h.ads	20260331104513 236add4f sdl3_sdl_sensor_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D sdl3_sdl_surface_h.ads  20260331104513 91d140a0 sdl3_sdl_surface_h%s
+D sdl3_sdl_touch_h.ads	20260331104513 e85c94ac sdl3_sdl_touch_h%s
+D sdl3_sdl_video_h.ads	20260331104513 c0f601b9 sdl3_sdl_video_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D stdint_h.ads		20260331104513 f00870c6 stdint_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_pumpevents sdl3_sdl_events_h 1520 14 none]
+G c Z s s [sdl_peepevents sdl3_sdl_events_h 1584 13 none]
+G c Z s s [sdl_hasevent sdl3_sdl_events_h 1612 13 none]
+G c Z s s [sdl_hasevents sdl3_sdl_events_h 1636 13 none]
+G c Z s s [sdl_flushevent sdl3_sdl_events_h 1668 14 none]
+G c Z s s [sdl_flushevents sdl3_sdl_events_h 1699 14 none]
+G c Z s s [sdl_pollevent sdl3_sdl_events_h 1756 13 none]
+G c Z s s [sdl_waitevent sdl3_sdl_events_h 1784 13 none]
+G c Z s s [sdl_waiteventtimeout sdl3_sdl_events_h 1818 13 none]
+G c Z s s [sdl_pushevent sdl3_sdl_events_h 1856 13 none]
+G c Z s s [sdl_seteventfilter sdl3_sdl_events_h 1927 14 none]
+G c Z s s [sdl_geteventfilter sdl3_sdl_events_h 1950 13 none]
+G c Z s s [sdl_addeventwatch sdl3_sdl_events_h 1986 13 none]
+G c Z s s [sdl_removeeventwatch sdl3_sdl_events_h 2007 14 none]
+G c Z s s [sdl_filterevents sdl3_sdl_events_h 2031 14 none]
+G c Z s s [sdl_seteventenabled sdl3_sdl_events_h 2049 14 none]
+G c Z s s [sdl_eventenabled sdl3_sdl_events_h 2067 13 none]
+G c Z s s [sdl_registerevents sdl3_sdl_events_h 2087 13 none]
+G c Z s s [sdl_getwindowfromevent sdl3_sdl_events_h 2107 13 none]
+G c Z s s [sdl_geteventdescription sdl3_sdl_events_h 2143 13 none]
+G c Z s s [sdl_commoneventIP sdl3_sdl_events_h 387 9 none]
+G c Z s s [sdl_displayeventIP sdl3_sdl_events_h 402 9 none]
+G c Z s s [sdl_windoweventIP sdl3_sdl_events_h 423 9 none]
+G c Z s s [sdl_keyboarddeviceeventIP sdl3_sdl_events_h 444 9 none]
+G c Z s s [sdl_keyboardeventIP sdl3_sdl_events_h 470 9 none]
+G c Z s s [sdl_texteditingeventIP sdl3_sdl_events_h 505 9 none]
+G c Z s s [sdl_texteditingcandidateseventIP sdl3_sdl_events_h 528 9 none]
+G c Z s s [sdl_textinputeventIP sdl3_sdl_events_h 562 9 none]
+G c Z s s [sdl_mousedeviceeventIP sdl3_sdl_events_h 581 9 none]
+G c Z s s [sdl_mousemotioneventIP sdl3_sdl_events_h 598 9 none]
+G c Z s s [sdl_mousebuttoneventIP sdl3_sdl_events_h 627 9 none]
+G c Z s s [sdl_mousewheeleventIP sdl3_sdl_events_h 657 9 none]
+G c Z s s [sdl_joyaxiseventIP sdl3_sdl_events_h 690 9 none]
+G c Z s s [sdl_joyballeventIP sdl3_sdl_events_h 715 9 none]
+G c Z s s [sdl_joyhateventIP sdl3_sdl_events_h 741 9 none]
+G c Z s s [sdl_joybuttoneventIP sdl3_sdl_events_h 771 9 none]
+G c Z s s [sdl_joydeviceeventIP sdl3_sdl_events_h 799 9 none]
+G c Z s s [sdl_joybatteryeventIP sdl3_sdl_events_h 816 9 none]
+G c Z s s [sdl_gamepadaxiseventIP sdl3_sdl_events_h 837 9 none]
+G c Z s s [sdl_gamepadbuttoneventIP sdl3_sdl_events_h 862 9 none]
+G c Z s s [sdl_gamepaddeviceeventIP sdl3_sdl_events_h 894 9 none]
+G c Z s s [sdl_gamepadtouchpadeventIP sdl3_sdl_events_h 911 9 none]
+G c Z s s [Tanon_array2941BIP sdl3_sdl_events_h 938 4 none]
+G c Z s s [sdl_gamepadsensoreventIP sdl3_sdl_events_h 939 9 none]
+G c Z s s [sdl_audiodeviceeventIP sdl3_sdl_events_h 966 9 none]
+G c Z s s [sdl_cameradeviceeventIP sdl3_sdl_events_h 988 9 none]
+G c Z s s [sdl_rendereventIP sdl3_sdl_events_h 1005 9 none]
+G c Z s s [sdl_touchfingereventIP sdl3_sdl_events_h 1036 9 none]
+G c Z s s [sdl_pinchfingereventIP sdl3_sdl_events_h 1064 9 none]
+G c Z s s [sdl_penproximityeventIP sdl3_sdl_events_h 1096 9 none]
+G c Z s s [sdl_penmotioneventIP sdl3_sdl_events_h 1121 9 none]
+G c Z s s [sdl_pentoucheventIP sdl3_sdl_events_h 1149 9 none]
+G c Z s s [sdl_penbuttoneventIP sdl3_sdl_events_h 1181 9 none]
+G c Z s s [sdl_penaxiseventIP sdl3_sdl_events_h 1213 9 none]
+G c Z s s [sdl_dropeventIP sdl3_sdl_events_h 1243 9 none]
+G c Z s s [sdl_clipboardeventIP sdl3_sdl_events_h 1269 9 none]
+G c Z s s [Tanon_array2969BIP sdl3_sdl_events_h 1290 4 none]
+G c Z s s [sdl_sensoreventIP sdl3_sdl_events_h 1291 9 none]
+G c Z s s [sdl_quiteventIP sdl3_sdl_events_h 1312 9 none]
+G c Z s s [sdl_usereventIP sdl3_sdl_events_h 1333 9 none]
+G c Z s s [Tanon_array2977BIP sdl3_sdl_events_h 1359 4 none]
+G c Z s s [sdl_eventIP sdl3_sdl_events_h 1360 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 9|6r6 6r24 12r6 13r6 510r14 567r14 1250r16 1251r14
+. 2145r13
+X 4 i-c.ads
+29K20*C 597e17 9|6w17 6r35 12r17 13r17 510r25 567r25 1250r27 1251r25 2145r24
+57I9*int<integer> 9|822r25 1586r19 1589r50 2087r45 2146r16 2146r28
+58I9*short<short_integer>
+66M9*unsigned 9|81r29 1360r28
+67M9*unsigned_short
+68M9*unsigned_long
+71M9*unsigned_char
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 9|12w19 480r22 481r24 536r28 634r22 777r22 868r22
+. 971r27 1158r24 1159r22 1191r22 1273r23 1612r69 1636r107 1756r61 1784r61
+. 1818r106 1856r61 1881r100 1950r92 1986r92 2049r80 2067r73
+59B12*bool{4|92E9} 9|480r33 481r35 536r39 634r33 777r33 868r33 971r38 1158r35
+. 1159r33 1191r33 1273r34 1612r80 1636r118 1756r72 1784r72 1818r117 1856r72
+. 1881r111 1950r103 1986r103 2049r91 2067r84
+X 6 i-cstrin.ads
+44K22*Strings 156e25 9|13w19 510r27 567r27 1250r29 1251r27 2145r26
+59P9*chars_ptr 9|510r35 567r35 1250r37 1251r35 2145r34
+X 7 sdl3_sdl_audio_h.ads
+14K9*SDL3_SDL_audio_h 2670e21 9|18w6 970r23
+388M12*SDL_AudioDeviceID{23|417M12} 9|970r40
+X 8 sdl3_sdl_camera_h.ads
+15K9*SDL3_SDL_camera_h 595e22 9|19w6 992r23
+94M12*SDL_CameraID{23|417M12} 9|992r41
+X 9 sdl3_sdl_events_h.ads
+24K9*SDL3_SDL_events_h 2152l5 2152e22
+81M12*SDL_EventType{4|66M9} 82r45 83r44 84r51 85r50 86r61 87r60 88r61 89r60
+. 90r54 91r60 92r59 93r53 94r55 95r53 96r68 97r68 98r69 99r69 100r53 101r52
+. 102r52 103r53 104r54 105r52 106r54 107r65 108r65 109r56 110r56 111r55 112r58
+. 113r58 114r59 115r57 116r62 117r55 118r62 119r62 120r68 121r64 122r55 123r63
+. 124r63 125r56 126r64 127r52 128r51 129r48 130r46 131r52 132r50 133r54 134r54
+. 135r56 136r63 137r61 138r62 139r52 140r57 141r55 142r51 143r51 144r53 145r60
+. 146r60 147r59 148r60 149r58 150r54 151r56 152r64 153r64 154r59 155r59 156r57
+. 157r53 158r55 159r56 160r61 161r63 162r59 163r61 164r63 165r68 166r51 167r49
+. 168r53 169r55 170r51 171r52 172r49 173r56 174r49 175r49 176r50 177r53 178r53
+. 179r58 180r60 181r67 182r53 183r56 184r57 185r48 186r46 187r55 188r53 189r50
+. 190r48 191r59 192r61 193r62 194r60 195r60 196r59 197r58 198r48 199r48 200r48
+. 201r48 202r53 203r44 204r44 205r52 403r24 424r24 445r24 471r24 506r24 529r24
+. 563r24 582r24 599r24 628r24 658r24 691r24 716r24 742r24 772r24 800r24 817r24
+. 838r24 863r24 895r24 912r24 940r24 967r24 989r24 1006r24 1037r24 1065r24
+. 1097r24 1122r24 1150r24 1182r24 1214r24 1244r24 1270r24 1292r24 1313r24
+82m4*SDL_EventType_SDL_EVENT_FIRST{81M12}
+83m4*SDL_EventType_SDL_EVENT_QUIT{81M12}
+84m4*SDL_EventType_SDL_EVENT_TERMINATING{81M12}
+85m4*SDL_EventType_SDL_EVENT_LOW_MEMORY{81M12}
+86m4*SDL_EventType_SDL_EVENT_WILL_ENTER_BACKGROUND{81M12}
+87m4*SDL_EventType_SDL_EVENT_DID_ENTER_BACKGROUND{81M12}
+88m4*SDL_EventType_SDL_EVENT_WILL_ENTER_FOREGROUND{81M12}
+89m4*SDL_EventType_SDL_EVENT_DID_ENTER_FOREGROUND{81M12}
+90m4*SDL_EventType_SDL_EVENT_LOCALE_CHANGED{81M12}
+91m4*SDL_EventType_SDL_EVENT_SYSTEM_THEME_CHANGED{81M12}
+92m4*SDL_EventType_SDL_EVENT_DISPLAY_ORIENTATION{81M12}
+93m4*SDL_EventType_SDL_EVENT_DISPLAY_ADDED{81M12}
+94m4*SDL_EventType_SDL_EVENT_DISPLAY_REMOVED{81M12}
+95m4*SDL_EventType_SDL_EVENT_DISPLAY_MOVED{81M12}
+96m4*SDL_EventType_SDL_EVENT_DISPLAY_DESKTOP_MODE_CHANGED{81M12}
+97m4*SDL_EventType_SDL_EVENT_DISPLAY_CURRENT_MODE_CHANGED{81M12}
+98m4*SDL_EventType_SDL_EVENT_DISPLAY_CONTENT_SCALE_CHANGED{81M12}
+99m4*SDL_EventType_SDL_EVENT_DISPLAY_USABLE_BOUNDS_CHANGED{81M12}
+100m4*SDL_EventType_SDL_EVENT_DISPLAY_FIRST{81M12}
+101m4*SDL_EventType_SDL_EVENT_DISPLAY_LAST{81M12}
+102m4*SDL_EventType_SDL_EVENT_WINDOW_SHOWN{81M12}
+103m4*SDL_EventType_SDL_EVENT_WINDOW_HIDDEN{81M12}
+104m4*SDL_EventType_SDL_EVENT_WINDOW_EXPOSED{81M12}
+105m4*SDL_EventType_SDL_EVENT_WINDOW_MOVED{81M12}
+106m4*SDL_EventType_SDL_EVENT_WINDOW_RESIZED{81M12}
+107m4*SDL_EventType_SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED{81M12}
+108m4*SDL_EventType_SDL_EVENT_WINDOW_METAL_VIEW_RESIZED{81M12}
+109m4*SDL_EventType_SDL_EVENT_WINDOW_MINIMIZED{81M12}
+110m4*SDL_EventType_SDL_EVENT_WINDOW_MAXIMIZED{81M12}
+111m4*SDL_EventType_SDL_EVENT_WINDOW_RESTORED{81M12}
+112m4*SDL_EventType_SDL_EVENT_WINDOW_MOUSE_ENTER{81M12}
+113m4*SDL_EventType_SDL_EVENT_WINDOW_MOUSE_LEAVE{81M12}
+114m4*SDL_EventType_SDL_EVENT_WINDOW_FOCUS_GAINED{81M12}
+115m4*SDL_EventType_SDL_EVENT_WINDOW_FOCUS_LOST{81M12}
+116m4*SDL_EventType_SDL_EVENT_WINDOW_CLOSE_REQUESTED{81M12}
+117m4*SDL_EventType_SDL_EVENT_WINDOW_HIT_TEST{81M12}
+118m4*SDL_EventType_SDL_EVENT_WINDOW_ICCPROF_CHANGED{81M12}
+119m4*SDL_EventType_SDL_EVENT_WINDOW_DISPLAY_CHANGED{81M12}
+120m4*SDL_EventType_SDL_EVENT_WINDOW_DISPLAY_SCALE_CHANGED{81M12}
+121m4*SDL_EventType_SDL_EVENT_WINDOW_SAFE_AREA_CHANGED{81M12}
+122m4*SDL_EventType_SDL_EVENT_WINDOW_OCCLUDED{81M12}
+123m4*SDL_EventType_SDL_EVENT_WINDOW_ENTER_FULLSCREEN{81M12}
+124m4*SDL_EventType_SDL_EVENT_WINDOW_LEAVE_FULLSCREEN{81M12}
+125m4*SDL_EventType_SDL_EVENT_WINDOW_DESTROYED{81M12}
+126m4*SDL_EventType_SDL_EVENT_WINDOW_HDR_STATE_CHANGED{81M12}
+127m4*SDL_EventType_SDL_EVENT_WINDOW_FIRST{81M12}
+128m4*SDL_EventType_SDL_EVENT_WINDOW_LAST{81M12}
+129m4*SDL_EventType_SDL_EVENT_KEY_DOWN{81M12}
+130m4*SDL_EventType_SDL_EVENT_KEY_UP{81M12}
+131m4*SDL_EventType_SDL_EVENT_TEXT_EDITING{81M12}
+132m4*SDL_EventType_SDL_EVENT_TEXT_INPUT{81M12}
+133m4*SDL_EventType_SDL_EVENT_KEYMAP_CHANGED{81M12}
+134m4*SDL_EventType_SDL_EVENT_KEYBOARD_ADDED{81M12}
+135m4*SDL_EventType_SDL_EVENT_KEYBOARD_REMOVED{81M12}
+136m4*SDL_EventType_SDL_EVENT_TEXT_EDITING_CANDIDATES{81M12}
+137m4*SDL_EventType_SDL_EVENT_SCREEN_KEYBOARD_SHOWN{81M12}
+138m4*SDL_EventType_SDL_EVENT_SCREEN_KEYBOARD_HIDDEN{81M12}
+139m4*SDL_EventType_SDL_EVENT_MOUSE_MOTION{81M12}
+140m4*SDL_EventType_SDL_EVENT_MOUSE_BUTTON_DOWN{81M12}
+141m4*SDL_EventType_SDL_EVENT_MOUSE_BUTTON_UP{81M12}
+142m4*SDL_EventType_SDL_EVENT_MOUSE_WHEEL{81M12}
+143m4*SDL_EventType_SDL_EVENT_MOUSE_ADDED{81M12}
+144m4*SDL_EventType_SDL_EVENT_MOUSE_REMOVED{81M12}
+145m4*SDL_EventType_SDL_EVENT_JOYSTICK_AXIS_MOTION{81M12}
+146m4*SDL_EventType_SDL_EVENT_JOYSTICK_BALL_MOTION{81M12}
+147m4*SDL_EventType_SDL_EVENT_JOYSTICK_HAT_MOTION{81M12}
+148m4*SDL_EventType_SDL_EVENT_JOYSTICK_BUTTON_DOWN{81M12}
+149m4*SDL_EventType_SDL_EVENT_JOYSTICK_BUTTON_UP{81M12}
+150m4*SDL_EventType_SDL_EVENT_JOYSTICK_ADDED{81M12}
+151m4*SDL_EventType_SDL_EVENT_JOYSTICK_REMOVED{81M12}
+152m4*SDL_EventType_SDL_EVENT_JOYSTICK_BATTERY_UPDATED{81M12}
+153m4*SDL_EventType_SDL_EVENT_JOYSTICK_UPDATE_COMPLETE{81M12}
+154m4*SDL_EventType_SDL_EVENT_GAMEPAD_AXIS_MOTION{81M12}
+155m4*SDL_EventType_SDL_EVENT_GAMEPAD_BUTTON_DOWN{81M12}
+156m4*SDL_EventType_SDL_EVENT_GAMEPAD_BUTTON_UP{81M12}
+157m4*SDL_EventType_SDL_EVENT_GAMEPAD_ADDED{81M12}
+158m4*SDL_EventType_SDL_EVENT_GAMEPAD_REMOVED{81M12}
+159m4*SDL_EventType_SDL_EVENT_GAMEPAD_REMAPPED{81M12}
+160m4*SDL_EventType_SDL_EVENT_GAMEPAD_TOUCHPAD_DOWN{81M12}
+161m4*SDL_EventType_SDL_EVENT_GAMEPAD_TOUCHPAD_MOTION{81M12}
+162m4*SDL_EventType_SDL_EVENT_GAMEPAD_TOUCHPAD_UP{81M12}
+163m4*SDL_EventType_SDL_EVENT_GAMEPAD_SENSOR_UPDATE{81M12}
+164m4*SDL_EventType_SDL_EVENT_GAMEPAD_UPDATE_COMPLETE{81M12}
+165m4*SDL_EventType_SDL_EVENT_GAMEPAD_STEAM_HANDLE_UPDATED{81M12}
+166m4*SDL_EventType_SDL_EVENT_FINGER_DOWN{81M12}
+167m4*SDL_EventType_SDL_EVENT_FINGER_UP{81M12}
+168m4*SDL_EventType_SDL_EVENT_FINGER_MOTION{81M12}
+169m4*SDL_EventType_SDL_EVENT_FINGER_CANCELED{81M12}
+170m4*SDL_EventType_SDL_EVENT_PINCH_BEGIN{81M12}
+171m4*SDL_EventType_SDL_EVENT_PINCH_UPDATE{81M12}
+172m4*SDL_EventType_SDL_EVENT_PINCH_END{81M12}
+173m4*SDL_EventType_SDL_EVENT_CLIPBOARD_UPDATE{81M12}
+174m4*SDL_EventType_SDL_EVENT_DROP_FILE{81M12}
+175m4*SDL_EventType_SDL_EVENT_DROP_TEXT{81M12}
+176m4*SDL_EventType_SDL_EVENT_DROP_BEGIN{81M12}
+177m4*SDL_EventType_SDL_EVENT_DROP_COMPLETE{81M12}
+178m4*SDL_EventType_SDL_EVENT_DROP_POSITION{81M12}
+179m4*SDL_EventType_SDL_EVENT_AUDIO_DEVICE_ADDED{81M12}
+180m4*SDL_EventType_SDL_EVENT_AUDIO_DEVICE_REMOVED{81M12}
+181m4*SDL_EventType_SDL_EVENT_AUDIO_DEVICE_FORMAT_CHANGED{81M12}
+182m4*SDL_EventType_SDL_EVENT_SENSOR_UPDATE{81M12}
+183m4*SDL_EventType_SDL_EVENT_PEN_PROXIMITY_IN{81M12}
+184m4*SDL_EventType_SDL_EVENT_PEN_PROXIMITY_OUT{81M12}
+185m4*SDL_EventType_SDL_EVENT_PEN_DOWN{81M12}
+186m4*SDL_EventType_SDL_EVENT_PEN_UP{81M12}
+187m4*SDL_EventType_SDL_EVENT_PEN_BUTTON_DOWN{81M12}
+188m4*SDL_EventType_SDL_EVENT_PEN_BUTTON_UP{81M12}
+189m4*SDL_EventType_SDL_EVENT_PEN_MOTION{81M12}
+190m4*SDL_EventType_SDL_EVENT_PEN_AXIS{81M12}
+191m4*SDL_EventType_SDL_EVENT_CAMERA_DEVICE_ADDED{81M12}
+192m4*SDL_EventType_SDL_EVENT_CAMERA_DEVICE_REMOVED{81M12}
+193m4*SDL_EventType_SDL_EVENT_CAMERA_DEVICE_APPROVED{81M12}
+194m4*SDL_EventType_SDL_EVENT_CAMERA_DEVICE_DENIED{81M12}
+195m4*SDL_EventType_SDL_EVENT_RENDER_TARGETS_RESET{81M12}
+196m4*SDL_EventType_SDL_EVENT_RENDER_DEVICE_RESET{81M12}
+197m4*SDL_EventType_SDL_EVENT_RENDER_DEVICE_LOST{81M12}
+198m4*SDL_EventType_SDL_EVENT_PRIVATE0{81M12}
+199m4*SDL_EventType_SDL_EVENT_PRIVATE1{81M12}
+200m4*SDL_EventType_SDL_EVENT_PRIVATE2{81M12}
+201m4*SDL_EventType_SDL_EVENT_PRIVATE3{81M12}
+202m4*SDL_EventType_SDL_EVENT_POLL_SENTINEL{81M12}
+203m4*SDL_EventType_SDL_EVENT_USER{81M12}
+204m4*SDL_EventType_SDL_EVENT_LAST{81M12}
+205m4*SDL_EventType_SDL_EVENT_ENUM_PADDING{81M12}
+387R9*SDL_CommonEvent 392e4 1365r30
+388m7*c_type{23|417M12}
+389m7*reserved{23|417M12}
+390m7*timestamp{23|437M12}
+402R9*SDL_DisplayEvent 410e4 1367r31
+403m7*c_type{81M12}
+404m7*reserved{23|417M12}
+405m7*timestamp{23|437M12}
+406m7*displayID{26|218M12}
+407i7*data1{23|409I12}
+408i7*data2{23|409I12}
+423R9*SDL_WindowEvent 431e4 1369r30
+424m7*c_type{81M12}
+425m7*reserved{23|417M12}
+426m7*timestamp{23|437M12}
+427m7*windowID{26|228M12}
+428i7*data1{23|409I12}
+429i7*data2{23|409I12}
+444R9*SDL_KeyboardDeviceEvent 450e4 1371r31
+445m7*c_type{81M12}
+446m7*reserved{23|417M12}
+447m7*timestamp{23|437M12}
+448m7*which{13|64M12}
+470R9*SDL_KeyboardEvent 483e4 1373r27
+471m7*c_type{81M12}
+472m7*reserved{23|417M12}
+473m7*timestamp{23|437M12}
+474m7*windowID{26|228M12}
+475m7*which{13|64M12}
+476m7*scancode{21|53M12}
+477m7*key{14|341M12}
+478m7*c_mod{14|349M12}
+479m7*raw{23|401M12}
+480b7*down{5|59E12}
+481b7*repeat{5|59E12}
+505R9*SDL_TextEditingEvent 514e4 1375r28
+506m7*c_type{81M12}
+507m7*reserved{23|417M12}
+508m7*timestamp{23|437M12}
+509m7*windowID{26|228M12}
+510p7*text{6|59P9}
+511i7*start{23|409I12}
+512i7*length{23|409I12}
+528R9*SDL_TextEditingCandidatesEvent 541e4 1377r39
+529m7*c_type{81M12}
+530m7*reserved{23|417M12}
+531m7*timestamp{23|437M12}
+532m7*windowID{26|228M12}
+533m7*candidates{29|67M9}
+534i7*num_candidates{23|409I12}
+535i7*selected_candidate{23|409I12}
+536b7*horizontal{5|59E12}
+537m7*padding1{23|385M12}
+538m7*padding2{23|385M12}
+539m7*padding3{23|385M12}
+562R9*SDL_TextInputEvent 569e4 1379r28
+563m7*c_type{81M12}
+564m7*reserved{23|417M12}
+565m7*timestamp{23|437M12}
+566m7*windowID{26|228M12}
+567p7*text{6|59P9}
+581R9*SDL_MouseDeviceEvent 587e4 1381r31
+582m7*c_type{81M12}
+583m7*reserved{23|417M12}
+584m7*timestamp{23|437M12}
+585m7*which{15|93M12}
+598R9*SDL_MouseMotionEvent 610e4 1383r30
+599m7*c_type{81M12}
+600m7*reserved{23|417M12}
+601m7*timestamp{23|437M12}
+602m7*windowID{26|228M12}
+603m7*which{15|93M12}
+604m7*state{15|198M12}
+605f7*x{float}
+606f7*y{float}
+607f7*xrel{float}
+608f7*yrel{float}
+627R9*SDL_MouseButtonEvent 640e4 1385r30
+628m7*c_type{81M12}
+629m7*reserved{23|417M12}
+630m7*timestamp{23|437M12}
+631m7*windowID{26|228M12}
+632m7*which{15|93M12}
+633m7*button{23|385M12}
+634b7*down{5|59E12}
+635m7*clicks{23|385M12}
+636m7*padding{23|385M12}
+637f7*x{float}
+638f7*y{float}
+657R9*SDL_MouseWheelEvent 671e4 1387r29
+658m7*c_type{81M12}
+659m7*reserved{23|417M12}
+660m7*timestamp{23|437M12}
+661m7*windowID{26|228M12}
+662m7*which{15|93M12}
+663f7*x{float}
+664f7*y{float}
+665e7*direction{15|161E9}
+666f7*mouse_x{float}
+667f7*mouse_y{float}
+668i7*integer_x{23|409I12}
+669i7*integer_y{23|409I12}
+690R9*SDL_JoyAxisEvent 702e4 1391r29
+691m7*c_type{81M12}
+692m7*reserved{23|417M12}
+693m7*timestamp{23|437M12}
+694m7*which{12|121M12}
+695m7*axis{23|385M12}
+696m7*padding1{23|385M12}
+697m7*padding2{23|385M12}
+698m7*padding3{23|385M12}
+699i7*value{23|393I12}
+700m7*padding4{23|401M12}
+715R9*SDL_JoyBallEvent 727e4 1393r29
+716m7*c_type{81M12}
+717m7*reserved{23|417M12}
+718m7*timestamp{23|437M12}
+719m7*which{12|121M12}
+720m7*ball{23|385M12}
+721m7*padding1{23|385M12}
+722m7*padding2{23|385M12}
+723m7*padding3{23|385M12}
+724i7*xrel{23|393I12}
+725i7*yrel{23|393I12}
+741R9*SDL_JoyHatEvent 751e4 1395r28
+742m7*c_type{81M12}
+743m7*reserved{23|417M12}
+744m7*timestamp{23|437M12}
+745m7*which{12|121M12}
+746m7*hat{23|385M12}
+747m7*value{23|385M12}
+748m7*padding1{23|385M12}
+749m7*padding2{23|385M12}
+771R9*SDL_JoyButtonEvent 781e4 1397r31
+772m7*c_type{81M12}
+773m7*reserved{23|417M12}
+774m7*timestamp{23|437M12}
+775m7*which{12|121M12}
+776m7*button{23|385M12}
+777b7*down{5|59E12}
+778m7*padding1{23|385M12}
+779m7*padding2{23|385M12}
+799R9*SDL_JoyDeviceEvent 805e4 1389r31
+800m7*c_type{81M12}
+801m7*reserved{23|417M12}
+802m7*timestamp{23|437M12}
+803m7*which{12|121M12}
+816R9*SDL_JoyBatteryEvent 824e4 1399r32
+817m7*c_type{81M12}
+818m7*reserved{23|417M12}
+819m7*timestamp{23|437M12}
+820m7*which{12|121M12}
+821i7*state{18|51I12}
+822i7*percent{4|57I9}
+837R9*SDL_GamepadAxisEvent 849e4 1403r29
+838m7*c_type{81M12}
+839m7*reserved{23|417M12}
+840m7*timestamp{23|437M12}
+841m7*which{12|121M12}
+842m7*axis{23|385M12}
+843m7*padding1{23|385M12}
+844m7*padding2{23|385M12}
+845m7*padding3{23|385M12}
+846i7*value{23|393I12}
+847m7*padding4{23|401M12}
+862R9*SDL_GamepadButtonEvent 872e4 1405r31
+863m7*c_type{81M12}
+864m7*reserved{23|417M12}
+865m7*timestamp{23|437M12}
+866m7*which{12|121M12}
+867m7*button{23|385M12}
+868b7*down{5|59E12}
+869m7*padding1{23|385M12}
+870m7*padding2{23|385M12}
+894R9*SDL_GamepadDeviceEvent 900e4 1401r31
+895m7*c_type{81M12}
+896m7*reserved{23|417M12}
+897m7*timestamp{23|437M12}
+898m7*which{12|121M12}
+911R9*SDL_GamepadTouchpadEvent 922e4 1407r33
+912m7*c_type{81M12}
+913m7*reserved{23|417M12}
+914m7*timestamp{23|437M12}
+915m7*which{12|121M12}
+916i7*touchpad{23|409I12}
+917i7*finger{23|409I12}
+918f7*x{float}
+919f7*y{float}
+920f7*pressure{float}
+938A9*anon_array2941(float)<integer> 945r22
+939R9*SDL_GamepadSensorEvent 948e4 1409r31
+940m7*c_type{81M12}
+941m7*reserved{23|417M12}
+942m7*timestamp{23|437M12}
+943m7*which{12|121M12}
+944i7*sensor{23|409I12}
+945a7*data{938A9}
+946m7*sensor_timestamp{23|437M12}
+966R9*SDL_AudioDeviceEvent 976e4 1411r31
+967m7*c_type{81M12}
+968m7*reserved{23|417M12}
+969m7*timestamp{23|437M12}
+970m7*which{7|388M12}
+971b7*recording{5|59E12}
+972m7*padding1{23|385M12}
+973m7*padding2{23|385M12}
+974m7*padding3{23|385M12}
+988R9*SDL_CameraDeviceEvent 994e4 1413r31
+989m7*c_type{81M12}
+990m7*reserved{23|417M12}
+991m7*timestamp{23|437M12}
+992m7*which{8|94M12}
+1005R9*SDL_RenderEvent 1011e4 1435r30
+1006m7*c_type{81M12}
+1007m7*reserved{23|417M12}
+1008m7*timestamp{23|437M12}
+1009m7*windowID{26|228M12}
+1036R9*SDL_TouchFingerEvent 1049e4 1421r31
+1037m7*c_type{81M12}
+1038m7*reserved{23|417M12}
+1039m7*timestamp{23|437M12}
+1040m7*touchID{25|61M12}
+1041m7*fingerID{25|76M12}
+1042f7*x{float}
+1043f7*y{float}
+1044f7*dx{float}
+1045f7*dy{float}
+1046f7*pressure{float}
+1047m7*windowID{26|228M12}
+1064R9*SDL_PinchFingerEvent 1071e4 1423r29
+1065m7*c_type{81M12}
+1066m7*reserved{23|417M12}
+1067m7*timestamp{23|437M12}
+1068f7*scale{float}
+1069m7*windowID{26|228M12}
+1096R9*SDL_PenProximityEvent 1103e4 1425r34
+1097m7*c_type{81M12}
+1098m7*reserved{23|417M12}
+1099m7*timestamp{23|437M12}
+1100m7*windowID{26|228M12}
+1101m7*which{16|99M12}
+1121R9*SDL_PenMotionEvent 1131e4 1429r31
+1122m7*c_type{81M12}
+1123m7*reserved{23|417M12}
+1124m7*timestamp{23|437M12}
+1125m7*windowID{26|228M12}
+1126m7*which{16|99M12}
+1127m7*pen_state{16|119M12}
+1128f7*x{float}
+1129f7*y{float}
+1149R9*SDL_PenTouchEvent 1161e4 1427r30
+1150m7*c_type{81M12}
+1151m7*reserved{23|417M12}
+1152m7*timestamp{23|437M12}
+1153m7*windowID{26|228M12}
+1154m7*which{16|99M12}
+1155m7*pen_state{16|119M12}
+1156f7*x{float}
+1157f7*y{float}
+1158b7*eraser{5|59E12}
+1159b7*down{5|59E12}
+1181R9*SDL_PenButtonEvent 1193e4 1431r31
+1182m7*c_type{81M12}
+1183m7*reserved{23|417M12}
+1184m7*timestamp{23|437M12}
+1185m7*windowID{26|228M12}
+1186m7*which{16|99M12}
+1187m7*pen_state{16|119M12}
+1188f7*x{float}
+1189f7*y{float}
+1190m7*button{23|385M12}
+1191b7*down{5|59E12}
+1213R9*SDL_PenAxisEvent 1225e4 1433r29
+1214m7*c_type{81M12}
+1215m7*reserved{23|417M12}
+1216m7*timestamp{23|437M12}
+1217m7*windowID{26|228M12}
+1218m7*which{16|99M12}
+1219m7*pen_state{16|119M12}
+1220f7*x{float}
+1221f7*y{float}
+1222e7*axis{16|137E9}
+1223f7*value{float}
+1243R9*SDL_DropEvent 1253e4 1437r28
+1244m7*c_type{81M12}
+1245m7*reserved{23|417M12}
+1246m7*timestamp{23|437M12}
+1247m7*windowID{26|228M12}
+1248f7*x{float}
+1249f7*y{float}
+1250p7*source{6|59P9}
+1251p7*data{6|59P9}
+1269R9*SDL_ClipboardEvent 1277e4 1439r33
+1270m7*c_type{81M12}
+1271m7*reserved{23|417M12}
+1272m7*timestamp{23|437M12}
+1273b7*owner{5|59E12}
+1274i7*num_mime_types{23|409I12}
+1275m7*mime_types{29|67M9}
+1290A9*anon_array2969(float)<integer> 1296r22
+1291R9*SDL_SensorEvent 1299e4 1415r30
+1292m7*c_type{81M12}
+1293m7*reserved{23|417M12}
+1294m7*timestamp{23|437M12}
+1295m7*which{22|65M12}
+1296a7*data{1290A9}
+1297m7*sensor_timestamp{23|437M12}
+1312R9*SDL_QuitEvent 1317e4 1417r28
+1313m7*c_type{81M12}
+1314m7*reserved{23|417M12}
+1315m7*timestamp{23|437M12}
+1333R9*SDL_UserEvent 1342e4 1419r28
+1334m7*c_type{23|417M12}
+1335m7*reserved{23|417M12}
+1336m7*timestamp{23|437M12}
+1337m7*windowID{26|228M12}
+1338i7*code{23|409I12}
+1339m7*data1{29|67M9}
+1340m7*data2{29|67M9}
+1359A9*anon_array2977(23|385M12)<integer> 1441r31
+1360R9*SDL_Event 1360d20 1444e4 1585r23 1756r43 1784r43 1818r50 1856r43 1881r82
+. 2107r61 2144r31
+1360m20*discr{4|66M9} 1361r12
+1363m13*c_type{23|417M12}
+1365r13*common{387R9}
+1367r13*display{402R9}
+1369r13*window{423R9}
+1371r13*kdevice{444R9}
+1373r13*key{470R9}
+1375r13*edit{505R9}
+1377r13*edit_candidates{528R9}
+1379r13*text{562R9}
+1381r13*mdevice{581R9}
+1383r13*motion{598R9}
+1385r13*button{627R9}
+1387r13*wheel{657R9}
+1389r13*jdevice{799R9}
+1391r13*jaxis{690R9}
+1393r13*jball{715R9}
+1395r13*jhat{741R9}
+1397r13*jbutton{771R9}
+1399r13*jbattery{816R9}
+1401r13*gdevice{894R9}
+1403r13*gaxis{837R9}
+1405r13*gbutton{862R9}
+1407r13*gtouchpad{911R9}
+1409r13*gsensor{939R9}
+1411r13*adevice{966R9}
+1413r13*cdevice{988R9}
+1415r13*sensor{1291R9}
+1417r13*quit{1312R9}
+1419r13*user{1333R9}
+1421r13*tfinger{1036R9}
+1423r13*pinch{1064R9}
+1425r13*pproximity{1096R9}
+1427r13*ptouch{1149R9}
+1429r13*pmotion{1121R9}
+1431r13*pbutton{1181R9}
+1433r13*paxis{1213R9}
+1435r13*render{1005R9}
+1437r13*drop{1243R9}
+1439r13*clipboard{1269R9}
+1441a13*padding{1359A9}
+1520U14*SDL_PumpEvents
+1532E9*SDL_EventAction 1536e4 1587r16
+1533n7*SDL_ADDEVENT{1532E9}
+1534n7*SDL_PEEKEVENT{1532E9}
+1535n7*SDL_GETEVENT{1532E9}
+1584V13*SDL_PeepEvents{4|57I9} 1585^7 1586>7 1587>7 1588>7 1589>7
+1585p7 events(1360R9)
+1586i7 numevents{4|57I9}
+1587e7 action{1532E9}
+1588m7 minType{23|417M12}
+1589m7 maxType{23|417M12}
+1612V13*SDL_HasEvent{5|59E12} 1612>27
+1612m27 c_type{23|417M12}
+1636V13*SDL_HasEvents{5|59E12} 1636>28 1636>64
+1636m28 minType{23|417M12}
+1636m64 maxType{23|417M12}
+1668U14*SDL_FlushEvent 1668>30
+1668m30 c_type{23|417M12}
+1699U14*SDL_FlushEvents 1699>31 1699>67
+1699m31 minType{23|417M12}
+1699m67 maxType{23|417M12}
+1756V13*SDL_PollEvent{5|59E12} 1756^28
+1756p28 event(1360R9)
+1784V13*SDL_WaitEvent{5|59E12} 1784^28
+1784p28 event(1360R9)
+1818V13*SDL_WaitEventTimeout{5|59E12} 1818^35 1818>61
+1818p35 event(1360R9)
+1818i61 timeoutMS{23|409I12}
+1856V13*SDL_PushEvent{5|59E12} 1856^28
+1856p28 event(1360R9)
+1881P9*SDL_EventFilter(4|92E9) 1881>45 1881^68 1927r43 1986r41 2007r45 2031r41
+1881m45 arg1{29|67M9}
+1881p68 arg2(1360R9)
+1927U14*SDL_SetEventFilter 1927>34 1927>60
+1927p34 filter{1881P9}
+1927m60 userdata{29|67M9}
+1950V13*SDL_GetEventFilter{5|59E12} 1950>33 1950>58
+1950m33 filter{29|67M9}
+1950m58 userdata{29|67M9}
+1986V13*SDL_AddEventWatch{5|59E12} 1986>32 1986>58
+1986p32 filter{1881P9}
+1986m58 userdata{29|67M9}
+2007U14*SDL_RemoveEventWatch 2007>36 2007>62
+2007p36 filter{1881P9}
+2007m62 userdata{29|67M9}
+2031U14*SDL_FilterEvents 2031>32 2031>58
+2031p32 filter{1881P9}
+2031m58 userdata{29|67M9}
+2049U14*SDL_SetEventEnabled 2049>35 2049>70
+2049m35 c_type{23|417M12}
+2049b70 enabled{5|59E12}
+2067V13*SDL_EventEnabled{5|59E12} 2067>31
+2067m31 c_type{23|417M12}
+2087V13*SDL_RegisterEvents{23|417M12} 2087>33
+2087i33 numevents{4|57I9}
+2107V13*SDL_GetWindowFromEvent(26|335R9) 2107^37
+2107p37 event(1360R9)
+2143V13*SDL_GetEventDescription{4|57I9} 2144^7 2145>7 2146>7
+2144p7 event(1360R9)
+2145p7 buf{6|59P9}
+2146i7 buflen{4|57I9}
+X 12 sdl3_sdl_joystick_h.ads
+16K9*SDL3_SDL_joystick_h 9|16w6 694r23 719r23 745r23 775r23 803r23 820r23
+. 841r23 866r23 898r23 915r23 943r23 12|1703e24
+121M12*SDL_JoystickID{23|417M12} 9|694r43 719r43 745r43 775r43 803r43 820r43
+. 841r43 866r43 898r43 915r43 943r43
+X 13 sdl3_sdl_keyboard_h.ads
+16K9*SDL3_SDL_keyboard_h 9|9w6 448r23 475r23 13|718e24
+64M12*SDL_KeyboardID{23|417M12} 9|448r43 475r43
+X 14 sdl3_sdl_keycode_h.ads
+9K9*SDL3_SDL_keycode_h 9|11w6 477r21 478r23 14|351e23
+341M12*SDL_Keycode{23|417M12} 9|477r40
+349M12*SDL_Keymod{23|401M12} 9|478r42
+X 15 sdl3_sdl_mouse_h.ads
+14K9*SDL3_SDL_mouse_h 9|15w6 585r23 603r23 604r23 632r23 662r23 665r27 15|938e21
+93M12*SDL_MouseID{23|417M12} 9|585r40 603r40 632r40 662r40
+161E9*SDL_MouseWheelDirection 9|665r44 15|164e4
+198M12*SDL_MouseButtonFlags{23|417M12} 9|604r40
+X 16 sdl3_sdl_pen_h.ads
+9K9*SDL3_SDL_pen_h 9|21w6 1101r23 1126r23 1127r27 1154r23 1155r27 1186r23
+. 1187r27 1218r23 1219r27 1222r22 16|203e19
+99M12*SDL_PenID{23|417M12} 9|1101r38 1126r38 1154r38 1186r38 1218r38
+119M12*SDL_PenInputFlags{23|417M12} 9|1127r42 1155r42 1187r42 1219r42
+137E9*SDL_PenAxis 9|1222r37 16|146e4
+X 18 sdl3_sdl_power_h.ads
+8K9*SDL3_SDL_power_h 9|17w6 821r23 18|104e21
+51I12*SDL_PowerState{4|57I9} 9|821r40
+X 21 sdl3_sdl_scancode_h.ads
+8K9*SDL3_SDL_scancode_h 9|10w6 476r26 21|484e24
+53M12*SDL_Scancode{4|66M9} 9|476r46
+X 22 sdl3_sdl_sensor_h.ads
+12K9*SDL3_SDL_sensor_h 9|22w6 1295r23 22|379e22
+65M12*SDL_SensorID{23|417M12} 9|1295r41
+X 23 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 9|7w6 388r24 389r26 390r27 404r26 405r27 407r23 408r23
+. 425r26 426r27 428r23 429r23 446r26 447r27 472r26 473r27 479r21 507r26 508r27
+. 511r23 512r24 530r26 531r27 534r32 535r36 537r26 538r26 539r26 564r26 565r27
+. 583r26 584r27 600r26 601r27 629r26 630r27 633r24 635r24 636r25 659r26 660r27
+. 668r27 669r27 692r26 693r27 695r22 696r26 697r26 698r26 699r23 700r26 717r26
+. 718r27 720r22 721r26 722r26 723r26 724r22 725r22 743r26 744r27 746r21 747r23
+. 748r26 749r26 773r26 774r27 776r24 778r26 779r26 801r26 802r27 818r26 819r27
+. 839r26 840r27 842r22 843r26 844r26 845r26 846r23 847r26 864r26 865r27 867r24
+. 869r26 870r26 896r26 897r27 913r26 914r27 916r26 917r24 941r26 942r27 944r24
+. 946r34 968r26 969r27 972r26 973r26 974r26 990r26 991r27 1007r26 1008r27
+. 1038r26 1039r27 1066r26 1067r27 1098r26 1099r27 1123r26 1124r27 1151r26
+. 1152r27 1183r26 1184r27 1190r24 1215r26 1216r27 1245r26 1246r27 1271r26
+. 1272r27 1274r32 1293r26 1294r27 1297r34 1314r26 1315r27 1334r24 1335r26
+. 1336r27 1338r22 1359r55 1363r30 1588r17 1589r17 1612r36 1636r38 1636r74
+. 1668r39 1699r41 1699r77 1818r73 2049r44 2067r40 2087r57 23|6557e22
+385M12*Uint8{34|26M12} 9|537r44 538r44 539r44 633r42 635r42 636r43 695r40
+. 696r44 697r44 698r44 720r40 721r44 722r44 723r44 746r39 747r41 748r44 749r44
+. 776r42 778r44 779r44 842r40 843r44 844r44 845r44 867r42 869r44 870r44 972r44
+. 973r44 974r44 1190r42 1359r73
+393I12*Sint16{33|28I12} 9|699r41 724r40 725r40 846r41
+401M12*Uint16{34|28M12} 9|479r39 700r44 847r44
+409I12*Sint32{33|30I12} 9|407r41 408r41 428r41 429r41 511r41 512r42 534r50
+. 535r54 668r45 669r45 916r44 917r42 944r42 1274r50 1338r40 1818r91
+417M12*Uint32{34|30M12} 9|388r42 389r44 404r44 425r44 446r44 472r44 507r44
+. 530r44 564r44 583r44 600r44 629r44 659r44 692r44 717r44 743r44 773r44 801r44
+. 818r44 839r44 864r44 896r44 913r44 941r44 968r44 990r44 1007r44 1038r44
+. 1066r44 1098r44 1123r44 1151r44 1183r44 1215r44 1245r44 1271r44 1293r44
+. 1314r44 1334r42 1335r44 1363r48 1588r35 1589r35 1612r54 1636r56 1636r92
+. 1668r57 1699r59 1699r95 2049r62 2067r58 2087r75
+437M12*Uint64{34|32M12} 9|390r45 405r45 426r45 447r45 473r45 508r45 531r45
+. 565r45 584r45 601r45 630r45 660r45 693r45 718r45 744r45 774r45 802r45 819r45
+. 840r45 865r45 897r45 914r45 942r45 946r52 969r45 991r45 1008r45 1039r45
+. 1067r45 1099r45 1124r45 1152r45 1184r45 1216r45 1246r45 1272r45 1294r45
+. 1297r52 1315r45 1336r45
+X 25 sdl3_sdl_touch_h.ads
+11K9*SDL3_SDL_touch_h 9|20w6 1040r25 1041r26 25|199e21
+61M12*SDL_TouchID{23|437M12} 9|1040r42
+76M12*SDL_FingerID{23|437M12} 9|1041r43
+X 26 sdl3_sdl_video_h.ads
+18K9*SDL3_SDL_video_h 9|8w6 406r27 427r26 474r26 509r26 532r26 566r26 602r26
+. 631r26 661r26 1009r26 1047r26 1069r26 1100r26 1125r26 1153r26 1185r26 1217r26
+. 1247r26 1337r26 2107r86 26|4092e21
+218M12*SDL_DisplayID{23|417M12} 9|406r44
+228M12*SDL_WindowID{23|417M12} 9|427r43 474r43 509r43 532r43 566r43 602r43
+. 631r43 661r43 1009r43 1047r43 1069r43 1100r43 1125r43 1153r43 1185r43 1217r43
+. 1247r43 1337r43
+335R9*SDL_Window 9|2107r103
+X 29 system.ads
+37K9*System 9|14w6 533r20 1275r20 1339r15 1340r15 1881r52 1927r71 1950r42
+. 1950r69 1986r69 2007r73 2031r69 29|153e11
+67M9*Address 9|533r27 1275r27 1339r22 1340r22 1881r59 1927r78 1950r49 1950r76
+. 1986r76 2007r80 2031r76
+X 33 x86_64_linux_gnu_bits_stdint_intn_h.ads
+28I12*int16_t{35|44I12}
+30I12*int32_t{35|48I12}
+X 34 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+26M12*uint8_t{35|42M12}
+28M12*uint16_t{35|46M12}
+32M12*uint64_t{35|54M12}
+X 35 x86_64_linux_gnu_bits_types_h.ads
+42M12*uu_uint8_t{4|71M9}
+44I12*uu_int16_t{4|58I9}
+46M12*uu_uint16_t{4|67M9}
+48I12*uu_int32_t{4|57I9}
+54M12*uu_uint64_t{4|68M9}
+

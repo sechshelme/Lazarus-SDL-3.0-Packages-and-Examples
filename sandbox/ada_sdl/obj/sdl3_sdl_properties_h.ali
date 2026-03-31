@@ -1,0 +1,185 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FLOATING_POINT
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_OBSOLESCENT_FEATURES
+
+U sdl3_sdl_properties_h%s  sdl3_sdl_properties_h.ads  977fa1a9 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_getglobalproperties sdl3_sdl_properties_h 116 13 none]
+G c Z s s [sdl_createproperties sdl3_sdl_properties_h 136 13 none]
+G c Z s s [sdl_copyproperties sdl3_sdl_properties_h 161 13 none]
+G c Z s s [sdl_lockproperties sdl3_sdl_properties_h 189 13 none]
+G c Z s s [sdl_unlockproperties sdl3_sdl_properties_h 206 14 none]
+G c Z s s [sdl_setpointerpropertywithcleanup sdl3_sdl_properties_h 267 13 none]
+G c Z s s [sdl_setpointerproperty sdl3_sdl_properties_h 299 13 none]
+G c Z s s [sdl_setstringproperty sdl3_sdl_properties_h 326 13 none]
+G c Z s s [sdl_setnumberproperty sdl3_sdl_properties_h 350 13 none]
+G c Z s s [sdl_setfloatproperty sdl3_sdl_properties_h 374 13 none]
+G c Z s s [sdl_setbooleanproperty sdl3_sdl_properties_h 398 13 none]
+G c Z s s [sdl_hasproperty sdl3_sdl_properties_h 420 13 none]
+G c Z s s [sdl_getpropertytype sdl3_sdl_properties_h 440 13 none]
+G c Z s s [sdl_getpointerproperty sdl3_sdl_properties_h 477 13 none]
+G c Z s s [sdl_getstringproperty sdl3_sdl_properties_h 508 13 none]
+G c Z s s [sdl_getnumberproperty sdl3_sdl_properties_h 537 13 none]
+G c Z s s [sdl_getfloatproperty sdl3_sdl_properties_h 566 13 none]
+G c Z s s [sdl_getbooleanproperty sdl3_sdl_properties_h 595 13 none]
+G c Z s s [sdl_clearproperty sdl3_sdl_properties_h 616 13 none]
+G c Z s s [sdl_enumerateproperties sdl3_sdl_properties_h 662 13 none]
+G c Z s s [sdl_destroyproperties sdl3_sdl_properties_h 687 14 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 8r6 10r6 269r14 301r14 328r14 329r15 352r14
+. 376r14 400r14 420r63 440r67 479r14 510r14 511r23 511r62 539r14 568r14 597r14
+. 616r65 642r17
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 8r17 10r17 269r25 301r25 328r25 329r26 352r25
+. 376r25 400r25 420r74 440r78 479r25 510r25 511r34 511r73 539r25 568r25 597r25
+. 616r76 642r28
+59I9*long<long_integer>
+66M9*unsigned
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 7|8w19 161r88 189r66 272r41 302r38 329r54 353r48
+. 377r29 401r15 401r39 420r102 598r23 598r47 616r104 665r41
+59B12*bool{4|92E9} 7|161r99 189r77 272r52 302r49 329r65 353r59 377r40 401r26
+. 401r50 420r113 598r34 598r58 616r115 665r52
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|10w19 269r27 301r27 328r27 329r28 352r27 376r27 400r27
+. 420r76 440r80 479r27 510r27 511r36 511r75 539r27 568r27 597r27 616r78 642r30
+59P9*chars_ptr 7|269r35 301r35 328r35 329r36 352r35 376r35 400r35 420r84
+. 440r88 479r35 510r35 511r44 511r83 539r35 568r35 597r35 616r86 642r38
+X 7 sdl3_sdl_properties_h.ads
+12K9*SDL3_SDL_properties_h 693l5 693e26
+14a4*SDL_PROP_NAME_STRING{string}
+66M12*SDL_PropertiesID{8|417M12} 116r44 136r41 161r39 161r63 189r41 206r44
+. 268r15 300r15 327r15 351r15 375r15 399r15 420r38 440r42 478r15 509r15 538r15
+. 567r15 596r15 616r40 641r17 663r15 687r45
+74E9*SDL_PropertyType 81e4 440r106
+75n7*SDL_PROPERTY_TYPE_INVALID{74E9}
+76n7*SDL_PROPERTY_TYPE_POINTER{74E9}
+77n7*SDL_PROPERTY_TYPE_STRING{74E9}
+78n7*SDL_PROPERTY_TYPE_NUMBER{74E9}
+79n7*SDL_PROPERTY_TYPE_FLOAT{74E9}
+80n7*SDL_PROPERTY_TYPE_BOOLEAN{74E9}
+116V13*SDL_GetGlobalProperties{66M12}
+136V13*SDL_CreateProperties{66M12}
+161V13*SDL_CopyProperties{5|59E12} 161>33 161>57
+161m33 src{66M12}
+161m57 dst{66M12}
+189V13*SDL_LockProperties{5|59E12} 189>33
+189m33 props{66M12}
+206U14*SDL_UnlockProperties 206>36
+206m36 props{66M12}
+234P9*SDL_CleanupPropertyCallback 234>58 234>81 271r17
+234m58 arg1{10|67M9}
+234m81 arg2{10|67M9}
+267V13*SDL_SetPointerPropertyWithCleanup{5|59E12} 268>7 269>7 270>7 271>7
+. 272>7
+268m7 props{66M12}
+269p7 name{6|59P9}
+270m7 value{10|67M9}
+271p7 cleanup{234P9}
+272m7 userdata{10|67M9}
+299V13*SDL_SetPointerProperty{5|59E12} 300>7 301>7 302>7
+300m7 props{66M12}
+301p7 name{6|59P9}
+302m7 value{10|67M9}
+326V13*SDL_SetStringProperty{5|59E12} 327>7 328>7 329>7
+327m7 props{66M12}
+328p7 name{6|59P9}
+329p7 value{6|59P9}
+350V13*SDL_SetNumberProperty{5|59E12} 351>7 352>7 353>7
+351m7 props{66M12}
+352p7 name{6|59P9}
+353i7 value{8|427I12}
+374V13*SDL_SetFloatProperty{5|59E12} 375>7 376>7 377>7
+375m7 props{66M12}
+376p7 name{6|59P9}
+377f7 value{float}
+398V13*SDL_SetBooleanProperty{5|59E12} 399>7 400>7 401>7
+399m7 props{66M12}
+400p7 name{6|59P9}
+401b7 value{5|59E12}
+420V13*SDL_HasProperty{5|59E12} 420>30 420>56
+420m30 props{66M12}
+420p56 name{6|59P9}
+440V13*SDL_GetPropertyType{74E9} 440>34 440>60
+440m34 props{66M12}
+440p60 name{6|59P9}
+477V13*SDL_GetPointerProperty{10|67M9} 478>7 479>7 480>7
+478m7 props{66M12}
+479p7 name{6|59P9}
+480m7 default_value{10|67M9}
+508V13*SDL_GetStringProperty{6|59P9} 509>7 510>7 511>7
+509m7 props{66M12}
+510p7 name{6|59P9}
+511p7 default_value{6|59P9}
+537V13*SDL_GetNumberProperty{8|427I12} 538>7 539>7 540>7
+538m7 props{66M12}
+539p7 name{6|59P9}
+540i7 default_value{8|427I12}
+566V13*SDL_GetFloatProperty{float} 567>7 568>7 569>7
+567m7 props{66M12}
+568p7 name{6|59P9}
+569f7 default_value{float}
+595V13*SDL_GetBooleanProperty{5|59E12} 596>7 597>7 598>7
+596m7 props{66M12}
+597p7 name{6|59P9}
+598b7 default_value{5|59E12}
+616V13*SDL_ClearProperty{5|59E12} 616>32 616>58
+616m32 props{66M12}
+616p58 name{6|59P9}
+639P9*SDL_EnumeratePropertiesCallback 640>10 641>10 642>10 664r18
+640m10 arg1{10|67M9}
+641m10 arg2{66M12}
+642p10 arg3{6|59P9}
+662V13*SDL_EnumerateProperties{5|59E12} 663>7 664>7 665>7
+663m7 props{66M12}
+664p7 callback{639P9}
+665m7 userdata{10|67M9}
+687U14*SDL_DestroyProperties 687>37
+687m37 props{66M12}
+X 8 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 7|7w6 66r32 353r15 540r23 540r56 8|6557e22
+417M12*Uint32{15|30M12} 7|66r50
+427I12*Sint64{14|32I12} 7|353r33 540r41 540r74
+X 10 system.ads
+37K9*System 7|9w6 234r65 234r88 270r15 272r18 302r15 480r23 480r46 640r17
+. 665r18 10|153e11
+67M9*Address 7|234r72 234r95 270r22 272r25 302r22 480r30 480r53 640r24 665r25
+X 14 x86_64_linux_gnu_bits_stdint_intn_h.ads
+32I12*int64_t{16|52I12}
+X 15 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+30M12*uint32_t{16|50M12}
+X 16 x86_64_linux_gnu_bits_types_h.ads
+50M12*uu_uint32_t{4|66M9}
+52I12*uu_int64_t{4|59I9}
+

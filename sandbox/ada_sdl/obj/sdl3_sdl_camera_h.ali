@@ -1,0 +1,144 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sdl3_sdl_camera_h%s	sdl3_sdl_camera_h.ads	322cbcb5 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W sdl3_sdl_pixels_h%s	sdl3_sdl_pixels_h.ads	sdl3_sdl_pixels_h.ali
+W sdl3_sdl_properties_h%s  sdl3_sdl_properties_h.ads  sdl3_sdl_properties_h.ali
+W sdl3_sdl_stdinc_h%s	sdl3_sdl_stdinc_h.ads	sdl3_sdl_stdinc_h.ali
+Y sdl3_sdl_surface_h%s	sdl3_sdl_surface_h.ads	sdl3_sdl_surface_h.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20240521074738 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20240521074738 f40c8db4 interfaces.c.strings%s
+D sdl3_sdl_camera_h.ads	20260331104513 a74ea162 sdl3_sdl_camera_h%s
+D sdl3_sdl_pixels_h.ads	20260331104513 93ccfcde sdl3_sdl_pixels_h%s
+D sdl3_sdl_properties_h.ads  20260331104513 e241592b sdl3_sdl_properties_h%s
+D sdl3_sdl_stdinc_h.ads	20260331104513 21185601 sdl3_sdl_stdinc_h%s
+D sdl3_sdl_surface_h.ads  20260331104513 91d140a0 sdl3_sdl_surface_h%s
+D stddef_h.ads		20260331104513 9b6a4de1 stddef_h%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-parame.ads		20251218205951 1f39ba92 system.parameters%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D x86_64_linux_gnu_bits_stdint_intn_h.ads  20260331104513 ce29289a x86_64_linux_gnu_bits_stdint_intn_h%s
+D x86_64_linux_gnu_bits_stdint_uintn_h.ads  20260331104513 d0ab4269 x86_64_linux_gnu_bits_stdint_uintn_h%s
+D x86_64_linux_gnu_bits_types_h.ads  20260331104513 99e0c930 x86_64_linux_gnu_bits_types_h%s
+G a e
+G c Z s s [sdl_getnumcameradrivers sdl3_sdl_camera_h 181 13 none]
+G c Z s s [sdl_getcameradriver sdl3_sdl_camera_h 209 13 none]
+G c Z s s [sdl_getcurrentcameradriver sdl3_sdl_camera_h 229 13 none]
+G c Z s s [sdl_getcameras sdl3_sdl_camera_h 250 13 none]
+G c Z s s [sdl_getcamerasupportedformats sdl3_sdl_camera_h 293 13 none]
+G c Z s s [sdl_getcameraname sdl3_sdl_camera_h 312 13 none]
+G c Z s s [sdl_getcameraposition sdl3_sdl_camera_h 335 13 none]
+G c Z s s [sdl_opencamera sdl3_sdl_camera_h 386 13 none]
+G c Z s s [sdl_getcamerapermissionstate sdl3_sdl_camera_h 425 13 none]
+G c Z s s [sdl_getcameraid sdl3_sdl_camera_h 444 13 none]
+G c Z s s [sdl_getcameraproperties sdl3_sdl_camera_h 461 13 none]
+G c Z s s [sdl_getcameraformat sdl3_sdl_camera_h 491 13 none]
+G c Z s s [sdl_acquirecameraframe sdl3_sdl_camera_h 538 13 none]
+G c Z s s [sdl_releasecameraframe sdl3_sdl_camera_h 570 14 none]
+G c Z s s [sdl_closecamera sdl3_sdl_camera_h 589 14 none]
+G c Z s s [sdl_cameraIP sdl3_sdl_camera_h 102 9 none]
+G c Z s s [sdl_cameraspecIP sdl3_sdl_camera_h 117 9 none]
+X 3 interfac.ads
+38K9*Interfaces 232e15 7|6r6 6r24 9r6 12r6 209r54 229r47 312r67
+X 4 i-c.ads
+29K20*C 597e17 7|6w17 6r35 9r17 12r17 209r65 229r58 312r78
+57I9*int<integer> 7|120r23 121r24 122r37 123r39 154r41 181r44 209r42 250r44
+. 293r87
+66M9*unsigned
+68M9*unsigned_long
+92B9*C_bool<boolean>
+X 5 i-cexten.ads
+37K22*Extensions 850e28 7|12w19 491r99
+59B12*bool{4|92E9} 7|491r110
+X 6 i-cstrin.ads
+44K22*Strings 156e25 7|9w19 209r67 229r60 312r80
+59P9*chars_ptr 7|209r75 229r68 312r88
+X 7 sdl3_sdl_camera_h.ads
+15K9*SDL3_SDL_camera_h 595l5 595e22
+94M12*SDL_CameraID{10|417M12} 250r63 293r58 312r46 335r50 386r43 444r65
+102R9*SDL_Camera 386r110 425r59 444r46 461r54 491r50 538r53 570r54 589r47
+117R9*SDL_CameraSpec 125e4 386r80 491r76
+118m7*format{8|545M12}
+119m7*colorspace{8|1023M12}
+120i7*width{4|57I9}
+121i7*height{4|57I9}
+122i7*framerate_numerator{4|57I9}
+123i7*framerate_denominator{4|57I9}
+140E9*SDL_CameraPosition 144e4 335r71
+141n7*SDL_CAMERA_POSITION_UNKNOWN{140E9}
+142n7*SDL_CAMERA_POSITION_FRONT_FACING{140E9}
+143n7*SDL_CAMERA_POSITION_BACK_FACING{140E9}
+154I12*SDL_CameraPermissionState{4|57I9} 155r76 156r77 157r78 425r78
+155i4*SDL_CameraPermissionState_SDL_CAMERA_PERMISSION_STATE_DENIED{154I12}
+156i4*SDL_CameraPermissionState_SDL_CAMERA_PERMISSION_STATE_PENDING{154I12}
+157i4*SDL_CameraPermissionState_SDL_CAMERA_PERMISSION_STATE_APPROVED{154I12}
+181V13*SDL_GetNumCameraDrivers{4|57I9}
+209V13*SDL_GetCameraDriver{6|59P9} 209>34
+209i34 index{4|57I9}
+229V13*SDL_GetCurrentCameraDriver{6|59P9}
+250V13*SDL_GetCameras(94M12) 250^29
+250p29 count(4|57I9)
+293V13*SDL_GetCameraSupportedFormats{13|67M9} 293>44 293^72
+293m44 instance_id{94M12}
+293p72 count(4|57I9)
+312V13*SDL_GetCameraName{6|59P9} 312>32
+312m32 instance_id{94M12}
+335V13*SDL_GetCameraPosition{140E9} 335>36
+335m36 instance_id{94M12}
+386V13*SDL_OpenCamera(102R9) 386>29 386^57
+386m29 instance_id{94M12}
+386p57 spec(117R9)
+425V13*SDL_GetCameraPermissionState{154I12} 425^43
+425p43 camera(102R9)
+444V13*SDL_GetCameraID{94M12} 444^30
+444p30 camera(102R9)
+461V13*SDL_GetCameraProperties{9|66M12} 461^38
+461p38 camera(102R9)
+491V13*SDL_GetCameraFormat{5|59E12} 491^34 491^62
+491p34 camera(102R9)
+491p62 spec(117R9)
+538V13*SDL_AcquireCameraFrame 538^37 538^65
+538p37 camera(102R9)
+538p65 timestampNS(10|437M12)
+570U14*SDL_ReleaseCameraFrame 570^38 570^66
+570p38 camera(102R9)
+570p66 frame
+589U14*SDL_CloseCamera 589^31
+589p31 camera(102R9)
+X 8 sdl3_sdl_pixels_h.ads
+11K9*SDL3_SDL_pixels_h 7|8w6 118r24 119r28 8|1548e22
+545M12*SDL_PixelFormat{4|66M9} 7|118r42
+1023M12*SDL_Colorspace{4|66M9} 7|119r46
+X 9 sdl3_sdl_properties_h.ads
+12K9*SDL3_SDL_properties_h 7|11w6 461r73 9|693e26
+66M12*SDL_PropertiesID{10|417M12} 7|461r95
+X 10 sdl3_sdl_stdinc_h.ads
+14K9*SDL3_SDL_stdinc_h 7|7w6 94r28 538r86 10|6557e22
+417M12*Uint32{18|30M12} 7|94r46
+437M12*Uint64{18|32M12} 7|538r104
+X 11 sdl3_sdl_surface_h.ads
+17K9 SDL3_SDL_surface_h 7|538r126 570r81
+X 13 system.ads
+37K9*System 7|10w6 293r99 13|153e11
+67M9*Address 7|293r106
+X 18 x86_64_linux_gnu_bits_stdint_uintn_h.ads
+30M12*uint32_t{19|50M12}
+32M12*uint64_t{19|54M12}
+X 19 x86_64_linux_gnu_bits_types_h.ads
+54M12*uu_uint64_t{4|68M9}
+
