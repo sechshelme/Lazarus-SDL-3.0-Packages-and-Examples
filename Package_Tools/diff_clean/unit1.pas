@@ -46,7 +46,10 @@ begin
   slHeader.LoadFromFile(path);
   for j := slHeader.Count - 1 downto 0 do begin
     s := slHeader[j];
-    if (pos('>  *', s) = 1) or (pos('<  *', s) = 1) or (pos('> /*', s) = 1) or (pos('< /*', s) = 1) then begin
+//    if (pos('>  *', s) = 1) or (pos('<  *', s) = 1) or (pos('> /*', s) = 1) or (pos('< /*', s) = 1) then begin
+//      slHeader.Delete(j);
+//    end;
+    if (pos('  *', s) = 1) or (pos('- *', s) = 1) or (pos('+ *', s) = 1) then begin
       slHeader.Delete(j);
     end;
   end;
