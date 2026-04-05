@@ -26,7 +26,7 @@ const
 const
   SDL_IMAGE_MAJOR_VERSION = 3;
   SDL_IMAGE_MINOR_VERSION = 4;
-  SDL_IMAGE_MICRO_VERSION = 0;
+  SDL_IMAGE_MICRO_VERSION = 2;
 
 function SDL_IMAGE_VERSION: longint;
 function SDL_IMAGE_VERSION_ATLEAST(X, Y, Z: longint): boolean;
