@@ -33,7 +33,7 @@ type
 const
   SDL_MIXER_MAJOR_VERSION = 3;
   SDL_MIXER_MINOR_VERSION = 2;
-  SDL_MIXER_MICRO_VERSION = 0;
+  SDL_MIXER_MICRO_VERSION = 2;
 
 function SDL_MIXER_VERSION: longint;
 function SDL_MIXER_VERSION_ATLEAST(X, Y, Z: longint): boolean;
@@ -130,6 +130,7 @@ const
   MIX_PROP_PLAY_START_MILLISECOND_NUMBER = 'SDL_mixer.play.start_millisecond';
   MIX_PROP_PLAY_LOOP_START_FRAME_NUMBER = 'SDL_mixer.play.loop_start_frame';
   MIX_PROP_PLAY_LOOP_START_MILLISECOND_NUMBER = 'SDL_mixer.play.loop_start_millisecond';
+  MIX_PROP_PLAY_START_ORDER_NUMBER = 'SDL_mixer.play.start_order';
   MIX_PROP_PLAY_FADE_IN_FRAMES_NUMBER = 'SDL_mixer.play.fade_in_frames';
   MIX_PROP_PLAY_FADE_IN_MILLISECONDS_NUMBER = 'SDL_mixer.play.fade_in_milliseconds';
   MIX_PROP_PLAY_FADE_IN_START_GAIN_FLOAT = 'SDL_mixer.play.fade_in_start_gain';
