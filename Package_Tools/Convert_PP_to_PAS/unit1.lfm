@@ -47,12 +47,12 @@ object Form1: TForm1
     Width = 248
     Anchors = [akTop, akRight, akBottom]
     Caption = 'external'
-    ClientHeight = 353
+    ClientHeight = 357
     ClientWidth = 242
     TabOrder = 2
     object ListBox1: TListBox
       Left = 0
-      Height = 353
+      Height = 357
       Top = 0
       Width = 242
       Align = alClient

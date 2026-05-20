@@ -5,10 +5,6 @@ interface
 uses
   SDL3;
 
-  {$IFDEF FPC}
-  {$PACKRECORDS C}
-  {$ENDIF}
-
 const
   {$IFDEF Linux}
   libSDL3_net = 'libSDL3_net.so';
@@ -22,69 +18,113 @@ const
   libSDL3_net = 'libSDL3_net.dylib';
   {$ENDIF}
 
+  {$IFDEF FPC}
+  {$PACKRECORDS C}
+  {$ENDIF}
+
+
+
 const
   SDL_NET_MAJOR_VERSION = 3;
-  SDL_NET_MINOR_VERSION = 0;
-  SDL_NET_PATCHLEVEL = 0;
+  SDL_NET_MINOR_VERSION = 1;
+  SDL_NET_MICRO_VERSION = 0;
+
+function NET_Version: longint; cdecl; external libSDL3_net;
 
 type
-  TSDLNet_Address = Pointer;
-  PSDLNet_Address = ^TSDLNet_Address;
-  PPSDLNet_Address = ^PSDLNet_Address;
+  PNET_Status = ^TNET_Status;
+  TNET_Status = longint;
 
-  TSDLNet_StreamSocket = Pointer;
-  PSDLNet_StreamSocket = ^TSDLNet_StreamSocket;
-  PPSDLNet_StreamSocket = ^PSDLNet_StreamSocket;
+const
+  NET_FAILURE = -(1);
+  NET_WAITING = 0;
+  NET_SUCCESS = 1;
 
-  TSDLNet_Server = Pointer;
-  PSDLNet_Server = ^TSDLNet_Server;
+function NET_Init: Tbool; cdecl; external libSDL3_net;
+procedure NET_Quit; cdecl; external libSDL3_net;
 
-  TSDLNet_DatagramSocket = Pointer;
-  PSDLNet_DatagramSocket = ^TSDLNet_DatagramSocket;
-  PPSDLNet_DatagramSocket = ^PSDLNet_DatagramSocket;
+type
+  PNET_Address = type Pointer;
+  PPNET_Address = ^PNET_Address;
 
-  TSDLNet_Datagram = record
-    addr: PSDLNet_Address;
+function NET_ResolveHostname(host: pchar): PNET_Address; cdecl; external libSDL3_net;
+function NET_WaitUntilResolved(address: PNET_Address; timeout: TSint32): TNET_Status; cdecl; external libSDL3_net;
+function NET_GetAddressStatus(address: PNET_Address): TNET_Status; cdecl; external libSDL3_net;
+function NET_GetAddressString(address: PNET_Address): pchar; cdecl; external libSDL3_net;
+function NET_RefAddress(address: PNET_Address): PNET_Address; cdecl; external libSDL3_net;
+procedure NET_UnrefAddress(address: PNET_Address); cdecl; external libSDL3_net;
+procedure NET_SimulateAddressResolutionLoss(percent_loss: longint); cdecl; external libSDL3_net;
+function NET_CompareAddresses(a: PNET_Address; b: PNET_Address): longint; cdecl; external libSDL3_net;
+function NET_GetLocalAddresses(num_addresses: Plongint): PPNET_Address; cdecl; external libSDL3_net;
+procedure NET_FreeLocalAddresses(addresses: PPNET_Address); cdecl; external libSDL3_net;
+
+type
+  PNET_StreamSocket = Pointer;
+  PPNET_StreamSocket = ^PNET_StreamSocket;
+
+function NET_CreateClient(address: PNET_Address; port: TUint16; props: TSDL_PropertiesID): PNET_StreamSocket; cdecl; external libSDL3_net;
+function NET_WaitUntilConnected(sock: PNET_StreamSocket; timeout: TSint32): TNET_Status; cdecl; external libSDL3_net;
+
+type
+  PNET_Server = type Pointer;
+
+function NET_CreateServer(addr: PNET_Address; port: TUint16; props: TSDL_PropertiesID): PNET_Server; cdecl; external libSDL3_net;
+
+const
+  NET_PROP_SERVER_REUSEADDR_BOOLEAN = 'NET.server.reuseaddr';
+
+function NET_AcceptClient(server: PNET_Server; client_stream: PPNET_StreamSocket): Tbool; cdecl; external libSDL3_net;
+procedure NET_DestroyServer(server: PNET_Server); cdecl; external libSDL3_net;
+function NET_GetStreamSocketAddress(sock: PNET_StreamSocket): PNET_Address; cdecl; external libSDL3_net;
+function NET_GetConnectionStatus(sock: PNET_StreamSocket): TNET_Status; cdecl; external libSDL3_net;
+function NET_WriteToStreamSocket(sock: PNET_StreamSocket; buf: pointer; buflen: longint): Tbool; cdecl; external libSDL3_net;
+function NET_GetStreamSocketPendingWrites(sock: PNET_StreamSocket): longint; cdecl; external libSDL3_net;
+function NET_WaitUntilStreamSocketDrained(sock: PNET_StreamSocket; timeout: TSint32): longint; cdecl; external libSDL3_net;
+function NET_ReadFromStreamSocket(sock: PNET_StreamSocket; buf: pointer; buflen: longint): longint; cdecl; external libSDL3_net;
+procedure NET_SimulateStreamPacketLoss(sock: PNET_StreamSocket; percent_loss: longint); cdecl; external libSDL3_net;
+procedure NET_DestroyStreamSocket(sock: PNET_StreamSocket); cdecl; external libSDL3_net;
+
+type
+  PNET_DatagramSocket = type Pointer;
+
+  TNET_Datagram = record
+    addr: PNET_Address;
     port: TUint16;
     buf: PUint8;
     buflen: longint;
   end;
-  PSDLNet_Datagram = ^TSDLNet_Datagram;
-  PPSDLNet_Datagram = ^PSDLNet_Datagram;
+  PNET_Datagram = ^TNET_Datagram;
+  PPNET_Datagram = ^PNET_Datagram;
 
-function SDLNet_Init: longint; cdecl; external libSDL3_net;
-procedure SDLNet_Quit; cdecl; external libSDL3_net;
-function SDLNet_ResolveHostname(host: PAnsiChar): PSDLNet_Address; cdecl; external libSDL3_net;
-function SDLNet_WaitUntilResolved(address: PSDLNet_Address; timeout: TSint32): longint; cdecl; external libSDL3_net;
-function SDLNet_GetAddressStatus(address: PSDLNet_Address): longint; cdecl; external libSDL3_net;
-function SDLNet_GetAddressString(address: PSDLNet_Address): PAnsiChar; cdecl; external libSDL3_net;
-function SDLNet_RefAddress(address: PSDLNet_Address): PSDLNet_Address; cdecl; external libSDL3_net;
-procedure SDLNet_UnrefAddress(address: PSDLNet_Address); cdecl; external libSDL3_net;
-procedure SDLNet_SimulateAddressResolutionLoss(percent_loss: longint); cdecl; external libSDL3_net;
-function SDLNet_CompareAddresses(a: PSDLNet_Address; b: PSDLNet_Address): longint; cdecl; external libSDL3_net;
-function SDLNet_GetLocalAddresses(num_addresses: Plongint): PPSDLNet_Address; cdecl; external libSDL3_net;
-procedure SDLNet_FreeLocalAddresses(addresses: PPSDLNet_Address); cdecl; external libSDL3_net;
-function SDLNet_CreateClient(address: PSDLNet_Address; port: TUint16): PSDLNet_StreamSocket; cdecl; external libSDL3_net;
-function SDLNet_WaitUntilConnected(sock: PSDLNet_StreamSocket; timeout: TSint32): longint; cdecl; external libSDL3_net;
-function SDLNet_CreateServer(addr: PSDLNet_Address; port: TUint16): PSDLNet_Server; cdecl; external libSDL3_net;
-function SDLNet_AcceptClient(server: PSDLNet_Server; client_stream: PPSDLNet_StreamSocket): longint; cdecl; external libSDL3_net;
-procedure SDLNet_DestroyServer(server: PSDLNet_Server); cdecl; external libSDL3_net;
-function SDLNet_GetStreamSocketAddress(sock: PSDLNet_StreamSocket): PSDLNet_Address; cdecl; external libSDL3_net;
-function SDLNet_GetConnectionStatus(sock: PSDLNet_StreamSocket): longint; cdecl; external libSDL3_net;
-function SDLNet_WriteToStreamSocket(sock: PSDLNet_StreamSocket; buf: pointer; buflen: longint): longint; cdecl; external libSDL3_net;
-function SDLNet_GetStreamSocketPendingWrites(sock: PSDLNet_StreamSocket): longint; cdecl; external libSDL3_net;
-function SDLNet_WaitUntilStreamSocketDrained(sock: PSDLNet_StreamSocket; timeout: TSint32): longint; cdecl; external libSDL3_net;
-function SDLNet_ReadFromStreamSocket(sock: PSDLNet_StreamSocket; buf: pointer; buflen: longint): longint; cdecl; external libSDL3_net;
-procedure SDLNet_SimulateStreamPacketLoss(sock: PSDLNet_StreamSocket; percent_loss: longint); cdecl; external libSDL3_net;
-procedure SDLNet_DestroyStreamSocket(sock: PSDLNet_StreamSocket); cdecl; external libSDL3_net;
-function SDLNet_CreateDatagramSocket(addr: PSDLNet_Address; port: TUint16): PSDLNet_DatagramSocket; cdecl; external libSDL3_net;
-function SDLNet_SendDatagram(sock: PSDLNet_DatagramSocket; address: PSDLNet_Address; port: TUint16; buf: pointer; buflen: longint): longint; cdecl; external libSDL3_net;
-function SDLNet_ReceiveDatagram(sock: PSDLNet_DatagramSocket; dgram: PPSDLNet_Datagram): longint; cdecl; external libSDL3_net;
-procedure SDLNet_DestroyDatagram(dgram: PSDLNet_Datagram); cdecl; external libSDL3_net;
-procedure SDLNet_SimulateDatagramPacketLoss(sock: PSDLNet_DatagramSocket; percent_loss: longint); cdecl; external libSDL3_net;
-procedure SDLNet_DestroyDatagramSocket(sock: PSDLNet_DatagramSocket); cdecl; external libSDL3_net;
-function SDLNet_WaitUntilInputAvailable(vsockets: Ppointer; numsockets: longint; timeout: TSint32): longint; cdecl; external libSDL3_net;
+function NET_CreateDatagramSocket(addr: PNET_Address; port: TUint16; props: TSDL_PropertiesID): PNET_DatagramSocket; cdecl; external libSDL3_net;
+
+const
+  NET_PROP_DATAGRAM_SOCKET_REUSEADDR_BOOLEAN = 'NET.datagram_socket.reuseaddr';
+  NET_PROP_DATAGRAM_SOCKET_ALLOW_BROADCAST_BOOLEAN = 'NET.datagram_socket.allow_broadcast';
+
+function NET_SendDatagram(sock: PNET_DatagramSocket; address: PNET_Address; port: TUint16; buf: pointer; buflen: longint): Tbool; cdecl; external libSDL3_net;
+function NET_ReceiveDatagram(sock: PNET_DatagramSocket; dgram: PPNET_Datagram): Tbool; cdecl; external libSDL3_net;
+procedure NET_DestroyDatagram(dgram: PNET_Datagram); cdecl; external libSDL3_net;
+procedure NET_SimulateDatagramPacketLoss(sock: PNET_DatagramSocket; percent_loss: longint); cdecl; external libSDL3_net;
+procedure NET_DestroyDatagramSocket(sock: PNET_DatagramSocket); cdecl; external libSDL3_net;
+function NET_WaitUntilInputAvailable(vsockets: Ppointer; numsockets: longint; timeout: TSint32): longint; cdecl; external libSDL3_net;
+
+function SDL_NET_VERSION: longint;
+function SDL_NET_VERSION_ATLEAST(X, Y, Z: longint): boolean;
 
 implementation
+
+function SDL_NET_VERSION: longint;
+begin
+  SDL_NET_VERSION := SDL_VERSIONNUM(SDL_NET_MAJOR_VERSION, SDL_NET_MINOR_VERSION, SDL_NET_MICRO_VERSION);
+end;
+
+function SDL_NET_VERSION_ATLEAST(X, Y, Z: longint): boolean;
+begin
+  SDL_NET_VERSION_ATLEAST :=
+    (SDL_NET_MAJOR_VERSION >= X) and
+    ((SDL_NET_MAJOR_VERSION > X) or (SDL_NET_MINOR_VERSION >= Y)) and
+    ((SDL_NET_MAJOR_VERSION > X) or (SDL_NET_MINOR_VERSION > Y) or (SDL_NET_MICRO_VERSION >= Z));
+end;
 
 end.
