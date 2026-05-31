@@ -23,10 +23,9 @@ const
   {$ENDIF}
 
 
-
 const
   SDL_NET_MAJOR_VERSION = 3;
-  SDL_NET_MINOR_VERSION = 1;
+  SDL_NET_MINOR_VERSION = 2;
   SDL_NET_MICRO_VERSION = 0;
 
 function NET_Version: longint; cdecl; external libSDL3_net;
@@ -51,6 +50,7 @@ function NET_ResolveHostname(host: pchar): PNET_Address; cdecl; external libSDL3
 function NET_WaitUntilResolved(address: PNET_Address; timeout: TSint32): TNET_Status; cdecl; external libSDL3_net;
 function NET_GetAddressStatus(address: PNET_Address): TNET_Status; cdecl; external libSDL3_net;
 function NET_GetAddressString(address: PNET_Address): pchar; cdecl; external libSDL3_net;
+function NET_GetAddressBytes(address: PNET_Address; num_bytes: Plongint): pointer; cdecl; external libSDL3_net;
 function NET_RefAddress(address: PNET_Address): PNET_Address; cdecl; external libSDL3_net;
 procedure NET_UnrefAddress(address: PNET_Address); cdecl; external libSDL3_net;
 procedure NET_SimulateAddressResolutionLoss(percent_loss: longint); cdecl; external libSDL3_net;
