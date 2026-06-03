@@ -33,7 +33,7 @@ type
 const
   SDL_MIXER_MAJOR_VERSION = 3;
   SDL_MIXER_MINOR_VERSION = 2;
-  SDL_MIXER_MICRO_VERSION = 2;
+  SDL_MIXER_MICRO_VERSION = 4;
 
 function SDL_MIXER_VERSION: longint;
 function SDL_MIXER_VERSION_ATLEAST(X, Y, Z: longint): boolean;
@@ -67,6 +67,7 @@ const
   MIX_PROP_AUDIO_LOAD_PREDECODE_BOOLEAN = 'SDL_mixer.audio.load.predecode';
   MIX_PROP_AUDIO_LOAD_PREFERRED_MIXER_POINTER = 'SDL_mixer.audio.load.preferred_mixer';
   MIX_PROP_AUDIO_LOAD_SKIP_METADATA_TAGS_BOOLEAN = 'SDL_mixer.audio.load.skip_metadata_tags';
+  MIX_PROP_AUDIO_LOAD_IGNORE_LOOPS_BOOLEAN = 'SDL_mixer.audio.load.ignore_loops';
   MIX_PROP_AUDIO_DECODER_STRING = 'SDL_mixer.audio.decoder';
 
 function MIX_LoadRawAudio_IO(mixer: PMIX_Mixer; io: PSDL_IOStream; spec: PSDL_AudioSpec; closeio: Tbool): PMIX_Audio; cdecl; external libSDL3_mixer;
