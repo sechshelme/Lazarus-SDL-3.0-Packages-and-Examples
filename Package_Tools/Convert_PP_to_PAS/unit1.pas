@@ -49,6 +49,7 @@ const
     (libs: 'libSDL3_gfx'; units: 'SDL3'),
     (libs: 'libSDL3_sound'; units: 'SDL3'),
     (libs: 'libSDL3_net'; units: 'SDL3'),
+    (libs: 'libSDL3_shadercross'; units: 'SDL3'),
     (libs: 'libSDL3_native_midi'; units: 'SDL3'),
     (libs: 'libSDL3'; units: 'SDL_stdinc'),
 

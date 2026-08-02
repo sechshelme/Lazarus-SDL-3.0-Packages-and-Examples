@@ -5,10 +5,6 @@ interface
 uses SDL3;
 
 
-  {$IFDEF FPC}
-  {$PACKRECORDS C}
-  {$ENDIF}
-
 const
   {$IFDEF Linux}
   libSDL3_native_midi = 'libSDL_native_midi';
@@ -22,10 +18,12 @@ const
   libSDL3_native_midi = 'libSDL_native_midi.dylib';
   {$ENDIF}
 
+  {$IFDEF FPC}
+  {$PACKRECORDS C}
+  {$ENDIF}
+
 type
-  TNativeMidi_Song = record
-  end;
-  PNativeMidi_Song = ^TNativeMidi_Song;
+  PNativeMidi_Song = type Pointer;
 
 function NativeMidi_Init: Tbool; cdecl; external libSDL3_native_midi;
 procedure NativeMidi_Quit; cdecl; external libSDL3_native_midi;

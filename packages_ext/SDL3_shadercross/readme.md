@@ -1,0 +1,4 @@
+rm -rf *
+cmake ../SDL_shadercross/ -DSDLSHADERCROSS_VENDORED=ON -DSDLSHADERCROSS_DXC=ON
+make
+
