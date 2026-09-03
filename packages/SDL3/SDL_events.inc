@@ -474,6 +474,7 @@ type
     timestamp: TUint64;
     windowID: TSDL_WindowID;
     which: TSDL_PenID;
+    pen_state: TSDL_PenInputFlags;
   end;
   PSDL_PenProximityEvent = ^TSDL_PenProximityEvent;
 
