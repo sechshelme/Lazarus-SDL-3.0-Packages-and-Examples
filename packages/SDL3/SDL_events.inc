@@ -475,6 +475,7 @@ type
     windowID: TSDL_WindowID;
     which: TSDL_PenID;
     pen_state: TSDL_PenInputFlags;
+    device_type: TSDL_PenDeviceType;
   end;
   PSDL_PenProximityEvent = ^TSDL_PenProximityEvent;
 
@@ -487,6 +488,7 @@ type
     pen_state: TSDL_PenInputFlags;
     x: single;
     y: single;
+    device_type: TSDL_PenDeviceType;
   end;
   PSDL_PenMotionEvent = ^TSDL_PenMotionEvent;
 
@@ -501,6 +503,7 @@ type
     y: single;
     eraser: Tbool;
     down: Tbool;
+    device_type: TSDL_PenDeviceType;
   end;
   PSDL_PenTouchEvent = ^TSDL_PenTouchEvent;
 
@@ -515,6 +518,7 @@ type
     y: single;
     button: TUint8;
     down: Tbool;
+    device_type: TSDL_PenDeviceType;
   end;
   PSDL_PenButtonEvent = ^TSDL_PenButtonEvent;
 
@@ -529,6 +533,7 @@ type
     y: single;
     axis: TSDL_PenAxis;
     Value: single;
+    device_type: TSDL_PenDeviceType;
   end;
   PSDL_PenAxisEvent = ^TSDL_PenAxisEvent;
 
