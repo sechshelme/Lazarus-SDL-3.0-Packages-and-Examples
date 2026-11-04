@@ -137,8 +137,7 @@ function SDL_AUDIO_ISLITTLEENDIAN(x: longint): boolean;
 function SDL_AUDIO_ISSIGNED(x: longint): boolean;
 function SDL_AUDIO_ISINT(x: longint): boolean;
 function SDL_AUDIO_ISUNSIGNED(x: longint): boolean;
-function SDL_AUDIO_FRAMESIZE(x: TSDL_AudioSpec): longint;
-
+function SDL_AUDIO_FRAMESIZE(x: TSDL_AudioSpec): UInt32;
 function SDL_DEFINE_AUDIO_FORMAT(signed, bigendian, flt, size: UInt16): UInt32;
 
 {$ENDIF read_interface}
@@ -186,7 +185,7 @@ begin
   SDL_AUDIO_ISUNSIGNED := not SDL_AUDIO_ISSIGNED(x);
 end;
 
-function SDL_AUDIO_FRAMESIZE(x: TSDL_AudioSpec): longint;
+function SDL_AUDIO_FRAMESIZE(x: TSDL_AudioSpec): UInt32;
 begin
   SDL_AUDIO_FRAMESIZE := (SDL_AUDIO_BYTESIZE(x.format)) * (x.channels);
 end;
